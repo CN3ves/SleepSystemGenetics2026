@@ -1,0 +1,53 @@
+'''
+Main Snakefile to run he complete analyses and produced the main figures and tables
+'''
+
+# Config file path
+configfile: 'workflow/config/config.yaml'
+
+# Rules to execute workflow
+include: 'rules/0-BXD_functions.smk'
+include: 'rules/1-BXD_fastq.smk'
+include: 'rules/2-BXD_align.smk'
+include: 'rules/3-BXD_bam.smk'
+include: 'rules/4-BXD_genotype.smk'
+include: 'rules/5-BXD_peaks.smk'
+include: 'rules/6-BXD_features.smk'
+include: 'rules/7-BXD_normalization.smk'
+include: 'rules/8-BXD_differential.smk'
+include: 'rules/9-BXD_qtl.smk'
+include: 'rules/10-BXD_annotation.smk'
+include: 'rules/11-BXD_enrichment.smk'
+include: 'rules/12-BXD_footprints.smk'
+include: 'rules/13-BXD_integrate.smk'
+
+include: 'rules/14-NRF_fastq.smk'
+include: 'rules/15-NRF_align.smk'
+include: 'rules/16-NRF_bam.smk'
+include: 'rules/17-NRF_differential.smk'
+
+include: 'rules/18-Check.smk'
+
+
+
+# Defines agregation/output parameters for peak calling. 
+corrected_samples = [sample.replace('tmp','039') for sample in
+     [sample.replace('039','038') for sample in
+     [sample.replace('038','tmp') for sample in config['atac_samples']]
+     ]]
+sample_groups = list(set(['_'.join(sample.split('_')[1:]) for sample in corrected_samples]))
+lines = list(set([line.split('_')[0] for line in sample_groups]))
+
+# Master rule used to launch workflow
+rule results:
+    '''
+    Rule to automatically generate required outputs.
+    On our server snakemake could hang for some jobs, so the outputs were generated step by step for convinience.
+    '''
+    input:
+        expand('results/18-Checkpoint/{exp}.check', exp = ['bxd', 'nrf']),
+
+
+         
+
+       

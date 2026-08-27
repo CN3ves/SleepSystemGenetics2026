@@ -1,0 +1,15 @@
+executor: cluster-generic
+cluster-generic-submit-cmd: 
+  mkdir -p slurm_logs/{rule} &&
+  sbatch
+    --cpus-per-task={threads}
+    --mem={resources.mem_mb}
+    --job-name={rule}-{wildcards}
+    --output=slurm_logs/{rule}/{rule}-{wildcards}.log
+    --time={resources.time}
+    --export=ALL
+    --chdir=$PWD
+    --account=pfranken_bxd_atac
+jobs: 226
+cluster-generic-cancel-cmd: scancel
+printshellcmds: True
