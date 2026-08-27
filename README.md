@@ -56,7 +56,12 @@ python setupGenomicData.py --mm10
 
 conda deactivate 
 ```
-One remote servers, you might need to reinstall from time to time if you see a python version clash. run before
+```
+rgt-hint  --version
+HINT - Regulatory Analysis Toolbox (RGT) - v1.0.2
+```
+
+On remote servers, you might need to reinstall from time to time if you see a python version clash. run before
 ```
 rm -r libs/python-3.11.7-hab00c5b_1_cpython* rgt_env/
 ```
