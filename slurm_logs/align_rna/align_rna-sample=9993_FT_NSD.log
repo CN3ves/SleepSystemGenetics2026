@@ -1,0 +1,51 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-24 10:57:42
+  Workflow ID: 02abbe89-2aad-44b7-babf-002dc5b23c09
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna016
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs align_rna:sample=9993_FT_NSD --allowed-rules align_rna --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.plbek3kl results/14-NRF_fastq/QC/fastq/9993_FT_NSD.fq.gz results/15-NRF_align/index/Genome results/14-NRF_fastq/summaries/QC_plot_density.png --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params input mtime code --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage sources source-cache software-deployment storage-local-copies software-deployment-cache persistence input-output --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpsuustr04 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Aug 24 10:57:47 2026]
+localrule align_rna:
+    input: results/14-NRF_fastq/QC/fastq/9993_FT_NSD.fq.gz, results/15-NRF_align/index/Genome, results/14-NRF_fastq/summaries/QC_plot_density.png
+    output: results/15-NRF_align/aligment/9993_FT_NSD_Aligned.out.sam
+    log: logs/15-NRF_align/align_9993_FT_NSD.log
+    jobid: 0
+    benchmark: benchmarks/15-NRF_align/align_9993_FT_NSD.txt
+    reason: Forced execution
+    wildcards: sample=9993_FT_NSD
+    threads: 20
+    resources: tmpdir=/tmp/64214075, disk_mb=11158, disk=11.16 GB, disk_mib=10642, mem_mb=30000, mem=30 GB, mem_mib=28611, time=00:10:00
+Shell command: 
+        module load star/2.7.11b
+
+        mkdir -p results/15-NRF_align/aligment
+
+        echo "Aligning sample <results/14-NRF_fastq/QC/fastq/9993_FT_NSD.fq.gz> to <mm10> transcripts annotation" >> logs/15-NRF_align/align_9993_FT_NSD.log
+        STAR --runMode alignReads --runThreadN 20 --genomeDir results/15-NRF_align/index --readFilesIn results/14-NRF_fastq/QC/fastq/9993_FT_NSD.fq.gz --readFilesCommand zcat --outFilterType BySJout --outFilterMultimapNmax 20 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverReadLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --winAnchorMultimapNmax 50 --outFileNamePrefix results/15-NRF_align/aligment/9993_FT_NSD_ --outSAMunmapped Within  --quantTranscriptomeSAMoutput BanSingleEnd --quantMode GeneCounts &>> logs/15-NRF_align/align_9993_FT_NSD.log
+        
+        echo "Logs saved in <logs/15-NRF_align/align_9993_FT_NSD.log>" >> logs/15-NRF_align/align_9993_FT_NSD.log
+        
+Write-protecting output file results/15-NRF_align/aligment/9993_FT_NSD_Aligned.out.sam.
+[Mon Aug 24 10:59:19 2026]
+Finished jobid: 0 (Rule: align_rna)
+1 of 1 steps (100%) done
+Storing output in storage.

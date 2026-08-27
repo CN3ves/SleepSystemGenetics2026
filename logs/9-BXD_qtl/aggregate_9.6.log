@@ -1,0 +1,92 @@
+Loading packages
+Checking arguments
+Reading inputs
+[1] "Merge files"
+ [1] "results/9-ATAC_qtl/sigs/atacchr1_QTL_sigs.csv" 
+ [2] "results/9-ATAC_qtl/sigs/atacchr2_QTL_sigs.csv" 
+ [3] "results/9-ATAC_qtl/sigs/atacchr3_QTL_sigs.csv" 
+ [4] "results/9-ATAC_qtl/sigs/atacchr4_QTL_sigs.csv" 
+ [5] "results/9-ATAC_qtl/sigs/atacchr5_QTL_sigs.csv" 
+ [6] "results/9-ATAC_qtl/sigs/atacchr6_QTL_sigs.csv" 
+ [7] "results/9-ATAC_qtl/sigs/atacchr7_QTL_sigs.csv" 
+ [8] "results/9-ATAC_qtl/sigs/atacchr8_QTL_sigs.csv" 
+ [9] "results/9-ATAC_qtl/sigs/atacchr9_QTL_sigs.csv" 
+[10] "results/9-ATAC_qtl/sigs/atacchr10_QTL_sigs.csv"
+[11] "results/9-ATAC_qtl/sigs/atacchr11_QTL_sigs.csv"
+[12] "results/9-ATAC_qtl/sigs/atacchr12_QTL_sigs.csv"
+[13] "results/9-ATAC_qtl/sigs/atacchr13_QTL_sigs.csv"
+[14] "results/9-ATAC_qtl/sigs/atacchr14_QTL_sigs.csv"
+[15] "results/9-ATAC_qtl/sigs/atacchr15_QTL_sigs.csv"
+[16] "results/9-ATAC_qtl/sigs/atacchr16_QTL_sigs.csv"
+[17] "results/9-ATAC_qtl/sigs/atacchr17_QTL_sigs.csv"
+[18] "results/9-ATAC_qtl/sigs/atacchr18_QTL_sigs.csv"
+[19] "results/9-ATAC_qtl/sigs/atacchr19_QTL_sigs.csv"
+[20] "results/9-ATAC_qtl/sigs/atacchrX_QTL_sigs.csv" 
+[21] "results/9-ATAC_qtl/sigs/atacchrY_QTL_sigs.csv" 
+[1] "Filtering table"
+[1] "Check merging tables - NAs: 0"
+[1] "QTL_table_atac.csv Original size 27231 Filtered size 26741"
+[1] "Merge files"
+ [1] "results/9-ATAC_qtl/sigs/atacchr1FC_QTL_sigs.csv" 
+ [2] "results/9-ATAC_qtl/sigs/atacchr2FC_QTL_sigs.csv" 
+ [3] "results/9-ATAC_qtl/sigs/atacchr3FC_QTL_sigs.csv" 
+ [4] "results/9-ATAC_qtl/sigs/atacchr4FC_QTL_sigs.csv" 
+ [5] "results/9-ATAC_qtl/sigs/atacchr5FC_QTL_sigs.csv" 
+ [6] "results/9-ATAC_qtl/sigs/atacchr6FC_QTL_sigs.csv" 
+ [7] "results/9-ATAC_qtl/sigs/atacchr7FC_QTL_sigs.csv" 
+ [8] "results/9-ATAC_qtl/sigs/atacchr8FC_QTL_sigs.csv" 
+ [9] "results/9-ATAC_qtl/sigs/atacchr9FC_QTL_sigs.csv" 
+[10] "results/9-ATAC_qtl/sigs/atacchr10FC_QTL_sigs.csv"
+[11] "results/9-ATAC_qtl/sigs/atacchr11FC_QTL_sigs.csv"
+[12] "results/9-ATAC_qtl/sigs/atacchr12FC_QTL_sigs.csv"
+[13] "results/9-ATAC_qtl/sigs/atacchr13FC_QTL_sigs.csv"
+[14] "results/9-ATAC_qtl/sigs/atacchr14FC_QTL_sigs.csv"
+[15] "results/9-ATAC_qtl/sigs/atacchr15FC_QTL_sigs.csv"
+[16] "results/9-ATAC_qtl/sigs/atacchr16FC_QTL_sigs.csv"
+[17] "results/9-ATAC_qtl/sigs/atacchr17FC_QTL_sigs.csv"
+[18] "results/9-ATAC_qtl/sigs/atacchr18FC_QTL_sigs.csv"
+[19] "results/9-ATAC_qtl/sigs/atacchr19FC_QTL_sigs.csv"
+[20] "results/9-ATAC_qtl/sigs/atacchrXFC_QTL_sigs.csv" 
+[21] "results/9-ATAC_qtl/sigs/atacchrYFC_QTL_sigs.csv" 
+[1] "Filtering table"
+[1] "Check merging tables - NAs: 0"
+[1] "QTL_table_atacFC.csv Original size 48205 Filtered size 46712"
+[1] "Merge files"
+[1] "results/9-ATAC_qtl/sigs/rna_QTL_sigs.csv"
+[1] "Filtering table"
+[1] "Check merging tables - NAs: 0"
+[1] "QTL_table_rna.csv Original size 5945 Filtered size 5934"
+[1] "Merge files"
+[1] "results/9-ATAC_qtl/sigs/rnaFC_QTL_sigs.csv"
+[1] "Filtering table"
+[1] "Check merging tables - NAs: 0"
+[1] "QTL_table_rnaFC.csv Original size 1500 Filtered size 1480"
+[1] "Merge files"
+[1] "results/9-ATAC_qtl/sigs/sleep_QTL_sigs.csv"
+[1] "Filtering table"
+[1] "Check merging tables - NAs: 0"
+[1] "QTL_table_sleep.csv Original size 139 Filtered size 136"
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] optparse_1.8.2
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.2

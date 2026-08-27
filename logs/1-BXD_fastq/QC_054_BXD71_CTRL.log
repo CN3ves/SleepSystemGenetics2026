@@ -1,0 +1,37 @@
+Running Fastp on <rawdata/atac/fastq/054_BXD71_CTRL.fastq.gz>
+Detecting adapter sequence for read1...
+>I7_Nextera_Transposase_1 | >Trans2_rc | >I7_Nextera_Transposase_1 | >Trans2_rc
+CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+
+Read1 before filtering:
+total reads: 63677183
+total bases: 9615254633
+Q20 bases: 8986794709(93.4639%)
+Q30 bases: 8552170230(88.9438%)
+Q40 bases: 7211786892(75.0036%)
+
+Read1 after filtering:
+total reads: 51810696
+total bases: 4248630545
+Q20 bases: 4182262178(98.4379%)
+Q30 bases: 4059371172(95.5454%)
+Q40 bases: 3365954771(79.2245%)
+
+Filtering result:
+reads passed filter: 63540376
+reads failed due to low quality: 126783
+reads failed due to too many N: 3350
+reads failed due to too short: 6674
+reads with adapter trimmed: 50331982
+bases trimmed due to adapters: 4062251716
+
+Duplication rate (may be overestimated since this is SE data): 18.4211%
+
+JSON report: results/1-ATAC_fastq/QC/json/054_BXD71_CTRL.json
+HTML report: results/1-ATAC_fastq/QC/html/054_BXD71_CTRL.html
+
+fastp -w 16 -D -i rawdata/atac/fastq/054_BXD71_CTRL.fastq.gz -o results/1-ATAC_fastq/QC/fastq/054_BXD71_CTRL.fq.gz -h results/1-ATAC_fastq/QC/html/054_BXD71_CTRL.html -j results/1-ATAC_fastq/QC/json/054_BXD71_CTRL.json 
+fastp v1.0.1, time used: 100 seconds
+Processed fastq files saved in <results/1-ATAC_fastq/QC/fastq/054_BXD71_CTRL.fq.gz>
+Reports saved in <results/1-ATAC_fastq/QC/html/054_BXD71_CTRL.html> and <results/1-ATAC_fastq/QC/json/054_BXD71_CTRL.json>
+Logs saved in <logs/1-ATAC_fastq/QC_054_BXD71_CTRL.log>

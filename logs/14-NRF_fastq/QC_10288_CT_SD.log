@@ -1,0 +1,37 @@
+Running Fastp on <rawdata/nrf1/fastq/10288_CT_SD.fastq.gz>
+Detecting adapter sequence for read1...
+>I7_Nextera_Transposase_1 | >Trans2_rc | >I7_Nextera_Transposase_1 | >Trans2_rc
+CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+
+Read1 before filtering:
+total reads: 33527785
+total bases: 5062695535
+Q20 bases: 4909286791(96.9698%)
+Q30 bases: 4660444925(92.0546%)
+Q40 bases: 4009736592(79.2016%)
+
+Read1 after filtering:
+total reads: 22351509
+total bases: 3306474853
+Q20 bases: 3177997773(96.1144%)
+Q30 bases: 2982655274(90.2065%)
+Q40 bases: 2512293336(75.981%)
+
+Filtering result:
+reads passed filter: 33484398
+reads failed due to low quality: 12740
+reads failed due to too many N: 25077
+reads failed due to too short: 5570
+reads with adapter trimmed: 3561159
+bases trimmed due to adapters: 73645177
+
+Duplication rate (may be overestimated since this is SE data): 33.2105%
+
+JSON report: results/14-NRF_fastq/QC/json/10288_CT_SD.json
+HTML report: results/14-NRF_fastq/QC/html/10288_CT_SD.html
+
+fastp -w 16 -D -i rawdata/nrf1/fastq/10288_CT_SD.fastq.gz -o results/14-NRF_fastq/QC/fastq/10288_CT_SD.fq.gz -h results/14-NRF_fastq/QC/html/10288_CT_SD.html -j results/14-NRF_fastq/QC/json/10288_CT_SD.json 
+fastp v1.0.1, time used: 75 seconds
+Processed fastq files saved in <results/14-NRF_fastq/QC/fastq/10288_CT_SD.fq.gz>
+Reports saved in <results/14-NRF_fastq/QC/html/10288_CT_SD.html> and <results/14-NRF_fastq/QC/json/10288_CT_SD.json>
+Logs saved in <logs/14-NRF_fastq/QC_10288_CT_SD.log>

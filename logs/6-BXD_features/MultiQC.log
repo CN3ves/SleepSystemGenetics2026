@@ -1,0 +1,13 @@
+Running MultiQC on all logs
+
+/// MultiQC 🔍 v1.35
+
+       file_search | Search path: /scratch/csousane/atac
+             htseq | Found 226 reports
+           bowtie2 | Found 226 reports
+             fastp | Found 226 reports
+     write_results | Data        : multiqc_data
+     write_results | Report      : multiqc_report.html
+           multiqc | MultiQC complete
+Moving results to <results/6-BXD_features/MultiQC>
+Logs saved in <logs/6-BXD_features/MultiQC.log>

@@ -1,0 +1,4 @@
+Copy full fastq file <results/1-ATAC_fastq/QC/fastq/054_BXD71_CTRL.fq.gz> to results/1-ATAC_fastq/subsampling/054_BXD71_CTRL_full.fq.gz
+Subseting <results/1-ATAC_fastq/QC/fastq/054_BXD71_CTRL.fq.gz> to <results/1-ATAC_fastq/subsampling/054_BXD71_CTRL_sub1.fq.gz
+Subseting <results/1-ATAC_fastq/QC/fastq/054_BXD71_CTRL.fq.gz> to <results/1-ATAC_fastq/subsampling/054_BXD71_CTRL_sub2.fq.gz
+Logs saved in <logs/1-ATAC_fastq/sampling_054_BXD71_CTRL.log>

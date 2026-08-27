@@ -1,0 +1,19 @@
+Estimate differential activity for BXD101 _sub2
+BED files: results/12-ATAC_footprints/motifs/BXD101_CTRL_sub2_mpbs.bed,results/12-ATAC_footprints/motifs/BXD101_SD_sub2_mpbs.bed
+BAM files: results/12-ATAC_footprints/bams/BXD101_CTRL_sub2.bam,results/12-ATAC_footprints/bams/BXD101_SD_sub2.bam
+groups: CTRL,SD
+ 48 cpus are detected and 20 of them will be used...
+
+generating signal for each motif and condition...
+
+generating signal for condition CTRL 
+
+generating signal for condition SD 
+
+signal generation is done!
+
+generating line plot for each motif...
+
+
+[total time: 0h 5m 57s]
+Logs saved in <logs/12-ATAC_footprints/diff_BXD101_sub2.log>

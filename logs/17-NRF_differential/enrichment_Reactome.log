@@ -1,0 +1,535 @@
+Reading inputs
+'select()' returned 1:many mapping between keys and columns
+[1] "Running enrichment for FT"
+[1] "ORA analyses for Reactome"
+[1] "genes "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:6651] "13175" "52850" "381677" "12575" "13371" "231605" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...13 enriched terms found
+'data.frame':	13 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-198725" "R-MMU-166520" "R-MMU-187037" "R-MMU-112316" ...
+ $ Description   : chr  "Nuclear Events (kinase and transcription factor activation)" "Signaling by NTRKs" "Signaling by NTRK1 (TRKA)" "Neuronal System" ...
+ $ GeneRatio     : chr  "22/3188" "46/3188" "40/3188" "152/3188" ...
+ $ BgRatio       : chr  "27/8736" "75/8736" "63/8736" "317/8736" ...
+ $ RichFactor    : num  0.815 0.613 0.635 0.479 0.466 ...
+ $ FoldEnrichment: num  2.23 1.68 1.74 1.31 1.28 ...
+ $ zScore        : num  4.86 4.49 4.47 4.32 4.19 ...
+ $ pvalue        : num  2.14e-06 9.94e-06 1.14e-05 1.38e-05 2.21e-05 ...
+ $ p.adjust      : num  0.00249 0.00401 0.00401 0.00401 0.00514 ...
+ $ qvalue        : num  0.00232 0.00374 0.00374 0.00374 0.0048 ...
+ $ geneID        : chr  "Dusp4/Dusp6/Ppp2r1b/Egr2/Sgk1/Nab2/Mapk11/Rps6ka3/Rps6ka2/Mapk7/Srf/Mapk1/Creb1/Mapk3/Rps6ka5/Chd4/Rps6ka1/Ppp2"| __truncated__ "Irs2/Bdnf/Dusp4/Dusp6/Ppp2r1b/Egr2/Sgk1/Nab2/Mapk11/Rps6ka3/Rps6ka2/Mapk7/Ap2b1/Srf/Crkl/Mapk1/Creb1/Shc2/Mapk3"| __truncated__ "Irs2/Dusp4/Dusp6/Ppp2r1b/Egr2/Sgk1/Nab2/Mapk11/Rps6ka3/Rps6ka2/Mapk7/Ap2b1/Srf/Crkl/Mapk1/Creb1/Shc2/Mapk3/Rps6"| __truncated__ "Homer1/Rtn3/Hspa8/Camkk1/Kcnf1/Kcnj3/Maoa/Cacng2/Camk2g/Slitrk1/Abcc8/Slc38a2/Tspoap1/Grik5/Ppfia4/Kcnd1/Rps6ka"| __truncated__ ...
+ $ Count         : int  22 46 40 152 178 16 186 46 17 20 ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting FT ORA Reactome genes "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Reactome"
+[1] "up "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3143] "13175" "52850" "381677" "12575" "13371" "231605" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...20 enriched terms found
+'data.frame':	20 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-5368287" "R-MMU-9937383" "R-MMU-5419276" "R-MMU-5389840" ...
+ $ Description   : chr  "Mitochondrial translation" "Mitochondrial ribosome-associated quality control" "Mitochondrial translation termination" "Mitochondrial translation elongation" ...
+ $ GeneRatio     : chr  "36/1570" "33/1570" "33/1570" "32/1570" ...
+ $ BgRatio       : chr  "90/8736" "85/8736" "86/8736" "83/8736" ...
+ $ RichFactor    : num  0.4 0.388 0.384 0.386 0.265 ...
+ $ FoldEnrichment: num  2.23 2.16 2.14 2.15 1.47 ...
+ $ zScore        : num  5.47 5.03 4.95 4.91 4.56 ...
+ $ pvalue        : num  7.16e-07 4.49e-06 6.04e-06 7.41e-06 8.76e-06 ...
+ $ p.adjust      : num  0.000807 0.001482 0.001482 0.001482 0.001482 ...
+ $ qvalue        : num  0.000753 0.001382 0.001382 0.001382 0.001382 ...
+ $ geneID        : chr  "Mrpl35/Mrpl51/Mtrf1l/Mrps22/Mrpl47/Mrps17/Mrps14/Mrps7/Mrps35/Mrpl4/Mrpl36/Mrps2/Mrpl46/Mrpl21/Mief1/Mrpl32/Mrp"| __truncated__ "Mrpl35/Mrpl51/Mrps22/Mrpl47/Mrps17/Mrps14/Mrps7/Mrps35/Mrpl4/Mrpl36/Mrps2/Mrpl46/Mrpl21/Mief1/Mrpl32/Mrpl48/Mrp"| __truncated__ "Mrpl35/Mrpl51/Mtrf1l/Mrps22/Mrpl47/Mrps17/Mrps14/Mrps7/Mrps35/Mrpl4/Mrpl36/Mrps2/Mrpl46/Mrpl21/Mrpl32/Mrpl48/Mr"| __truncated__ "Mrpl35/Mrpl51/Mrps22/Mrpl47/Mrps17/Mrps14/Mrps7/Mrps35/Mrpl4/Mrpl36/Mrps2/Mrpl46/Mrpl21/Mrpl32/Mrpl48/Mrps6/Mrp"| __truncated__ ...
+ $ Count         : int  36 33 33 32 107 31 59 79 15 60 ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting FT ORA Reactome up "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Reactome"
+[1] "down "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3508] "329502" "20168" "76295" "72205" "320910" "216825" "12696" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...3 enriched terms found
+'data.frame':	3 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-112316" "R-MMU-71387" "R-MMU-112315"
+ $ Description   : chr  "Neuronal System" "Metabolism of carbohydrates and carbohydrate derivatives" "Transmission across Chemical Synapses"
+ $ GeneRatio     : chr  "93/1618" "78/1618" "60/1618"
+ $ BgRatio       : chr  "317/8736" "263/8736" "198/8736"
+ $ RichFactor    : num  0.293 0.297 0.303
+ $ FoldEnrichment: num  1.58 1.6 1.64
+ $ zScore        : num  5.05 4.72 4.32
+ $ pvalue        : num  1.25e-06 5.81e-06 3.41e-05
+ $ p.adjust      : num  0.00139 0.00322 0.0126
+ $ qvalue        : num  0.00135 0.00313 0.01225
+ $ geneID        : chr  "Rtn3/Kcnj3/Maoa/Camk2g/Slitrk1/Abcc8/Tspoap1/Grik5/Ppfia4/Kcnd1/Gria4/Gabra4/Ptprd/Lin7b/Cask/Camk2b/Gabrg2/Gri"| __truncated__ "Naglu/Pkm/Galns/Arsb/Sdc3/Gns/Eno3/Chpf2/Fut2/Man2b2/Pfkm/Cspg5/Pxylp1/Man2c1/Man2b1/Chst15/Cryl1/Papss1/Glb1l/"| __truncated__ "Kcnj3/Maoa/Camk2g/Tspoap1/Grik5/Ppfia4/Gria4/Gabra4/Lin7b/Cask/Camk2b/Gabrg2/Grin3a/Gng2/Ppfia3/Chrnb2/Cacna1b/"| __truncated__
+ $ Count         : int  93 78 60
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "GSEA analyses for Reactome"
+#
+# Gene Set Enrichment Analysis
+#
+#...@organism 	 mouse 
+#...@setType 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@geneList 	 Named num [1:14908] 4.05 3.8 2.92 2.9 2.88 ...
+ - attr(*, "names")= chr [1:14908] "13654" "57435" "22139" "11838" ...
+#...nPerm 	 
+#...pvalues adjusted by 'BH' with cutoff <0.2 
+#...68 enriched terms found
+'data.frame':	68 obs. of  11 variables:
+ $ ID             : chr  "R-MMU-450408" "R-MMU-8948216" "R-MMU-9018519" "R-MMU-1280215" ...
+ $ Description    : chr  "AUF1 (hnRNP D0) binds and destabilizes mRNA" "Collagen chain trimerization" "Estrogen-dependent gene expression" "Cytokine Signaling in Immune system" ...
+ $ setSize        : int  42 32 51 360 471 27 17 13 62 65 ...
+ $ enrichmentScore: num  0.652 -0.653 0.597 0.368 0.357 ...
+ $ NES            : num  1.98 -1.96 1.9 1.55 1.54 ...
+ $ pvalue         : num  2.13e-04 1.31e-04 1.93e-04 2.16e-04 4.72e-05 ...
+ $ p.adjust       : num  0.0467 0.0467 0.0467 0.0467 0.0467 ...
+ $ qvalue         : num  0.0444 0.0444 0.0444 0.0444 0.0444 ...
+ $ rank           : num  1062 2304 2816 2606 2401 ...
+ $ leading_edge   : chr  "tags=12%, list=7%, signal=11%" "tags=59%, list=15%, signal=50%" "tags=35%, list=19%, signal=29%" "tags=22%, list=17%, signal=19%" ...
+ $ core_enrichment: chr  "15507/15511/193740/15481/22186" "12814/12823/12834/213945/12837/12818/12841/12833/71355/12824/12815/12832/107581/12831/237759/140709/69700/12839/245026" "319179/97114/97122/319158/12705/268527/245841/15519/66491/68024/17749/13982/14228/21887/56351/12455/20021/15516" "14281/85030/319520/19116/27279/15511/67603/14229/12703/97114/384783/26410/19698/16159/107527/53859/22027/193740"| __truncated__ ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+'select()' returned 1:many mapping between keys and columns
+[1] "Running enrichment for CT"
+[1] "ORA analyses for Reactome"
+[1] "genes "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:7242] "13175" "52850" "231605" "381677" "329502" "12575" "13371" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...8 enriched terms found
+'data.frame':	8 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-112316" "R-MMU-198725" "R-MMU-9675108" "R-MMU-422475" ...
+ $ Description   : chr  "Neuronal System" "Nuclear Events (kinase and transcription factor activation)" "Nervous system development" "Axon guidance" ...
+ $ GeneRatio     : chr  "164/3477" "22/3477" "126/3477" "125/3477" ...
+ $ BgRatio       : chr  "317/8736" "27/8736" "245/8736" "244/8736" ...
+ $ RichFactor    : num  0.517 0.815 0.514 0.512 0.629 ...
+ $ FoldEnrichment: num  1.3 2.05 1.29 1.29 1.58 ...
+ $ zScore        : num  4.42 4.43 3.77 3.7 3.73 ...
+ $ pvalue        : num  7.89e-06 1.13e-05 1.23e-04 1.61e-04 1.90e-04 ...
+ $ p.adjust      : num  0.00664 0.00664 0.03315 0.03315 0.03315 ...
+ $ qvalue        : num  0.0063 0.0063 0.0315 0.0315 0.0315 ...
+ $ geneID        : chr  "Homer1/Rtn3/Maoa/Kcnj3/Slitrk1/Hspa8/Gabra4/Dlgap4/Kcnf1/Camk2g/Camkk1/Cask/Cacng2/Gria4/Kcnn2/Slc1a1/Gabrg2/Kc"| __truncated__ "Dusp4/Mapk11/Egr2/Dusp6/Rps6ka2/Ppp2r1b/Srf/Rps6ka5/Sgk1/Mapk7/Nab2/Chd4/Rps6ka3/Creb1/Mapk1/Mapk3/Ppp2cb/Ppp2r"| __truncated__ "Irs2/Epha10/Rock2/Ezr/Arhgef7/Arpc5/Ptk2/Epha8/Grb10/Slit2/Actg1/Unc5a/Vldlr/Slit3/Hsp90ab1/Ephb6/Ap2b1/Rps6ka5"| __truncated__ "Irs2/Epha10/Rock2/Ezr/Arhgef7/Arpc5/Ptk2/Epha8/Grb10/Slit2/Actg1/Unc5a/Vldlr/Slit3/Hsp90ab1/Ephb6/Ap2b1/Rps6ka5"| __truncated__ ...
+ $ Count         : int  164 22 126 125 39 186 15 45
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting CT ORA Reactome genes "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Reactome"
+[1] "up "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3414] "13175" "52850" "231605" "381677" "12575" "13371" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...28 enriched terms found
+'data.frame':	28 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-72203" "R-MMU-72163" "R-MMU-72172" "R-MMU-674695" ...
+ $ Description   : chr  "Processing of Capped Intron-Containing Pre-mRNA" "mRNA Splicing - Major Pathway" "mRNA Splicing" "RNA Polymerase II Pre-transcription Events" ...
+ $ GeneRatio     : chr  "90/1697" "66/1697" "67/1697" "33/1697" ...
+ $ BgRatio       : chr  "279/8736" "192/8736" "198/8736" "76/8736" ...
+ $ RichFactor    : num  0.323 0.344 0.338 0.434 0.365 ...
+ $ FoldEnrichment: num  1.66 1.77 1.74 2.24 1.88 ...
+ $ zScore        : num  5.51 5.29 5.19 5.31 4.66 ...
+ $ pvalue        : num  1.61e-07 5.95e-07 9.37e-07 1.38e-06 1.24e-05 ...
+ $ p.adjust      : num  0.000182 0.000338 0.000354 0.000392 0.002202 ...
+ $ qvalue        : num  0.000173 0.00032 0.000336 0.000371 0.002087 ...
+ $ geneID        : chr  "Papola/Hspa8/Srsf10/Txnl4a/Prpf18/Ranbp2/Rbm10/Srsf7/Mettl3/Hnrnph1/Acin1/Dhx16/Prpf3/Dhx15/Hnrnpa2b1/Hnrnpc/Dd"| __truncated__ "Hspa8/Srsf10/Txnl4a/Prpf18/Rbm10/Srsf7/Hnrnph1/Acin1/Dhx16/Prpf3/Dhx15/Hnrnpa2b1/Hnrnpc/Ddx41/Ncbp1/Hnrnpf/Ppwd"| __truncated__ "Hspa8/Srsf10/Txnl4a/Prpf18/Rbm10/Srsf7/Hnrnph1/Acin1/Dhx16/Prpf3/Dhx15/Hnrnpa2b1/Hnrnpc/Ddx41/Ncbp1/Hnrnpf/Ppwd"| __truncated__ "Taf12/Taf9/Taf3/Mllt1/Taf10/Gtf2e2/Taf7/Cdc73/Eaf1/Ncbp1/Gtf2b/Leo1/Taf4/Taf5/Aff4/Ctr9/Taf8/Polr2c/Polr2k/Nelf"| __truncated__ ...
+ $ Count         : int  90 66 67 33 42 113 35 48 32 32 ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting CT ORA Reactome up "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Reactome"
+[1] "down "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3828] "329502" "320910" "72205" "76295" "22704" "83671" "68795" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...3 enriched terms found
+'data.frame':	3 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-112316" "R-MMU-8948216" "R-MMU-71387"
+ $ Description   : chr  "Neuronal System" "Collagen chain trimerization" "Metabolism of carbohydrates and carbohydrate derivatives"
+ $ GeneRatio     : chr  "105/1780" "17/1780" "79/1780"
+ $ BgRatio       : chr  "317/8736" "33/8736" "263/8736"
+ $ RichFactor    : num  0.331 0.515 0.3
+ $ FoldEnrichment: num  1.63 2.53 1.47
+ $ zScore        : num  5.74 4.45 3.95
+ $ pvalue        : num  4.23e-08 6.78e-05 1.04e-04
+ $ p.adjust      : num  4.78e-05 3.84e-02 3.93e-02
+ $ qvalue        : num  4.62e-05 3.71e-02 3.80e-02
+ $ geneID        : chr  "Rtn3/Maoa/Kcnj3/Slitrk1/Gabra4/Camk2g/Cask/Gria4/Gabrg2/Kcnj11/Abcc8/Ppfia4/Epb41l5/Grik5/Lin7b/Tspoap1/Ptprd/G"| __truncated__ "Col19a1/Col6a6/Col26a1/Col11a2/Col22a1/Col5a1/Col5a2/Col28a1/Col9a1/Col6a1/Col6a2/Col8a1/Col16a1/Col3a1/Col15a1"| __truncated__ "Naglu/Arsb/Pfkm/Chpf2/Pkm/Cspg5/Hexb/Galns/Sdc3/Man2b2/Cryl1/Akr1b1/Gns/Glb1/Pxylp1/Phka2/Man2b1/Gale/Rae1/Man2"| __truncated__
+ $ Count         : int  105 17 79
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "GSEA analyses for Reactome"
+#
+# Gene Set Enrichment Analysis
+#
+#...@organism 	 mouse 
+#...@setType 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@geneList 	 Named num [1:14908] 3.64 3 2.87 2.73 2.34 ...
+ - attr(*, "names")= chr [1:14908] "57435" "239766" "13654" "71840" ...
+#...nPerm 	 
+#...pvalues adjusted by 'BH' with cutoff <0.2 
+#...30 enriched terms found
+'data.frame':	30 obs. of  11 variables:
+ $ ID             : chr  "R-MMU-8948216" "R-MMU-450408" "R-MMU-8953897" "R-MMU-1474244" ...
+ $ Description    : chr  "Collagen chain trimerization" "AUF1 (hnRNP D0) binds and destabilizes mRNA" "Cellular responses to stimuli" "Extracellular matrix organization" ...
+ $ setSize        : int  32 42 471 199 55 360 51 36 13 411 ...
+ $ enrichmentScore: num  -0.699 0.698 0.36 -0.398 -0.556 ...
+ $ NES            : num  -2.13 2.12 1.56 -1.64 -1.87 ...
+ $ pvalue         : num  4.07e-06 3.62e-06 1.21e-05 7.51e-05 1.96e-04 ...
+ $ p.adjust       : num  0.0022 0.0022 0.00436 0.02028 0.03815 ...
+ $ qvalue         : num  0.00209 0.00209 0.00414 0.01925 0.03622 ...
+ $ rank           : num  2402 614 2502 2338 2338 ...
+ $ leading_edge   : chr  "tags=72%, list=16%, signal=60%" "tags=12%, list=4%, signal=11%" "tags=19%, list=17%, signal=16%" "tags=33%, list=16%, signal=28%" ...
+ $ core_enrichment: chr  "12814/12833/12818/12841/12819/12834/237759/12815/12821/12837/71355/12831/12817/12823/12832/12824/12825/140709/2"| __truncated__ "15507/15511/193740/22186/15481" "53417/14281/12575/15511/14229/319179/14828/97122/63873/71962/109270/216850/193740/319158/12608/15505/17750/8088"| __truncated__ "12833/81877/12818/22370/76293/12841/12830/234407/16416/12819/12834/12162/11465/13179/21923/26432/12333/17387/12"| __truncated__ ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting CT GSEA Reactome"
+[1] "Ridgeplot"
+Picking joint bandwidth of 0.12
+[1] "GSEA"
+NULL
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+'select()' returned 1:many mapping between keys and columns
+[1] "Running enrichment for FV"
+[1] "ORA analyses for Reactome"
+[1] "genes "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:7151] "13175" "52850" "381677" "13371" "329502" "12575" "231605" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...8 enriched terms found
+'data.frame':	8 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-198725" "R-MMU-187037" "R-MMU-166520" "R-MMU-112316" ...
+ $ Description   : chr  "Nuclear Events (kinase and transcription factor activation)" "Signaling by NTRK1 (TRKA)" "Signaling by NTRKs" "Neuronal System" ...
+ $ GeneRatio     : chr  "21/3386" "40/3386" "46/3386" "156/3386" ...
+ $ BgRatio       : chr  "27/8736" "63/8736" "75/8736" "317/8736" ...
+ $ RichFactor    : num  0.778 0.635 0.613 0.492 0.506 ...
+ $ FoldEnrichment: num  2.01 1.64 1.58 1.27 1.31 ...
+ $ zScore        : num  4.17 4.04 4.03 3.89 3.86 ...
+ $ pvalue        : num  4.14e-05 5.85e-05 5.93e-05 7.52e-05 8.81e-05 ...
+ $ p.adjust      : num  0.0205 0.0205 0.0205 0.0205 0.0205 ...
+ $ qvalue        : num  0.0192 0.0192 0.0192 0.0192 0.0192 ...
+ $ geneID        : chr  "Dusp4/Mapk11/Egr2/Rps6ka2/Rps6ka3/Dusp6/Ppp2r1b/Srf/Rps6ka5/Nab2/Chd4/Sgk1/Mapk7/Mapk3/Ppp2cb/Mapk1/Creb1/Dusp7"| __truncated__ "Irs2/Dusp4/Mapk11/Egr2/Rps6ka2/Rps6ka3/Dusp6/Ppp2r1b/Srf/Ap2b1/Rps6ka5/Nab2/Chd4/Sgk1/Crk/Mapk7/Shc3/Shc2/Mapk3"| __truncated__ "Bdnf/Irs2/Dusp4/Mapk11/Egr2/Rps6ka2/Rps6ka3/Dusp6/Ppp2r1b/Srf/Ap2b1/Rps6ka5/Nab2/Chd4/Furin/Sgk1/Crk/Mapk7/Shc3"| __truncated__ "Homer1/Rtn3/Kcnf1/Hspa8/Camk2g/Kcnj3/Dlgap4/Gabra4/Lrrtm3/Cacng2/Slitrk1/Maoa/Kcnb1/Abcc8/Rps6ka2/Tspoap1/Rps6k"| __truncated__ ...
+ $ Count         : int  21 40 46 156 124 123 191 38
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting FV ORA Reactome genes "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Reactome"
+[1] "up "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3362] "13175" "52850" "381677" "13371" "12575" "231605" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...36 enriched terms found
+'data.frame':	36 obs. of  12 variables:
+ $ ID            : chr  "R-MMU-72203" "R-MMU-9006934" "R-MMU-674695" "R-MMU-3371556" ...
+ $ Description   : chr  "Processing of Capped Intron-Containing Pre-mRNA" "Signaling by Receptor Tyrosine Kinases" "RNA Polymerase II Pre-transcription Events" "Cellular response to heat stress" ...
+ $ GeneRatio     : chr  "86/1654" "115/1654" "32/1654" "33/1654" ...
+ $ BgRatio       : chr  "279/8736" "404/8736" "76/8736" "80/8736" ...
+ $ RichFactor    : num  0.308 0.285 0.421 0.412 0.357 ...
+ $ FoldEnrichment: num  1.63 1.5 2.22 2.18 1.88 ...
+ $ zScore        : num  5.15 5.01 5.18 5.12 4.61 ...
+ $ pvalue        : num  8.49e-07 1.23e-06 2.51e-06 3.03e-06 1.61e-05 ...
+ $ p.adjust      : num  0.000695 0.000695 0.000853 0.000853 0.00342 ...
+ $ qvalue        : num  0.000635 0.000635 0.000779 0.000779 0.003124 ...
+ $ geneID        : chr  "Papola/Hspa8/Srsf10/Ranbp2/Srsf7/Txnl4a/Hnrnph1/Hnrnpf/Rbm10/Prpf18/Ncbp1/Hnrnpc/Ddx41/Mettl3/Nxf1/Dhx15/Dhx16/"| __truncated__ "Bdnf/Irs2/Dusp4/Spred1/Rock2/Ptpn1/Spred2/Jak2/Hspb1/Ptk2/Spry2/Arhgef7/Mapk11/Egr2/Baiap2/Pdgfb/Rps6ka2/Rps6ka"| __truncated__ "Taf12/Taf9/Taf10/Ncbp1/Mllt1/Taf5/Eaf1/Leo1/Taf3/Skic8/Gtf2e2/Polr2c/Polr2h/Taf4/Polr2k/Gtf2f2/Taf6/Taf7/Ctr9/T"| __truncated__ "Hspa5/Hsph1/Hspa8/Hspa1b/Ranbp2/Hsp90ab1/Dnajb1/Hspb8/Ptges3/St13/Fkbp4/Hsf1/Pom121/Hsp90aa1/Bag3/Hspa1a/Nup35/"| __truncated__ ...
+ $ Count         : int  86 115 32 33 41 15 26 60 61 46 ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting FV ORA Reactome up "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Reactome"
+[1] "down "
+#
+# over-representation test
+#
+#...@organism 	 mouse 
+#...@ontology 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3789] "329502" "72205" "12696" "76295" "223697" "68795" "665113" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...1 enriched terms found
+'data.frame':	1 obs. of  12 variables:
+ $ ID            : chr "R-MMU-112316"
+ $ Description   : chr "Neuronal System"
+ $ GeneRatio     : chr "95/1732"
+ $ BgRatio       : chr "317/8736"
+ $ RichFactor    : num 0.3
+ $ FoldEnrichment: num 1.51
+ $ zScore        : num 4.61
+ $ pvalue        : num 7.43e-06
+ $ p.adjust      : num 0.00838
+ $ qvalue        : num 0.00814
+ $ geneID        : chr "Rtn3/Camk2g/Kcnj3/Gabra4/Slitrk1/Maoa/Abcc8/Tspoap1/Gabrg2/Gria4/Slc17a7/Kcnj11/Epb41l5/Kcnd1/Cask/Ppfia4/Gng2/"| __truncated__
+ $ Count         : int 95
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "GSEA analyses for Reactome"
+#
+# Gene Set Enrichment Analysis
+#
+#...@organism 	 mouse 
+#...@setType 	 Reactome 
+#...@keytype 	 ENTREZID 
+#...@geneList 	 Named num [1:14908] 4.77 3.35 3.19 2.62 2.51 ...
+ - attr(*, "names")= chr [1:14908] "631584" "57435" "13654" "102075" ...
+#...nPerm 	 
+#...pvalues adjusted by 'BH' with cutoff <0.2 
+#...76 enriched terms found
+'data.frame':	76 obs. of  11 variables:
+ $ ID             : chr  "R-MMU-450408" "R-MMU-8953897" "R-MMU-8948216" "R-MMU-9018519" ...
+ $ Description    : chr  "AUF1 (hnRNP D0) binds and destabilizes mRNA" "Cellular responses to stimuli" "Collagen chain trimerization" "Estrogen-dependent gene expression" ...
+ $ setSize        : int  42 471 32 51 411 14 13 20 44 27 ...
+ $ enrichmentScore: num  0.707 0.369 -0.648 0.592 0.349 ...
+ $ NES            : num  2.2 1.61 -1.99 1.91 1.51 ...
+ $ pvalue         : num  8.96e-07 6.01e-06 2.06e-04 2.11e-04 2.03e-04 ...
+ $ p.adjust       : num  0.000968 0.003243 0.045571 0.045571 0.045571 ...
+ $ qvalue         : num  0.000902 0.003025 0.042507 0.042507 0.042507 ...
+ $ rank           : num  711 3245 3651 2582 3310 ...
+ $ leading_edge   : chr  "tags=12%, list=5%, signal=11%" "tags=25%, list=22%, signal=20%" "tags=81%, list=24%, signal=61%" "tags=35%, list=17%, signal=29%" ...
+ $ core_enrichment: chr  "15507/15511/193740/15481/22186" "12575/14281/53417/63873/319179/15511/14828/14229/319158/193740/80888/97122/216850/71962/109270/12306/11535/1550"| __truncated__ "12817/12819/12816/373864/12821/12832/237759/12839/12837/12814/12825/107581/12834/12823/12815/12833/140709/71355"| __truncated__ "97114/319179/319158/97122/12705/17749/15519/56351/21887/14228/68705/68024/319190/245841/268527/15516/12400/66491" ...
+#...Citation
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems. 2016, 12(2):477-479 
+
+[1] "plotting FV GSEA Reactome"
+[1] "Ridgeplot"
+Picking joint bandwidth of 0.123
+[1] "GSEA"
+NULL
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+Warning messages:
+1: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+2: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the ggupset package.
+  Please report the issue at <https://github.com/const-ae/ggupset/issues>. 
+3: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+4: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+5: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+6: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+7: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] optparse_1.8.2                           
+ [2] ReactomePA_1.54.0                        
+ [3] lubridate_1.9.5                          
+ [4] forcats_1.0.1                            
+ [5] stringr_1.6.0                            
+ [6] dplyr_1.2.1                              
+ [7] purrr_1.2.2                              
+ [8] readr_2.2.0                              
+ [9] tidyr_1.3.2                              
+[10] tibble_3.3.1                             
+[11] tidyverse_2.0.0                          
+[12] org.Mm.eg.db_3.22.0                      
+[13] TxDb.Mmusculus.UCSC.mm10.knownGene_3.10.0
+[14] GenomicFeatures_1.62.0                   
+[15] AnnotationDbi_1.72.0                     
+[16] Biobase_2.70.0                           
+[17] GenomicRanges_1.62.1                     
+[18] Seqinfo_1.0.0                            
+[19] IRanges_2.44.0                           
+[20] S4Vectors_0.48.1                         
+[21] BiocGenerics_0.56.0                      
+[22] generics_0.1.4                           
+[23] enrichplot_1.30.5                        
+[24] ggplot2_4.0.3                            
+[25] clusterProfiler_4.18.4                   
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3          jsonlite_2.0.0             
+  [3] tidydr_0.0.6                magrittr_2.0.5             
+  [5] ggtangle_0.1.2              farver_2.1.2               
+  [7] fs_2.1.0                    BiocIO_1.20.0              
+  [9] vctrs_0.7.3                 memoise_2.0.1              
+ [11] Rsamtools_2.26.0            RCurl_1.98-1.20            
+ [13] ggtree_4.0.5                htmltools_0.5.9            
+ [15] S4Arrays_1.10.1             curl_7.1.0                 
+ [17] SparseArray_1.10.10         gridGraphics_0.5-1         
+ [19] htmlwidgets_1.6.4           plyr_1.8.9                 
+ [21] cachem_1.1.0                GenomicAlignments_1.46.0   
+ [23] igraph_2.3.3                lifecycle_1.0.5            
+ [25] pkgconfig_2.0.3             Matrix_1.7-4               
+ [27] R6_2.6.1                    fastmap_1.2.0              
+ [29] gson_0.2.1                  MatrixGenerics_1.22.0      
+ [31] digest_0.6.39               aplot_0.3.1                
+ [33] ggnewscale_0.5.2            patchwork_1.3.2            
+ [35] RSQLite_3.53.3              labeling_0.4.3             
+ [37] timechange_0.4.0            httr_1.4.8                 
+ [39] polyclip_1.10-7             abind_1.4-8                
+ [41] compiler_4.5.2              bit64_4.8.4                
+ [43] fontquiver_0.2.1            withr_3.0.3                
+ [45] graphite_1.56.0             S7_0.2.2                   
+ [47] BiocParallel_1.44.0         viridis_0.6.5              
+ [49] DBI_1.3.0                   ggupset_0.4.1              
+ [51] ggforce_0.5.0               R.utils_2.13.0             
+ [53] MASS_7.3-65                 rappdirs_0.3.4             
+ [55] DelayedArray_0.36.1         rjson_0.2.23               
+ [57] tools_4.5.2                 otel_0.2.0                 
+ [59] ape_5.8-1                   scatterpie_0.2.6           
+ [61] R.oo_1.27.1                 glue_1.8.1                 
+ [63] restfulr_0.0.17             nlme_3.1-168               
+ [65] GOSemSim_2.36.0             grid_4.5.2                 
+ [67] cluster_2.1.8.1             reshape2_1.4.5             
+ [69] fgsea_1.36.2                gtable_0.3.6               
+ [71] tzdb_0.5.0                  R.methodsS3_1.8.2          
+ [73] hms_1.1.4                   data.table_1.18.6.1        
+ [75] tidygraph_1.3.1             XVector_0.50.0             
+ [77] ggrepel_0.9.8               pillar_1.11.1              
+ [79] yulab.utils_0.2.4           splines_4.5.2              
+ [81] tweenr_2.0.3                treeio_1.34.0              
+ [83] lattice_0.22-7              rtracklayer_1.70.1         
+ [85] bit_4.6.0                   tidyselect_1.2.1           
+ [87] fontLiberation_0.1.0        GO.db_3.22.0               
+ [89] Biostrings_2.78.0           reactome.db_1.95.0         
+ [91] gridExtra_2.3.1             fontBitstreamVera_0.1.1    
+ [93] SummarizedExperiment_1.40.0 graphlayouts_1.2.5         
+ [95] matrixStats_1.5.0           stringi_1.8.7              
+ [97] lazyeval_0.2.3              ggfun_0.2.1                
+ [99] yaml_2.3.12                 codetools_0.2-20           
+[101] cigarillo_1.0.0             ggraph_2.2.2               
+[103] gdtools_0.5.1               qvalue_2.42.0              
+[105] graph_1.88.1                ggplotify_0.1.3            
+[107] cli_3.6.6                   systemfonts_1.3.2          
+[109] Rcpp_1.1.1-1.1              png_0.1-9                  
+[111] XML_3.99-0.24               parallel_4.5.2             
+[113] blob_1.3.0                  DOSE_4.4.0                 
+[115] bitops_1.1-0                viridisLite_0.4.3          
+[117] tidytree_0.4.8              ggiraph_0.9.6              
+[119] ggridges_0.5.7              scales_1.4.0               
+[121] crayon_1.5.3                rlang_1.3.0                
+[123] cowplot_1.2.0               fastmatch_1.1-8            
+[125] KEGGREST_1.50.0            

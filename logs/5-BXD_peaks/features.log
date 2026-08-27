@@ -1,0 +1,5 @@
+Merging narrowpeaks and converting to bed
+Sorting features
+Reducing features
+Spliting features ito smaller (<250bp) fragments
+Logs saved in <logs/5-ATAC_peaks/features.log>

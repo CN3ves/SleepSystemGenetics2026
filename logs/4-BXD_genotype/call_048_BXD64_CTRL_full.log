@@ -1,0 +1,128 @@
+Start computation
+[[1]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[2]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[3]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[4]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[5]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[6]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[7]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[8]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[9]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[10]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[11]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[12]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[13]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[14]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[15]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[16]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[17]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[18]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[19]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[20]]
+ [1] "doParallel" "parallel"   "iterators"  "foreach"    "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+Computation ended
+Save table
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] parallel  stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] optparse_1.8.2    doParallel_1.0.17 iterators_1.0.14  foreach_1.5.2    
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.2   codetools_0.2-20

@@ -1,0 +1,5 @@
+Merging <results/5-ATAC_peaks/parents/DBA_CTRL_rand2.narrowPeak.gz results/5-ATAC_peaks/parents/DBA_SD_rand2.narrowPeak.gz results/5-ATAC_peaks/parents/C57Bl6_CTRL_rand2.narrowPeak.gz results/5-ATAC_peaks/parents/C57Bl6_SD_rand2.narrowPeak.gz> narrowpeaks and converting to <merged_features2.bed>
+Sorting features to <merged_features2.sorted.bed>
+Reducing features to <results/6-ATAC_features/parent/genomic_features2.bed>
+Spliting features into smaller (<250bp) fragments in <results/6-ATAC_features/parent/genomic_features2.gtf>
+Logs saved in <logs/6-ATAC_features/parent_2.log>

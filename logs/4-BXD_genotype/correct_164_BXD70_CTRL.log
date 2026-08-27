@@ -1,0 +1,11 @@
+Copying <results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_full.co.bam> files from <results/3-ATAC_bam/sort> to <results/4-ATAC_genotype/corrected_bams> 
+cp results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_full.co.bam results/4-ATAC_genotype/corrected_bams/coord/164_BXD70_CTRL_full.co.bam
+cp results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_full.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/164_BXD70_CTRL_full.co.bam.bai
+cp results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_sub1.co.bam results/4-ATAC_genotype/corrected_bams/coord/164_BXD70_CTRL_sub1.co.bam
+cp results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_sub1.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/164_BXD70_CTRL_sub1.co.bam.bai
+cp results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_sub2.co.bam results/4-ATAC_genotype/corrected_bams/coord/164_BXD70_CTRL_sub2.co.bam
+cp results/3-ATAC_bam/sort/coord/164_BXD70_CTRL_sub2.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/164_BXD70_CTRL_sub2.co.bam.bai
+cp results/3-ATAC_bam/sort/name/164_BXD70_CTRL_full.co.bam results/4-ATAC_genotype/corrected_bams/name/164_BXD70_CTRL_full.nm.bam
+cp results/3-ATAC_bam/sort/name/164_BXD70_CTRL_sub1.co.bam results/4-ATAC_genotype/corrected_bams/name/164_BXD70_CTRL_sub1.nm.bam
+cp results/3-ATAC_bam/sort/name/164_BXD70_CTRL_sub2.co.bam results/4-ATAC_genotype/corrected_bams/name/164_BXD70_CTRL_sub2.nm.bam
+Logs saved in <logs/4-ATAC_genotype/correct_164_BXD70_CTRL.log>

@@ -1,0 +1,48 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 14:45:09
+  Workflow ID: 36afb0e5-5649-49cb-9746-c689fab0382f
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna005
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs count_features:sample=067_73b_SD --allowed-rules count_features --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.4wxr8x18 results/4-ATAC_genotype/corrected_bams/coord/067_73b_SD_full.co.bam results/6-ATAC_features/list/genomic_features.gtf results/6-ATAC_features/htseq/check --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env params code input mtime --conda-frontend conda --shared-fs-usage source-cache sources software-deployment storage-local-copies input-output persistence software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp22q6gm4h --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 14:45:09 2026]
+localrule count_features:
+    input: results/4-ATAC_genotype/corrected_bams/coord/067_73b_SD_full.co.bam, results/6-ATAC_features/list/genomic_features.gtf, results/6-ATAC_features/htseq/check
+    output: results/6-ATAC_features/counts/067_73b_SD.count
+    log: logs/6-ATAC_features/counts_067_73b_SD.log
+    jobid: 0
+    benchmark: benchmarks/6-ATAC_features/counts_067_73b_SD.txt
+    reason: Forced execution
+    wildcards: sample=067_73b_SD
+    resources: tmpdir=/tmp/62715497, mem_mb=1000, mem=1 GB, mem_mib=954, disk_mb=4719, disk=4.72 GB, disk_mib=4501, time=00:45:00
+Shell command: 
+        mkdir -p results/6-ATAC_features/counts
+
+        echo "Counting featured for <results/4-ATAC_genotype/corrected_bams/coord/067_73b_SD_full.co.bam>" >> logs/6-ATAC_features/counts_067_73b_SD.log
+        python3 -m HTSeq.scripts.count -r pos -s no -m union -t Peak -i Peak_ID -q --nonunique all -f bam results/4-ATAC_genotype/corrected_bams/coord/067_73b_SD_full.co.bam results/6-ATAC_features/list/genomic_features.gtf > results/6-ATAC_features/counts/067_73b_SD.count 2>> logs/6-ATAC_features/counts_067_73b_SD.log
+
+        echo "Logs saved in <logs/6-ATAC_features/counts_067_73b_SD.log>" >> logs/6-ATAC_features/counts_067_73b_SD.log
+        
+Write-protecting output file results/6-ATAC_features/counts/067_73b_SD.count.
+[Sun Jul 26 14:58:00 2026]
+Finished jobid: 0 (Rule: count_features)
+1 of 1 steps (100%) done
+Storing output in storage.

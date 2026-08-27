@@ -1,0 +1,92 @@
+Loading packages
+Checking arguments
+Reading inputs
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+[1] "SAMPLES with high bottleneck"
+        coef             sample
+1  0.7968772  10048_FT_SD.RData
+5  0.7851790 10089_FV_NSD.RData
+8  0.7992706 10163_FV_NSD.RData
+10 0.7952440  10174_FV_SD.RData
+13 0.7954295  10288_CT_SD.RData
+14 0.7967341 10289_CT_NSD.RData
+23 0.7970332   9515_CT_SD.RData
+25 0.7897990   9517_CT_SD.RData
+null device 
+          1 
+null device 
+          1 
+[1] "PT score:"
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+-22.10000  -1.80000  -0.20000  -0.05375   1.30000  21.00000 
+null device 
+          1 
+[1] "NFR score:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
+-23.4000  -1.1000   0.3000  -0.4436   1.5000  22.1000       32 
+Warning message:
+Removed 32 rows containing missing values or values outside the scale range (`geom_point()`). 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+ [1] grid      parallel  stats4    stats     graphics  grDevices utils    
+ [8] datasets  methods   base     
+
+other attached packages:
+ [1] optparse_1.8.2        ComplexHeatmap_2.26.1 dplyr_1.2.1          
+ [4] doParallel_1.0.17     iterators_1.0.14      foreach_1.5.2        
+ [7] reshape2_1.4.5        ggplot2_4.0.3         Rsamtools_2.26.0     
+[10] Biostrings_2.78.0     XVector_0.50.0        GenomicRanges_1.62.1 
+[13] IRanges_2.44.0        S4Vectors_0.48.1      Seqinfo_1.0.0        
+[16] BiocGenerics_0.56.0   generics_0.1.4        tidyr_1.3.2          
+
+loaded via a namespace (and not attached):
+ [1] bitops_1.1-0        shape_1.4.6.1       stringi_1.8.7      
+ [4] digest_0.6.39       magrittr_2.0.5      RColorBrewer_1.1-3 
+ [7] circlize_0.4.18     plyr_1.8.9          GlobalOptions_0.1.4
+[10] purrr_1.2.2         scales_1.4.0        codetools_0.2-20   
+[13] cli_3.6.6           rlang_1.3.0         crayon_1.5.3       
+[16] withr_3.0.3         tools_4.5.2         BiocParallel_1.44.0
+[19] colorspace_2.1-3    GetoptLong_1.1.1    vctrs_0.7.3        
+[22] R6_2.6.1            png_0.1-9           matrixStats_1.5.0  
+[25] lifecycle_1.0.5     stringr_1.6.0       MASS_7.3-65        
+[28] clue_0.3-68         cluster_2.1.8.1     pkgconfig_2.0.3    
+[31] pillar_1.11.1       gtable_0.3.6        glue_1.8.1         
+[34] Rcpp_1.1.1-1.1      tibble_3.3.1        tidyselect_1.2.1   
+[37] farver_2.1.2        rjson_0.2.23        labeling_0.4.3     
+[40] compiler_4.5.2      S7_0.2.2           

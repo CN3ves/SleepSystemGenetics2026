@@ -1,0 +1,529 @@
+Exonic reads: 58.12%
+66.18%
+66.48%
+Qualimap counts per group
+Java memory size is set to 1200M
+Launching application...
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+QualiMap v.2.3
+Built on 2023-05-19 16:57
+
+Selected tool: counts
+Tue Aug 25 19:28:05 CEST 2026		WARNING	Output folder already exists, the results will be saved there
+
+WARNING: The sample name "9280_CT_SD" will be replaced with name "sample_9280_CT_SD" due to NOISeq issues
+WARNING: The sample name "9268_CT_NSD" will be replaced with name "sample_9268_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9279_CT_NSD" will be replaced with name "sample_9279_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9517_CT_SD" will be replaced with name "sample_9517_CT_SD" due to NOISeq issues
+WARNING: The sample name "9515_CT_SD" will be replaced with name "sample_9515_CT_SD" due to NOISeq issues
+WARNING: The sample name "9516_CT_NSD" will be replaced with name "sample_9516_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9518_CT_NSD" will be replaced with name "sample_9518_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9984_CT_SD" will be replaced with name "sample_9984_CT_SD" due to NOISeq issues
+WARNING: The sample name "10081_CT_NSD" will be replaced with name "sample_10081_CT_NSD" due to NOISeq issues
+WARNING: The sample name "10290_CT_NSD" will be replaced with name "sample_10290_CT_NSD" due to NOISeq issues
+WARNING: The sample name "10289_CT_NSD" will be replaced with name "sample_10289_CT_NSD" due to NOISeq issues
+WARNING: The sample name "10288_CT_SD" will be replaced with name "sample_10288_CT_SD" due to NOISeq issues
+Rscript /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts/countsQC.r --homedir /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts --input /tmp/qualimap1787678885467//input.txt -k 5 --info /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt --compare -o /tmp/qualimap1787678885467/
+Reading input data using input description from /tmp/qualimap1787678885467//input.txt 
+Loaded counts for  48526  features
+Num samples: 12 
+Conditions:
+   Conditions
+1          SD
+2         NSD
+3         NSD
+4          SD
+5          SD
+6         NSD
+7         NSD
+8          SD
+9         NSD
+10        NSD
+11        NSD
+12         SD
+
+Compare conditions  TRUE 
+Loading annotations from  /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt 
+Loaded annoations for  37315 genes
+ chr [1:48526] "ENSMUSG00000000001.4" "ENSMUSG00000000003.15" ...
+ chr [1:37315] "ENSMUSG00000028180" "ENSMUSG00000028182" ...
+Annotation based analysis is deactivated
+'data.frame':	48526 obs. of  12 variables:
+ $ sample_9280_CT_SD  : int  858 0 51 12 28 10 1245 1158 1466 1021 ...
+ $ sample_9268_CT_NSD : int  684 0 38 8 56 6 1112 1117 1408 1048 ...
+ $ sample_9279_CT_NSD : int  663 0 25 10 39 11 1145 1208 1489 1075 ...
+ $ sample_9517_CT_SD  : int  845 0 33 1 50 6 1208 1085 1484 989 ...
+ $ sample_9515_CT_SD  : int  791 0 35 6 38 9 1087 1025 1338 983 ...
+ $ sample_9516_CT_NSD : int  786 0 44 2 47 7 1220 1086 1572 1113 ...
+ $ sample_9518_CT_NSD : int  702 0 42 4 47 5 1244 1074 1296 1111 ...
+ $ sample_9984_CT_SD  : int  750 0 39 0 29 8 1209 968 1244 977 ...
+ $ sample_10081_CT_NSD: int  800 0 32 7 51 8 1386 1206 1570 1109 ...
+ $ sample_10290_CT_NSD: int  718 0 27 2 42 9 1191 1196 1433 884 ...
+ $ sample_10289_CT_NSD: int  666 0 35 6 47 10 1132 1073 1494 981 ...
+ $ sample_10288_CT_SD : int  733 0 42 4 32 4 1031 893 1208 881 ...
+ - attr(*, "factors")= Factor w/ 2 levels "NSD","SD": 2 1 1 2 2 1 1 2 1 1 ...
+[1] 48526    12
+Init NOISeq data...
+
+Draw global plots...
+Compute counts density...
+Compute scatterplots..
+Compute saturation..
+Compute counts per biotype..
+[1] "Warning: 16645 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Count distributions are to be computed for:"
+ [1] "sample_9280_CT_SD"   "sample_9268_CT_NSD"  "sample_9279_CT_NSD" 
+ [4] "sample_9517_CT_SD"   "sample_9515_CT_SD"   "sample_9516_CT_NSD" 
+ [7] "sample_9518_CT_NSD"  "sample_9984_CT_SD"   "sample_10081_CT_NSD"
+[10] "sample_10290_CT_NSD" "sample_10289_CT_NSD" "sample_10288_CT_SD" 
+Draw per sample plots...
+
+Processing sample sample_9280_CT_SD 
+Processing sample sample_9268_CT_NSD 
+Processing sample sample_9279_CT_NSD 
+Processing sample sample_9517_CT_SD 
+Processing sample sample_9515_CT_SD 
+Processing sample sample_9516_CT_NSD 
+Processing sample sample_9518_CT_NSD 
+Processing sample sample_9984_CT_SD 
+Processing sample sample_10081_CT_NSD 
+Processing sample sample_10290_CT_NSD 
+Processing sample sample_10289_CT_NSD 
+Processing sample sample_10288_CT_SD 
+
+Performing comparison for conditions
+Compute counts per biotype for conditions..
+[1] "Warning: 16645 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Counts per million distributions are to be computed for:"
+[1] "NSD" "SD" 
+CountsQC is successfully finished!
+Warning message:
+In all(lapply(counts, is.numeric)) :
+  coercing argument of type 'list' to logical
+Warning message:
+The gene names from counts do not correspond to the names from annotation file. 
+There were 50 or more warnings (use warnings() to see the first 50)
+
+Preparing result report
+Writing HTML report...
+HTML report created successfully
+
+Finished
+Java memory size is set to 1200M
+Launching application...
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+QualiMap v.2.3
+Built on 2023-05-19 16:57
+
+Selected tool: counts
+Tue Aug 25 19:28:32 CEST 2026		WARNING	Output folder already exists, the results will be saved there
+
+WARNING: The sample name "9347_FV_SD" will be replaced with name "sample_9347_FV_SD" due to NOISeq issues
+WARNING: The sample name "9243_FV_NSD" will be replaced with name "sample_9243_FV_NSD" due to NOISeq issues
+WARNING: The sample name "9661_FV_NSD" will be replaced with name "sample_9661_FV_NSD" due to NOISeq issues
+WARNING: The sample name "9673_FV_SD" will be replaced with name "sample_9673_FV_SD" due to NOISeq issues
+WARNING: The sample name "10089_FV_NSD" will be replaced with name "sample_10089_FV_NSD" due to NOISeq issues
+WARNING: The sample name "10092_FV_NSD" will be replaced with name "sample_10092_FV_NSD" due to NOISeq issues
+WARNING: The sample name "10050_FV_SD" will be replaced with name "sample_10050_FV_SD" due to NOISeq issues
+WARNING: The sample name "10174_FV_SD" will be replaced with name "sample_10174_FV_SD" due to NOISeq issues
+WARNING: The sample name "10163_FV_NSD" will be replaced with name "sample_10163_FV_NSD" due to NOISeq issues
+WARNING: The sample name "10173_FV_SD" will be replaced with name "sample_10173_FV_SD" due to NOISeq issues
+Rscript /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts/countsQC.r --homedir /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts --input /tmp/qualimap1787678912455//input.txt -k 5 --info /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt --compare -o /tmp/qualimap1787678912455/
+Reading input data using input description from /tmp/qualimap1787678912455//input.txt 
+Loaded counts for  48526  features
+Num samples: 10 
+Conditions:
+   Conditions
+1          SD
+2         NSD
+3         NSD
+4          SD
+5         NSD
+6         NSD
+7          SD
+8          SD
+9         NSD
+10         SD
+
+Compare conditions  TRUE 
+Loading annotations from  /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt 
+Loaded annoations for  37315 genes
+ chr [1:48526] "ENSMUSG00000000001.4" "ENSMUSG00000000003.15" ...
+ chr [1:37315] "ENSMUSG00000028180" "ENSMUSG00000028182" ...
+Annotation based analysis is deactivated
+'data.frame':	48526 obs. of  10 variables:
+ $ sample_9347_FV_SD  : int  764 0 36 1 39 15 1166 981 1303 1029 ...
+ $ sample_9243_FV_NSD : int  701 0 30 2 32 9 1240 1034 1505 1022 ...
+ $ sample_9661_FV_NSD : int  760 0 38 2 43 12 1276 1272 1634 1060 ...
+ $ sample_9673_FV_SD  : int  817 0 26 2 41 8 1202 1075 1304 1000 ...
+ $ sample_10089_FV_NSD: int  680 0 43 1 37 2 1233 1092 1579 1034 ...
+ $ sample_10092_FV_NSD: int  784 0 31 4 60 14 1299 1185 1481 1084 ...
+ $ sample_10050_FV_SD : int  864 0 38 4 50 14 1344 1064 1402 1019 ...
+ $ sample_10174_FV_SD : int  748 0 33 0 33 7 1220 1067 1381 967 ...
+ $ sample_10163_FV_NSD: int  770 0 29 3 53 6 1240 1240 1352 1013 ...
+ $ sample_10173_FV_SD : int  788 0 39 0 39 15 1093 1055 1321 930 ...
+ - attr(*, "factors")= Factor w/ 2 levels "NSD","SD": 2 1 1 2 1 1 2 2 1 2
+[1] 48526    10
+Init NOISeq data...
+
+Draw global plots...
+Compute counts density...
+Compute scatterplots..
+Compute saturation..
+Compute counts per biotype..
+[1] "Warning: 17116 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Count distributions are to be computed for:"
+ [1] "sample_9347_FV_SD"   "sample_9243_FV_NSD"  "sample_9661_FV_NSD" 
+ [4] "sample_9673_FV_SD"   "sample_10089_FV_NSD" "sample_10092_FV_NSD"
+ [7] "sample_10050_FV_SD"  "sample_10174_FV_SD"  "sample_10163_FV_NSD"
+[10] "sample_10173_FV_SD" 
+Draw per sample plots...
+
+Processing sample sample_9347_FV_SD 
+Processing sample sample_9243_FV_NSD 
+Processing sample sample_9661_FV_NSD 
+Processing sample sample_9673_FV_SD 
+Processing sample sample_10089_FV_NSD 
+Processing sample sample_10092_FV_NSD 
+Processing sample sample_10050_FV_SD 
+Processing sample sample_10174_FV_SD 
+Processing sample sample_10163_FV_NSD 
+Processing sample sample_10173_FV_SD 
+
+Performing comparison for conditions
+Compute counts per biotype for conditions..
+[1] "Warning: 17116 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Counts per million distributions are to be computed for:"
+[1] "NSD" "SD" 
+CountsQC is successfully finished!
+Warning message:
+In all(lapply(counts, is.numeric)) :
+  coercing argument of type 'list' to logical
+Warning message:
+The gene names from counts do not correspond to the names from annotation file. 
+There were 45 warnings (use warnings() to see them)
+
+Preparing result report
+Writing HTML report...
+HTML report created successfully
+
+Finished
+Java memory size is set to 1200M
+Launching application...
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+QualiMap v.2.3
+Built on 2023-05-19 16:57
+
+Selected tool: counts
+Tue Aug 25 19:28:55 CEST 2026		WARNING	Output folder already exists, the results will be saved there
+
+WARNING: The sample name "9348_FT_SD" will be replaced with name "sample_9348_FT_SD" due to NOISeq issues
+WARNING: The sample name "9244_FT_NSD" will be replaced with name "sample_9244_FT_NSD" due to NOISeq issues
+WARNING: The sample name "9844_FT_SD" will be replaced with name "sample_9844_FT_SD" due to NOISeq issues
+WARNING: The sample name "9726_FT_NSD" will be replaced with name "sample_9726_FT_NSD" due to NOISeq issues
+WARNING: The sample name "10049_FT_NSD" will be replaced with name "sample_10049_FT_NSD" due to NOISeq issues
+WARNING: The sample name "9993_FT_NSD" will be replaced with name "sample_9993_FT_NSD" due to NOISeq issues
+WARNING: The sample name "10048_FT_SD" will be replaced with name "sample_10048_FT_SD" due to NOISeq issues
+WARNING: The sample name "10175_FT_SD" will be replaced with name "sample_10175_FT_SD" due to NOISeq issues
+WARNING: The sample name "10160_FT_NSD" will be replaced with name "sample_10160_FT_NSD" due to NOISeq issues
+WARNING: The sample name "10205_FT_SD" will be replaced with name "sample_10205_FT_SD" due to NOISeq issues
+Rscript /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts/countsQC.r --homedir /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts --input /tmp/qualimap1787678935335//input.txt -k 5 --info /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt --compare -o /tmp/qualimap1787678935335/
+Reading input data using input description from /tmp/qualimap1787678935335//input.txt 
+Loaded counts for  48526  features
+Num samples: 10 
+Conditions:
+   Conditions
+1          SD
+2         NSD
+3          SD
+4         NSD
+5         NSD
+6         NSD
+7          SD
+8          SD
+9         NSD
+10         SD
+
+Compare conditions  TRUE 
+Loading annotations from  /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt 
+Loaded annoations for  37315 genes
+ chr [1:48526] "ENSMUSG00000000001.4" "ENSMUSG00000000003.15" ...
+ chr [1:37315] "ENSMUSG00000028180" "ENSMUSG00000028182" ...
+Annotation based analysis is deactivated
+'data.frame':	48526 obs. of  10 variables:
+ $ sample_9348_FT_SD  : int  831 0 46 0 37 11 1075 1191 1392 1076 ...
+ $ sample_9244_FT_NSD : int  757 0 37 7 50 10 1081 1242 1588 1166 ...
+ $ sample_9844_FT_SD  : int  866 0 48 2 37 13 1211 1279 1631 1034 ...
+ $ sample_9726_FT_NSD : int  719 0 33 3 39 12 1198 1315 1646 1111 ...
+ $ sample_10049_FT_NSD: int  776 0 42 4 42 10 1289 1255 1747 1192 ...
+ $ sample_9993_FT_NSD : int  743 0 40 3 35 9 1103 1230 1528 1011 ...
+ $ sample_10048_FT_SD : int  716 0 41 3 37 5 979 1052 1223 848 ...
+ $ sample_10175_FT_SD : int  772 0 40 2 31 4 1051 1101 1372 1000 ...
+ $ sample_10160_FT_NSD: int  506 0 26 1 24 3 832 891 1123 735 ...
+ $ sample_10205_FT_SD : int  745 0 41 5 30 7 1078 1049 1332 964 ...
+ - attr(*, "factors")= Factor w/ 2 levels "NSD","SD": 2 1 2 1 1 1 2 2 1 2
+[1] 48526    10
+Init NOISeq data...
+
+Draw global plots...
+Compute counts density...
+Compute scatterplots..
+Compute saturation..
+Compute counts per biotype..
+[1] "Warning: 16514 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Count distributions are to be computed for:"
+ [1] "sample_9348_FT_SD"   "sample_9244_FT_NSD"  "sample_9844_FT_SD"  
+ [4] "sample_9726_FT_NSD"  "sample_10049_FT_NSD" "sample_9993_FT_NSD" 
+ [7] "sample_10048_FT_SD"  "sample_10175_FT_SD"  "sample_10160_FT_NSD"
+[10] "sample_10205_FT_SD" 
+Draw per sample plots...
+
+Processing sample sample_9348_FT_SD 
+Processing sample sample_9244_FT_NSD 
+Processing sample sample_9844_FT_SD 
+Processing sample sample_9726_FT_NSD 
+Processing sample sample_10049_FT_NSD 
+Processing sample sample_9993_FT_NSD 
+Processing sample sample_10048_FT_SD 
+Processing sample sample_10175_FT_SD 
+Processing sample sample_10160_FT_NSD 
+Processing sample sample_10205_FT_SD 
+
+Performing comparison for conditions
+Compute counts per biotype for conditions..
+[1] "Warning: 16514 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Counts per million distributions are to be computed for:"
+[1] "NSD" "SD" 
+CountsQC is successfully finished!
+Warning message:
+In all(lapply(counts, is.numeric)) :
+  coercing argument of type 'list' to logical
+Warning message:
+The gene names from counts do not correspond to the names from annotation file. 
+There were 45 warnings (use warnings() to see them)
+
+Preparing result report
+Writing HTML report...
+HTML report created successfully
+
+Finished
+Qualimap counts
+Java memory size is set to 1200M
+Launching application...
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+QualiMap v.2.3
+Built on 2023-05-19 16:57
+
+Selected tool: counts
+WARNING: The sample name "9280_CT_SD" will be replaced with name "sample_9280_CT_SD" due to NOISeq issues
+WARNING: The sample name "9347_FV_SD" will be replaced with name "sample_9347_FV_SD" due to NOISeq issues
+WARNING: The sample name "9348_FT_SD" will be replaced with name "sample_9348_FT_SD" due to NOISeq issues
+WARNING: The sample name "9243_FV_NSD" will be replaced with name "sample_9243_FV_NSD" due to NOISeq issues
+WARNING: The sample name "9268_CT_NSD" will be replaced with name "sample_9268_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9279_CT_NSD" will be replaced with name "sample_9279_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9244_FT_NSD" will be replaced with name "sample_9244_FT_NSD" due to NOISeq issues
+WARNING: The sample name "9844_FT_SD" will be replaced with name "sample_9844_FT_SD" due to NOISeq issues
+WARNING: The sample name "9726_FT_NSD" will be replaced with name "sample_9726_FT_NSD" due to NOISeq issues
+WARNING: The sample name "9661_FV_NSD" will be replaced with name "sample_9661_FV_NSD" due to NOISeq issues
+WARNING: The sample name "9673_FV_SD" will be replaced with name "sample_9673_FV_SD" due to NOISeq issues
+WARNING: The sample name "9517_CT_SD" will be replaced with name "sample_9517_CT_SD" due to NOISeq issues
+WARNING: The sample name "9515_CT_SD" will be replaced with name "sample_9515_CT_SD" due to NOISeq issues
+WARNING: The sample name "9516_CT_NSD" will be replaced with name "sample_9516_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9518_CT_NSD" will be replaced with name "sample_9518_CT_NSD" due to NOISeq issues
+WARNING: The sample name "9984_CT_SD" will be replaced with name "sample_9984_CT_SD" due to NOISeq issues
+WARNING: The sample name "10081_CT_NSD" will be replaced with name "sample_10081_CT_NSD" due to NOISeq issues
+WARNING: The sample name "10049_FT_NSD" will be replaced with name "sample_10049_FT_NSD" due to NOISeq issues
+WARNING: The sample name "9993_FT_NSD" will be replaced with name "sample_9993_FT_NSD" due to NOISeq issues
+WARNING: The sample name "10048_FT_SD" will be replaced with name "sample_10048_FT_SD" due to NOISeq issues
+WARNING: The sample name "10089_FV_NSD" will be replaced with name "sample_10089_FV_NSD" due to NOISeq issues
+WARNING: The sample name "10092_FV_NSD" will be replaced with name "sample_10092_FV_NSD" due to NOISeq issues
+WARNING: The sample name "10050_FV_SD" will be replaced with name "sample_10050_FV_SD" due to NOISeq issues
+WARNING: The sample name "10290_CT_NSD" will be replaced with name "sample_10290_CT_NSD" due to NOISeq issues
+WARNING: The sample name "10175_FT_SD" will be replaced with name "sample_10175_FT_SD" due to NOISeq issues
+WARNING: The sample name "10289_CT_NSD" will be replaced with name "sample_10289_CT_NSD" due to NOISeq issues
+WARNING: The sample name "10160_FT_NSD" will be replaced with name "sample_10160_FT_NSD" due to NOISeq issues
+WARNING: The sample name "10288_CT_SD" will be replaced with name "sample_10288_CT_SD" due to NOISeq issues
+WARNING: The sample name "10174_FV_SD" will be replaced with name "sample_10174_FV_SD" due to NOISeq issues
+WARNING: The sample name "10163_FV_NSD" will be replaced with name "sample_10163_FV_NSD" due to NOISeq issues
+WARNING: The sample name "10173_FV_SD" will be replaced with name "sample_10173_FV_SD" due to NOISeq issues
+WARNING: The sample name "10205_FT_SD" will be replaced with name "sample_10205_FT_SD" due to NOISeq issues
+Rscript /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts/countsQC.r --homedir /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/scripts --input /tmp/qualimap1787678958281//input.txt -k 5 --info /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt --compare -o /tmp/qualimap1787678958281/
+Reading input data using input description from /tmp/qualimap1787678958281//input.txt 
+Loaded counts for  48526  features
+Num samples: 32 
+Conditions:
+   Conditions
+1          SD
+2          SD
+3          SD
+4         NSD
+5         NSD
+6         NSD
+7         NSD
+8          SD
+9         NSD
+10        NSD
+11         SD
+12         SD
+13         SD
+14        NSD
+15        NSD
+16         SD
+17        NSD
+18        NSD
+19        NSD
+20         SD
+21        NSD
+22        NSD
+23         SD
+24        NSD
+25         SD
+26        NSD
+27        NSD
+28         SD
+29         SD
+30        NSD
+31         SD
+32         SD
+
+Compare conditions  TRUE 
+Loading annotations from  /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/qualimap-2.3-wrnvak3m7rj4ns7rh6nispn3vaolahmq/species/mouse.ens68.txt 
+Loaded annoations for  37315 genes
+ chr [1:48526] "ENSMUSG00000000001.4" "ENSMUSG00000000003.15" ...
+ chr [1:37315] "ENSMUSG00000028180" "ENSMUSG00000028182" ...
+Annotation based analysis is deactivated
+'data.frame':	48526 obs. of  32 variables:
+ $ sample_9280_CT_SD  : int  858 0 51 12 28 10 1245 1158 1466 1021 ...
+ $ sample_9347_FV_SD  : int  764 0 36 1 39 15 1166 981 1303 1029 ...
+ $ sample_9348_FT_SD  : int  831 0 46 0 37 11 1075 1191 1392 1076 ...
+ $ sample_9243_FV_NSD : int  701 0 30 2 32 9 1240 1034 1505 1022 ...
+ $ sample_9268_CT_NSD : int  684 0 38 8 56 6 1112 1117 1408 1048 ...
+ $ sample_9279_CT_NSD : int  663 0 25 10 39 11 1145 1208 1489 1075 ...
+ $ sample_9244_FT_NSD : int  757 0 37 7 50 10 1081 1242 1588 1166 ...
+ $ sample_9844_FT_SD  : int  866 0 48 2 37 13 1211 1279 1631 1034 ...
+ $ sample_9726_FT_NSD : int  719 0 33 3 39 12 1198 1315 1646 1111 ...
+ $ sample_9661_FV_NSD : int  760 0 38 2 43 12 1276 1272 1634 1060 ...
+ $ sample_9673_FV_SD  : int  817 0 26 2 41 8 1202 1075 1304 1000 ...
+ $ sample_9517_CT_SD  : int  845 0 33 1 50 6 1208 1085 1484 989 ...
+ $ sample_9515_CT_SD  : int  791 0 35 6 38 9 1087 1025 1338 983 ...
+ $ sample_9516_CT_NSD : int  786 0 44 2 47 7 1220 1086 1572 1113 ...
+ $ sample_9518_CT_NSD : int  702 0 42 4 47 5 1244 1074 1296 1111 ...
+ $ sample_9984_CT_SD  : int  750 0 39 0 29 8 1209 968 1244 977 ...
+ $ sample_10081_CT_NSD: int  800 0 32 7 51 8 1386 1206 1570 1109 ...
+ $ sample_10049_FT_NSD: int  776 0 42 4 42 10 1289 1255 1747 1192 ...
+ $ sample_9993_FT_NSD : int  743 0 40 3 35 9 1103 1230 1528 1011 ...
+ $ sample_10048_FT_SD : int  716 0 41 3 37 5 979 1052 1223 848 ...
+ $ sample_10089_FV_NSD: int  680 0 43 1 37 2 1233 1092 1579 1034 ...
+ $ sample_10092_FV_NSD: int  784 0 31 4 60 14 1299 1185 1481 1084 ...
+ $ sample_10050_FV_SD : int  864 0 38 4 50 14 1344 1064 1402 1019 ...
+ $ sample_10290_CT_NSD: int  718 0 27 2 42 9 1191 1196 1433 884 ...
+ $ sample_10175_FT_SD : int  772 0 40 2 31 4 1051 1101 1372 1000 ...
+ $ sample_10289_CT_NSD: int  666 0 35 6 47 10 1132 1073 1494 981 ...
+ $ sample_10160_FT_NSD: int  506 0 26 1 24 3 832 891 1123 735 ...
+ $ sample_10288_CT_SD : int  733 0 42 4 32 4 1031 893 1208 881 ...
+ $ sample_10174_FV_SD : int  748 0 33 0 33 7 1220 1067 1381 967 ...
+ $ sample_10163_FV_NSD: int  770 0 29 3 53 6 1240 1240 1352 1013 ...
+ $ sample_10173_FV_SD : int  788 0 39 0 39 15 1093 1055 1321 930 ...
+ $ sample_10205_FT_SD : int  745 0 41 5 30 7 1078 1049 1332 964 ...
+ - attr(*, "factors")= Factor w/ 2 levels "NSD","SD": 2 2 2 1 1 1 1 2 1 1 ...
+[1] 48526    32
+Init NOISeq data...
+
+Draw global plots...
+Compute counts density...
+Compute scatterplots..
+Compute saturation..
+Compute counts per biotype..
+[1] "Warning: 13974 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Count distributions are to be computed for:"
+ [1] "sample_9280_CT_SD"   "sample_9347_FV_SD"   "sample_9348_FT_SD"  
+ [4] "sample_9243_FV_NSD"  "sample_9268_CT_NSD"  "sample_9279_CT_NSD" 
+ [7] "sample_9244_FT_NSD"  "sample_9844_FT_SD"   "sample_9726_FT_NSD" 
+[10] "sample_9661_FV_NSD"  "sample_9673_FV_SD"   "sample_9517_CT_SD"  
+[13] "sample_9515_CT_SD"   "sample_9516_CT_NSD"  "sample_9518_CT_NSD" 
+[16] "sample_9984_CT_SD"   "sample_10081_CT_NSD" "sample_10049_FT_NSD"
+[19] "sample_9993_FT_NSD"  "sample_10048_FT_SD"  "sample_10089_FV_NSD"
+[22] "sample_10092_FV_NSD" "sample_10050_FV_SD"  "sample_10290_CT_NSD"
+[25] "sample_10175_FT_SD"  "sample_10289_CT_NSD" "sample_10160_FT_NSD"
+[28] "sample_10288_CT_SD"  "sample_10174_FV_SD"  "sample_10163_FV_NSD"
+[31] "sample_10173_FV_SD"  "sample_10205_FT_SD" 
+Draw per sample plots...
+
+Processing sample sample_9280_CT_SD 
+Processing sample sample_9347_FV_SD 
+Processing sample sample_9348_FT_SD 
+Processing sample sample_9243_FV_NSD 
+Processing sample sample_9268_CT_NSD 
+Processing sample sample_9279_CT_NSD 
+Processing sample sample_9244_FT_NSD 
+Processing sample sample_9844_FT_SD 
+Processing sample sample_9726_FT_NSD 
+Processing sample sample_9661_FV_NSD 
+Processing sample sample_9673_FV_SD 
+Processing sample sample_9517_CT_SD 
+Processing sample sample_9515_CT_SD 
+Processing sample sample_9516_CT_NSD 
+Processing sample sample_9518_CT_NSD 
+Processing sample sample_9984_CT_SD 
+Processing sample sample_10081_CT_NSD 
+Processing sample sample_10049_FT_NSD 
+Processing sample sample_9993_FT_NSD 
+Processing sample sample_10048_FT_SD 
+Processing sample sample_10089_FV_NSD 
+Processing sample sample_10092_FV_NSD 
+Processing sample sample_10050_FV_SD 
+Processing sample sample_10290_CT_NSD 
+Processing sample sample_10175_FT_SD 
+Processing sample sample_10289_CT_NSD 
+Processing sample sample_10160_FT_NSD 
+Processing sample sample_10288_CT_SD 
+Processing sample sample_10174_FV_SD 
+Processing sample sample_10163_FV_NSD 
+Processing sample sample_10173_FV_SD 
+Processing sample sample_10205_FT_SD 
+
+Performing comparison for conditions
+Compute counts per biotype for conditions..
+[1] "Warning: 13974 features with 0 counts in all samples are to be removed for this analysis."
+[1] "Counts per million distributions are to be computed for:"
+[1] "NSD" "SD" 
+CountsQC is successfully finished!
+Warning message:
+In all(lapply(counts, is.numeric)) :
+  coercing argument of type 'list' to logical
+Warning message:
+The gene names from counts do not correspond to the names from annotation file. 
+There were 50 or more warnings (use warnings() to see the first 50)
+
+Preparing result report
+Writing HTML report...
+HTML report created successfully
+
+Finished
+Qualimap multi-bamqc
+Java memory size is set to 1200M
+Launching application...
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+QualiMap v.2.3
+Built on 2023-05-19 16:57
+
+Selected tool: multi-bamqc
+Tue Aug 25 19:30:32 CEST 2026		WARNING	Output folder already exists, the results will be saved there
+
+Running multi-sample BAM QC
+
+Checking input paths
+Loading sample data
+Creating charts
+
+Preparing result report
+Writing HTML report...
+HTML report created successfully
+
+Finished
+Logs saved in <logs/16-NRF_bam/qualimap.log>

@@ -1,0 +1,54 @@
+Loading packages
+Checking arguments
+Reading inputs
+[1] "GROUPS with low total reads (<200M) - footprinting"
+[1] "64/68"
+[1] "GROUPS with >200M total reads"
+      Category         x
+65 C57Bl6_CTRL 389061400
+67    DBA_CTRL 373510955
+68      DBA_SD 359837930
+66   C57Bl6_SD 344163961
+[1] "GROUPS with the lowest total reads"
+      Category         x
+35  BXD66_CTRL 126015125
+18    BXD48_SD 121211128
+49  BXD81_CTRL 121058302
+9  BXD101_CTRL 119716378
+53  BXD84_CTRL 118745533
+28    BXD56_SD 100400696
+Generating diagnostic plots
+null device 
+          1 
+null device 
+          1 
+Generating summary table
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] optparse_1.8.2 tidyr_1.3.2    ggplot2_4.0.3 
+
+loaded via a namespace (and not attached):
+ [1] labeling_0.4.3     RColorBrewer_1.1-3 R6_2.6.1           tidyselect_1.2.1  
+ [5] farver_2.1.2       magrittr_2.0.5     gtable_0.3.6       glue_1.8.1        
+ [9] tibble_3.3.1       pkgconfig_2.0.3    dplyr_1.2.1        generics_0.1.4    
+[13] lifecycle_1.0.5    cli_3.6.6          S7_0.2.2           scales_1.4.0      
+[17] grid_4.5.2         vctrs_0.7.3        withr_3.0.3        compiler_4.5.2    
+[21] purrr_1.2.2        pillar_1.11.1      rlang_1.3.0       

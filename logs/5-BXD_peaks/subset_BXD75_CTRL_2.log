@@ -1,0 +1,92 @@
+Calling peaks for results/4-ATAC_genotype/corrected_bams/name/020_BXD75_CTRL_sub2.nm.bam results/4-ATAC_genotype/corrected_bams/name/058_BXD75_CTRL_sub2.nm.bam results/4-ATAC_genotype/corrected_bams/name/095_BXD75_CTRL_sub2.nm.bam
+Processing experimental file #0: results/4-ATAC_genotype/corrected_bams/name/020_BXD75_CTRL_sub2.nm.bam
+Warning! Read K00382:106:HJ57YBBXY:5:2122:2331:15416 prevented from extending below 0 on chrUn_GL456366
+Warning! Read K00382:111:HKHK5BBXY:2:1204:19197:36059 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:3:1212:13778:47348 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:4:2106:29894:32578 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:3:2124:10947:29079 prevented from extending below 0 on chr4_JH584295_random
+  BAM records analyzed:    15000000
+    Unmapped:                178506
+    To skipped refs:        2652319
+      (chrM)
+    MAPQ < 30:              3183284
+    Paired alignments:            0
+    Unpaired alignments:    8985891
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    11638210
+      duplicates:           2921402 (25.1%)
+  Fragments analyzed:       8695011
+    Full fragments:               0
+    Half fragments:         8695011
+      (from unpaired alns)
+    ATAC-seq cut sites:     8695011
+      (expanded to length 100bp)
+- control file #0 not provided -
+  Background pileup value: 0.343881
+Processing experimental file #1: results/4-ATAC_genotype/corrected_bams/name/058_BXD75_CTRL_sub2.nm.bam
+Warning! Read K00382:115:HKHC5BBXY:5:2106:13382:20076 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:8:1224:5091:39049 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:115:HKHC5BBXY:3:1121:31446:34319 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:115:HKHC5BBXY:5:1204:28189:19355 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:7:1215:15026:41950 prevented from extending past 40056 on chrUn_GL456239
+  BAM records analyzed:    15000000
+    Unmapped:                120375
+    To skipped refs:        1283910
+      (chrM)
+    MAPQ < 30:              2388734
+    Paired alignments:            0
+    Unpaired alignments:   11206981
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    12490891
+      duplicates:           1527135 (12.2%)
+  Fragments analyzed:      10942689
+    Full fragments:               0
+    Half fragments:        10942689
+      (from unpaired alns)
+    ATAC-seq cut sites:    10942689
+      (expanded to length 100bp)
+- control file #1 not provided -
+  Background pileup value: 0.433181
+Processing experimental file #2: results/4-ATAC_genotype/corrected_bams/name/095_BXD75_CTRL_sub2.nm.bam
+Warning! Read K00382:115:HKHC5BBXY:7:2201:27580:7926 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:115:HKHC5BBXY:6:2104:17015:46276 prevented from extending below 0 on chrUn_GL456383
+Warning! Read K00382:107:HJ55YBBXY:8:2201:8024:15574 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:107:HJ55YBBXY:6:1201:24728:35092 prevented from extending past 24685 on chrUn_GL456387
+Warning! Read K00382:107:HJ55YBBXY:8:1225:7101:14045 prevented from extending below 0 on chr4_JH584295_random
+  BAM records analyzed:    15000000
+    Unmapped:                 61567
+    To skipped refs:        1418465
+      (chrM)
+    MAPQ < 30:              2563409
+    Paired alignments:            0
+    Unpaired alignments:   10956559
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    12375024
+      duplicates:           1592589 (12.9%)
+  Fragments analyzed:      10761364
+    Full fragments:               0
+    Half fragments:        10761364
+      (from unpaired alns)
+    ATAC-seq cut sites:    10761364
+      (expanded to length 100bp)
+- control file #2 not provided -
+  Background pileup value: 0.425757
+Peak-calling parameters:
+  Genome length: 2491878275bp
+  Significance threshold: -log(q) > 1.301
+  Min. AUC: 200.000
+  Max. gap between sites: 100bp
+Peaks identified: 24561 (14653963bp)
+Logs saved in <logs/5-ATAC_peaks/subset_BXD75_CTRL_2.log>

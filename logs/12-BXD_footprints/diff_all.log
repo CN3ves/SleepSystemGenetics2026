@@ -1,0 +1,60 @@
+Estimate differential activity for all samples
+BED files: results/12-BXD_footprints/motifs/48a_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/48a_SD_mpbs.bed,results/12-BXD_footprints/motifs/65a_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/65a_SD_mpbs.bed,results/12-BXD_footprints/motifs/73b_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/73b_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD100_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD100_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD101_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD101_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD43_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD43_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD44_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD44_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD45_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD45_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD48_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD48_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD49_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD49_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD50_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD50_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD51_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD51_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD55_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD55_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD56_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD56_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD61_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD61_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD64_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD64_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD65_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD65_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD66_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD66_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD67_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD67_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD70_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD70_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD71_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD71_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD73_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD73_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD75_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD75_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD79_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD79_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD81_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD81_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD83_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD83_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD84_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD84_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD85_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD85_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD89_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD89_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD90_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD90_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD95_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD95_SD_mpbs.bed,results/12-BXD_footprints/motifs/BXD98_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/BXD98_SD_mpbs.bed,results/12-BXD_footprints/motifs/C57Bl6_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/C57Bl6_SD_mpbs.bed,results/12-BXD_footprints/motifs/DBA_CTRL_mpbs.bed,results/12-BXD_footprints/motifs/DBA_SD_mpbs.bed
+BAM files: results/12-BXD_footprints/bams/48a_CTRL.bam,results/12-BXD_footprints/bams/48a_SD.bam,results/12-BXD_footprints/bams/65a_CTRL.bam,results/12-BXD_footprints/bams/65a_SD.bam,results/12-BXD_footprints/bams/73b_CTRL.bam,results/12-BXD_footprints/bams/73b_SD.bam,results/12-BXD_footprints/bams/BXD100_CTRL.bam,results/12-BXD_footprints/bams/BXD100_SD.bam,results/12-BXD_footprints/bams/BXD101_CTRL.bam,results/12-BXD_footprints/bams/BXD101_SD.bam,results/12-BXD_footprints/bams/BXD43_CTRL.bam,results/12-BXD_footprints/bams/BXD43_SD.bam,results/12-BXD_footprints/bams/BXD44_CTRL.bam,results/12-BXD_footprints/bams/BXD44_SD.bam,results/12-BXD_footprints/bams/BXD45_CTRL.bam,results/12-BXD_footprints/bams/BXD45_SD.bam,results/12-BXD_footprints/bams/BXD48_CTRL.bam,results/12-BXD_footprints/bams/BXD48_SD.bam,results/12-BXD_footprints/bams/BXD49_CTRL.bam,results/12-BXD_footprints/bams/BXD49_SD.bam,results/12-BXD_footprints/bams/BXD50_CTRL.bam,results/12-BXD_footprints/bams/BXD50_SD.bam,results/12-BXD_footprints/bams/BXD51_CTRL.bam,results/12-BXD_footprints/bams/BXD51_SD.bam,results/12-BXD_footprints/bams/BXD55_CTRL.bam,results/12-BXD_footprints/bams/BXD55_SD.bam,results/12-BXD_footprints/bams/BXD56_CTRL.bam,results/12-BXD_footprints/bams/BXD56_SD.bam,results/12-BXD_footprints/bams/BXD61_CTRL.bam,results/12-BXD_footprints/bams/BXD61_SD.bam,results/12-BXD_footprints/bams/BXD64_CTRL.bam,results/12-BXD_footprints/bams/BXD64_SD.bam,results/12-BXD_footprints/bams/BXD65_CTRL.bam,results/12-BXD_footprints/bams/BXD65_SD.bam,results/12-BXD_footprints/bams/BXD66_CTRL.bam,results/12-BXD_footprints/bams/BXD66_SD.bam,results/12-BXD_footprints/bams/BXD67_CTRL.bam,results/12-BXD_footprints/bams/BXD67_SD.bam,results/12-BXD_footprints/bams/BXD70_CTRL.bam,results/12-BXD_footprints/bams/BXD70_SD.bam,results/12-BXD_footprints/bams/BXD71_CTRL.bam,results/12-BXD_footprints/bams/BXD71_SD.bam,results/12-BXD_footprints/bams/BXD73_CTRL.bam,results/12-BXD_footprints/bams/BXD73_SD.bam,results/12-BXD_footprints/bams/BXD75_CTRL.bam,results/12-BXD_footprints/bams/BXD75_SD.bam,results/12-BXD_footprints/bams/BXD79_CTRL.bam,results/12-BXD_footprints/bams/BXD79_SD.bam,results/12-BXD_footprints/bams/BXD81_CTRL.bam,results/12-BXD_footprints/bams/BXD81_SD.bam,results/12-BXD_footprints/bams/BXD83_CTRL.bam,results/12-BXD_footprints/bams/BXD83_SD.bam,results/12-BXD_footprints/bams/BXD84_CTRL.bam,results/12-BXD_footprints/bams/BXD84_SD.bam,results/12-BXD_footprints/bams/BXD85_CTRL.bam,results/12-BXD_footprints/bams/BXD85_SD.bam,results/12-BXD_footprints/bams/BXD89_CTRL.bam,results/12-BXD_footprints/bams/BXD89_SD.bam,results/12-BXD_footprints/bams/BXD90_CTRL.bam,results/12-BXD_footprints/bams/BXD90_SD.bam,results/12-BXD_footprints/bams/BXD95_CTRL.bam,results/12-BXD_footprints/bams/BXD95_SD.bam,results/12-BXD_footprints/bams/BXD98_CTRL.bam,results/12-BXD_footprints/bams/BXD98_SD.bam,results/12-BXD_footprints/bams/C57Bl6_CTRL.bam,results/12-BXD_footprints/bams/C57Bl6_SD.bam,results/12-BXD_footprints/bams/DBA_CTRL.bam,results/12-BXD_footprints/bams/DBA_SD.bam
+groups: 48a_CTRL,48a_SD,65a_CTRL,65a_SD,73b_CTRL,73b_SD,BXD100_CTRL,BXD100_SD,BXD101_CTRL,BXD101_SD,BXD43_CTRL,BXD43_SD,BXD44_CTRL,BXD44_SD,BXD45_CTRL,BXD45_SD,BXD48_CTRL,BXD48_SD,BXD49_CTRL,BXD49_SD,BXD50_CTRL,BXD50_SD,BXD51_CTRL,BXD51_SD,BXD55_CTRL,BXD55_SD,BXD56_CTRL,BXD56_SD,BXD61_CTRL,BXD61_SD,BXD64_CTRL,BXD64_SD,BXD65_CTRL,BXD65_SD,BXD66_CTRL,BXD66_SD,BXD67_CTRL,BXD67_SD,BXD70_CTRL,BXD70_SD,BXD71_CTRL,BXD71_SD,BXD73_CTRL,BXD73_SD,BXD75_CTRL,BXD75_SD,BXD79_CTRL,BXD79_SD,BXD81_CTRL,BXD81_SD,BXD83_CTRL,BXD83_SD,BXD84_CTRL,BXD84_SD,BXD85_CTRL,BXD85_SD,BXD89_CTRL,BXD89_SD,BXD90_CTRL,BXD90_SD,BXD95_CTRL,BXD95_SD,BXD98_CTRL,BXD98_SD,C57Bl6_CTRL,C57Bl6_SD,DBA_CTRL,DBA_SD
+ 48 cpus are detected and 10 of them will be used...
+
+generating signal for each motif and condition...
+
+generating signal for condition 48a_CTRL 
+
+generating signal for condition 48a_SD 
+
+generating signal for condition 65a_CTRL 
+
+generating signal for condition 65a_SD 
+
+generating signal for condition 73b_CTRL 
+
+generating signal for condition 73b_SD 
+
+generating signal for condition BXD100_CTRL 
+
+generating signal for condition BXD100_SD 
+
+generating signal for condition BXD101_CTRL 
+
+generating signal for condition BXD101_SD 
+
+generating signal for condition BXD43_CTRL 
+
+generating signal for condition BXD43_SD 
+
+generating signal for condition BXD44_CTRL 
+
+generating signal for condition BXD44_SD 
+
+generating signal for condition BXD45_CTRL 
+
+generating signal for condition BXD45_SD 
+
+generating signal for condition BXD48_CTRL 
+
+generating signal for condition BXD48_SD 
+
+generating signal for condition BXD49_CTRL 
+
+generating signal for condition BXD49_SD 
+
+generating signal for condition BXD50_CTRL 
+
+generating signal for condition BXD50_SD 
+
+generating signal for condition BXD51_CTRL 
+
+generating signal for condition BXD51_SD 
+
+generating signal for condition BXD55_CTRL 
+
+generating signal for condition BXD55_SD 
+

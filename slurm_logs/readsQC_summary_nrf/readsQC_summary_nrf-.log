@@ -1,0 +1,50 @@
+localrules directive specifies rules that are not present in the Snakefile:
+	readsQC_summary_nrfs
+
+
+SNAKEMAKE
+=========
+  Date: 2026-08-22 17:23:40
+  Workflow ID: 1a15af5f-bdbb-45fa-9ab3-ec1725166d0b
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna067
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs readsQC_summary_nrf: --allowed-rules readsQC_summary_nrf --cores all --attempt 1 --force-use-threads --wait-for-files-file /scratch/csousane/atac/.snakemake/tmp.2a18j8nw/snakejob.readsQC_summary_nrf.4.sh.waitforfilesfile.txt --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code mtime params input --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment persistence source-cache input-output software-deployment-cache sources storage-local-copies --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp_ebfm4sn --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: e331b71dca27571e853b97081085344d
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Aug 22 17:23:40 2026]
+localrule readsQC_summary_nrf:
+    input: results/14-NRF_fastq/QC/json/9280_CT_SD.json, results/14-NRF_fastq/QC/json/9347_FV_SD.json, results/14-NRF_fastq/QC/json/9348_FT_SD.json, results/14-NRF_fastq/QC/json/9243_FV_NSD.json, results/14-NRF_fastq/QC/json/9268_CT_NSD.json, results/14-NRF_fastq/QC/json/9279_CT_NSD.json, results/14-NRF_fastq/QC/json/9244_FT_NSD.json, results/14-NRF_fastq/QC/json/9844_FT_SD.json, results/14-NRF_fastq/QC/json/9726_FT_NSD.json, results/14-NRF_fastq/QC/json/9661_FV_NSD.json, results/14-NRF_fastq/QC/json/9673_FV_SD.json, results/14-NRF_fastq/QC/json/9517_CT_SD.json, results/14-NRF_fastq/QC/json/9515_CT_SD.json, results/14-NRF_fastq/QC/json/9516_CT_NSD.json, results/14-NRF_fastq/QC/json/9518_CT_NSD.json, results/14-NRF_fastq/QC/json/9984_CT_SD.json, results/14-NRF_fastq/QC/json/10081_CT_NSD.json, results/14-NRF_fastq/QC/json/10049_FT_NSD.json, results/14-NRF_fastq/QC/json/9993_FT_NSD.json, results/14-NRF_fastq/QC/json/10048_FT_SD.json, results/14-NRF_fastq/QC/json/10089_FV_NSD.json, results/14-NRF_fastq/QC/json/10092_FV_NSD.json, results/14-NRF_fastq/QC/json/10050_FV_SD.json, results/14-NRF_fastq/QC/json/10290_CT_NSD.json, results/14-NRF_fastq/QC/json/10175_FT_SD.json, results/14-NRF_fastq/QC/json/10289_CT_NSD.json, results/14-NRF_fastq/QC/json/10160_FT_NSD.json, results/14-NRF_fastq/QC/json/10288_CT_SD.json, results/14-NRF_fastq/QC/json/10174_FV_SD.json, results/14-NRF_fastq/QC/json/10163_FV_NSD.json, results/14-NRF_fastq/QC/json/10173_FV_SD.json, results/14-NRF_fastq/QC/json/10205_FT_SD.json
+    output: results/14-NRF_fastq/summaries/QC_plot_density.png
+    log: logs/14-NRF_fastq/QCsummary.log
+    jobid: 0
+    benchmark: benchmarks/14-NRF_fastq/QCsummary.txt
+    reason: Forced execution
+    resources: tmpdir=/tmp/64013038, mem_mb=1000, mem=1 GB, mem_mib=954, disk_mb=1000, disk=1 GB, disk_mib=954, time=00:05:00
+Shell command: 
+        module load  r-light/4.5.2
+        mkdir -p results/14-NRF_fastq/summaries
+
+        echo "Summarising QC results" >> logs/14-NRF_fastq/QCsummary.log
+        Rscript workflow/scripts/2.1-QC_reads_table.R -m rawdata/atac/atac_metadata.csv -d results/1-BXD_fastq/QC/json/ -o results/14-NRF_fastq/summaries
+
+        echo "Plotting QC summaries" >> logs/14-NRF_fastq/QCsummary.log
+        Rscript workflow/scripts/14.1-QC_reads_plots.R -m rawdata/atac/atac_metadata.csv -f results/14-NRF_fastq/summaries/QC_fastq.csv -o results/14-NRF_fastq/summaries
+
+        echo "Logs saved in <logs/14-NRF_fastq/QCsummary.log>" >> logs/14-NRF_fastq/QCsummary.log
+        
+slurmstepd: error: *** JOB 64013038 ON dna067 CANCELLED AT 2026-08-22T17:24:32 ***

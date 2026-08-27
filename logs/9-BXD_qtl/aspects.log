@@ -1,0 +1,4 @@
+Loading sleep data <rawdata/sleep_bxd/phenotypes.txt> into R object
+Copying other results to <results/9-BXD_qtl/aspects>
+cp results/8-BXD_differential/DA/*disp* results/9-BXD_qtl/aspects
+Logs saved in <logs/9-BXD_qtl/aspects.log>

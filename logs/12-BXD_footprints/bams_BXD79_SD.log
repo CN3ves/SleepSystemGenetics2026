@@ -1,0 +1,6 @@
+Merge bam files results/3-ATAC_bam/sort/coord/098_BXD79_SD_full.co.bam results/3-ATAC_bam/sort/coord/167_BXD79_SD_full.co.bam results/3-ATAC_bam/sort/coord/211_BXD79_SD_full.co.bam results/3-ATAC_bam/sort/coord/213_BXD79_SD_full.co.bam
+Indexing file
+Checking downsampled files
+Merge bam files results/3-ATAC_bam/sort/coord/211_BXD79_SD_sub1.co.bam results/3-ATAC_bam/sort/coord/213_BXD79_SD_sub1.co.bam results/3-ATAC_bam/sort/coord/098_BXD79_SD_sub1.co.bam 
+Merge bam files results/3-ATAC_bam/sort/coord/213_BXD79_SD_sub2.co.bam results/3-ATAC_bam/sort/coord/167_BXD79_SD_sub2.co.bam results/3-ATAC_bam/sort/coord/098_BXD79_SD_sub2.co.bam 
+Logs saved in <logs/12-ATAC_footprints/bams_BXD79_SD.log>

@@ -1,0 +1,52 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 14:34:38
+  Workflow ID: d8bb4bd2-e518-4c34-bd8f-25d5db0c0c63
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna005
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs frip:type=mito,i= --allowed-rules frip --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.4wxr8x18 results/6-ATAC_features/mito/genomic_features.gtf --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env params code input mtime --conda-frontend conda --shared-fs-usage source-cache sources software-deployment storage-local-copies input-output persistence software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp22q6gm4h --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 30
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 14:34:38 2026]
+localrule frip:
+    input: results/6-ATAC_features/mito/genomic_features.gtf
+    output: results/6-ATAC_features/frip/frip_mito.csv
+    log: logs/6-ATAC_features/frip_mito.log
+    jobid: 0
+    benchmark: benchmarks/6-ATAC_features/frip_mito.txt
+    reason: Forced execution
+    wildcards: type=mito, i=
+    threads: 30
+    resources: tmpdir=/tmp/62715402, mem_mb=15000, mem=15 GB, mem_mib=14306, disk_mb=1000, disk=1 GB, disk_mib=954, time=01:00:00
+Shell command: 
+        mkdir -p results/6-ATAC_features/frip
+        module load r-light/4.5.2
+        
+        echo "Estimate frip using <results/6-ATAC_features/mito/genomic_features.gtf>" >> logs/6-ATAC_features/frip_mito.log
+        Rscript workflow/scripts/6.2_Peaks_frips.R  -b results/4-ATAC_genotype/corrected_bams/coord/ -f results/6-ATAC_features/mito/genomic_features.gtf -o results/6-ATAC_features/frip 
+
+        echo "Logs saved in <logs/6-ATAC_features/frip_mito.log>" >> logs/6-ATAC_features/frip_mito.log
+        
+Loading packages
+Checking arguments
+Reading inputs
+[Sun Jul 26 14:59:41 2026]
+Finished jobid: 0 (Rule: frip)
+1 of 1 steps (100%) done
+Storing output in storage.

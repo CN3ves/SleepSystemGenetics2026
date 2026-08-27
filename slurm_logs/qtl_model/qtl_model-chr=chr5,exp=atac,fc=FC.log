@@ -1,0 +1,56 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-29 16:59:19
+  Workflow ID: 27941b32-a54d-4a96-b1a2-73061c2fd953
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna058
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs qtl_model:exp=atac,chr=chr5,fc=FC --allowed-rules qtl_model --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.66x123pl results/9-ATAC_qtl/data/atac_geno.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params code input software-env mtime --conda-frontend conda --shared-fs-usage persistence storage-local-copies software-deployment input-output source-cache sources software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpmj3kf3mz --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jul 29 16:59:19 2026]
+localrule qtl_model:
+    input: results/9-ATAC_qtl/data/atac_geno.csv
+    output: results/9-ATAC_qtl/QTL/atacchr5FC_QTL_model.RData
+    log: logs/9-ATAC_qtl/QTL_atac_chr5_FC_model.log
+    jobid: 0
+    benchmark: benchmarks/9-ATAC_qtl/QTL_atac_chr5_FC_model.txt
+    reason: Forced execution
+    wildcards: exp=atac, chr=chr5, fc=FC
+    threads: 40
+    resources: tmpdir=/tmp/62831065, mem_mb=50000, mem=50 GB, mem_mib=47684, disk_mb=1000, disk=1 GB, disk_mib=954, time=00:30:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/QTL
+
+        echo "Prepare for QTL analysis" > logs/9-ATAC_qtl/QTL_atac_chr5_FC_model.log
+        json="results/9-ATAC_qtl/data/atacchr5FC.json"
+
+        echo "Running model on <$json>" >> logs/9-ATAC_qtl/QTL_atac_chr5_FC_model.log
+        Rscript workflow/scripts/9.3_QTL_run.R -j $json -o results/9-ATAC_qtl/QTL 2>> logs/9-ATAC_qtl/QTL_atac_chr5_FC_model.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/QTL_atac_chr5_FC_model.log>" >> logs/9-ATAC_qtl/QTL_atac_chr5_FC_model.log
+        
+Loading packages
+Checking arguments
+Reading inputs
+Write-protecting output file results/9-ATAC_qtl/QTL/atacchr5FC_QTL_model.RData.
+[Wed Jul 29 17:14:45 2026]
+Finished jobid: 0 (Rule: qtl_model)
+1 of 1 steps (100%) done
+Storing output in storage.

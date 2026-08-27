@@ -1,0 +1,50 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-23 15:45:11
+  Workflow ID: 5abe2606-31f1-431c-ab03-7110779e69fc
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna065
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs eda:exp=atac --allowed-rules eda --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.vx62094d results/7-ATAC_normalization/filter/atac_filtered_counts.RData results/4-ATAC_genotype/check/metadata_corrected.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env code params mtime input --conda-frontend conda --shared-fs-usage software-deployment-cache persistence software-deployment input-output sources storage-local-copies source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp2tgyihpp --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jul 23 15:45:11 2026]
+localrule eda:
+    input: results/7-ATAC_normalization/filter/atac_filtered_counts.RData, results/4-ATAC_genotype/check/metadata_corrected.csv
+    output: results/7-ATAC_normalization/EDA/atac__filtered_normalised_counts.RData
+    log: logs/7-ATAC_normalization/eda_atac.log
+    jobid: 0
+    benchmark: benchmarks/7-ATAC_normalization/eda_atac.txt
+    reason: Forced execution
+    wildcards: exp=atac
+    resources: tmpdir=/tmp/62665319, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=5000, mem=5 GB, mem_mib=4769, time=00:10:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/7-ATAC_normalization/EDA
+
+        echo "Running multidimentional scaling on <atac>" > logs/7-ATAC_normalization/eda_atac.log
+        Rscript workflow/scripts/7.4_Normalization_MDS.R -c results/7-ATAC_normalization/filter/atac_filtered_counts.RData -o results/7-ATAC_normalization/EDA 2>> logs/7-ATAC_normalization/eda_atac.log
+
+        echo "Running clustering heatmaps on <atac>" >> logs/7-ATAC_normalization/eda_atac.log
+        Rscript workflow/scripts/7.5_Normalization_heatmap.R -c results/7-ATAC_normalization/EDA/atac__filtered_normalised_counts.RData -m results/4-ATAC_genotype/check/metadata_corrected.csv -a genotype,condition,tissue -o results/7-ATAC_normalization/EDA 2>> logs/7-ATAC_normalization/eda_atac.log
+
+        echo "Logs saved in <logs/7-ATAC_normalization/eda_atac.log>" >> logs/7-ATAC_normalization/eda_atac.log
+        
+Loading packages
+Checking arguments
+slurmstepd: error: *** JOB 62665319 ON dna065 CANCELLED AT 2026-07-23T15:46:09 ***

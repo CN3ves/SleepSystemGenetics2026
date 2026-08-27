@@ -1,0 +1,565 @@
+Reading inputs
+'select()' returned 1:many mapping between keys and columns
+[1] "Running enrichment for FT"
+[1] "ORA analyses for Wikipaths"
+[1] "genes "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:6651] "13175" "52850" "381677" "12575" "13371" "231605" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...9 enriched terms found
+'data.frame':	9 obs. of  12 variables:
+ $ ID            : chr  "WP493" "WP65" "WP265" "WP572" ...
+ $ Description   : chr  "Mapk signaling pathway" "Insulin signaling" "Delta Notch signaling pathway" "EGFR1 signaling pathway" ...
+ $ GeneRatio     : chr  "83/1665" "83/1665" "48/1665" "84/1665" ...
+ $ BgRatio       : chr  "159/4787" "159/4787" "82/4787" "175/4787" ...
+ $ RichFactor    : num  0.522 0.522 0.585 0.48 0.477 ...
+ $ FoldEnrichment: num  1.5 1.5 1.68 1.38 1.37 ...
+ $ zScore        : num  4.69 4.69 4.56 3.74 3.44 ...
+ $ pvalue        : num  3.46e-06 3.46e-06 8.01e-06 1.66e-04 4.91e-04 ...
+ $ p.adjust      : num  0.000308 0.000308 0.000475 0.007381 0.017493 ...
+ $ qvalue        : num  0.000248 0.000248 0.000382 0.005936 0.014069 ...
+ $ geneID        : chr  "14828/12064/319520/50772/15481/240672/67603/53608/15507/21809/11911/18099/13197/110651/11479/15370/16151/23939/"| __truncated__ "22433/19246/50772/20525/210789/53608/13653/20393/20411/19094/110651/14783/20112/23939/14281/23938/14251/26397/2"| __truncated__ "16452/60406/433586/18132/18035/57750/20602/16656/17127/14199/22761/12805/26413/16848/140484/59287/26417/20848/1"| __truncated__ "215114/16452/24064/27387/13859/110651/14783/20112/23939/14281/23938/26397/57257/17127/12371/216963/19252/74155/"| __truncated__ ...
+ $ Count         : int  83 83 48 84 74 39 70 183 10
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting FT ORA Wikipaths genes "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Wikipaths"
+[1] "up "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3143] "13175" "52850" "381677" "12575" "13371" "231605" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...7 enriched terms found
+'data.frame':	7 obs. of  12 variables:
+ $ ID            : chr  "WP310" "WP493" "WP2872" "WP544" ...
+ $ Description   : chr  "mRNA processing" "Mapk signaling pathway" "White fat cell differentiation" "Exercise induced circadian regulation" ...
+ $ GeneRatio     : chr  "112/877" "48/877" "15/877" "19/877" ...
+ $ BgRatio       : chr  "443/4787" "159/4787" "32/4787" "49/4787" ...
+ $ RichFactor    : num  0.253 0.302 0.469 0.388 0.289 ...
+ $ FoldEnrichment: num  1.38 1.65 2.56 2.12 1.58 ...
+ $ zScore        : num  3.98 3.93 4.19 3.72 3.52 ...
+ $ pvalue        : num  7.92e-05 1.51e-04 1.96e-04 5.96e-04 5.96e-04 ...
+ $ p.adjust      : num  0.0114 0.0114 0.0114 0.0207 0.0207 ...
+ $ qvalue        : num  0.0102 0.0102 0.0102 0.0186 0.0186 ...
+ $ geneID        : chr  "239188/20975/18789/68272/27366/72290/27993/235402/234733/14105/225027/24018/67207/67229/56275/67434/20826/72397"| __truncated__ "14828/12064/319520/50772/15481/240672/67603/53608/15507/21809/11911/18099/13197/110651/15370/14281/16177/225724"| __truncated__ "16600/13654/16598/12609/54131/12912/12606/19401/12385/21887/66277/22259/13198/12608/14461" "18627/15481/16601/53412/12952/15502/18626/54375/13690/22763/64209/12753/11865/18701/19053/75062/12608/14011/22057" ...
+ $ Count         : int  112 48 15 19 46 40 44
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting FT ORA Wikipaths up "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Wikipaths"
+[1] "down "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3508] "329502" "20168" "76295" "72205" "320910" "216825" "12696" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...2 enriched terms found
+'data.frame':	2 obs. of  12 variables:
+ $ ID            : chr  "WP5298" "WP265"
+ $ Description   : chr  "Dravet syndrome Scn1a A1783V point mutation model" "Delta Notch signaling pathway"
+ $ GeneRatio     : chr  "27/788" "26/788"
+ $ BgRatio       : chr  "73/4787" "82/4787"
+ $ RichFactor    : num  0.37 0.317
+ $ FoldEnrichment: num  2.25 1.93
+ $ zScore        : num  4.76 3.75
+ $ pvalue        : num  1.64e-05 4.37e-04
+ $ p.adjust      : num  0.00284 0.0378
+ $ qvalue        : num  0.00261 0.03473
+ $ geneID        : chr  "16519/17161/14802/14397/55936/108069/14168/20501/12287/78757/20265/76257/72961/11651/14402/20910/16513/16542/27"| __truncated__ "14199/12805/26413/140484/59287/26417/20466/16450/19165/55927/16449/18133/26965/50754/11651/15208/16842/19763/18"| __truncated__
+ $ Count         : int  27 26
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "GSEA analyses for Wikipaths"
+using 'fgsea' for GSEA analysis, please cite Korotkevich et al (2019).
+
+preparing geneSet collections...
+GSEA analysis...
+leading edge analysis...
+done...
+#
+# Gene Set Enrichment Analysis
+#
+#...@organism 	 Mus musculus 
+#...@setType 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@geneList 	 Named num [1:14908] 4.05 3.8 2.92 2.9 2.88 ...
+ - attr(*, "names")= chr [1:14908] "13654" "57435" "22139" "11838" ...
+#...nPerm 	 
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...13 enriched terms found
+'data.frame':	13 obs. of  11 variables:
+ $ ID             : chr  "WP273" "WP493" "WP447" "WP189" ...
+ $ Description    : chr  "Ovarian infertility" "Mapk signaling pathway" "Adipogenesis genes" "GPCRs class A rhodopsin like" ...
+ $ setSize        : int  22 150 112 98 17 10 146 15 62 256 ...
+ $ enrichmentScore: num  0.776 0.478 0.509 0.495 0.763 ...
+ $ NES            : num  2.07 1.83 1.88 1.78 1.93 ...
+ $ pvalue         : num  2.02e-05 1.64e-05 3.79e-05 2.73e-04 4.97e-04 ...
+ $ p.adjust       : num  0.00167 0.00167 0.00209 0.01127 0.01536 ...
+ $ qvalue         : num  0.00141 0.00141 0.00177 0.00956 0.01303 ...
+ $ rank           : num  1314 1713 2741 1532 975 ...
+ $ leading_edge   : chr  "tags=36%, list=9%, signal=33%" "tags=20%, list=11%, signal=18%" "tags=35%, list=18%, signal=29%" "tags=33%, list=10%, signal=29%" ...
+ $ core_enrichment: chr  "19116/13653/22337/13404/14566/12608/17127/12444" "14281/319520/15370/240672/15507/19252/13197/53608/14102/12064/67603/14828/26410/170706/18784/53859/193740/16177"| __truncated__ "13654/19116/64899/13197/17873/14102/12703/12609/384783/22160/18787/14362/22259/12702/19013/12608/14234/19401/12"| __truncated__ "212541/14748/15564/15551/17202/14428/14064/12273/18441/14539/14065/11609/11607/15562/58861/11550/20606/18101/11"| __truncated__ ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting FT GSEA Wikipaths"
+[1] "Ridgeplot"
+Picking joint bandwidth of 0.26
+[1] "GSEA"
+NULL
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+'select()' returned 1:many mapping between keys and columns
+[1] "Running enrichment for CT"
+[1] "ORA analyses for Wikipaths"
+[1] "genes "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:7242] "13175" "52850" "231605" "381677" "329502" "12575" "13371" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...32 enriched terms found
+'data.frame':	32 obs. of  12 variables:
+ $ ID            : chr  "WP265" "WP493" "WP65" "WP258" ...
+ $ Description   : chr  "Delta Notch signaling pathway" "Mapk signaling pathway" "Insulin signaling" "TGF beta receptor signaling pathway" ...
+ $ GeneRatio     : chr  "52/1820" "88/1820" "86/1820" "80/1820" ...
+ $ BgRatio       : chr  "82/4787" "159/4787" "159/4787" "150/4787" ...
+ $ RichFactor    : num  0.634 0.553 0.541 0.533 0.465 ...
+ $ FoldEnrichment: num  1.67 1.46 1.42 1.4 1.22 ...
+ $ zScore        : num  4.78 4.58 4.24 3.93 3.86 ...
+ $ pvalue        : num  2.34e-06 4.92e-06 2.10e-05 7.78e-05 8.07e-05 ...
+ $ p.adjust      : num  0.000417 0.000438 0.001244 0.002873 0.002873 ...
+ $ qvalue        : num  0.000326 0.000342 0.000971 0.002242 0.002242 ...
+ $ geneID        : chr  "16452/433586/18132/20602/60406/12805/16449/16656/17127/57750/18035/18550/14199/22761/55927/26965/59287/16396/26"| __truncated__ "14828/12064/319520/15481/11479/15507/21809/240672/67603/12371/53608/50772/18099/20807/13197/16151/16765/23939/1"| __truncated__ "22433/19246/19094/14783/20525/18607/20411/13653/53608/18642/20112/50772/20807/14252/73086/20393/23939/210789/26"| __truncated__ "12575/14282/15481/12443/12325/21809/20482/103573/19087/71770/17127/17131/26397/19651/56317/59079/18753/17222/26"| __truncated__ ...
+ $ Count         : int  52 88 86 80 206 33 94 43 27 78 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting CT ORA Wikipaths genes "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Wikipaths"
+[1] "up "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3414] "13175" "52850" "231605" "381677" "12575" "13371" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...7 enriched terms found
+'data.frame':	7 obs. of  12 variables:
+ $ ID            : chr  "WP310" "WP493" "WP274" "WP1244" ...
+ $ Description   : chr  "mRNA processing" "Mapk signaling pathway" "B cell receptor signaling pathway" "Estrogen signaling" ...
+ $ GeneRatio     : chr  "124/938" "53/938" "48/938" "27/938" ...
+ $ BgRatio       : chr  "443/4787" "159/4787" "155/4787" "75/4787" ...
+ $ RichFactor    : num  0.28 0.333 0.31 0.36 0.307 ...
+ $ FoldEnrichment: num  1.43 1.7 1.58 1.84 1.57 ...
+ $ zScore        : num  4.67 4.44 3.63 3.61 3.47 ...
+ $ pvalue        : num  4.57e-06 2.26e-05 4.06e-04 6.11e-04 6.76e-04 ...
+ $ p.adjust      : num  0.00079 0.00195 0.02215 0.02215 0.02215 ...
+ $ qvalue        : num  0.000702 0.001734 0.019675 0.019675 0.019675 ...
+ $ geneID        : chr  "239188/20975/68272/18789/27993/14105/72290/27366/24018/67229/53621/234733/67434/56275/76936/72397/71514/243272/"| __truncated__ "14828/12064/319520/15481/15507/21809/240672/67603/53608/50772/18099/20807/13197/110651/18591/225724/16177/53859"| __truncated__ "319520/27261/67771/12043/14083/12053/67603/12445/18607/17060/18003/18035/12444/225724/18719/18753/68119/12912/1"| __truncated__ "12443/12043/66464/108143/12912/68153/24074/14281/229906/226182/18706/15184/16150/20021/17749/20022/14784/70315/"| __truncated__ ...
+ $ Count         : int  124 53 48 27 46 48 19
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting CT ORA Wikipaths up "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Wikipaths"
+[1] "down "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3828] "329502" "320910" "72205" "76295" "22704" "83671" "68795" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...6 enriched terms found
+'data.frame':	6 obs. of  12 variables:
+ $ ID            : chr  "WP5298" "WP103" "WP4346" "WP1983" ...
+ $ Description   : chr  "Dravet syndrome Scn1a A1783V point mutation model" "Cholesterol biosynthesis" "Cholesterol metabolism with Bloch and Kandutsch Russell pathways" "Splicing factor NOVA regulated synaptic proteins" ...
+ $ GeneRatio     : chr  "30/882" "10/882" "21/882" "18/882" ...
+ $ BgRatio       : chr  "73/4787" "15/4787" "52/4787" "42/4787" ...
+ $ RichFactor    : num  0.411 0.667 0.404 0.429 0.281 ...
+ $ FoldEnrichment: num  2.23 3.62 2.19 2.33 1.53 ...
+ $ zScore        : num  5.03 4.83 4.11 4.1 3.46 ...
+ $ pvalue        : num  4.80e-06 5.26e-05 1.73e-04 2.06e-04 6.59e-04 ...
+ $ p.adjust      : num  0.000835 0.004574 0.008944 0.008944 0.022929 ...
+ $ qvalue        : num  0.000753 0.004123 0.008062 0.008062 0.020668 ...
+ $ geneID        : chr  "17161/16519/14397/14802/55936/108069/232333/20265/16524/20501/76257/12287/72961/11651/78757/14168/279653/56717/"| __truncated__ "16987/20775/13360/18194/208715/110196/17855/192156/235293/66234" "16987/11303/110460/20787/20775/14081/74754/13360/18194/73166/13116/208715/110196/17855/192156/14104/235293/5647"| __truncated__ "12325/12361/14406/94332/26420/65945/13852/11603/20911/14806/12390/14810/76707/57321/13822/16531/80883/12661" ...
+ $ Count         : int  30 10 21 18 52 27
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting CT ORA Wikipaths down "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "GSEA analyses for Wikipaths"
+using 'fgsea' for GSEA analysis, please cite Korotkevich et al (2019).
+
+preparing geneSet collections...
+GSEA analysis...
+leading edge analysis...
+done...
+#
+# Gene Set Enrichment Analysis
+#
+#...@organism 	 Mus musculus 
+#...@setType 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@geneList 	 Named num [1:14908] 3.64 3 2.87 2.73 2.34 ...
+ - attr(*, "names")= chr [1:14908] "57435" "239766" "13654" "71840" ...
+#...nPerm 	 
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...5 enriched terms found
+'data.frame':	5 obs. of  11 variables:
+ $ ID             : chr  "WP202" "WP189" "WP493" "WP258" ...
+ $ Description    : chr  "Hypertrophy model" "GPCRs class A rhodopsin like" "Mapk signaling pathway" "TGF beta receptor signaling pathway" ...
+ $ setSize        : int  16 98 150 146 22
+ $ enrichmentScore: num  0.784 0.492 0.437 0.424 0.69
+ $ NES            : num  1.98 1.79 1.7 1.65 1.87
+ $ pvalue         : num  0.000214 0.000309 0.000303 0.000954 0.001202
+ $ p.adjust       : num  0.017 0.017 0.017 0.0393 0.0397
+ $ qvalue         : num  0.015 0.015 0.015 0.0349 0.0352
+ $ rank           : int  1960 2089 878 1367 2356
+ $ leading_edge   : chr  "tags=44%, list=13%, signal=38%" "tags=37%, list=14%, signal=32%" "tags=15%, list=6%, signal=15%" "tags=14%, list=9%, signal=13%" ...
+ $ core_enrichment: chr  "18124/16007/11910/16177/15982/56405/15200" "15564/14748/15551/14064/212541/14428/17202/15562/12273/18101/14065/243764/170732/12767/14829/18386/18441/11550/"| __truncated__ "14281/15507/319520/240672/15370/14102/12064/13197/14828/53608/170706/67603/53859/193740/18784/19252/16177/26410"| __truncated__ "14282/14281/12575/16477/11910/12442/12705/22337/15481/12443/26397/21809/18753/103573/17131/22062/20482/17127/17869/19087/18044" ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+'select()' returned 1:many mapping between keys and columns
+[1] "Running enrichment for FV"
+[1] "ORA analyses for Wikipaths"
+[1] "genes "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:7151] "13175" "52850" "381677" "13371" "329502" "12575" "231605" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...19 enriched terms found
+'data.frame':	19 obs. of  12 variables:
+ $ ID            : chr  "WP493" "WP65" "WP4346" "WP572" ...
+ $ Description   : chr  "Mapk signaling pathway" "Insulin signaling" "Cholesterol metabolism with Bloch and Kandutsch Russell pathways" "EGFR1 signaling pathway" ...
+ $ GeneRatio     : chr  "92/1774" "85/1774" "34/1774" "89/1774" ...
+ $ BgRatio       : chr  "159/4787" "159/4787" "52/4787" "175/4787" ...
+ $ RichFactor    : num  0.579 0.535 0.654 0.509 0.867 ...
+ $ FoldEnrichment: num  1.56 1.44 1.76 1.37 2.34 ...
+ $ zScore        : num  5.52 4.35 4.25 3.85 3.98 ...
+ $ pvalue        : num  4.93e-08 1.37e-05 2.90e-05 1.03e-04 1.10e-04 ...
+ $ p.adjust      : num  8.72e-06 1.21e-03 1.71e-03 3.89e-03 3.89e-03 ...
+ $ qvalue        : num  7.26e-06 1.01e-03 1.42e-03 3.24e-03 3.24e-03 ...
+ $ geneID        : chr  "12064/14828/319520/15481/15507/240672/18099/11479/50772/21809/16765/225724/18591/12371/110651/67603/23938/11911"| __truncated__ "22433/19246/20411/14783/19094/50772/210789/225724/20112/110651/19744/14251/20525/18607/13653/23938/20807/12331/"| __truncated__ "16987/11303/110460/74754/20787/14081/20775/74205/83603/218203/13595/73166/18194/68801/17855/13360/192156/22259/"| __truncated__ "215114/27387/16452/24064/14783/20112/12371/110651/26365/57257/98910/23938/18479/26397/73086/74155/216963/17127/"| __truncated__ ...
+ $ Count         : int  92 85 34 89 13 12 42 18 26 29 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting FV ORA Wikipaths genes "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Wikipaths"
+[1] "up "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3362] "13175" "52850" "381677" "13371" "12575" "231605" "170768" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...7 enriched terms found
+'data.frame':	7 obs. of  12 variables:
+ $ ID            : chr  "WP493" "WP447" "WP2872" "WP544" ...
+ $ Description   : chr  "Mapk signaling pathway" "Adipogenesis genes" "White fat cell differentiation" "Exercise induced circadian regulation" ...
+ $ GeneRatio     : chr  "53/926" "44/926" "15/926" "20/926" ...
+ $ BgRatio       : chr  "159/4787" "135/4787" "32/4787" "49/4787" ...
+ $ RichFactor    : num  0.333 0.326 0.469 0.408 0.253 ...
+ $ FoldEnrichment: num  1.72 1.68 2.42 2.11 1.31 ...
+ $ zScore        : num  4.54 3.95 3.96 3.82 3.32 ...
+ $ pvalue        : num  1.54e-05 1.47e-04 3.67e-04 4.08e-04 7.61e-04 ...
+ $ p.adjust      : num  0.00268 0.01279 0.01776 0.01776 0.02572 ...
+ $ qvalue        : num  0.0025 0.0119 0.0165 0.0165 0.024 ...
+ $ geneID        : chr  "12064/14828/319520/15481/15507/240672/18099/50772/21809/225724/18591/110651/67603/11911/20807/53608/18479/12928"| __truncated__ "384783/17873/20602/14362/13654/19645/19401/17127/64899/19651/15361/13197/21887/14102/13198/18787/12609/12606/19"| __truncated__ "16600/13654/16598/19401/54131/21887/12385/13198/12609/12606/12912/22259/66277/12608/20851" "18627/15481/53412/15502/16601/12753/12952/22763/11865/64209/18626/19053/13690/54375/18701/12608/14011/22057/22218/30960" ...
+ $ Count         : int  53 44 15 20 112 17 26
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting FV ORA Wikipaths up "
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "ORA analyses for Wikipaths"
+[1] "down "
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:3789] "329502" "72205" "12696" "76295" "223697" "68795" "665113" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...5 enriched terms found
+'data.frame':	5 obs. of  12 variables:
+ $ ID            : chr  "WP5298" "WP4346" "WP103" "WP1983" ...
+ $ Description   : chr  "Dravet syndrome Scn1a A1783V point mutation model" "Cholesterol metabolism with Bloch and Kandutsch Russell pathways" "Cholesterol biosynthesis" "Splicing factor NOVA regulated synaptic proteins" ...
+ $ GeneRatio     : chr  "30/848" "21/848" "9/848" "17/848" ...
+ $ BgRatio       : chr  "73/4787" "52/4787" "15/4787" "42/4787" ...
+ $ RichFactor    : num  0.411 0.404 0.6 0.405 0.395
+ $ FoldEnrichment: num  2.32 2.28 3.39 2.28 2.23
+ $ zScore        : num  5.27 4.3 4.3 3.88 3.53
+ $ pvalue        : num  2.06e-06 9.61e-05 2.97e-04 4.28e-04 1.26e-03
+ $ p.adjust      : num  0.000361 0.008407 0.017339 0.018721 0.044061
+ $ qvalue        : num  0.000334 0.007787 0.016061 0.017341 0.040815
+ $ geneID        : chr  "16519/14397/17161/14802/72961/55936/20265/12287/20910/279653/14810/78757/16524/108069/232333/14396/20501/56717/"| __truncated__ "16987/11303/110460/74754/20787/14081/20775/73166/18194/17855/13360/192156/208715/13116/235293/110196/76267/5647"| __truncated__ "16987/20775/18194/17855/13360/192156/208715/235293/110196" "12325/14406/94332/12361/65945/26420/14810/20911/13852/11603/76707/57321/14806/12390/242425/11735/110351" ...
+ $ Count         : int  30 21 9 17 15
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "GSEA analyses for Wikipaths"
+using 'fgsea' for GSEA analysis, please cite Korotkevich et al (2019).
+
+preparing geneSet collections...
+GSEA analysis...
+leading edge analysis...
+done...
+#
+# Gene Set Enrichment Analysis
+#
+#...@organism 	 Mus musculus 
+#...@setType 	 WikiPathways 
+#...@keytype 	 ENTREZID 
+#...@geneList 	 Named num [1:14908] 4.77 3.35 3.19 2.62 2.51 ...
+ - attr(*, "names")= chr [1:14908] "631584" "57435" "13654" "102075" ...
+#...nPerm 	 
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...6 enriched terms found
+'data.frame':	6 obs. of  11 variables:
+ $ ID             : chr  "WP447" "WP493" "WP2902" "WP1763" ...
+ $ Description    : chr  "Adipogenesis genes" "Mapk signaling pathway" "p53 signaling" "Mechanisms associated with pluripotency" ...
+ $ setSize        : int  112 150 62 256 146 16
+ $ enrichmentScore: num  0.52 0.44 0.549 0.371 0.43 ...
+ $ NES            : num  1.91 1.69 1.86 1.51 1.64 ...
+ $ pvalue         : num  9.73e-06 1.20e-04 6.43e-04 1.03e-03 1.35e-03 ...
+ $ p.adjust       : num  0.00161 0.00992 0.03534 0.04254 0.04452 ...
+ $ qvalue         : num  0.00142 0.0088 0.03134 0.03772 0.03948 ...
+ $ rank           : int  2629 1681 1530 3310 2639 1549
+ $ leading_edge   : chr  "tags=36%, list=18%, signal=30%" "tags=21%, list=11%, signal=19%" "tags=29%, list=10%, signal=26%" "tags=26%, list=22%, signal=21%" ...
+ $ core_enrichment: chr  "13654/64899/19116/18787/384783/17873/14102/14234/13197/228775/12609/14362/22259/19401/12608/232174/22160/12703/"| __truncated__ "15507/319520/14281/12064/240672/15370/14828/18784/14102/193740/53608/53859/13197/67603/19252/170706/15481/26410"| __truncated__ "12575/55948/18787/268697/12442/17873/14102/13197/22062/12445/23882/26374/20135/12443/12571/12444/50883/16000" "12575/14281/16600/18712/16598/20750/18451/13197/216850/19698/74178/14566/15901/20841/14362/18103/81879/104156/1"| __truncated__ ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting FV GSEA Wikipaths"
+[1] "Ridgeplot"
+Picking joint bandwidth of 0.163
+[1] "GSEA"
+NULL
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+Warning messages:
+1: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+2: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the ggupset package.
+  Please report the issue at <https://github.com/const-ae/ggupset/issues>. 
+3: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+4: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+5: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+6: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+7: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+8: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+9: In max(idx1, idx2) : no non-missing arguments to max; returning -Inf
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] optparse_1.8.2                           
+ [2] ReactomePA_1.54.0                        
+ [3] lubridate_1.9.5                          
+ [4] forcats_1.0.1                            
+ [5] stringr_1.6.0                            
+ [6] dplyr_1.2.1                              
+ [7] purrr_1.2.2                              
+ [8] readr_2.2.0                              
+ [9] tidyr_1.3.2                              
+[10] tibble_3.3.1                             
+[11] tidyverse_2.0.0                          
+[12] org.Mm.eg.db_3.22.0                      
+[13] TxDb.Mmusculus.UCSC.mm10.knownGene_3.10.0
+[14] GenomicFeatures_1.62.0                   
+[15] AnnotationDbi_1.72.0                     
+[16] Biobase_2.70.0                           
+[17] GenomicRanges_1.62.1                     
+[18] Seqinfo_1.0.0                            
+[19] IRanges_2.44.0                           
+[20] S4Vectors_0.48.1                         
+[21] BiocGenerics_0.56.0                      
+[22] generics_0.1.4                           
+[23] enrichplot_1.30.5                        
+[24] ggplot2_4.0.3                            
+[25] clusterProfiler_4.18.4                   
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3          jsonlite_2.0.0             
+  [3] tidydr_0.0.6                magrittr_2.0.5             
+  [5] ggtangle_0.1.2              farver_2.1.2               
+  [7] fs_2.1.0                    BiocIO_1.20.0              
+  [9] vctrs_0.7.3                 memoise_2.0.1              
+ [11] Rsamtools_2.26.0            RCurl_1.98-1.20            
+ [13] ggtree_4.0.5                htmltools_0.5.9            
+ [15] S4Arrays_1.10.1             curl_7.1.0                 
+ [17] SparseArray_1.10.10         gridGraphics_0.5-1         
+ [19] htmlwidgets_1.6.4           plyr_1.8.9                 
+ [21] cachem_1.1.0                GenomicAlignments_1.46.0   
+ [23] igraph_2.3.3                lifecycle_1.0.5            
+ [25] pkgconfig_2.0.3             Matrix_1.7-4               
+ [27] R6_2.6.1                    fastmap_1.2.0              
+ [29] gson_0.2.1                  MatrixGenerics_1.22.0      
+ [31] digest_0.6.39               aplot_0.3.1                
+ [33] ggnewscale_0.5.2            patchwork_1.3.2            
+ [35] RSQLite_3.53.3              labeling_0.4.3             
+ [37] timechange_0.4.0            httr_1.4.8                 
+ [39] polyclip_1.10-7             abind_1.4-8                
+ [41] compiler_4.5.2              bit64_4.8.4                
+ [43] fontquiver_0.2.1            withr_3.0.3                
+ [45] graphite_1.56.0             S7_0.2.2                   
+ [47] BiocParallel_1.44.0         viridis_0.6.5              
+ [49] DBI_1.3.0                   ggupset_0.4.1              
+ [51] ggforce_0.5.0               R.utils_2.13.0             
+ [53] MASS_7.3-65                 rappdirs_0.3.4             
+ [55] DelayedArray_0.36.1         rjson_0.2.23               
+ [57] tools_4.5.2                 otel_0.2.0                 
+ [59] ape_5.8-1                   scatterpie_0.2.6           
+ [61] R.oo_1.27.1                 glue_1.8.1                 
+ [63] restfulr_0.0.17             nlme_3.1-168               
+ [65] GOSemSim_2.36.0             grid_4.5.2                 
+ [67] cluster_2.1.8.1             reshape2_1.4.5             
+ [69] fgsea_1.36.2                gtable_0.3.6               
+ [71] tzdb_0.5.0                  R.methodsS3_1.8.2          
+ [73] hms_1.1.4                   data.table_1.18.6.1        
+ [75] tidygraph_1.3.1             XVector_0.50.0             
+ [77] ggrepel_0.9.8               pillar_1.11.1              
+ [79] yulab.utils_0.2.4           splines_4.5.2              
+ [81] tweenr_2.0.3                treeio_1.34.0              
+ [83] lattice_0.22-7              rtracklayer_1.70.1         
+ [85] bit_4.6.0                   tidyselect_1.2.1           
+ [87] fontLiberation_0.1.0        GO.db_3.22.0               
+ [89] Biostrings_2.78.0           reactome.db_1.95.0         
+ [91] gridExtra_2.3.1             fontBitstreamVera_0.1.1    
+ [93] SummarizedExperiment_1.40.0 graphlayouts_1.2.5         
+ [95] matrixStats_1.5.0           stringi_1.8.7              
+ [97] lazyeval_0.2.3              ggfun_0.2.1                
+ [99] yaml_2.3.12                 codetools_0.2-20           
+[101] cigarillo_1.0.0             ggraph_2.2.2               
+[103] gdtools_0.5.1               qvalue_2.42.0              
+[105] graph_1.88.1                ggplotify_0.1.3            
+[107] cli_3.6.6                   systemfonts_1.3.2          
+[109] Rcpp_1.1.1-1.1              png_0.1-9                  
+[111] XML_3.99-0.24               parallel_4.5.2             
+[113] blob_1.3.0                  DOSE_4.4.0                 
+[115] bitops_1.1-0                viridisLite_0.4.3          
+[117] tidytree_0.4.8              ggiraph_0.9.6              
+[119] ggridges_0.5.7              scales_1.4.0               
+[121] crayon_1.5.3                rlang_1.3.0                
+[123] cowplot_1.2.0               fastmatch_1.1-8            
+[125] KEGGREST_1.50.0            

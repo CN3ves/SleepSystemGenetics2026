@@ -1,0 +1,9 @@
+Aligning sample <results/14-NRF_fastq/QC/fastq/9348_FT_SD.fq.gz> to <mm10> transcripts annotation
+	STAR --runMode alignReads --runThreadN 20 --genomeDir results/15-NRF_align/index --readFilesIn results/14-NRF_fastq/QC/fastq/9348_FT_SD.fq.gz --readFilesCommand zcat --outFilterType BySJout --outFilterMultimapNmax 20 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverReadLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --winAnchorMultimapNmax 50 --outFileNamePrefix results/15-NRF_align/aligment/9348_FT_SD_ --outSAMunmapped Within --quantTranscriptomeSAMoutput BanSingleEnd --quantMode GeneCounts
+	STAR version: 2.7.11b   compiled: 2026-05-04T10:25:03+02:00 :/tmp/60671180/dcsrsoft/spack-stage/spack-stage-star-2.7.11b-vajw2i64vwtd3guabe3yfs6bdnwitxfn/spack-src/source
+Aug 24 10:57:47 ..... started STAR run
+Aug 24 10:57:48 ..... loading genome
+Aug 24 10:58:02 ..... started mapping
+Aug 24 10:59:19 ..... finished mapping
+Aug 24 10:59:20 ..... finished successfully
+Logs saved in <logs/15-NRF_align/align_9348_FT_SD.log>

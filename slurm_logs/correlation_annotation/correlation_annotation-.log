@@ -1,0 +1,49 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-17 21:50:59
+  Workflow ID: 429fa96b-e8d6-4b4d-9342-0268212419c6
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna051
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs correlation_annotation: --allowed-rules correlation_annotation --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.8oje9ymi results/8-ATAC_differential/DA/rna_counts_disp.RData results/8-ATAC_differential/DA/rna_peaks_treament.csv results/8-ATAC_differential/DA/atac_counts_disp.RData results/8-ATAC_differential/DA/atac_peaks_treament.csv results/6-ATAC_features/list/genomic_features.gtf --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime input code --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage persistence software-deployment-cache storage-local-copies software-deployment sources input-output source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp4dx4p9t3 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: d5cb1e3d1c89e77622e8cd992a184f43
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Aug 17 21:51:02 2026]
+localrule correlation_annotation:
+    input: results/8-ATAC_differential/DA/rna_counts_disp.RData, results/8-ATAC_differential/DA/rna_peaks_treament.csv, results/8-ATAC_differential/DA/atac_counts_disp.RData, results/8-ATAC_differential/DA/atac_peaks_treament.csv, results/6-ATAC_features/list/genomic_features.gtf
+    output: results/13-ATAC_integrate/cors/gene_region_cors_annotation.csv
+    log: logs/13-ATAC_integrate/cors.log
+    jobid: 0
+    benchmark: benchmarks/13-ATAC_integrate/cors.txt
+    reason: Forced execution
+    threads: 40
+    resources: tmpdir=/tmp/63654649, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=50000, mem=50 GB, mem_mib=47684, time=0:20:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/13-ATAC_integrate/cors
+
+        echo "Calculating RNA/ATAC correlations based on annotation" > logs/13-ATAC_integrate/cors.log
+        Rscript workflow/scripts/13.1-Integrate_cors.R -a results/8-ATAC_differential/DA/atac_counts_disp.RData -c results/8-ATAC_differential/DA/atac_peaks_treament.csv -r results/8-ATAC_differential/DA/rna_counts_disp.RData -t results/8-ATAC_differential/DA/rna_peaks_treament.csv -p results/6-ATAC_features/list/genomic_features.gtf -o results/13-ATAC_integrate/cors 2>> logs/13-ATAC_integrate/cors.log
+
+        echo "Logs saved in <logs/13-ATAC_integrate/cors.log>" >> logs/13-ATAC_integrate/cors.log
+        
+Write-protecting output file results/13-ATAC_integrate/cors/gene_region_cors_annotation.csv.
+[Mon Aug 17 22:05:00 2026]
+Finished jobid: 0 (Rule: correlation_annotation)
+1 of 1 steps (100%) done
+Storing output in storage.

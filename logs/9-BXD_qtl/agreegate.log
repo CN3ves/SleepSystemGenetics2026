@@ -1,0 +1,6 @@
+Aggregating QTL results into a single table
+<input.qtls>
+Error in `[.data.frame`(tables, , c("BB_Ctrl", "BB_SD", "DD_Ctrl", "DD_SD")) : 
+  undefined columns selected
+Calls: [ -> [.data.frame
+Execution halted

@@ -1,0 +1,79 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 12:40:29
+  Workflow ID: 3a5eae7a-1f30-4aae-aba1-0def485e885e
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna005
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs correct_samples:sample=207_BXD44_SD --allowed-rules correct_samples --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.4wxr8x18 results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam results/4-ATAC_genotype/check/metadata_corrected.csv results/3-ATAC_bam/alignQC/QCbam_align.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env params code input mtime --conda-frontend conda --shared-fs-usage source-cache sources software-deployment storage-local-copies input-output persistence software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp22q6gm4h --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 12:40:30 2026]
+localrule correct_samples:
+    input: results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam, results/4-ATAC_genotype/check/metadata_corrected.csv, results/3-ATAC_bam/alignQC/QCbam_align.csv
+    output: results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_full.co.bam, results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub1.co.bam, results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub2.co.bam, results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_full.nm.bam, results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub1.nm.bam, results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub2.nm.bam
+    log: logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+    jobid: 0
+    benchmark: benchmarks/4-ATAC_genotype/correct_207_BXD44_SD.txt
+    reason: Forced execution
+    wildcards: sample=207_BXD44_SD
+    resources: tmpdir=/tmp/62713822, disk_mb=7164, disk=7.16 GB, disk_mib=6833, mem_mb=5000, mem=5 GB, mem_mib=4769, time=00:30:00
+Shell command: 
+        mkdir -p results/4-ATAC_genotype/corrected_bams/coord results/4-ATAC_genotype/corrected_bams/name
+
+        echo "Copying <results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam> files from <results/3-ATAC_bam/sort> to <results/4-ATAC_genotype/corrected_bams> " > logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        echo "cp results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_full.co.bam" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_full.co.bam
+
+        echo "cp results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_full.co.bam.bai" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_full.co.bam.bai
+
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub1/g') results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub1.co.bam" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub1/g') results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub1.co.bam
+        
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub1/g').bai results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub1.co.bam.bai" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub1/g').bai results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub1.co.bam.bai
+
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub2/g') results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub2.co.bam" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub2/g') results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub2.co.bam
+        
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub2/g').bai results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub2.co.bam.bai" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub2/g').bai results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub2.co.bam.bai
+        
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/coord/name/g') results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_full.nm.bam" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/coord/name/g' | sed 's/\.co\./\.nm\./g') results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_full.nm.bam
+        
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub1/g' | sed 's/coord/name/g') results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub1.nm.bam" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub1/g' | sed 's/coord/name/g'| sed 's/\.co\./\.nm\./g') results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub1.nm.bam
+        
+        echo "cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub2/g'| sed 's/coord/name/g') results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub2.nm.bam" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+        cp $(echo results/3-ATAC_bam/sort/coord/207_BXD44_SD_full.co.bam | sed 's/full/sub2/g'| sed 's/coord/name/g'| sed 's/\.co\./\.nm\./g') results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub2.nm.bam
+
+        echo "Logs saved in <logs/4-ATAC_genotype/correct_207_BXD44_SD.log>" >> logs/4-ATAC_genotype/correct_207_BXD44_SD.log
+    
+        
+Write-protecting output file results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_full.co.bam.
+Write-protecting output file results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub1.co.bam.
+Write-protecting output file results/4-ATAC_genotype/corrected_bams/coord/207_BXD44_SD_sub2.co.bam.
+Write-protecting output file results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_full.nm.bam.
+Write-protecting output file results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub1.nm.bam.
+Write-protecting output file results/4-ATAC_genotype/corrected_bams/name/207_BXD44_SD_sub2.nm.bam.
+[Sun Jul 26 13:01:32 2026]
+Finished jobid: 0 (Rule: correct_samples)
+1 of 1 steps (100%) done
+Storing output in storage.

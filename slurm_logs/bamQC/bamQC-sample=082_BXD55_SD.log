@@ -1,0 +1,99 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 03:53:31
+  Workflow ID: 4e39c241-9b28-4d1b-8145-ba5699e16242
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna082
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs bamQC:sample=082_BXD55_SD --allowed-rules bamQC --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.zyrmu1ym results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code software-env params mtime input --conda-frontend conda --shared-fs-usage software-deployment software-deployment-cache input-output source-cache persistence storage-local-copies sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpjw02sbsl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 03:53:32 2026]
+localrule bamQC:
+    input: results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam
+    output: results/3-ATAC_bam/bamQC/082_BXD55_SD_full.RData
+    log: logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+    jobid: 0
+    benchmark: benchmarks/3-ATAC_bam/bamQC_082_BXD55_SD.txt
+    reason: Forced execution
+    wildcards: sample=082_BXD55_SD
+    resources: tmpdir=/tmp/62709742, disk_mb=5627, disk=5.63 GB, disk_mib=5367, mem_mb=50000, mem=50 GB, mem_mib=47684, time=02:00:00
+Shell command: 
+        module load  r-light/4.5.2
+        mkdir -p results/3-ATAC_bam/bamQC
+
+        echo "Summarising QC results" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        Rscript workflow/scripts/3.1-QC_align_bamQC.R -b results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam -o results/3-ATAC_bam/bamQC
+
+        echo "Logs saved in <logs/3-ATAC_bam/bamQC_082_BXD55_SD.log>" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        
+Loading packages
+Error in library("ATACseqQC") : there is no package called ‘ATACseqQC’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted
+RuleException:
+CalledProcessError in file "/scratch/csousane/atac/workflow/rules/3-ATAC_bam.smk", line 137:
+Command 'set -euo pipefail;  
+        module load  r-light/4.5.2
+        mkdir -p results/3-ATAC_bam/bamQC
+
+        echo "Summarising QC results" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        Rscript workflow/scripts/3.1-QC_align_bamQC.R -b results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam -o results/3-ATAC_bam/bamQC
+
+        echo "Logs saved in <logs/3-ATAC_bam/bamQC_082_BXD55_SD.log>" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log' returned non-zero exit status 1.
+[Sun Jul 26 03:53:34 2026]
+Error in rule bamQC:
+    message: None
+    jobid: 0
+    input: results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam
+    output: results/3-ATAC_bam/bamQC/082_BXD55_SD_full.RData
+    log: logs/3-ATAC_bam/bamQC_082_BXD55_SD.log (check log file(s) for error details)
+    shell:
+        
+        module load  r-light/4.5.2
+        mkdir -p results/3-ATAC_bam/bamQC
+
+        echo "Summarising QC results" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        Rscript workflow/scripts/3.1-QC_align_bamQC.R -b results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam -o results/3-ATAC_bam/bamQC
+
+        echo "Logs saved in <logs/3-ATAC_bam/bamQC_082_BXD55_SD.log>" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sun Jul 26 03:53:34 2026]
+Error in rule bamQC:
+    message: None
+    jobid: 0
+    input: results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam
+    output: results/3-ATAC_bam/bamQC/082_BXD55_SD_full.RData
+    log: logs/3-ATAC_bam/bamQC_082_BXD55_SD.log (check log file(s) for error details)
+    shell:
+        
+        module load  r-light/4.5.2
+        mkdir -p results/3-ATAC_bam/bamQC
+
+        echo "Summarising QC results" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        Rscript workflow/scripts/3.1-QC_align_bamQC.R -b results/3-ATAC_bam/sort/coord/082_BXD55_SD_full.co.bam -o results/3-ATAC_bam/bamQC
+
+        echo "Logs saved in <logs/3-ATAC_bam/bamQC_082_BXD55_SD.log>" >> logs/3-ATAC_bam/bamQC_082_BXD55_SD.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

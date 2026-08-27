@@ -1,0 +1,52 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-05 23:49:25
+  Workflow ID: 874eeb02-7458-4560-89d3-263011665f3a
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna068
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs qtl_ttest:exp=atac --allowed-rules qtl_ttest --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.tksys52e results/9-ATAC_qtl/tables/QTL_table_filter_atacFC.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params code input software-env mtime --conda-frontend conda --shared-fs-usage persistence input-output software-deployment storage-local-copies sources source-cache software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpzcnj9_tf --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 4b692a11c3ab362eb1f1b247e316ee7f
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Aug  5 23:49:25 2026]
+localrule qtl_ttest:
+    input: results/9-ATAC_qtl/tables/QTL_table_filter_atacFC.csv
+    output: results/9-ATAC_qtl/ttest/qtl_ttests_atac.csv
+    log: logs/9-ATAC_qtl/ttest_atacFC.log
+    jobid: 0
+    benchmark: benchmarks/9-ATAC_qtl/ttest_atac.txt
+    reason: Forced execution
+    wildcards: exp=atac
+    threads: 20
+    resources: tmpdir=/tmp/63086379, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=100000, mem=100 GB, mem_mib=95368, time=8:00:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/ttest
+
+        echo "Classifying interaction QTL results from <results/9-ATAC_qtl/tables/QTL_table_filter_atacFC.csv>" > logs/9-ATAC_qtl/ttest_atacFC.log
+        Rscript workflow/scripts/9.7_QTL_classify.R -q results/9-ATAC_qtl/QTL -t results/9-ATAC_qtl/tables/QTL_table_filter_atacFC.csv -o results/9-ATAC_qtl/ttest 2>> logs/9-ATAC_qtl/ttest_atacFC.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/ttest_atacFC.log>" >> logs/9-ATAC_qtl/ttest_atacFC.log
+        
+Loading packages
+Checking arguments
+Write-protecting output file results/9-ATAC_qtl/ttest/qtl_ttests_atac.csv.
+[Thu Aug  6 06:26:00 2026]
+Finished jobid: 0 (Rule: qtl_ttest)
+1 of 1 steps (100%) done
+Storing output in storage.

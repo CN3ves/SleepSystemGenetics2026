@@ -1,0 +1,119 @@
+Calling peaks for results/4-ATAC_genotype/corrected_bams/name/064_BXD95_CTRL_full.nm.bam results/4-ATAC_genotype/corrected_bams/name/134_BXD95_CTRL_full.nm.bam results/4-ATAC_genotype/corrected_bams/name/178_BXD95_CTRL_full.nm.bam
+Processing experimental file #0: results/4-ATAC_genotype/corrected_bams/name/064_BXD95_CTRL_full.nm.bam
+Warning! Read K00382:110:HKHKHBBXY:4:2119:24434:25369 prevented from extending past 31704 on chrUn_GL456360
+Warning! Read K00382:110:HKHKHBBXY:4:2218:17492:18159 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:110:HKHKHBBXY:1:1218:22627:16366 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:114:HKH5VBBXY:8:2207:15940:2281 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:1:1225:22749:42003 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:110:HKHKHBBXY:1:1106:3082:26846 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:110:HKHKHBBXY:4:2201:14529:18335 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:1:1108:29346:8945 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:110:HKHKHBBXY:4:2123:2148:20762 prevented from extending past 40056 on chrUn_GL456239
+  BAM records analyzed:    42426064
+    Unmapped:                401023
+    To skipped refs:        7911223
+      (chrM)
+    MAPQ < 30:              8625747
+    Paired alignments:            0
+    Unpaired alignments:   25488071
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    33399294
+      duplicates:          10391640 (31.1%)
+  Fragments analyzed:      22985440
+    Full fragments:               0
+    Half fragments:        22985440
+      (from unpaired alns)
+    ATAC-seq cut sites:    22985440
+      (expanded to length 100bp)
+- control file #0 not provided -
+  Background pileup value: 0.909818
+Processing experimental file #1: results/4-ATAC_genotype/corrected_bams/name/134_BXD95_CTRL_full.nm.bam
+Warning! Read K00382:118:HKHCJBBXY:1:1107:6796:20937 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:120:HKHGNBBXY:7:2222:2158:40895 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:115:HKHC5BBXY:1:1227:10490:11899 prevented from extending past 336933 on chrX_GL456233_random
+Warning! Read K00382:118:HKHCJBBXY:1:2115:1458:26670 prevented from extending below 0 on chrUn_GL456393
+Warning! Read K00382:115:HKHC5BBXY:1:1214:17553:8523 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:4:1221:4858:13359 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:2:2118:6035:45326 prevented from extending past 31602 on chrUn_GL456378
+Warning! Read K00382:120:HKHGNBBXY:7:1201:10145:23962 prevented from extending past 25871 on chrUn_GL456381
+Warning! Read K00382:118:HKHCJBBXY:1:1221:21947:4884 prevented from extending past 1976 on chr4_JH584295_random
+  BAM records analyzed:    47961847
+    Unmapped:                230985
+    To skipped refs:        3749274
+      (chrM)
+    MAPQ < 30:              7549173
+    Paired alignments:            0
+    Unpaired alignments:   36432415
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    40181689
+      duplicates:           6509833 (16.2%)
+  Fragments analyzed:      33650005
+    Full fragments:               0
+    Half fragments:        33650005
+      (from unpaired alns)
+    ATAC-seq cut sites:    33650005
+      (expanded to length 100bp)
+- control file #1 not provided -
+  Background pileup value: 1.332140
+Processing experimental file #2: results/4-ATAC_genotype/corrected_bams/name/178_BXD95_CTRL_full.nm.bam
+Warning! Read K00382:111:HKHK5BBXY:3:1220:26129:25492 prevented from extending past 28772 on chrUn_GL456389
+Warning! Read K00382:106:HJ57YBBXY:6:2119:18111:42935 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:4:1222:22110:8998 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:5:2101:17381:36640 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:106:HJ57YBBXY:8:2225:26078:21500 prevented from extending past 47073 on chrUn_GL456366
+Warning! Read K00382:106:HJ57YBBXY:8:2213:22668:47911 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:2:1223:21389:10458 prevented from extending past 72385 on chrUn_GL456379
+Warning! Read K00382:106:HJ57YBBXY:7:2204:20973:15680 prevented from extending below 0 on chrUn_GL456393
+Warning! Read K00382:111:HKHK5BBXY:2:2103:17523:2105 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:3:1118:10379:30767 prevented from extending past 28772 on chrUn_GL456389
+Warning! Read K00382:106:HJ57YBBXY:5:1203:23338:26670 prevented from extending past 24323 on chrUn_GL456394
+Warning! Read K00382:111:HKHK5BBXY:3:2112:1641:2475 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:106:HJ57YBBXY:6:1127:8288:24612 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:111:HKHK5BBXY:2:2201:9526:11882 prevented from extending past 25871 on chrUn_GL456381
+Warning! Read K00382:111:HKHK5BBXY:2:1128:10460:41985 prevented from extending past 24685 on chrUn_GL456387
+Warning! Read K00382:111:HKHK5BBXY:3:2123:23693:14168 prevented from extending below 0 on chrUn_GL456387
+Warning! Read K00382:111:HKHK5BBXY:4:1102:1915:20533 prevented from extending below 0 on chrUn_GL456381
+Warning! Read K00382:106:HJ57YBBXY:5:1219:13382:9069 prevented from extending past 55711 on chrUn_GL456393
+Warning! Read K00382:111:HKHK5BBXY:2:1223:29782:13851 prevented from extending past 24323 on chrUn_GL456394
+Warning! Read K00382:111:HKHK5BBXY:3:1111:21247:10844 prevented from extending past 28772 on chrUn_GL456389
+Warning! Read K00382:106:HJ57YBBXY:8:2102:29863:11917 prevented from extending past 24685 on chrUn_GL456387
+Warning! Read K00382:111:HKHK5BBXY:5:2207:5660:4760 prevented from extending past 24685 on chrUn_GL456387
+Warning! Read K00382:106:HJ57YBBXY:6:2127:3041:42741 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:106:HJ57YBBXY:5:1202:22922:20779 prevented from extending past 1976 on chr4_JH584295_random
+  BAM records analyzed:    69438199
+    Unmapped:                514634
+    To skipped refs:        4471836
+      (chrM)
+    MAPQ < 30:             10538857
+    Paired alignments:            0
+    Unpaired alignments:   53912872
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    58384708
+      duplicates:           7937922 (13.6%)
+  Fragments analyzed:      50424859
+    Full fragments:               0
+    Half fragments:        50424859
+      (from unpaired alns)
+    ATAC-seq cut sites:    50424859
+      (expanded to length 100bp)
+- control file #2 not provided -
+  Background pileup value: 1.996291
+Peak-calling parameters:
+  Genome length: 2491878275bp
+  Significance threshold: -log(q) > 1.301
+  Min. AUC: 200.000
+  Max. gap between sites: 100bp
+Peaks identified: 17661 (11654109bp)
+Logs saved in <logs/5-ATAC_peaks/peaks_BXD95_CTRL.log>

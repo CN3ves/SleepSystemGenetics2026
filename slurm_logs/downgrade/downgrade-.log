@@ -1,0 +1,162 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-12 10:49:37
+  Workflow ID: 3070d3e2-e927-453e-944c-4c578af92d0e
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna055
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs downgrade: --allowed-rules downgrade --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.0cppjey4 results/12-ATAC_footprints/check.txt --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime software-env params code input --conda-frontend conda --shared-fs-usage software-deployment-cache sources input-output persistence source-cache software-deployment storage-local-copies --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpjfi9u94a --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 4b692a11c3ab362eb1f1b247e316ee7f
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Aug 12 10:49:43 2026]
+localrule downgrade:
+    input: results/12-ATAC_footprints/check.txt
+    output: results/12-ATAC_footprints/check2.txt
+    log: logs/12-ATAC_footprints/hint2.log
+    jobid: 0
+    benchmark: benchmarks/12-ATAC_footprints/hint2.txt
+    reason: Forced execution
+    resources: tmpdir=/tmp/63439417, mem_mb=500, mem=500 MB, mem_mib=477, disk_mb=1000, disk=1 GB, disk_mib=954, time=0:10:00
+Shell command: 
+        module load miniforge3/25.3.0-3
+       
+        conda init
+        conda activate ./rgt_env
+
+        echo "Downgrading libraries" >> logs/12-ATAC_footprints/hint2.log
+
+        pip install RGT
+        pip install setuptools==69.5.1
+        pip install numpy==1.26.4
+        pip install scipy==1.12.0
+
+        touch results/12-ATAC_footprints//check2.txt
+
+        echo "Setting up mm10 " >> logs/12-ATAC_footprints/hint2.log
+        cd ~/rgtdata
+        python setupGenomicData.py --mm10
+        conda deactivate 
+
+        echo "Logs saved in <logs/12-ATAC_footprints/hint2.log>" >> logs/12-ATAC_footprints/hint2.log
+        
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/condabin/conda
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/bin/conda
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/bin/conda-env
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/bin/activate
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/bin/deactivate
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/etc/profile.d/conda.sh
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/etc/fish/conf.d/conda.fish
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/shell/condabin/Conda.psm1
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/shell/condabin/conda-hook.ps1
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/lib/python3.12/site-packages/xontrib/conda.xsh
+no change     /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz/etc/profile.d/conda.csh
+no change     /users/csousane/.bashrc
+No action taken.
+
+CondaError: Run 'conda init' before 'conda activate'
+
+RuleException:
+CalledProcessError in file "/scratch/csousane/atac/workflow/rules/12-ATAC_footprints.smk", line 126:
+Command 'set -euo pipefail;  
+        module load miniforge3/25.3.0-3
+       
+        conda init
+        conda activate ./rgt_env
+
+        echo "Downgrading libraries" >> logs/12-ATAC_footprints/hint2.log
+
+        pip install RGT
+        pip install setuptools==69.5.1
+        pip install numpy==1.26.4
+        pip install scipy==1.12.0
+
+        touch results/12-ATAC_footprints//check2.txt
+
+        echo "Setting up mm10 " >> logs/12-ATAC_footprints/hint2.log
+        cd ~/rgtdata
+        python setupGenomicData.py --mm10
+        conda deactivate 
+
+        echo "Logs saved in <logs/12-ATAC_footprints/hint2.log>" >> logs/12-ATAC_footprints/hint2.log' returned non-zero exit status 1.
+[Wed Aug 12 10:49:46 2026]
+Error in rule downgrade:
+    message: None
+    jobid: 0
+    input: results/12-ATAC_footprints/check.txt
+    output: results/12-ATAC_footprints/check2.txt
+    log: logs/12-ATAC_footprints/hint2.log (check log file(s) for error details)
+    shell:
+        
+        module load miniforge3/25.3.0-3
+       
+        conda init
+        conda activate ./rgt_env
+
+        echo "Downgrading libraries" >> logs/12-ATAC_footprints/hint2.log
+
+        pip install RGT
+        pip install setuptools==69.5.1
+        pip install numpy==1.26.4
+        pip install scipy==1.12.0
+
+        touch results/12-ATAC_footprints//check2.txt
+
+        echo "Setting up mm10 " >> logs/12-ATAC_footprints/hint2.log
+        cd ~/rgtdata
+        python setupGenomicData.py --mm10
+        conda deactivate 
+
+        echo "Logs saved in <logs/12-ATAC_footprints/hint2.log>" >> logs/12-ATAC_footprints/hint2.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Aug 12 10:49:46 2026]
+Error in rule downgrade:
+    message: None
+    jobid: 0
+    input: results/12-ATAC_footprints/check.txt
+    output: results/12-ATAC_footprints/check2.txt
+    log: logs/12-ATAC_footprints/hint2.log (check log file(s) for error details)
+    shell:
+        
+        module load miniforge3/25.3.0-3
+       
+        conda init
+        conda activate ./rgt_env
+
+        echo "Downgrading libraries" >> logs/12-ATAC_footprints/hint2.log
+
+        pip install RGT
+        pip install setuptools==69.5.1
+        pip install numpy==1.26.4
+        pip install scipy==1.12.0
+
+        touch results/12-ATAC_footprints//check2.txt
+
+        echo "Setting up mm10 " >> logs/12-ATAC_footprints/hint2.log
+        cd ~/rgtdata
+        python setupGenomicData.py --mm10
+        conda deactivate 
+
+        echo "Logs saved in <logs/12-ATAC_footprints/hint2.log>" >> logs/12-ATAC_footprints/hint2.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

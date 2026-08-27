@@ -1,0 +1,55 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-30 09:56:17
+  Workflow ID: ccd40bca-447f-4d9e-84af-977ffc58a8d7
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna025
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs qtl_perms:exp=atac,chr=chrY,fc=,i=15 --allowed-rules qtl_perms --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.65k85ao3 results/9-ATAC_qtl/QTL/atacchrY_QTL_model.RData --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime code input params software-env --conda-frontend conda --shared-fs-usage input-output source-cache persistence software-deployment-cache storage-local-copies software-deployment sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp97_ttb4l --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jul 30 09:56:17 2026]
+localrule qtl_perms:
+    input: results/9-ATAC_qtl/QTL/atacchrY_QTL_model.RData
+    output: results/9-ATAC_qtl/QTL/atacchrY_QTL_perm15.RData
+    log: logs/9-ATAC_qtl/QTL_atac_chrY__perm_15.log
+    jobid: 0
+    benchmark: benchmarks/9-ATAC_qtl/QTL_atac_chrY__perm_15.txt
+    reason: Forced execution
+    wildcards: exp=atac, chr=chrY, fc=, i=15
+    threads: 10
+    resources: tmpdir=/tmp/62840931, mem_mb=100000, mem=100 GB, mem_mib=95368, disk_mb=1000, disk=1 GB, disk_mib=954, time=08:00:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/QTL
+
+        echo "QTL permutations number 15" > logs/9-ATAC_qtl/QTL_atac_chrY__perm_15.log
+        echo "<results/9-ATAC_qtl/QTL/atacchrY_QTL_model.RData>" >> logs/9-ATAC_qtl/QTL_atac_chrY__perm_15.log
+        Rscript workflow/scripts/9.4_QTL_perms.R -q results/9-ATAC_qtl/QTL/atacchrY_QTL_model.RData -i 15 -o results/9-ATAC_qtl/QTL 2>> logs/9-ATAC_qtl/QTL_atac_chrY__perm_15.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/QTL_atac_chrY__perm_15.log>" >> logs/9-ATAC_qtl/QTL_atac_chrY__perm_15.log
+        
+Loading packages
+Checking arguments
+Reading inputs
+Reading  results/9-ATAC_qtl/QTL/atacchrY_QTL_model.RData 
+Write-protecting output file results/9-ATAC_qtl/QTL/atacchrY_QTL_perm15.RData.
+[Thu Jul 30 09:56:24 2026]
+Finished jobid: 0 (Rule: qtl_perms)
+1 of 1 steps (100%) done
+Storing output in storage.

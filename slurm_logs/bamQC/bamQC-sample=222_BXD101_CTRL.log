@@ -1,0 +1,122 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-10 11:25:56
+  Workflow ID: f3a501d1-7036-4cb7-8380-449f1b47b3ac
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna060
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs bamQC:sample=222_BXD101_CTRL --allowed-rules bamQC --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.gj141jiw results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input software-env mtime code params --conda-frontend conda --shared-fs-usage software-deployment-cache input-output persistence sources software-deployment storage-local-copies source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp1lko0jsb --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 6f1921ddeacde7cd68610aa02c93e2f3
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jul 10 11:25:56 2026]
+localrule bamQC:
+    input: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam
+    output: results/3-ATAC_bam/bamQC/222_BXD101_CTRL_full.RData
+    log: logs/3-ATAC_bam/bamQC_222_BXD101_CTRL.log
+    jobid: 0
+    benchmark: benchmarks/3-ATAC_bam/bamQC_222_BXD101_CTRL.txt
+    reason: Forced execution
+    wildcards: sample=222_BXD101_CTRL
+    resources: tmpdir=/tmp/62116182, mem_mb=50000, mem=50 GB, mem_mib=47684, disk_mb=5563, disk=5.56 GB, disk_mib=5306, time=02:00:00
+Shell command: 
+        module load  r-light/4.5.2
+        mkdir -p results/3-ATAC_bam/bamQC
+
+        echo "Summarising QC results" >> logs/3-ATAC_bam/bamQC_222_BXD101_CTRL.log
+        Rscript workflow/scripts/3.1-QC_align_bamQC.R -b results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam -o results/3-ATAC_bam/bamQC
+
+        echo "Logs saved in <logs/3-ATAC_bam/bamQC_222_BXD101_CTRL.log>" >> logs/3-ATAC_bam/bamQC_222_BXD101_CTRL.log
+        
+Loading packages
+Checking arguments
+[1] "Reading bam file"
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/3-ATAC_bam/sort/coord/222_BXD101_CTRL_full.co.bam.bai
+Write-protecting output file results/3-ATAC_bam/bamQC/222_BXD101_CTRL_full.RData.
+[Fri Jul 10 12:13:41 2026]
+Finished jobid: 0 (Rule: bamQC)
+1 of 1 steps (100%) done
+Storing output in storage.

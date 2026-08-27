@@ -1,0 +1,19 @@
+Downloading index for mm10
+Build index
+	STAR --runThreadN 20 --runMode genomeGenerate --genomeSAindexNbases 12 --genomeDir results/15-NRF_align/index --genomeFastaFiles results/15-NRF_align/index/GRCm38.primary_assembly.genome.fa --sjdbOverhang 150 --sjdbGTFfile results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gff3
+	STAR version: 2.7.11b   compiled: 2026-05-04T10:25:03+02:00 :/tmp/60671180/dcsrsoft/spack-stage/spack-stage-star-2.7.11b-vajw2i64vwtd3guabe3yfs6bdnwitxfn/spack-src/source
+Aug 22 17:25:41 ..... started STAR run
+Aug 22 17:27:10 ... starting to generate Genome files
+Aug 22 17:27:39 ..... processing annotations GTF
+Aug 22 17:27:47 ... starting to sort Suffix Array. This may take a long time...
+Aug 22 17:27:58 ... sorting Suffix Array chunks and saving them to disk...
+Aug 22 17:32:39 ... loading chunks from disk, packing SA...
+Aug 22 17:33:36 ... finished generating suffix array
+Aug 22 17:33:36 ... generating Suffix Array index
+Aug 22 17:34:06 ... completed Suffix Array index
+Aug 22 17:34:07 ..... inserting junctions into the genome indices
+Aug 22 17:35:59 ... writing Genome to disk ...
+Aug 22 17:36:00 ... writing Suffix Array to disk ...
+Aug 22 17:36:08 ... writing SAindex to disk
+Aug 22 17:36:09 ..... finished successfully
+Logs saved in <logs/15-NRF_align/index.log>

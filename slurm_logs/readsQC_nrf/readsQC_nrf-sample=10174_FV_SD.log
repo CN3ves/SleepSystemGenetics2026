@@ -1,0 +1,52 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-22 17:00:48
+  Workflow ID: e8507194-a840-4929-b726-b044053cdd36
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna052
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs readsQC_nrf:sample=10174_FV_SD --allowed-rules readsQC_nrf --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.66niyo9s rawdata/nrf1/fastq/10174_FV_SD.fastq.gz --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input code mtime params --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage input-output software-deployment persistence sources storage-local-copies software-deployment-cache source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp6ukj5zoo --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: e331b71dca27571e853b97081085344d
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Aug 22 17:00:49 2026]
+localrule readsQC_nrf:
+    input: rawdata/nrf1/fastq/10174_FV_SD.fastq.gz
+    output: results/14-NRF_fastq/QC/fastq/10174_FV_SD.fq.gz, results/14-NRF_fastq/QC/html/10174_FV_SD.html, results/14-NRF_fastq/QC/json/10174_FV_SD.json
+    log: logs/14-NRF_fastq/QC_10174_FV_SD.log
+    jobid: 0
+    benchmark: benchmarks/14-NRF_fastq/QC_10174_FV_SD.txt
+    reason: Forced execution
+    wildcards: sample=10174_FV_SD
+    threads: 16
+    resources: tmpdir=/tmp/64012300, mem_mb=5000, mem=5 GB, mem_mib=4769, disk_mb=8546, disk=8.55 GB, disk_mib=8151, time=00:10:00
+Shell command: 
+        module load fastp/1.0.1
+        mkdir -p results/14-NRF_fastq/QC
+
+        echo "Running Fastp on <rawdata/nrf1/fastq/10174_FV_SD.fastq.gz>" > logs/14-NRF_fastq/QC_10174_FV_SD.log
+        
+        fastp -w 16 -D -i rawdata/nrf1/fastq/10174_FV_SD.fastq.gz -o results/14-NRF_fastq/QC/fastq/10174_FV_SD.fq.gz -h results/14-NRF_fastq/QC/html/10174_FV_SD.html -j results/14-NRF_fastq/QC/json/10174_FV_SD.json &>> logs/14-NRF_fastq/QC_10174_FV_SD.log
+        
+        echo "Processed fastq files saved in <results/14-NRF_fastq/QC/fastq/10174_FV_SD.fq.gz>" >> logs/14-NRF_fastq/QC_10174_FV_SD.log
+        echo "Reports saved in <results/14-NRF_fastq/QC/html/10174_FV_SD.html> and <results/14-NRF_fastq/QC/json/10174_FV_SD.json>" >> logs/14-NRF_fastq/QC_10174_FV_SD.log
+        echo "Logs saved in <logs/14-NRF_fastq/QC_10174_FV_SD.log>" >> logs/14-NRF_fastq/QC_10174_FV_SD.log
+        
+[Sat Aug 22 17:02:27 2026]
+Finished jobid: 0 (Rule: readsQC_nrf)
+1 of 1 steps (100%) done
+Storing output in storage.

@@ -1,0 +1,308 @@
+Loading packages
+Checking arguments
+Reading files
+Filter data for shared samples
+Filter low count number features
+Annotate ATAC regions
+>> preparing features information...		 2026-08-17 21:52:12 
+>> Using Genome: mm10 ...
+>> identifying nearest features...		 2026-08-17 21:52:12 
+>> calculating distance from peak to TSS...	 2026-08-17 21:52:20 
+>> assigning genomic annotation...		 2026-08-17 21:52:20 
+>> Using Genome: mm10 ...
+>> Using Genome: mm10 ...
+>> adding gene annotation...			 2026-08-17 21:52:37 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2026-08-17 21:52:38 
+>> done...					 2026-08-17 21:52:38 
+Filter data for matching genes
+Calculate correlations
+[[1]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[2]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[3]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[4]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[5]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[6]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[7]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[8]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[9]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[10]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[11]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[12]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[13]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[14]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[15]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[16]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[17]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[18]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[19]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[20]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[21]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[22]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[23]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[24]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[25]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[26]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[27]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[28]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[29]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[30]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[31]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[32]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[33]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[34]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[35]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[36]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[37]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[38]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[39]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[40]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] optparse_1.8.2                           
+ [2] ggplot2_4.0.3                            
+ [3] doSNOW_1.0.20                            
+ [4] snow_0.4-4                               
+ [5] doParallel_1.0.17                        
+ [6] iterators_1.0.14                         
+ [7] foreach_1.5.2                            
+ [8] TxDb.Mmusculus.UCSC.mm10.knownGene_3.10.0
+ [9] GenomicFeatures_1.62.0                   
+[10] org.Mm.eg.db_3.22.0                      
+[11] AnnotationDbi_1.72.0                     
+[12] Biobase_2.70.0                           
+[13] ChIPseeker_1.46.1                        
+[14] GenomicRanges_1.62.1                     
+[15] Seqinfo_1.0.0                            
+[16] IRanges_2.44.0                           
+[17] S4Vectors_0.48.1                         
+[18] BiocGenerics_0.56.0                      
+[19] generics_0.1.4                           
+[20] edgeR_4.8.2                              
+[21] limma_3.66.0                             
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3                      
+  [2] jsonlite_2.0.0                          
+  [3] tidydr_0.0.6                            
+  [4] magrittr_2.0.5                          
+  [5] ggtangle_0.1.2                          
+  [6] farver_2.1.2                            
+  [7] fs_2.1.0                                
+  [8] BiocIO_1.20.0                           
+  [9] vctrs_0.7.3                             
+ [10] memoise_2.0.1                           
+ [11] Rsamtools_2.26.0                        
+ [12] RCurl_1.98-1.19                         
+ [13] ggtree_4.0.5                            
+ [14] htmltools_0.5.9                         
+ [15] S4Arrays_1.10.1                         
+ [16] TxDb.Hsapiens.UCSC.hg19.knownGene_3.22.1
+ [17] plotrix_3.8-14                          
+ [18] curl_7.1.0                              
+ [19] SparseArray_1.10.10                     
+ [20] gridGraphics_0.5-1                      
+ [21] KernSmooth_2.23-26                      
+ [22] htmlwidgets_1.6.4                       
+ [23] plyr_1.8.9                              
+ [24] cachem_1.1.0                            
+ [25] GenomicAlignments_1.46.0                
+ [26] igraph_2.3.3                            
+ [27] lifecycle_1.0.5                         
+ [28] pkgconfig_2.0.3                         
+ [29] Matrix_1.7-4                            
+ [30] R6_2.6.1                                
+ [31] fastmap_1.2.0                           
+ [32] MatrixGenerics_1.22.0                   
+ [33] digest_0.6.39                           
+ [34] aplot_0.3.1                             
+ [35] enrichplot_1.30.5                       
+ [36] ggnewscale_0.5.2                        
+ [37] patchwork_1.3.2                         
+ [38] RSQLite_3.53.3                          
+ [39] polyclip_1.10-7                         
+ [40] httr_1.4.8                              
+ [41] abind_1.4-8                             
+ [42] compiler_4.5.2                          
+ [43] withr_3.0.3                             
+ [44] bit64_4.8.2                             
+ [45] fontquiver_0.2.1                        
+ [46] S7_0.2.2                                
+ [47] BiocParallel_1.44.0                     
+ [48] DBI_1.3.0                               
+ [49] gplots_3.3.0                            
+ [50] ggforce_0.5.0                           
+ [51] R.utils_2.13.0                          
+ [52] MASS_7.3-65                             
+ [53] rappdirs_0.3.4                          
+ [54] DelayedArray_0.36.1                     
+ [55] rjson_0.2.23                            
+ [56] caTools_1.18.4                          
+ [57] gtools_3.9.5                            
+ [58] tools_4.5.2                             
+ [59] otel_0.2.0                              
+ [60] ape_5.8-1                               
+ [61] scatterpie_0.2.6                        
+ [62] R.oo_1.27.1                             
+ [63] glue_1.8.1                              
+ [64] restfulr_0.0.17                         
+ [65] nlme_3.1-168                            
+ [66] GOSemSim_2.36.0                         
+ [67] grid_4.5.2                              
+ [68] cluster_2.1.8.1                         
+ [69] reshape2_1.4.5                          
+ [70] fgsea_1.36.2                            
+ [71] gtable_0.3.6                            
+ [72] R.methodsS3_1.8.2                       
+ [73] tidyr_1.3.2                             
+ [74] data.table_1.18.4                       
+ [75] XVector_0.50.0                          
+ [76] ggrepel_0.9.8                           
+ [77] pillar_1.11.1                           
+ [78] stringr_1.6.0                           
+ [79] yulab.utils_0.2.4                       
+ [80] splines_4.5.2                           
+ [81] tweenr_2.0.3                            
+ [82] dplyr_1.2.1                             
+ [83] treeio_1.34.0                           
+ [84] lattice_0.22-7                          
+ [85] rtracklayer_1.70.1                      
+ [86] bit_4.6.0                               
+ [87] tidyselect_1.2.1                        
+ [88] fontLiberation_0.1.0                    
+ [89] GO.db_3.22.0                            
+ [90] locfit_1.5-9.12                         
+ [91] Biostrings_2.78.0                       
+ [92] fontBitstreamVera_0.1.1                 
+ [93] SummarizedExperiment_1.40.0             
+ [94] statmod_1.5.2                           
+ [95] matrixStats_1.5.0                       
+ [96] stringi_1.8.7                           
+ [97] UCSC.utils_1.6.1                        
+ [98] lazyeval_0.2.3                          
+ [99] ggfun_0.2.1                             
+[100] yaml_2.3.12                             
+[101] boot_1.3-32                             
+[102] codetools_0.2-20                        
+[103] cigarillo_1.0.0                         
+[104] gdtools_0.5.1                           
+[105] tibble_3.3.1                            
+[106] qvalue_2.42.0                           
+[107] ggplotify_0.1.3                         
+[108] cli_3.6.6                               
+[109] systemfonts_1.3.2                       
+[110] Rcpp_1.1.1-1.1                          
+[111] GenomeInfoDb_1.46.2                     
+[112] png_0.1-9                               
+[113] XML_3.99-0.23                           
+[114] blob_1.3.0                              
+[115] DOSE_4.4.0                              
+[116] bitops_1.1-0                            
+[117] tidytree_0.4.8                          
+[118] ggiraph_0.9.6                           
+[119] scales_1.4.0                            
+[120] purrr_1.2.2                             
+[121] crayon_1.5.3                            
+[122] rlang_1.3.0                             
+[123] cowplot_1.2.0                           
+[124] fastmatch_1.1-8                         
+[125] KEGGREST_1.50.0                         

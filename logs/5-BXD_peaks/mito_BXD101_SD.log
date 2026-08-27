@@ -1,0 +1,458 @@
+Calling peaks with mitochondrial DNA for results/4-ATAC_genotype/corrected_bams/name/031_BXD101_SD_full.nm.bam results/4-ATAC_genotype/corrected_bams/name/143_BXD101_SD_full.nm.bam results/4-ATAC_genotype/corrected_bams/name/223_BXD101_SD_full.nm.bam
+Processing experimental file #0: results/4-ATAC_genotype/corrected_bams/name/031_BXD101_SD_full.nm.bam
+Warning! Read K00382:107:HJ55YBBXY:5:2118:22607:5323 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:2101:27336:11266 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:1215:24160:20076 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:2113:12499:43304 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2112:20882:39576 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2223:7162:33176 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:1128:6147:16858 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:1219:12033:38521 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1101:26575:30450 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1103:20121:25140 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1105:20862:29870 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1205:6309:33070 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1218:18264:23786 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2127:6999:6273 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1126:21542:30767 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2203:10642:21483 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:1209:7162:24595 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:2108:23937:46698 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:1222:16224:12831 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1125:14448:4022 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1228:11353:14941 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2202:7923:22045 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:1213:3863:37976 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1101:18873:9965 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1107:5335:28147 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1107:16031:30855 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1107:21623:7556 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1108:15016:32402 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1112:6116:16032 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1120:19400:9192 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1209:7811:42073 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1221:11586:40385 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:1128:7872:34547 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:2103:27458:26142 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:2108:6745:22010 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:1208:24637:42706 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1102:13108:14994 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1117:12002:24155 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1117:19613:8928 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2117:22820:22538 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2223:17462:36323 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2221:15544:45906 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:1223:20212:12040 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:1110:6938:43445 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1128:28605:36605 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1218:13311:33070 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1118:8197:13060 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2215:13352:8101 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:2103:24951:43849 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1114:19197:14748 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1215:19136:18652 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:1228:21125:10563 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:2213:12550:34635 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1218:12652:13711 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1127:24109:37712 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:2211:13088:19390 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2228:11018:23118 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1105:15300:27479 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2104:19116:9332 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:118:HKHCJBBXY:3:1218:20994:2211 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1104:4036:23188 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1122:28209:24876 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2109:3183:22520 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:2113:10886:35796 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2121:18335:15399 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1207:5365:40051 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1123:21755:33598 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:107:HJ55YBBXY:7:2203:18944:26617 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:2108:11901:14766 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:2109:28168:46715 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1224:27732:43286 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:1217:22769:3916 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2225:20902:44289 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2104:25936:43761 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:1204:20801:14713 prevented from extending past 16299 on chrM
+Warning! Read K00382:125:HKHL3BBXY:6:1218:7070:48737 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2118:14955:1033 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:1218:23683:33879 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:118:HKHCJBBXY:3:2127:26179:9297 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:1226:13413:1912 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:2206:28047:4514 prevented from extending past 16299 on chrM
+Warning! Read K00382:125:HKHL3BBXY:6:1210:2879:21289 prevented from extending below 0 on chrUn_GL456239
+Warning! Read K00382:118:HKHCJBBXY:2:1212:25236:32209 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:1206:31751:29888 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1224:2199:46381 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:2228:31680:18159 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2123:18406:15944 prevented from extending below 0 on chrM
+Warning! Read K00382:125:HKHL3BBXY:6:2224:5507:47717 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1204:24728:15399 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2126:2473:5183 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1227:18710:40139 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2102:13981:32613 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1103:29285:24841 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2126:20456:35180 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:1219:3721:32314 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:2204:26748:6273 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:1224:14529:47489 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:1119:10033:16559 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:3:2126:21237:4426 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2219:13108:20832 prevented from extending below 0 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2116:15057:34301 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:2222:31578:8312 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:118:HKHCJBBXY:2:1107:9019:18915 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:7:1201:15209:36569 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:1214:30604:6378 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:1119:20659:14889 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1205:21125:19812 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:1119:17168:18863 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:1111:16204:10229 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:1105:16853:17579 prevented from extending past 16299 on chrM
+Warning! Read K00382:118:HKHCJBBXY:2:2223:27519:6167 prevented from extending below 0 on chrM
+Warning! Read K00382:125:HKHL3BBXY:6:2107:24708:33756 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:1226:22495:36886 prevented from extending below 0 on chrM
+Warning! Read K00382:125:HKHL3BBXY:6:1111:23358:18370 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:1206:14194:46944 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:2104:20943:16155 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:6:2118:27874:20076 prevented from extending below 0 on chrM
+Warning! Read K00382:125:HKHL3BBXY:6:1205:29518:30732 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:1103:8481:29237 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:1120:30421:13588 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:2117:26342:26705 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:6:2227:13575:8734 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:2105:26616:46522 prevented from extending below 0 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:2108:18365:12075 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:8:2105:28879:49177 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:5:1224:21531:31980 prevented from extending past 16299 on chrM
+Warning! Read K00382:107:HJ55YBBXY:7:1111:13768:32595 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:8:2120:15848:47559 prevented from extending below 0 on chrM
+(another 17 warning messages suppressed)
+  BAM records analyzed:    38870513
+    Unmapped:                293026
+    MAPQ < 30:              9161954
+    Paired alignments:            0
+    Unpaired alignments:   29415533
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    29415533
+      duplicates:          10113947 (34.4%)
+  Fragments analyzed:      19301586
+    Full fragments:               0
+    Half fragments:        19301586
+      (from unpaired alns)
+    ATAC-seq cut sites:    19301586
+      (expanded to length 100bp)
+- control file #0 not provided -
+  Background pileup value: 0.763688
+Processing experimental file #1: results/4-ATAC_genotype/corrected_bams/name/143_BXD101_SD_full.nm.bam
+Warning! Read K00382:109:HJ5Y5BBXY:5:1217:10074:12093 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:2220:9597:3600 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:8:1106:10247:30362 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1101:15412:30802 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1104:4564:2897 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1105:6248:13904 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1105:18040:10985 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1109:6573:27303 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1209:10003:37783 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:1116:21328:33774 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:1126:19410:33053 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2128:20963:25052 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1209:14235:4462 prevented from extending below 0 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:1223:24718:6132 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:2103:3549:43304 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:1106:9678:7785 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:8:1215:22627:21641 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1105:12469:19373 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1111:19695:39770 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1116:27803:20656 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1120:20740:41053 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1209:22414:14906 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2126:10998:31804 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:1116:5558:17597 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2105:3539:18564 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1113:13443:47295 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2104:27367:34354 prevented from extending below 0 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:1106:27833:45889 prevented from extending below 0 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:2105:19248:48245 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1102:8298:6835 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1103:12773:18388 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1105:5802:2404 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1108:15290:26230 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1109:6289:4479 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1109:29335:37765 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1211:7760:42267 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1214:15037:48474 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1220:25997:18933 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1223:15453:16735 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2107:26068:28727 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2111:9049:24665 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:1219:22242:47594 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1203:21704:17016 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1104:15412:28551 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1102:24180:3899 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1212:27417:25826 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2104:14123:31382 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2110:14732:32015 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2123:16467:12304 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2202:21927:15469 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1110:4523:17913 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1202:15818:42442 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2223:22830:29413 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1121:26555:5095 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:2102:11637:20850 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1122:22242:27901 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2119:9861:34793 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1106:27620:2545 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1111:7669:8629 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1104:8278:10739 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2204:17300:48456 prevented from extending past 16299 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:2227:24901:7574 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:2220:4838:24190 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2109:7507:39014 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1228:11464:43198 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1111:29305:18124 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2122:19735:41493 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2218:12966:17034 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:2207:24200:49124 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:7:2119:20527:11706 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1122:29406:4936 prevented from extending below 0 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:1113:16264:19126 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2217:1397:30714 prevented from extending below 0 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:2210:15818:31013 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1226:16173:9297 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2109:27976:13183 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:1128:26281:27654 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:109:HJ5Y5BBXY:8:2224:25195:31998 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1203:14884:49230 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2106:18710:49177 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2115:23317:37748 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:5:1214:20395:24700 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2217:1428:38504 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1116:23429:31154 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2128:19187:29395 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1117:5436:48227 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:2219:21288:8699 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2207:1397:19214 prevented from extending past 16299 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:1119:32481:31681 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2115:19339:8734 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:6:2119:3924:47014 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:2103:15554:16629 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2114:21278:48667 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:109:HJ5Y5BBXY:6:1202:8542:28076 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1208:17919:8207 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1128:27296:5816 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1120:21268:23434 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1102:24880:36270 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1102:3965:6185 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2112:25449:16295 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2108:17300:17016 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2226:19116:24841 prevented from extending past 31602 on chrUn_GL456378
+Warning! Read K00382:115:HKHC5BBXY:5:1208:7425:29343 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1219:24870:16243 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:1206:19877:39312 prevented from extending below 0 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:3:1111:10399:33791 prevented from extending past 16299 on chrM
+Warning! Read K00382:120:HKHGNBBXY:8:1216:13068:45484 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2222:32035:46100 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:1126:18528:26177 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:7:2206:16914:47190 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1205:2514:29589 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:2208:5913:47893 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:1227:18365:3670 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1213:26575:38785 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:1120:21237:7310 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:5:1128:3599:26582 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:4:2128:2047:6624 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:2207:27915:24718 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:1123:7537:12445 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:1204:26088:27707 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:7:1117:22455:13675 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:1112:19299:36165 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:3:2120:28199:10581 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:8:2225:22404:47735 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:1204:8481:30081 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:5:1207:8633:36394 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:1103:18862:5376 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:6:2117:29376:11249 prevented from extending past 16299 on chrM
+(another 15 warning messages suppressed)
+  BAM records analyzed:    40149785
+    Unmapped:                210038
+    MAPQ < 30:              9066876
+    Paired alignments:            0
+    Unpaired alignments:   30872871
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    30872871
+      duplicates:           9393291 (30.4%)
+  Fragments analyzed:      21479580
+    Full fragments:               0
+    Half fragments:        21479580
+      (from unpaired alns)
+    ATAC-seq cut sites:    21479580
+      (expanded to length 100bp)
+- control file #1 not provided -
+  Background pileup value: 0.850101
+Processing experimental file #2: results/4-ATAC_genotype/corrected_bams/name/223_BXD101_SD_full.nm.bam
+Warning! Read K00382:109:HJ5Y5BBXY:3:2223:15919:5095 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:4:1103:7496:42478 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1101:10013:17368 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1102:5315:21852 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1103:17908:16348 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1108:10267:27197 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1110:19319:9332 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1223:18020:22626 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2206:20882:28323 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2207:11738:29008 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2212:8105:35690 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2227:4645:23856 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1103:6248:32578 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1228:19238:45590 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2224:19695:30063 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:2210:22079:11407 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:2:1118:4117:12497 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:4:2213:20649:12058 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1101:12926:8488 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1102:26189:13253 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1107:28554:33246 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1109:22567:11020 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1117:8877:34530 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1211:13961:17843 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1214:26565:3530 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1215:15859:45889 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2110:18284:3037 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1126:7720:43357 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2117:25510:10458 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2123:9567:28586 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2206:20760:32050 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2212:9912:43075 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2228:12083:10229 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1117:19289:16665 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1101:9526:6607 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1101:22983:46487 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1117:12378:42073 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1124:20029:11196 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1210:14336:27250 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1226:24951:6853 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2109:3031:34846 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1123:27306:42689 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1107:21724:37835 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1128:8775:3336 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:2114:29640:6114 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2126:18832:38345 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2223:18172:48597 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:1114:14763:42548 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1111:16904:5605 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:2204:21917:16225 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1110:30695:39418 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2119:3823:15750 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:1:1117:8633:41036 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2228:8998:41809 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:1:1213:28676:48016 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1226:11099:8805 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1208:25986:11530 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1105:23602:29624 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2110:11962:22678 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2112:15635:38046 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1101:15940:27391 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1101:27377:31980 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2201:7304:6871 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1103:23368:43884 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:4:2109:10105:14045 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1103:27752:6396 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:4:1214:7141:42460 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1211:27620:21254 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2111:10571:28217 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1106:15209:46416 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:2106:23612:19478 prevented from extending below 0 on chrUn_GL456393
+Warning! Read K00382:115:HKHC5BBXY:1:2113:9759:45273 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1102:6989:15363 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2228:27773:43216 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2105:28899:16647 prevented from extending past 25871 on chrUn_GL456381
+Warning! Read K00382:115:HKHC5BBXY:2:2213:17208:30890 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1106:1326:11530 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1103:13738:43374 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1112:25885:48913 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1225:11880:49019 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2218:29914:14854 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:115:HKHC5BBXY:1:2119:22739:31892 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1205:3752:1384 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:115:HKHC5BBXY:2:1103:20628:35972 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:2:1116:10713:33598 prevented from extending past 72385 on chrUn_GL456379
+Warning! Read K00382:115:HKHC5BBXY:2:1116:4320:19531 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2227:7263:43374 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2106:25286:32402 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2221:1276:6097 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2105:4807:40596 prevented from extending past 28772 on chrUn_GL456389
+Warning! Read K00382:109:HJ5Y5BBXY:2:2107:16376:23470 prevented from extending past 28772 on chrUn_GL456389
+Warning! Read K00382:115:HKHC5BBXY:1:1206:1742:6449 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1119:21288:41862 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2121:8734:49124 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1206:1773:38890 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:2208:26880:49194 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2104:12012:25017 prevented from extending below 0 on chrUn_GL456366
+Warning! Read K00382:115:HKHC5BBXY:1:1119:1468:7275 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1214:4411:38926 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:1:2119:28442:25421 prevented from extending below 0 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:2:1118:19177:15276 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:115:HKHC5BBXY:2:2111:14793:39998 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:2212:12439:47454 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2127:11069:19373 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1112:25601:24929 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2125:30137:37677 prevented from extending past 25871 on chrUn_GL456381
+Warning! Read K00382:109:HJ5Y5BBXY:2:2226:20202:20076 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:2:2111:6898:28041 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:2214:10835:5323 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1211:28432:41335 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:1102:25621:48667 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2221:31375:21465 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1211:22567:17350 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:1119:18446:17843 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:4:2209:29224:8559 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:2122:27793:39383 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:2118:8085:31716 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:3:1220:24890:34495 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1226:9161:26441 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1227:1103:12550 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2222:13240:46451 prevented from extending past 16299 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:1127:27123:15996 prevented from extending below 0 on chrM
+Warning! Read K00382:109:HJ5Y5BBXY:1:1107:11951:19988 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:2209:12094:11302 prevented from extending below 0 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1225:26220:10106 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:1:1201:21399:40332 prevented from extending past 16299 on chrM
+Warning! Read K00382:115:HKHC5BBXY:2:1221:9841:14185 prevented from extending below 0 on chrUn_GL456239
+Warning! Read K00382:109:HJ5Y5BBXY:1:1116:12631:36745 prevented from extending below 0 on chrM
+(another 24 warning messages suppressed)
+  BAM records analyzed:    66654028
+    Unmapped:                273836
+    MAPQ < 30:             10194871
+    Paired alignments:            0
+    Unpaired alignments:   56185321
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    56185321
+      duplicates:           8957320 (15.9%)
+  Fragments analyzed:      47228001
+    Full fragments:               0
+    Half fragments:        47228001
+      (from unpaired alns)
+    ATAC-seq cut sites:    47228001
+      (expanded to length 100bp)
+- control file #2 not provided -
+  Background pileup value: 1.869905
+Peak-calling parameters:
+  Genome length: 2491894574bp
+  Significance threshold: -log(q) > 1.301
+  Min. AUC: 200.000
+  Max. gap between sites: 100bp
+Peaks identified: 21095 (13542512bp)
+Logs saved in <logs/5-ATAC_peaks/mito_BXD101_SD.log>

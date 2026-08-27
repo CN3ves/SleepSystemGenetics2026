@@ -1,0 +1,97 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-25 18:24:40
+  Workflow ID: 70474f9c-5c24-4db0-8a77-67dd00ad91a1
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna065
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs prepare_data:exp=atac --allowed-rules prepare_data --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.s7vlqv1b results/9-ATAC_qtl/aspects/atac_counts_disp.RData --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env code mtime params input --conda-frontend conda --shared-fs-usage software-deployment software-deployment-cache sources storage-local-copies source-cache persistence input-output --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpzccozql3 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Jul 25 18:24:40 2026]
+localrule prepare_data:
+    input: results/9-ATAC_qtl/aspects/atac_counts_disp.RData
+    output: results/9-ATAC_qtl/data/atac_qtl.RData
+    log: logs/9-ATAC_qtl/data_atac.log
+    jobid: 0
+    benchmark: benchmarks/9-ATAC_qtl/data_atac.txt
+    reason: Forced execution
+    wildcards: exp=atac
+    resources: tmpdir=/tmp/62701687, mem_mb=5000, mem=5 GB, mem_mib=4769, disk_mb=1000, disk=1 GB, disk_mib=954, time=00:10:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/data
+
+        echo "Prepare <results/9-ATAC_qtl/aspects/atac_counts_disp.RData> for QTL analysis" > logs/9-ATAC_qtl/data_atac.log
+        Rscript workflow/scripts/9.2_QTL_prepare.R -c 'results/9-ATAC_qtl/aspects/atac_counts_disp.RData' -d results/9-ATAC_qtl/info -o results/9-ATAC_qtl/data 2>> logs/9-ATAC_qtl/data_atac.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/data_atac.log>" >> logs/9-ATAC_qtl/data_atac.log
+        
+Loading packages
+Checking arguments
+RuleException:
+CalledProcessError in file "/scratch/csousane/atac/workflow/rules/9-ATAC_qtl.smk", line 97:
+Command 'set -euo pipefail;  
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/data
+
+        echo "Prepare <results/9-ATAC_qtl/aspects/atac_counts_disp.RData> for QTL analysis" > logs/9-ATAC_qtl/data_atac.log
+        Rscript workflow/scripts/9.2_QTL_prepare.R -c 'results/9-ATAC_qtl/aspects/atac_counts_disp.RData' -d results/9-ATAC_qtl/info -o results/9-ATAC_qtl/data 2>> logs/9-ATAC_qtl/data_atac.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/data_atac.log>" >> logs/9-ATAC_qtl/data_atac.log' returned non-zero exit status 1.
+[Sat Jul 25 18:24:41 2026]
+Error in rule prepare_data:
+    message: None
+    jobid: 0
+    input: results/9-ATAC_qtl/aspects/atac_counts_disp.RData
+    output: results/9-ATAC_qtl/data/atac_qtl.RData
+    log: logs/9-ATAC_qtl/data_atac.log (check log file(s) for error details)
+    shell:
+        
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/data
+
+        echo "Prepare <results/9-ATAC_qtl/aspects/atac_counts_disp.RData> for QTL analysis" > logs/9-ATAC_qtl/data_atac.log
+        Rscript workflow/scripts/9.2_QTL_prepare.R -c 'results/9-ATAC_qtl/aspects/atac_counts_disp.RData' -d results/9-ATAC_qtl/info -o results/9-ATAC_qtl/data 2>> logs/9-ATAC_qtl/data_atac.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/data_atac.log>" >> logs/9-ATAC_qtl/data_atac.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat Jul 25 18:24:41 2026]
+Error in rule prepare_data:
+    message: None
+    jobid: 0
+    input: results/9-ATAC_qtl/aspects/atac_counts_disp.RData
+    output: results/9-ATAC_qtl/data/atac_qtl.RData
+    log: logs/9-ATAC_qtl/data_atac.log (check log file(s) for error details)
+    shell:
+        
+        module load r-light/4.5.2
+        mkdir -p results/9-ATAC_qtl/data
+
+        echo "Prepare <results/9-ATAC_qtl/aspects/atac_counts_disp.RData> for QTL analysis" > logs/9-ATAC_qtl/data_atac.log
+        Rscript workflow/scripts/9.2_QTL_prepare.R -c 'results/9-ATAC_qtl/aspects/atac_counts_disp.RData' -d results/9-ATAC_qtl/info -o results/9-ATAC_qtl/data 2>> logs/9-ATAC_qtl/data_atac.log
+
+        echo "Logs saved in <logs/9-ATAC_qtl/data_atac.log>" >> logs/9-ATAC_qtl/data_atac.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

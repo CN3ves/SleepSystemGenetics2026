@@ -1,0 +1,5 @@
+Running GO enrichment for ATAC regions
+Running KEGG enrichment for ATAC regions
+Running Wikipaths enrichment for ATAC regions
+Running Reactome enrichment for ATAC regions
+Logs saved in <logs/11-ATAC_enrichment/atac.log>

@@ -1,0 +1,78 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 02:46:38
+  Workflow ID: 2712ab93-5358-421d-9edc-993ae32b6cc5
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna026
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs sort_aligment:sample=132_BXD89_CTRL --allowed-rules sort_aligment --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.zyrmu1ym results/2-ATAC_align/aligment/132_BXD89_CTRL_full.sam results/2-ATAC_align/aligment/132_BXD89_CTRL_sub1.sam results/2-ATAC_align/aligment/132_BXD89_CTRL_sub2.sam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code software-env params mtime input --conda-frontend conda --shared-fs-usage software-deployment software-deployment-cache input-output source-cache persistence storage-local-copies sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpjw02sbsl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 02:46:38 2026]
+localrule sort_aligment:
+    input: results/2-ATAC_align/aligment/132_BXD89_CTRL_full.sam, results/2-ATAC_align/aligment/132_BXD89_CTRL_sub1.sam, results/2-ATAC_align/aligment/132_BXD89_CTRL_sub2.sam
+    output: results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_full.co.bam, results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub1.co.bam, results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub2.co.bam, results/3-ATAC_bam/sort/name/132_BXD89_CTRL_full.nm.bam, results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub1.nm.bam, results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub2.nm.bam
+    log: logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+    jobid: 0
+    benchmark: benchmarks/3-ATAC_bam/sort_132_BXD89_CTRL.txt
+    reason: Forced execution
+    wildcards: sample=132_BXD89_CTRL
+    threads: 20
+    resources: tmpdir=/tmp/62708391, mem_mb=20000, mem=20 GB, mem_mib=19074, disk_mb=48551, disk=48.55 GB, disk_mib=46302, time=02:00:00
+Shell command: 
+        module load samtools/1.21
+
+        mkdir -p results/3-ATAC_bam/sort/name results/3-ATAC_bam/sort/coord
+
+        echo "Sorting sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_full.sam> by name" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        samtools view -S -b results/2-ATAC_align/aligment/132_BXD89_CTRL_full.sam | samtools sort -n -o results/3-ATAC_bam/sort/name/132_BXD89_CTRL_full.nm.bam -@ 20 &>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        echo "Sorting sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_full.sam> by coordinate" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        samtools sort -o results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_full.co.bam -@ 20 results/3-ATAC_bam/sort/name/132_BXD89_CTRL_full.nm.bam &>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        echo "Indexing sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_full.sam> " >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        sleep 60
+        samtools index -@ 20 results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_full.co.bam 2>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        
+
+        echo "Sorting sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_sub1.sam> by name" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        samtools view -S -b results/2-ATAC_align/aligment/132_BXD89_CTRL_sub1.sam | samtools sort -n -o results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub1.nm.bam -@ 20 &>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        echo "Sorting sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_sub1.sam> by coordinate" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        samtools sort -o results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub1.co.bam -@ 20 results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub1.nm.bam &>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        echo "Indexing sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_sub1.sam> " >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        sleep 60
+        samtools index -@ 20 results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub1.co.bam 2>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        
+        echo "Sorting sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_sub2.sam> by name" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        samtools view -S -b results/2-ATAC_align/aligment/132_BXD89_CTRL_sub2.sam | samtools sort -n -o results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub2.nm.bam -@ 20 &>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        echo "Sorting sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_sub2.sam> by coordinate" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        samtools sort -o results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub2.co.bam -@ 20 results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub2.nm.bam &>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        echo "Indexing sample <results/2-ATAC_align/aligment/132_BXD89_CTRL_sub2.sam> " >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        sleep 60
+        samtools index -@ 20 results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub2.co.bam 2>> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        
+        echo "Logs saved in <logs/3-ATAC_bam/sort_132_BXD89_CTRL.log>" >> logs/3-ATAC_bam/sort_132_BXD89_CTRL.log
+        
+Write-protecting output file results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_full.co.bam.
+Write-protecting output file results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub1.co.bam.
+Write-protecting output file results/3-ATAC_bam/sort/coord/132_BXD89_CTRL_sub2.co.bam.
+Write-protecting output file results/3-ATAC_bam/sort/name/132_BXD89_CTRL_full.nm.bam.
+Write-protecting output file results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub1.nm.bam.
+Write-protecting output file results/3-ATAC_bam/sort/name/132_BXD89_CTRL_sub2.nm.bam.
+[Sun Jul 26 02:57:04 2026]
+Finished jobid: 0 (Rule: sort_aligment)
+1 of 1 steps (100%) done
+Storing output in storage.

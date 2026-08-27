@@ -1,0 +1,37 @@
+Running Fastp on <rawdata/atac/fastq/203_DBA_SD.fastq.gz>
+Detecting adapter sequence for read1...
+>I7_Nextera_Transposase_1 | >Trans2_rc | >I7_Nextera_Transposase_1 | >Trans2_rc
+CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+
+Read1 before filtering:
+total reads: 70629889
+total bases: 10665113239
+Q20 bases: 10050403271(94.2363%)
+Q30 bases: 9529147597(89.3488%)
+Q40 bases: 7920933354(74.2696%)
+
+Read1 after filtering:
+total reads: 57827621
+total bases: 5076433558
+Q20 bases: 4984421963(98.1875%)
+Q30 bases: 4814120294(94.8327%)
+Q40 bases: 3931526606(77.4466%)
+
+Filtering result:
+reads passed filter: 70480008
+reads failed due to low quality: 142383
+reads failed due to too many N: 3712
+reads failed due to too short: 3786
+reads with adapter trimmed: 53536842
+bases trimmed due to adapters: 4154365953
+
+Duplication rate (may be overestimated since this is SE data): 17.9144%
+
+JSON report: results/1-ATAC_fastq/QC/json/203_DBA_SD.json
+HTML report: results/1-ATAC_fastq/QC/html/203_DBA_SD.html
+
+fastp -w 16 -D -i rawdata/atac/fastq/203_DBA_SD.fastq.gz -o results/1-ATAC_fastq/QC/fastq/203_DBA_SD.fq.gz -h results/1-ATAC_fastq/QC/html/203_DBA_SD.html -j results/1-ATAC_fastq/QC/json/203_DBA_SD.json 
+fastp v1.0.1, time used: 123 seconds
+Processed fastq files saved in <results/1-ATAC_fastq/QC/fastq/203_DBA_SD.fq.gz>
+Reports saved in <results/1-ATAC_fastq/QC/html/203_DBA_SD.html> and <results/1-ATAC_fastq/QC/json/203_DBA_SD.json>
+Logs saved in <logs/1-ATAC_fastq/QC_203_DBA_SD.log>

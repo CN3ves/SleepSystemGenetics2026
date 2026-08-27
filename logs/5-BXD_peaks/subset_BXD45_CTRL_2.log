@@ -1,0 +1,86 @@
+Calling peaks for results/4-ATAC_genotype/corrected_bams/name/002_BXD45_CTRL_sub2.nm.bam results/4-ATAC_genotype/corrected_bams/name/077_BXD45_CTRL_sub2.nm.bam results/4-ATAC_genotype/corrected_bams/name/150_BXD45_CTRL_sub2.nm.bam
+Processing experimental file #0: results/4-ATAC_genotype/corrected_bams/name/002_BXD45_CTRL_sub2.nm.bam
+Warning! Read K00382:110:HKHKHBBXY:1:1218:24018:19513 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:110:HKHKHBBXY:2:1221:15108:28094 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:1:1221:23328:32033 prevented from extending below 0 on chr4_JH584295_random
+Warning! Read K00382:111:HKHK5BBXY:1:1106:3082:16225 prevented from extending past 40056 on chrUn_GL456239
+  BAM records analyzed:    15000000
+    Unmapped:                 53586
+    To skipped refs:         965324
+      (chrM)
+    MAPQ < 30:              2052247
+    Paired alignments:            0
+    Unpaired alignments:   11928843
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    12894167
+      duplicates:           1282050 (9.9%)
+  Fragments analyzed:      11591474
+    Full fragments:               0
+    Half fragments:        11591474
+      (from unpaired alns)
+    ATAC-seq cut sites:    11591474
+      (expanded to length 100bp)
+- control file #0 not provided -
+  Background pileup value: 0.458996
+Processing experimental file #1: results/4-ATAC_genotype/corrected_bams/name/077_BXD45_CTRL_sub2.nm.bam
+Warning! Read K00382:120:HKHGNBBXY:8:1216:28178:23663 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:109:HJ5Y5BBXY:6:1101:7090:8471 prevented from extending past 1976 on chr4_JH584295_random
+  BAM records analyzed:    15000000
+    Unmapped:                 63173
+    To skipped refs:        1377071
+      (chrM)
+    MAPQ < 30:              2402645
+    Paired alignments:            0
+    Unpaired alignments:   11157111
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    12534182
+      duplicates:           1514039 (12.1%)
+  Fragments analyzed:      10999080
+    Full fragments:               0
+    Half fragments:        10999080
+      (from unpaired alns)
+    ATAC-seq cut sites:    10999080
+      (expanded to length 100bp)
+- control file #1 not provided -
+  Background pileup value: 0.435358
+Processing experimental file #2: results/4-ATAC_genotype/corrected_bams/name/150_BXD45_CTRL_sub2.nm.bam
+Warning! Read K00382:107:HJ55YBBXY:8:2117:19278:35426 prevented from extending past 40056 on chrUn_GL456239
+Warning! Read K00382:118:HKHCJBBXY:3:2215:11809:11724 prevented from extending past 1976 on chr4_JH584295_random
+Warning! Read K00382:118:HKHCJBBXY:3:2122:13423:7486 prevented from extending below 0 on chrUn_GL456239
+  BAM records analyzed:    15000000
+    Unmapped:                 65879
+    To skipped refs:        1374002
+      (chrM)
+    MAPQ < 30:              2454677
+    Paired alignments:            0
+    Unpaired alignments:   11105442
+  PCR duplicates --
+    Paired aln sets:              0
+      duplicates:                 0 (0.0%)
+    Discordant aln sets:          0
+      duplicates:                 0 (0.0%)
+    Singleton aln sets:    12479444
+      duplicates:           1515485 (12.1%)
+  Fragments analyzed:      10943020
+    Full fragments:               0
+    Half fragments:        10943020
+      (from unpaired alns)
+    ATAC-seq cut sites:    10943020
+      (expanded to length 100bp)
+- control file #2 not provided -
+  Background pileup value: 0.433144
+Peak-calling parameters:
+  Genome length: 2491878275bp
+  Significance threshold: -log(q) > 1.301
+  Min. AUC: 200.000
+  Max. gap between sites: 100bp
+Peaks identified: 10388 (6972640bp)
+Logs saved in <logs/5-ATAC_peaks/subset_BXD45_CTRL_2.log>

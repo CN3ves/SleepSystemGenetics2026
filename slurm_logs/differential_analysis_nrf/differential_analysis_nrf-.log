@@ -1,0 +1,48 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-26 18:16:38
+  Workflow ID: 22633534-9014-40b7-8c0c-736a13080bb4
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna065
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs differential_analysis_nrf: --allowed-rules differential_analysis_nrf --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.x8e49429 results/16-NRF_bam/EDA/EDA_normalised.RData results/16-NRF_bam/MultiQC/multiqc_report.html --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code params input mtime --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment sources source-cache persistence input-output storage-local-copies software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpaxqzelh6 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Aug 26 18:16:39 2026]
+localrule differential_analysis_nrf:
+    input: results/16-NRF_bam/EDA/EDA_normalised.RData, results/16-NRF_bam/MultiQC/multiqc_report.html
+    output: results/17-NRF_differential/DA/nrf_stats.RData
+    log: logs/17-NRF_differential/DA.log
+    jobid: 0
+    benchmark: benchmarks/17-NRF_differential/DA.txt
+    reason: Forced execution
+    resources: tmpdir=/tmp/64328340, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=5000, mem=5 GB, mem_mib=4769, time=00:10:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/17-NRF_differential/DA
+
+        echo "Differential analysis on <results/16-NRF_bam/EDA/EDA_normalised.RData>" > logs/17-NRF_differential/DA.log
+        Rscript workflow/scripts/17.1-Differential_analysis.R -c 'results/16-NRF_bam/EDA/EDA_normalised.RData' -o results/17-NRF_differential/DA 2>> logs/17-NRF_differential/DA.log
+
+        echo "Logs saved in <logs/17-NRF_differential/DA.log>" >> logs/17-NRF_differential/DA.log
+        
+Write-protecting output file results/17-NRF_differential/DA/nrf_stats.RData.
+[Wed Aug 26 18:18:38 2026]
+Finished jobid: 0 (Rule: differential_analysis_nrf)
+1 of 1 steps (100%) done
+Storing output in storage.

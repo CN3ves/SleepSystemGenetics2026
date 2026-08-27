@@ -1,0 +1,540 @@
+Reading inputs
+Loading required namespace: edgeR
+[1] "Running enrichment for DEG"
+'select()' returned 1:1 mapping between keys and columns
+[1] "ORA analyses for GO"
+[1] "genes all"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 GOALL 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:11165] "12282" "12304" "14828" "57778" "381511" "64136" "210573" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...3457 enriched terms found
+'data.frame':	3457 obs. of  13 variables:
+ $ ONTOLOGY      : chr  "BP" "BP" "BP" "BP" ...
+ $ ID            : chr  "GO:0007264" "GO:0050807" "GO:0006397" "GO:0050803" ...
+ $ Description   : chr  "small GTPase-mediated signal transduction" "regulation of synapse organization" "mRNA processing" "regulation of synapse structure or activity" ...
+ $ GeneRatio     : chr  "355/10551" "318/10551" "369/10551" "322/10551" ...
+ $ BgRatio       : chr  "461/21379" "415/21379" "498/21379" "424/21379" ...
+ $ RichFactor    : num  0.77 0.766 0.741 0.759 0.784 ...
+ $ FoldEnrichment: num  1.56 1.55 1.5 1.54 1.59 ...
+ $ zScore        : num  12 11.2 11.2 11.1 10.6 ...
+ $ pvalue        : num  7.55e-35 1.26e-30 3.96e-30 9.86e-30 1.28e-27 ...
+ $ p.adjust      : num  4.86e-31 4.06e-27 8.49e-27 1.59e-26 1.65e-24 ...
+ $ qvalue        : num  2.62e-31 2.19e-27 4.58e-27 8.56e-27 8.89e-25 ...
+ $ geneID        : chr  "Dok3/Spry4/Baiap2/Rab15/Spry2/Lrrk2/Rnd3/Arhgap31/Sh2d3c/Mcf2l/Plcd4/Mras/Lipa/Cdkn1a/Myo9b/Sipa1l1/Bcl6/Arfgap"| __truncated__ "Nectin1/Hspa8/Homer1/Dlgap4/Hnrnpm/Baiap2/Shank2/Arc/Etv5/Mdga1/Cbln2/Bhlhb9/Ptpn1/Lrrk2/Cap2/Zdhhc8/Rims4/Ptk2"| __truncated__ "Hspa8/Cirbp/Hnrnpm/Hnrnph1/Papola/Tra2a/Mettl16/Acin1/Rbm14/Srsf7/Rbm11/Txnl4a/Srsf6/Hnrnpc/Rbm3/Lsm11/Sf1/Prpf"| __truncated__ "Nectin1/Hspa8/Homer1/Dlgap4/Hnrnpm/Baiap2/Shank2/Arc/Etv5/Mdga1/Cbln2/Bhlhb9/Ptpn1/Lrrk2/Cap2/Zdhhc8/Rims4/Ptk2"| __truncated__ ...
+ $ Count         : int  355 318 369 322 257 331 350 247 249 248 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "genes BP"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:11165] "12282" "12304" "14828" "57778" "381511" "64136" "210573" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...2626 enriched terms found
+'data.frame':	2626 obs. of  12 variables:
+ $ ID            : chr  "GO:0007264" "GO:0050807" "GO:0006397" "GO:0050803" ...
+ $ Description   : chr  "small GTPase-mediated signal transduction" "regulation of synapse organization" "mRNA processing" "regulation of synapse structure or activity" ...
+ $ GeneRatio     : chr  "355/10551" "318/10551" "369/10551" "322/10551" ...
+ $ BgRatio       : chr  "461/21379" "415/21379" "498/21379" "424/21379" ...
+ $ RichFactor    : num  0.77 0.766 0.741 0.759 0.784 ...
+ $ FoldEnrichment: num  1.56 1.55 1.5 1.54 1.59 ...
+ $ zScore        : num  12 11.2 11.2 11.1 10.6 ...
+ $ pvalue        : num  7.55e-35 1.26e-30 3.96e-30 9.86e-30 1.28e-27 ...
+ $ p.adjust      : num  4.86e-31 4.06e-27 8.49e-27 1.59e-26 1.65e-24 ...
+ $ qvalue        : num  2.62e-31 2.19e-27 4.58e-27 8.56e-27 8.89e-25 ...
+ $ geneID        : chr  "Dok3/Spry4/Baiap2/Rab15/Spry2/Lrrk2/Rnd3/Arhgap31/Sh2d3c/Mcf2l/Plcd4/Mras/Lipa/Cdkn1a/Myo9b/Sipa1l1/Bcl6/Arfgap"| __truncated__ "Nectin1/Hspa8/Homer1/Dlgap4/Hnrnpm/Baiap2/Shank2/Arc/Etv5/Mdga1/Cbln2/Bhlhb9/Ptpn1/Lrrk2/Cap2/Zdhhc8/Rims4/Ptk2"| __truncated__ "Hspa8/Cirbp/Hnrnpm/Hnrnph1/Papola/Tra2a/Mettl16/Acin1/Rbm14/Srsf7/Rbm11/Txnl4a/Srsf6/Hnrnpc/Rbm3/Lsm11/Sf1/Prpf"| __truncated__ "Nectin1/Hspa8/Homer1/Dlgap4/Hnrnpm/Baiap2/Shank2/Arc/Etv5/Mdga1/Cbln2/Bhlhb9/Ptpn1/Lrrk2/Cap2/Zdhhc8/Rims4/Ptk2"| __truncated__ ...
+ $ Count         : int  355 318 369 322 257 331 350 247 249 248 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting DEG ORA GO genes BP"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "genes MF"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:11165] "12282" "12304" "14828" "57778" "381511" "64136" "210573" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...459 enriched terms found
+'data.frame':	459 obs. of  12 variables:
+ $ ID            : chr  "GO:0030695" "GO:0060589" "GO:0003779" "GO:0051020" ...
+ $ Description   : chr  "GTPase regulator activity" "nucleoside-triphosphatase regulator activity" "actin binding" "GTPase binding" ...
+ $ GeneRatio     : chr  "330/10529" "330/10529" "327/10529" "249/10529" ...
+ $ BgRatio       : chr  "447/20899" "448/20899" "456/20899" "337/20899" ...
+ $ RichFactor    : num  0.738 0.737 0.717 0.739 0.721 ...
+ $ FoldEnrichment: num  1.47 1.46 1.42 1.47 1.43 ...
+ $ zScore        : num  10.02 9.96 9.21 8.7 8.7 ...
+ $ pvalue        : num  1.24e-24 2.38e-24 6.00e-21 5.53e-19 7.06e-19 ...
+ $ p.adjust      : num  1.56e-21 1.56e-21 2.62e-18 1.61e-16 1.61e-16 ...
+ $ qvalue        : num  9.07e-22 9.07e-22 1.52e-18 9.37e-17 9.37e-17 ...
+ $ geneID        : chr  "Sgsm1/Rin1/Tbc1d2/Lrrk2/Arhgap31/Sh2d3c/Mcf2l/Rin2/Dennd6b/Plcd4/Rgs11/Hps1/Iqgap2/Myo9b/Sipa1l1/Arfgap3/Arfgap"| __truncated__ "Sgsm1/Rin1/Tbc1d2/Lrrk2/Arhgap31/Sh2d3c/Mcf2l/Rin2/Dennd6b/Plcd4/Rgs11/Hps1/Iqgap2/Myo9b/Sipa1l1/Arfgap3/Arfgap"| __truncated__ "Fmnl1/Mical2/Enc1/Arc/Lrrk2/Cap2/Myo19/Tpm4/Myh3/Gjb6/Fscn1/Ezr/Ptk2/Myo16/Wipf2/Iqgap2/Myo1b/Myo9b/Arpc2/Klhl3"| __truncated__ "Fmnl1/Sgsm1/Bicd2/Rin1/Rilpl1/Ppp6r1/Sytl2/Lrrk2/Rin2/Rims4/Iqgap2/Myo9b/Bcl2l1/Fnbp1l/Xpo1/Ptprn/Rab34/Cdc42se"| __truncated__ ...
+ $ Count         : int  330 330 327 249 284 223 254 187 304 258 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting DEG ORA GO genes MF"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "genes CC"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:11165] "12282" "12304" "14828" "57778" "381511" "64136" "210573" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...372 enriched terms found
+'data.frame':	372 obs. of  12 variables:
+ $ ID            : chr  "GO:0014069" "GO:0045211" "GO:0005769" "GO:0031252" ...
+ $ Description   : chr  "postsynaptic density" "postsynaptic membrane" "early endosome" "cell leading edge" ...
+ $ GeneRatio     : chr  "369/10692" "320/10692" "332/10692" "346/10692" ...
+ $ BgRatio       : chr  "485/21515" "415/21515" "455/21515" "488/21515" ...
+ $ RichFactor    : num  0.761 0.771 0.73 0.709 0.699 ...
+ $ FoldEnrichment: num  1.53 1.55 1.47 1.43 1.41 ...
+ $ zScore        : num  11.76 11.28 10.03 9.48 9.08 ...
+ $ pvalue        : num  2.06e-33 5.22e-31 1.42e-24 5.45e-22 2.91e-20 ...
+ $ p.adjust      : num  1.61e-30 2.04e-28 3.70e-22 1.07e-19 4.55e-18 ...
+ $ qvalue        : num  7.96e-31 1.01e-28 1.82e-22 5.27e-20 2.25e-18 ...
+ $ geneID        : chr  "Hspa8/Homer1/Hnrnpm/Hnrnph1/Baiap2/Shank2/Arc/Mdga1/Cacng2/Sh2d5/Ina/Cap2/Wwc1/Tacc3/Shisa7/Dnajb1/Slitrk1/Lrrt"| __truncated__ "Hspa8/Shank2/Arc/Mdga1/Cacng2/Abhd6/Grm2/Kcnn2/Shisa7/Slc9a5/Slitrk1/Lrrtm3/Prrt1/Hip1/Canx/Lrfn2/Csmd2/Dlg1/Ry"| __truncated__ "Zfyve28/Atp11b/Arc/Cln6/Tfrc/Ptpn1/Slc9a9/Ldlr/Slc1a1/Myo1b/Pcsk9/Snx3/Plekha3/Rab34/Furin/Epha8/Snx16/Hspd1/Nu"| __truncated__ "Spry4/Baiap2/Synj2/Ppp6r1/Spry2/Arhgap31/Sh2d3c/Mcf2l/Stx3/Wwc1/Fscn1/Ezr/Shisa7/Slc9a5/Ptk2/Caprin1/Iqgap2/Myo"| __truncated__ ...
+ $ Count         : int  369 320 332 346 344 312 303 183 185 187 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting DEG ORA GO genes CC"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "Running enrichment for QTL"
+'select()' returned 1:1 mapping between keys and columns
+[1] "ORA analyses for GO"
+[1] "genes all"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 GOALL 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:4514] "102634333" "66236" "66323" "73598" "75480" "69349" "72254" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...384 enriched terms found
+'data.frame':	384 obs. of  13 variables:
+ $ ONTOLOGY      : chr  "BP" "BP" "BP" "BP" ...
+ $ ID            : chr  "GO:0051258" "GO:0048193" "GO:0072659" "GO:1990778" ...
+ $ Description   : chr  "protein polymerization" "Golgi vesicle transport" "protein localization to plasma membrane" "protein localization to cell periphery" ...
+ $ GeneRatio     : chr  "100/4146" "98/4146" "101/4146" "122/4146" ...
+ $ BgRatio       : chr  "296/21379" "300/21379" "312/21379" "410/21379" ...
+ $ RichFactor    : num  0.338 0.327 0.324 0.298 0.29 ...
+ $ FoldEnrichment: num  1.74 1.68 1.67 1.53 1.5 ...
+ $ zScore        : num  6.31 5.86 5.84 5.36 5.28 ...
+ $ pvalue        : num  2.97e-09 2.92e-08 3.03e-08 2.48e-07 3.25e-07 ...
+ $ p.adjust      : num  1.89e-05 6.42e-05 6.42e-05 3.74e-04 3.74e-04 ...
+ $ qvalue        : num  1.62e-05 5.50e-05 5.50e-05 3.21e-04 3.21e-04 ...
+ $ geneID        : chr  "Abl1/Actr3/Aif1/Ang/Ankrd53/Arl6/Arpc5/Bin1/Capg/Ccl21a/Cd2ap/Cdc42ep1/Cdc42ep4/Cdh5/Cdk5rap2/Chmp3/Clasp2/Cyfi"| __truncated__ "Aldh7a1/Ap1g2/Ap4m1/Arcn1/Arf1/Arf3/Arf4/Arfgap2/Arfgef2/Arl8b/Atp9a/Bbs1/Bet1/Blzf1/Cep19/Chic2/Cog1/Cog4/Copa"| __truncated__ "Abi3/Actb/Actr3/Aldh7a1/Arhgap44/Arl6/Atp1b3/Bbs1/Blzf1/Camk2b/Camk2d/Cd81/Cib1/Csk/Ehd1/Ehd3/Epb41l3/Epha3/Exo"| __truncated__ "Abi3/Actb/Actr3/Aldh7a1/Ap4m1/Arhgap44/Arl13b/Arl6/Atp1b3/Bbs1/Blzf1/C1ql2/Camk2b/Camk2d/Cd81/Cib1/Csk/Efcab7/E"| __truncated__ ...
+ $ Count         : int  100 98 101 122 134 43 25 130 99 70 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "genes BP"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:4514] "102634333" "66236" "66323" "73598" "75480" "69349" "72254" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...252 enriched terms found
+'data.frame':	252 obs. of  12 variables:
+ $ ID            : chr  "GO:0051258" "GO:0048193" "GO:0072659" "GO:1990778" ...
+ $ Description   : chr  "protein polymerization" "Golgi vesicle transport" "protein localization to plasma membrane" "protein localization to cell periphery" ...
+ $ GeneRatio     : chr  "100/4146" "98/4146" "101/4146" "122/4146" ...
+ $ BgRatio       : chr  "296/21379" "300/21379" "312/21379" "410/21379" ...
+ $ RichFactor    : num  0.338 0.327 0.324 0.298 0.29 ...
+ $ FoldEnrichment: num  1.74 1.68 1.67 1.53 1.5 ...
+ $ zScore        : num  6.31 5.86 5.84 5.36 5.28 ...
+ $ pvalue        : num  2.97e-09 2.92e-08 3.03e-08 2.48e-07 3.25e-07 ...
+ $ p.adjust      : num  1.89e-05 6.42e-05 6.42e-05 3.74e-04 3.74e-04 ...
+ $ qvalue        : num  1.62e-05 5.50e-05 5.50e-05 3.21e-04 3.21e-04 ...
+ $ geneID        : chr  "Abl1/Actr3/Aif1/Ang/Ankrd53/Arl6/Arpc5/Bin1/Capg/Ccl21a/Cd2ap/Cdc42ep1/Cdc42ep4/Cdh5/Cdk5rap2/Chmp3/Clasp2/Cyfi"| __truncated__ "Aldh7a1/Ap1g2/Ap4m1/Arcn1/Arf1/Arf3/Arf4/Arfgap2/Arfgef2/Arl8b/Atp9a/Bbs1/Bet1/Blzf1/Cep19/Chic2/Cog1/Cog4/Copa"| __truncated__ "Abi3/Actb/Actr3/Aldh7a1/Arhgap44/Arl6/Atp1b3/Bbs1/Blzf1/Camk2b/Camk2d/Cd81/Cib1/Csk/Ehd1/Ehd3/Epb41l3/Epha3/Exo"| __truncated__ "Abi3/Actb/Actr3/Aldh7a1/Ap4m1/Arhgap44/Arl13b/Arl6/Atp1b3/Bbs1/Blzf1/C1ql2/Camk2b/Camk2d/Cd81/Cib1/Csk/Efcab7/E"| __truncated__ ...
+ $ Count         : int  100 98 101 122 134 43 25 130 99 70 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting QTL ORA GO genes BP"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "genes MF"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:4514] "102634333" "66236" "66323" "73598" "75480" "69349" "72254" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...50 enriched terms found
+'data.frame':	50 obs. of  12 variables:
+ $ ID            : chr  "GO:0016829" "GO:0003779" "GO:0003774" "GO:0016853" ...
+ $ Description   : chr  "lyase activity" "actin binding" "cytoskeletal motor activity" "isomerase activity" ...
+ $ GeneRatio     : chr  "72/4132" "136/4132" "44/4132" "126/4132" ...
+ $ BgRatio       : chr  "199/20899" "456/20899" "110/20899" "431/20899" ...
+ $ RichFactor    : num  0.362 0.298 0.4 0.292 0.297 ...
+ $ FoldEnrichment: num  1.83 1.51 2.02 1.48 1.5 ...
+ $ zScore        : num  5.84 5.45 5.34 4.98 4.99 ...
+ $ pvalue        : num  4.59e-08 1.44e-07 8.12e-07 1.30e-06 1.32e-06 ...
+ $ p.adjust      : num  5.92e-05 9.27e-05 3.42e-04 3.42e-04 3.42e-04 ...
+ $ qvalue        : num  5.02e-05 7.87e-05 2.90e-04 2.90e-04 2.90e-04 ...
+ $ geneID        : chr  "Aco2/Adcy4/Adcy9/Alad/Aldob/Aloxe3/Amd2/Apip/Car12/Car2/Car3/Car4/Chac1/Clybl/Car5b/Echs1/Endou/Eno1/Eno3/Eno4/"| __truncated__ "Abi3/Abl1/Ablim1/Actr3/Aif1/Ang/Ankrd24/Arhgap27/Arpc5/Bin1/Bloc1s6/Cap1/Cap2/Capg/Ccr5/Cd2ap/Cfl2/Clasp2/Cnn3/"| __truncated__ "Dnah5/Dnah6/Dnah7b/Dnah7c/Dnah8/Dnah9/Kif11/Kif13b/Kif16b/Kif17/Kif1c/Kif21a/Kif24/Kif5c/Kif6/Kifc3/Kifc5b/Myh1"| __truncated__ "Aloxe3/Chd8/Creld1/Cyp2j13/Ddx1/Ddx25/Ddx42/Ddx47/Ddx59/Dhx30/Dhx34/Dhx35/Dhx37/Dnah5/Dnah6/Dnah7b/Dnah7c/Dnah8"| __truncated__ ...
+ $ Count         : int  72 136 44 126 117 44 86 56 116 84 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting QTL ORA GO genes MF"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "genes CC"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:4514] "102634333" "66236" "66323" "73598" "75480" "69349" "72254" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...82 enriched terms found
+'data.frame':	82 obs. of  12 variables:
+ $ ID            : chr  "GO:0014069" "GO:0005759" "GO:0045121" "GO:0098857" ...
+ $ Description   : chr  "postsynaptic density" "mitochondrial matrix" "membrane raft" "membrane microdomain" ...
+ $ GeneRatio     : chr  "142/4201" "118/4201" "104/4201" "104/4201" ...
+ $ BgRatio       : chr  "485/21515" "394/21515" "346/21515" "348/21515" ...
+ $ RichFactor    : num  0.293 0.299 0.301 0.299 0.299 ...
+ $ FoldEnrichment: num  1.5 1.53 1.54 1.53 1.53 ...
+ $ zScore        : num  5.48 5.27 4.98 4.91 4.8 ...
+ $ pvalue        : num  1.21e-07 3.87e-07 1.54e-06 2.06e-06 3.39e-06 ...
+ $ p.adjust      : num  9.33e-05 1.49e-04 3.95e-04 3.97e-04 5.22e-04 ...
+ $ qvalue        : num  7.03e-05 1.12e-04 2.98e-04 2.99e-04 3.93e-04 ...
+ $ geneID        : chr  "Abi3/Abl1/Ablim1/Abr/Adgrb1/Abi1/Arf1/Arfgap1/Arhgap44/Arpc5/Arrb1/Arrb2/Atp1a1/Camk1/Camk2b/Camk2d/Camk2n1/Cap"| __truncated__ "Acadl/Acadvl/Aco2/Aldh18a1/Aldh1b1/Aldh4a1/Atxn3/Bckdhb/Bckdk/Brca1/Ccnb1/Cdk5rap1/Coq5/Dap3/Dars2/Dhx30/Dlat/E"| __truncated__ "Ache/Actb/Adam17/Arid3a/Arid3c/Asah2/Atp1a1/Atp1a2/Atp1b3/Bcl10/Cacna1h/Cd14/Cd8a/Chp1/Chrnb2/Cnr1/Cntnap2/Coro"| __truncated__ "Ache/Actb/Adam17/Arid3a/Arid3c/Asah2/Atp1a1/Atp1a2/Atp1b3/Bcl10/Cacna1h/Cd14/Cd8a/Chp1/Chrnb2/Cnr1/Cntnap2/Coro"| __truncated__ ...
+ $ Count         : int  142 118 104 104 100 125 131 64 131 98 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting QTL ORA GO genes CC"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "Running enrichment for QTLxSD"
+'select()' returned 1:1 mapping between keys and columns
+[1] "ORA analyses for GO"
+[1] "genes all"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 GOALL 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:1243] "72244" "66421" "378954" "69277" "75106" "102638670" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...48 enriched terms found
+'data.frame':	48 obs. of  13 variables:
+ $ ONTOLOGY      : chr  "BP" "BP" "BP" "BP" ...
+ $ ID            : chr  "GO:0120034" "GO:0007015" "GO:0007173" "GO:0018193" ...
+ $ Description   : chr  "positive regulation of plasma membrane bounded cell projection assembly" "actin filament organization" "epidermal growth factor receptor signaling pathway" "peptidyl-amino acid modification" ...
+ $ GeneRatio     : chr  "20/1119" "47/1119" "19/1119" "32/1119" ...
+ $ BgRatio       : chr  "127/21379" "476/21379" "124/21379" "279/21379" ...
+ $ RichFactor    : num  0.1575 0.0987 0.1532 0.1147 0.1039 ...
+ $ FoldEnrichment: num  3.01 1.89 2.93 2.19 1.98 ...
+ $ zScore        : num  5.34 4.6 5.06 4.71 4.58 ...
+ $ pvalue        : num  9.72e-06 2.34e-05 2.40e-05 2.73e-05 2.99e-05 ...
+ $ p.adjust      : num  0.0237 0.0237 0.0237 0.0237 0.0237 ...
+ $ qvalue        : num  0.0211 0.0211 0.0211 0.0211 0.0211 ...
+ $ geneID        : chr  "Abi2/Avil/Cdc42/Cdc42ep5/Cep120/Crocc/Def8/Eps8l1/Fscn1/P2ry12/Ppp1r35/Rhoq/Wasf2/Actr3/Ccl21a/Fam98a/Fuz/Ift88/Rab11a/Tgfb3" "Abi2/Avil/Catip/Cd2ap/Cdc42/Cdc42ep5/Clasp1/F11r/Fscn1/Iqgap1/Jmy/Mtss1/Marcksl1/Myo7a/Pak2/Plekhh2/Prox1/Rhoq/"| __truncated__ "Ceacam2/Efemp1/Esr1/Iqgap1/Mapk3/Nppa/Pde6g/Ptpn11/Rhbdf1/Snx5/Sox9/Adam17/Braf/Egfr/Mmp9/Neu3/Ralb/Shc1/Src" "Bcl11a/Cfap20/Dph2/Dph3/Dyrk1a/Efemp1/Egln2/Gadd45a/Lipt2/Loxl2/Ndufab1/Nlk/Qpct/Ripk1/Samsn1/Setd7/Tpst2/Tssk4"| __truncated__ ...
+ $ Count         : int  20 47 19 32 40 6 6 31 39 33 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "genes BP"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:1243] "72244" "66421" "378954" "69277" "75106" "102638670" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...41 enriched terms found
+'data.frame':	41 obs. of  12 variables:
+ $ ID            : chr  "GO:0120034" "GO:0007015" "GO:0007173" "GO:0018193" ...
+ $ Description   : chr  "positive regulation of plasma membrane bounded cell projection assembly" "actin filament organization" "epidermal growth factor receptor signaling pathway" "peptidyl-amino acid modification" ...
+ $ GeneRatio     : chr  "20/1119" "47/1119" "19/1119" "32/1119" ...
+ $ BgRatio       : chr  "127/21379" "476/21379" "124/21379" "279/21379" ...
+ $ RichFactor    : num  0.1575 0.0987 0.1532 0.1147 0.1039 ...
+ $ FoldEnrichment: num  3.01 1.89 2.93 2.19 1.98 ...
+ $ zScore        : num  5.34 4.6 5.06 4.71 4.58 ...
+ $ pvalue        : num  9.72e-06 2.34e-05 2.40e-05 2.73e-05 2.99e-05 ...
+ $ p.adjust      : num  0.0237 0.0237 0.0237 0.0237 0.0237 ...
+ $ qvalue        : num  0.0211 0.0211 0.0211 0.0211 0.0211 ...
+ $ geneID        : chr  "Abi2/Avil/Cdc42/Cdc42ep5/Cep120/Crocc/Def8/Eps8l1/Fscn1/P2ry12/Ppp1r35/Rhoq/Wasf2/Actr3/Ccl21a/Fam98a/Fuz/Ift88/Rab11a/Tgfb3" "Abi2/Avil/Catip/Cd2ap/Cdc42/Cdc42ep5/Clasp1/F11r/Fscn1/Iqgap1/Jmy/Mtss1/Marcksl1/Myo7a/Pak2/Plekhh2/Prox1/Rhoq/"| __truncated__ "Ceacam2/Efemp1/Esr1/Iqgap1/Mapk3/Nppa/Pde6g/Ptpn11/Rhbdf1/Snx5/Sox9/Adam17/Braf/Egfr/Mmp9/Neu3/Ralb/Shc1/Src" "Bcl11a/Cfap20/Dph2/Dph3/Dyrk1a/Efemp1/Egln2/Gadd45a/Lipt2/Loxl2/Ndufab1/Nlk/Qpct/Ripk1/Samsn1/Setd7/Tpst2/Tssk4"| __truncated__ ...
+ $ Count         : int  20 47 19 32 40 6 6 31 39 33 ...
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting QTLxSD ORA GO genes BP"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+[1] "genes MF"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:1243] "72244" "66421" "378954" "69277" "75106" "102638670" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...2 enriched terms found
+'data.frame':	2 obs. of  12 variables:
+ $ ID            : chr  "GO:0003779" "GO:0004706"
+ $ Description   : chr  "actin binding" "JUN kinase kinase kinase activity"
+ $ GeneRatio     : chr  "53/1115" "5/1115"
+ $ BgRatio       : chr  "456/20899" "10/20899"
+ $ RichFactor    : num  0.116 0.5
+ $ FoldEnrichment: num  2.18 9.37
+ $ zScore        : num  6.04 6.29
+ $ pvalue        : num  8.54e-08 8.62e-05
+ $ p.adjust      : num  8.73e-05 4.41e-02
+ $ qvalue        : num  8.32e-05 4.20e-02
+ $ geneID        : chr  "Adcy8/Anxa8/Avil/Cd2ap/Ceacam2/Crocc/Dnase1/Dyrk1a/Eps8l1/Fscn1/Iqgap1/Jmy/Lrrk2/Mtss1/Marcksl1/Myo7a/Palld/Ple"| __truncated__ "Lrrk2/Map3k9/Ripk1/Map3k10/Map3k5"
+ $ Count         : int  53 5
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "genes CC"
+#
+# over-representation test
+#
+#...@organism 	 Mus musculus 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:1243] "72244" "66421" "378954" "69277" "75106" "102638670" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...5 enriched terms found
+'data.frame':	5 obs. of  12 variables:
+ $ ID            : chr  "GO:0030055" "GO:0035145" "GO:0005925" "GO:0005814" ...
+ $ Description   : chr  "cell-substrate junction" "exon-exon junction complex" "focal adhesion" "centriole" ...
+ $ GeneRatio     : chr  "29/1140" "8/1140" "25/1140" "21/1140" ...
+ $ BgRatio       : chr  "214/21515" "26/21515" "200/21515" "165/21515" ...
+ $ RichFactor    : num  0.136 0.308 0.125 0.127 0.116
+ $ FoldEnrichment: num  2.56 5.81 2.36 2.4 2.19
+ $ zScore        : num  5.42 5.8 4.57 4.28 3.99
+ $ pvalue        : num  3.29e-06 4.02e-05 6.02e-05 1.76e-04 3.47e-04
+ $ p.adjust      : num  0.00213 0.01299 0.01299 0.02854 0.04489
+ $ qvalue        : num  0.00198 0.01209 0.01209 0.02656 0.04178
+ $ geneID        : chr  "Avil/Capn2/Cav2/Clasp1/Iqgap1/Itga6/Mapk3/Pak2/Palld/Ptpra/Synpo2/Tle2/Zfyve21/Actr3/Adam17/Atat1/Bloc1s6/Atp6v"| __truncated__ "Magohb/Pnn/Upf2/Tdrd3/Thrap3/Upf1/Upf3a/Upf3b" "Avil/Capn2/Cav2/Clasp1/Iqgap1/Mapk3/Pak2/Palld/Ptpra/Synpo2/Tle2/Zfyve21/Adam17/Atat1/Bloc1s6/Atp6v0a2/Fermt1/L"| __truncated__ "Ccnf/Cep120/Cep128/Cep19/Cfap20/Crocc/Hyls1/Parp3/Ppp1r35/Saxo2/Spice1/Wdr62/Birc5/Cep85/Cetn4/D7Ertd443e/Hspa1"| __truncated__ ...
+ $ Count         : int  29 8 25 21 23
+#...Citation
+S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang, W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320 
+
+[1] "plotting QTLxSD ORA GO genes CC"
+[1] "Ontology plot"
+[1] "Barplot"
+[1] "Dotplot"
+[1] "Cnet"
+[1] "Heatplot"
+[1] "Emap"
+[1] "Upset plot"
+Warning messages:
+1: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+2: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the ggupset package.
+  Please report the issue at <https://github.com/const-ae/ggupset/issues>. 
+3: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+4: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+5: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+6: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+7: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+8: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+9: In (function (model, data, ...)  : Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "GeneRatio"
+ℹ Did you misspell an argument name?
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] optparse_1.8.2                           
+ [2] ReactomePA_1.54.0                        
+ [3] lubridate_1.9.5                          
+ [4] forcats_1.0.1                            
+ [5] stringr_1.6.0                            
+ [6] dplyr_1.2.1                              
+ [7] purrr_1.2.2                              
+ [8] readr_2.2.0                              
+ [9] tidyr_1.3.2                              
+[10] tibble_3.3.1                             
+[11] tidyverse_2.0.0                          
+[12] org.Mm.eg.db_3.22.0                      
+[13] TxDb.Mmusculus.UCSC.mm10.knownGene_3.10.0
+[14] GenomicFeatures_1.62.0                   
+[15] AnnotationDbi_1.72.0                     
+[16] Biobase_2.70.0                           
+[17] GenomicRanges_1.62.1                     
+[18] Seqinfo_1.0.0                            
+[19] IRanges_2.44.0                           
+[20] S4Vectors_0.48.1                         
+[21] BiocGenerics_0.56.0                      
+[22] generics_0.1.4                           
+[23] enrichplot_1.30.5                        
+[24] ggplot2_4.0.3                            
+[25] clusterProfiler_4.18.4                   
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3          jsonlite_2.0.0             
+  [3] tidydr_0.0.6                magrittr_2.0.5             
+  [5] ggtangle_0.1.2              farver_2.1.2               
+  [7] fs_2.1.0                    BiocIO_1.20.0              
+  [9] vctrs_0.7.3                 ggarchery_0.4.4            
+ [11] memoise_2.0.1               Rsamtools_2.26.0           
+ [13] RCurl_1.98-1.19             ggtree_4.0.5               
+ [15] htmltools_0.5.9             S4Arrays_1.10.1            
+ [17] curl_7.1.0                  SparseArray_1.10.10        
+ [19] gridGraphics_0.5-1          htmlwidgets_1.6.4          
+ [21] plyr_1.8.9                  cachem_1.1.0               
+ [23] GenomicAlignments_1.46.0    igraph_2.3.3               
+ [25] lifecycle_1.0.5             pkgconfig_2.0.3            
+ [27] Matrix_1.7-4                R6_2.6.1                   
+ [29] fastmap_1.2.0               gson_0.2.1                 
+ [31] MatrixGenerics_1.22.0       digest_0.6.39              
+ [33] aplot_0.3.1                 ggnewscale_0.5.2           
+ [35] patchwork_1.3.2             RSQLite_3.53.3             
+ [37] labeling_0.4.3              timechange_0.4.0           
+ [39] httr_1.4.8                  polyclip_1.10-7            
+ [41] abind_1.4-8                 compiler_4.5.2             
+ [43] bit64_4.8.2                 fontquiver_0.2.1           
+ [45] withr_3.0.3                 graphite_1.56.0            
+ [47] S7_0.2.2                    BiocParallel_1.44.0        
+ [49] viridis_0.6.5               DBI_1.3.0                  
+ [51] ggupset_0.4.1               ggforce_0.5.0              
+ [53] R.utils_2.13.0              MASS_7.3-65                
+ [55] rappdirs_0.3.4              DelayedArray_0.36.1        
+ [57] rjson_0.2.23                tools_4.5.2                
+ [59] otel_0.2.0                  ape_5.8-1                  
+ [61] scatterpie_0.2.6            R.oo_1.27.1                
+ [63] glue_1.8.1                  restfulr_0.0.17            
+ [65] nlme_3.1-168                GOSemSim_2.36.0            
+ [67] grid_4.5.2                  cluster_2.1.8.1            
+ [69] reshape2_1.4.5              fgsea_1.36.2               
+ [71] gtable_0.3.6                tzdb_0.5.0                 
+ [73] R.methodsS3_1.8.2           hms_1.1.4                  
+ [75] data.table_1.18.4           tidygraph_1.3.1            
+ [77] XVector_0.50.0              ggrepel_0.9.8              
+ [79] pillar_1.11.1               limma_3.66.0               
+ [81] yulab.utils_0.2.4           splines_4.5.2              
+ [83] tweenr_2.0.3                treeio_1.34.0              
+ [85] lattice_0.22-7              rtracklayer_1.70.1         
+ [87] bit_4.6.0                   tidyselect_1.2.1           
+ [89] locfit_1.5-9.12             fontLiberation_0.1.0       
+ [91] GO.db_3.22.0                Biostrings_2.78.0          
+ [93] reactome.db_1.95.0          gridExtra_2.3.1            
+ [95] fontBitstreamVera_0.1.1     edgeR_4.8.2                
+ [97] SummarizedExperiment_1.40.0 graphlayouts_1.2.5         
+ [99] statmod_1.5.2               matrixStats_1.5.0          
+[101] stringi_1.8.7               lazyeval_0.2.3             
+[103] ggfun_0.2.1                 yaml_2.3.12                
+[105] codetools_0.2-20            cigarillo_1.0.0            
+[107] ggraph_2.2.2                gdtools_0.5.1              
+[109] qvalue_2.42.0               graph_1.88.1               
+[111] ggplotify_0.1.3             cli_3.6.6                  
+[113] systemfonts_1.3.2           Rcpp_1.1.1-1.1             
+[115] png_0.1-9                   XML_3.99-0.23              
+[117] parallel_4.5.2              blob_1.3.0                 
+[119] DOSE_4.4.0                  bitops_1.1-0               
+[121] viridisLite_0.4.3           tidytree_0.4.8             
+[123] ggiraph_0.9.6               scales_1.4.0               
+[125] crayon_1.5.3                rlang_1.3.0                
+[127] cowplot_1.2.0               fastmatch_1.1-8            
+[129] KEGGREST_1.50.0            

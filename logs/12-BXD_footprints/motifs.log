@@ -1,0 +1,425 @@
+Scan motifs
+>> output location: results/12-ATAC_footprints/motifs
+
+>> genome: mm10
+>> pseudocounts: 1.0
+>> fpr threshold: 0.0001
+
+>> loading input files..
+>>> BXD65_SD, 65514 regions
+>>> BXD55_CTRL, 62579 regions
+>>> BXD100_SD, 68379 regions
+>>> BXD48_CTRL, 65777 regions
+>>> BXD64_CTRL, 63146 regions
+>>> BXD83_SD, 64413 regions
+>>> C57Bl6_SD, 72120 regions
+>>> BXD84_CTRL, 61551 regions
+>>> 65a_CTRL, 66740 regions
+>>> BXD48_SD, 62385 regions
+>>> BXD67_SD, 66595 regions
+>>> BXD81_SD, 65187 regions
+>>> BXD66_CTRL, 62771 regions
+>>> BXD49_CTRL, 62850 regions
+>>> BXD75_SD, 66545 regions
+>>> BXD45_CTRL, 65884 regions
+>>> BXD101_SD, 65449 regions
+>>> BXD101_CTRL, 62006 regions
+>>> BXD50_SD, 66302 regions
+>>> BXD50_CTRL, 62446 regions
+>>> 48a_CTRL, 62700 regions
+>>> BXD56_CTRL, 66617 regions
+>>> BXD90_SD, 66720 regions
+>>> BXD85_SD, 65079 regions
+>>> 73b_SD, 64538 regions
+>>> BXD43_CTRL, 62132 regions
+>>> BXD45_SD, 64903 regions
+>>> BXD51_CTRL, 63704 regions
+>>> BXD44_CTRL, 64707 regions
+>>> BXD79_CTRL, 66888 regions
+>>> BXD44_SD, 65767 regions
+>>> BXD98_SD, 66547 regions
+>>> BXD75_CTRL, 63456 regions
+>>> DBA_SD, 72512 regions
+>>> BXD84_SD, 65080 regions
+>>> BXD90_CTRL, 64284 regions
+>>> BXD71_SD, 66835 regions
+>>> BXD95_SD, 67412 regions
+>>> BXD100_CTRL, 65211 regions
+>>> 48a_SD, 67793 regions
+>>> BXD61_CTRL, 63162 regions
+>>> BXD70_CTRL, 65108 regions
+>>> 73b_CTRL, 65730 regions
+>>> BXD70_SD, 66003 regions
+>>> BXD95_CTRL, 65690 regions
+>>> 65a_SD, 64620 regions
+>>> BXD89_SD, 67631 regions
+>>> BXD81_CTRL, 63514 regions
+>>> BXD85_CTRL, 63095 regions
+>>> BXD73_CTRL, 63939 regions
+>>> BXD64_SD, 63182 regions
+>>> BXD83_CTRL, 61921 regions
+>>> BXD66_SD, 66295 regions
+>>> BXD89_CTRL, 63935 regions
+>>> BXD49_SD, 65012 regions
+>>> BXD71_CTRL, 64480 regions
+>>> BXD79_SD, 67496 regions
+>>> BXD98_CTRL, 64081 regions
+>>> DBA_CTRL, 71401 regions
+>>> BXD61_SD, 67340 regions
+>>> BXD56_SD, 62897 regions
+>>> BXD67_CTRL, 64744 regions
+>>> BXD51_SD, 63655 regions
+>>> C57Bl6_CTRL, 71961 regions
+>>> BXD65_CTRL, 64935 regions
+>>> BXD73_SD, 64975 regions
+>>> BXD55_SD, 67434 regions
+>>> BXD43_SD, 68502 regions
+>>> BXD65_SD_sub1, 55991 regions
+>>> BXD55_CTRL_sub1, 52155 regions
+>>> BXD100_SD_sub1, 56120 regions
+>>> BXD48_CTRL_sub1, 55681 regions
+>>> BXD64_CTRL_sub1, 50391 regions
+>>> BXD83_SD_sub1, 54935 regions
+>>> C57Bl6_SD_sub1, 54997 regions
+>>> BXD84_CTRL_sub1, 51880 regions
+>>> 65a_CTRL_sub1, 52963 regions
+>>> BXD48_SD_sub1, 53582 regions
+>>> BXD67_SD_sub1, 57483 regions
+>>> BXD81_SD_sub1, 56111 regions
+>>> BXD66_CTRL_sub1, 53911 regions
+>>> BXD49_CTRL_sub1, 53024 regions
+>>> BXD75_SD_sub1, 58152 regions
+>>> BXD45_CTRL_sub1, 50839 regions
+>>> BXD101_SD_sub1, 54871 regions
+>>> BXD101_CTRL_sub1, 52767 regions
+>>> BXD50_SD_sub1, 55443 regions
+>>> BXD50_CTRL_sub1, 50630 regions
+>>> 48a_CTRL_sub1, 50486 regions
+>>> BXD56_CTRL_sub1, 52872 regions
+>>> BXD90_SD_sub1, 56023 regions
+>>> BXD85_SD_sub1, 54613 regions
+>>> 73b_SD_sub1, 54092 regions
+>>> BXD43_CTRL_sub1, 52475 regions
+>>> BXD45_SD_sub1, 52886 regions
+>>> BXD51_CTRL_sub1, 53481 regions
+>>> BXD44_CTRL_sub1, 51174 regions
+>>> BXD79_CTRL_sub1, 52332 regions
+>>> BXD44_SD_sub1, 52711 regions
+>>> BXD98_SD_sub1, 52838 regions
+>>> BXD75_CTRL_sub1, 54056 regions
+>>> DBA_SD_sub1, 55383 regions
+>>> BXD84_SD_sub1, 56614 regions
+>>> BXD90_CTRL_sub1, 54397 regions
+>>> BXD71_SD_sub1, 55200 regions
+>>> BXD95_SD_sub1, 56970 regions
+>>> BXD100_CTRL_sub1, 54648 regions
+>>> 48a_SD_sub1, 58679 regions
+>>> BXD61_CTRL_sub1, 52668 regions
+>>> BXD70_CTRL_sub1, 54619 regions
+>>> 73b_CTRL_sub1, 54948 regions
+>>> BXD70_SD_sub1, 55416 regions
+>>> BXD95_CTRL_sub1, 54426 regions
+>>> 65a_SD_sub1, 53019 regions
+>>> BXD89_SD_sub1, 56355 regions
+>>> BXD81_CTRL_sub1, 54368 regions
+>>> BXD85_CTRL_sub1, 51033 regions
+>>> BXD73_CTRL_sub1, 53948 regions
+>>> BXD64_SD_sub1, 52627 regions
+>>> BXD83_CTRL_sub1, 49529 regions
+>>> BXD66_SD_sub1, 57869 regions
+>>> BXD89_CTRL_sub1, 54661 regions
+>>> BXD49_SD_sub1, 56127 regions
+>>> BXD71_CTRL_sub1, 53899 regions
+>>> BXD79_SD_sub1, 53941 regions
+>>> BXD98_CTRL_sub1, 48024 regions
+>>> DBA_CTRL_sub1, 51011 regions
+>>> BXD61_SD_sub1, 56456 regions
+>>> BXD56_SD_sub1, 56705 regions
+>>> BXD67_CTRL_sub1, 53936 regions
+>>> BXD51_SD_sub1, 53133 regions
+>>> C57Bl6_CTRL_sub1, 50181 regions
+>>> BXD65_CTRL_sub1, 52988 regions
+>>> BXD73_SD_sub1, 53895 regions
+>>> BXD55_SD_sub1, 56387 regions
+>>> BXD43_SD_sub1, 55723 regions
+>>> BXD65_SD_sub2, 51401 regions
+>>> BXD55_CTRL_sub2, 46773 regions
+>>> BXD100_SD_sub2, 51241 regions
+>>> BXD48_CTRL_sub2, 51335 regions
+>>> BXD64_CTRL_sub2, 45453 regions
+>>> BXD83_SD_sub2, 50293 regions
+>>> C57Bl6_SD_sub2, 50547 regions
+>>> BXD84_CTRL_sub2, 47387 regions
+>>> 65a_CTRL_sub2, 49598 regions
+>>> BXD48_SD_sub2, 48739 regions
+>>> BXD67_SD_sub2, 53087 regions
+>>> BXD81_SD_sub2, 52308 regions
+>>> BXD66_CTRL_sub2, 48977 regions
+>>> BXD49_CTRL_sub2, 48001 regions
+>>> BXD75_SD_sub2, 54419 regions
+>>> BXD45_CTRL_sub2, 45673 regions
+>>> BXD101_SD_sub2, 50361 regions
+>>> BXD101_CTRL_sub2, 47569 regions
+>>> BXD50_SD_sub2, 50397 regions
+>>> BXD50_CTRL_sub2, 45543 regions
+>>> 48a_CTRL_sub2, 45015 regions
+>>> BXD56_CTRL_sub2, 48119 regions
+>>> BXD90_SD_sub2, 50945 regions
+>>> BXD85_SD_sub2, 49609 regions
+>>> 73b_SD_sub2, 49435 regions
+>>> BXD43_CTRL_sub2, 47522 regions
+>>> BXD45_SD_sub2, 47524 regions
+>>> BXD51_CTRL_sub2, 48607 regions
+>>> BXD44_CTRL_sub2, 45684 regions
+>>> BXD79_CTRL_sub2, 47971 regions
+>>> BXD44_SD_sub2, 47207 regions
+>>> BXD98_SD_sub2, 47967 regions
+>>> BXD75_CTRL_sub2, 48990 regions
+>>> DBA_SD_sub2, 50026 regions
+>>> BXD84_SD_sub2, 51780 regions
+>>> BXD90_CTRL_sub2, 49790 regions
+>>> BXD71_SD_sub2, 50608 regions
+>>> BXD95_SD_sub2, 52599 regions
+>>> BXD100_CTRL_sub2, 50212 regions
+>>> 48a_SD_sub2, 54420 regions
+>>> BXD61_CTRL_sub2, 47930 regions
+>>> BXD70_CTRL_sub2, 49911 regions
+>>> 73b_CTRL_sub2, 50218 regions
+>>> BXD70_SD_sub2, 51092 regions
+>>> BXD95_CTRL_sub2, 49980 regions
+>>> 65a_SD_sub2, 48125 regions
+>>> BXD89_SD_sub2, 51550 regions
+>>> BXD81_CTRL_sub2, 49885 regions
+>>> BXD85_CTRL_sub2, 45875 regions
+>>> BXD73_CTRL_sub2, 48870 regions
+>>> BXD64_SD_sub2, 47497 regions
+>>> BXD83_CTRL_sub2, 44375 regions
+>>> BXD66_SD_sub2, 54108 regions
+>>> BXD89_CTRL_sub2, 50085 regions
+>>> BXD49_SD_sub2, 51524 regions
+>>> BXD71_CTRL_sub2, 49564 regions
+>>> BXD79_SD_sub2, 50295 regions
+>>> BXD98_CTRL_sub2, 42847 regions
+>>> DBA_CTRL_sub2, 45861 regions
+>>> BXD61_SD_sub2, 52190 regions
+>>> BXD56_SD_sub2, 53622 regions
+>>> BXD67_CTRL_sub2, 49237 regions
+>>> BXD51_SD_sub2, 47973 regions
+>>> C57Bl6_CTRL_sub2, 45136 regions
+>>> BXD65_CTRL_sub2, 48051 regions
+>>> BXD73_SD_sub2, 48954 regions
+>>> BXD55_SD_sub2, 51523 regions
+>>> BXD43_SD_sub2, 51011 regions
+
+>> loading motif databases..
+>>> jaspar_vertebrates
+
+>> motifs loaded: 746
+
+>> matching [BXD65_SD], 65514 regions... [21.385 seconds]
+>> matching [BXD55_CTRL], 62579 regions... [17.161 seconds]
+>> matching [BXD100_SD], 68379 regions... [18.848 seconds]
+>> matching [BXD48_CTRL], 65777 regions... [17.834 seconds]
+>> matching [BXD64_CTRL], 63146 regions... [16.902 seconds]
+>> matching [BXD83_SD], 64413 regions... [17.703 seconds]
+>> matching [C57Bl6_SD], 72120 regions... [19.620 seconds]
+>> matching [BXD84_CTRL], 61551 regions... [17.217 seconds]
+>> matching [65a_CTRL], 66740 regions... [18.394 seconds]
+>> matching [BXD48_SD], 62385 regions... [17.017 seconds]
+>> matching [BXD67_SD], 66595 regions... [18.703 seconds]
+>> matching [BXD81_SD], 65187 regions... [18.355 seconds]
+>> matching [BXD66_CTRL], 62771 regions... [16.650 seconds]
+>> matching [BXD49_CTRL], 62850 regions... [16.926 seconds]
+>> matching [BXD75_SD], 66545 regions... [17.977 seconds]
+>> matching [BXD45_CTRL], 65884 regions... [18.311 seconds]
+>> matching [BXD101_SD], 65449 regions... [16.847 seconds]
+>> matching [BXD101_CTRL], 62006 regions... [15.850 seconds]
+>> matching [BXD50_SD], 66302 regions... [17.808 seconds]
+>> matching [BXD50_CTRL], 62446 regions... [16.808 seconds]
+>> matching [48a_CTRL], 62700 regions... [16.974 seconds]
+>> matching [BXD56_CTRL], 66617 regions... [17.767 seconds]
+>> matching [BXD90_SD], 66720 regions... [17.475 seconds]
+>> matching [BXD85_SD], 65079 regions... [16.770 seconds]
+>> matching [73b_SD], 64538 regions... [16.673 seconds]
+>> matching [BXD43_CTRL], 62132 regions... [16.061 seconds]
+>> matching [BXD45_SD], 64903 regions... [16.696 seconds]
+>> matching [BXD51_CTRL], 63704 regions... [16.437 seconds]
+>> matching [BXD44_CTRL], 64707 regions... [16.591 seconds]
+>> matching [BXD79_CTRL], 66888 regions... [17.255 seconds]
+>> matching [BXD44_SD], 65767 regions... [17.205 seconds]
+>> matching [BXD98_SD], 66547 regions... [17.354 seconds]
+>> matching [BXD75_CTRL], 63456 regions... [16.735 seconds]
+>> matching [DBA_SD], 72512 regions... [19.222 seconds]
+>> matching [BXD84_SD], 65080 regions... [16.830 seconds]
+>> matching [BXD90_CTRL], 64284 regions... [16.839 seconds]
+>> matching [BXD71_SD], 66835 regions... [17.366 seconds]
+>> matching [BXD95_SD], 67412 regions... [17.336 seconds]
+>> matching [BXD100_CTRL], 65211 regions... [16.661 seconds]
+>> matching [48a_SD], 67793 regions... [17.278 seconds]
+>> matching [BXD61_CTRL], 63162 regions... [16.394 seconds]
+>> matching [BXD70_CTRL], 65108 regions... [16.788 seconds]
+>> matching [73b_CTRL], 65730 regions... [17.094 seconds]
+>> matching [BXD70_SD], 66003 regions... [17.351 seconds]
+>> matching [BXD95_CTRL], 65690 regions... [16.991 seconds]
+>> matching [65a_SD], 64620 regions... [16.554 seconds]
+>> matching [BXD89_SD], 67631 regions... [17.364 seconds]
+>> matching [BXD81_CTRL], 63514 regions... [16.189 seconds]
+>> matching [BXD85_CTRL], 63095 regions... [16.043 seconds]
+>> matching [BXD73_CTRL], 63939 regions... [16.595 seconds]
+>> matching [BXD64_SD], 63182 regions... [16.445 seconds]
+>> matching [BXD83_CTRL], 61921 regions... [16.104 seconds]
+>> matching [BXD66_SD], 66295 regions... [17.102 seconds]
+>> matching [BXD89_CTRL], 63935 regions... [16.492 seconds]
+>> matching [BXD49_SD], 65012 regions... [16.906 seconds]
+>> matching [BXD71_CTRL], 64480 regions... [16.825 seconds]
+>> matching [BXD79_SD], 67496 regions... [17.570 seconds]
+>> matching [BXD98_CTRL], 64081 regions... [16.539 seconds]
+>> matching [DBA_CTRL], 71401 regions... [18.539 seconds]
+>> matching [BXD61_SD], 67340 regions... [17.280 seconds]
+>> matching [BXD56_SD], 62897 regions... [16.270 seconds]
+>> matching [BXD67_CTRL], 64744 regions... [16.814 seconds]
+>> matching [BXD51_SD], 63655 regions... [16.572 seconds]
+>> matching [C57Bl6_CTRL], 71961 regions... [18.682 seconds]
+>> matching [BXD65_CTRL], 64935 regions... [16.867 seconds]
+>> matching [BXD73_SD], 64975 regions... [17.018 seconds]
+>> matching [BXD55_SD], 67434 regions... [17.557 seconds]
+>> matching [BXD43_SD], 68502 regions... [17.684 seconds]
+>> matching [BXD65_SD_sub1], 55991 regions... [14.298 seconds]
+>> matching [BXD55_CTRL_sub1], 52155 regions... [13.293 seconds]
+>> matching [BXD100_SD_sub1], 56120 regions... [14.415 seconds]
+>> matching [BXD48_CTRL_sub1], 55681 regions... [14.162 seconds]
+>> matching [BXD64_CTRL_sub1], 50391 regions... [12.868 seconds]
+>> matching [BXD83_SD_sub1], 54935 regions... [14.168 seconds]
+>> matching [C57Bl6_SD_sub1], 54997 regions... [14.054 seconds]
+>> matching [BXD84_CTRL_sub1], 51880 regions... [13.362 seconds]
+>> matching [65a_CTRL_sub1], 52963 regions... [13.486 seconds]
+>> matching [BXD48_SD_sub1], 53582 regions... [13.618 seconds]
+>> matching [BXD67_SD_sub1], 57483 regions... [14.761 seconds]
+>> matching [BXD81_SD_sub1], 56111 regions... [14.475 seconds]
+>> matching [BXD66_CTRL_sub1], 53911 regions... [13.806 seconds]
+>> matching [BXD49_CTRL_sub1], 53024 regions... [13.602 seconds]
+>> matching [BXD75_SD_sub1], 58152 regions... [14.962 seconds]
+>> matching [BXD45_CTRL_sub1], 50839 regions... [13.095 seconds]
+>> matching [BXD101_SD_sub1], 54871 regions... [14.163 seconds]
+>> matching [BXD101_CTRL_sub1], 52767 regions... [13.761 seconds]
+>> matching [BXD50_SD_sub1], 55443 regions... [14.629 seconds]
+>> matching [BXD50_CTRL_sub1], 50630 regions... [13.405 seconds]
+>> matching [48a_CTRL_sub1], 50486 regions... [14.130 seconds]
+>> matching [BXD56_CTRL_sub1], 52872 regions... [14.217 seconds]
+>> matching [BXD90_SD_sub1], 56023 regions... [14.579 seconds]
+>> matching [BXD85_SD_sub1], 54613 regions... [14.251 seconds]
+>> matching [73b_SD_sub1], 54092 regions... [14.149 seconds]
+>> matching [BXD43_CTRL_sub1], 52475 regions... [14.309 seconds]
+>> matching [BXD45_SD_sub1], 52886 regions... [14.092 seconds]
+>> matching [BXD51_CTRL_sub1], 53481 regions... [13.835 seconds]
+>> matching [BXD44_CTRL_sub1], 51174 regions... [13.471 seconds]
+>> matching [BXD79_CTRL_sub1], 52332 regions... [13.467 seconds]
+>> matching [BXD44_SD_sub1], 52711 regions... [13.903 seconds]
+>> matching [BXD98_SD_sub1], 52838 regions... [15.461 seconds]
+>> matching [BXD75_CTRL_sub1], 54056 regions... [14.151 seconds]
+>> matching [DBA_SD_sub1], 55383 regions... [14.277 seconds]
+>> matching [BXD84_SD_sub1], 56614 regions... [14.679 seconds]
+>> matching [BXD90_CTRL_sub1], 54397 regions... [14.209 seconds]
+>> matching [BXD71_SD_sub1], 55200 regions... [14.281 seconds]
+>> matching [BXD95_SD_sub1], 56970 regions... [14.872 seconds]
+>> matching [BXD100_CTRL_sub1], 54648 regions... [14.046 seconds]
+>> matching [48a_SD_sub1], 58679 regions... [15.218 seconds]
+>> matching [BXD61_CTRL_sub1], 52668 regions... [13.733 seconds]
+>> matching [BXD70_CTRL_sub1], 54619 regions... [14.896 seconds]
+>> matching [73b_CTRL_sub1], 54948 regions... [15.146 seconds]
+>> matching [BXD70_SD_sub1], 55416 regions... [14.339 seconds]
+>> matching [BXD95_CTRL_sub1], 54426 regions... [13.980 seconds]
+>> matching [65a_SD_sub1], 53019 regions... [13.750 seconds]
+>> matching [BXD89_SD_sub1], 56355 regions... [14.688 seconds]
+>> matching [BXD81_CTRL_sub1], 54368 regions... [14.205 seconds]
+>> matching [BXD85_CTRL_sub1], 51033 regions... [13.263 seconds]
+>> matching [BXD73_CTRL_sub1], 53948 regions... [13.879 seconds]
+>> matching [BXD64_SD_sub1], 52627 regions... [13.565 seconds]
+>> matching [BXD83_CTRL_sub1], 49529 regions... [15.128 seconds]
+>> matching [BXD66_SD_sub1], 57869 regions... [15.663 seconds]
+>> matching [BXD89_CTRL_sub1], 54661 regions... [14.208 seconds]
+>> matching [BXD49_SD_sub1], 56127 regions... [14.588 seconds]
+>> matching [BXD71_CTRL_sub1], 53899 regions... [13.940 seconds]
+>> matching [BXD79_SD_sub1], 53941 regions... [13.991 seconds]
+>> matching [BXD98_CTRL_sub1], 48024 regions... [13.115 seconds]
+>> matching [DBA_CTRL_sub1], 51011 regions... [13.146 seconds]
+>> matching [BXD61_SD_sub1], 56456 regions... [14.517 seconds]
+>> matching [BXD56_SD_sub1], 56705 regions... [15.134 seconds]
+>> matching [BXD67_CTRL_sub1], 53936 regions... [14.195 seconds]
+>> matching [BXD51_SD_sub1], 53133 regions... [14.052 seconds]
+>> matching [C57Bl6_CTRL_sub1], 50181 regions... [13.189 seconds]
+>> matching [BXD65_CTRL_sub1], 52988 regions... [13.780 seconds]
+>> matching [BXD73_SD_sub1], 53895 regions... [14.263 seconds]
+>> matching [BXD55_SD_sub1], 56387 regions... [14.737 seconds]
+>> matching [BXD43_SD_sub1], 55723 regions... [14.398 seconds]
+>> matching [BXD65_SD_sub2], 51401 regions... [13.183 seconds]
+>> matching [BXD55_CTRL_sub2], 46773 regions... [12.010 seconds]
+>> matching [BXD100_SD_sub2], 51241 regions... [13.396 seconds]
+>> matching [BXD48_CTRL_sub2], 51335 regions... [14.485 seconds]
+>> matching [BXD64_CTRL_sub2], 45453 regions... [11.882 seconds]
+>> matching [BXD83_SD_sub2], 50293 regions... [13.026 seconds]
+>> matching [C57Bl6_SD_sub2], 50547 regions... [12.995 seconds]
+>> matching [BXD84_CTRL_sub2], 47387 regions... [12.195 seconds]
+>> matching [65a_CTRL_sub2], 49598 regions... [12.748 seconds]
+>> matching [BXD48_SD_sub2], 48739 regions... [13.084 seconds]
+>> matching [BXD67_SD_sub2], 53087 regions... [14.054 seconds]
+>> matching [BXD81_SD_sub2], 52308 regions... [13.534 seconds]
+>> matching [BXD66_CTRL_sub2], 48977 regions... [12.539 seconds]
+>> matching [BXD49_CTRL_sub2], 48001 regions... [12.583 seconds]
+>> matching [BXD75_SD_sub2], 54419 regions... [14.269 seconds]
+>> matching [BXD45_CTRL_sub2], 45673 regions... [11.797 seconds]
+>> matching [BXD101_SD_sub2], 50361 regions... [13.028 seconds]
+>> matching [BXD101_CTRL_sub2], 47569 regions... [12.416 seconds]
+>> matching [BXD50_SD_sub2], 50397 regions... [13.201 seconds]
+>> matching [BXD50_CTRL_sub2], 45543 regions... [11.916 seconds]
+>> matching [48a_CTRL_sub2], 45015 regions... [11.634 seconds]
+>> matching [BXD56_CTRL_sub2], 48119 regions... [12.524 seconds]
+>> matching [BXD90_SD_sub2], 50945 regions... [13.106 seconds]
+>> matching [BXD85_SD_sub2], 49609 regions... [12.857 seconds]
+>> matching [73b_SD_sub2], 49435 regions... [12.913 seconds]
+>> matching [BXD43_CTRL_sub2], 47522 regions... [12.364 seconds]
+>> matching [BXD45_SD_sub2], 47524 regions... [12.539 seconds]
+>> matching [BXD51_CTRL_sub2], 48607 regions... [12.741 seconds]
+>> matching [BXD44_CTRL_sub2], 45684 regions... [11.931 seconds]
+>> matching [BXD79_CTRL_sub2], 47971 regions... [12.434 seconds]
+>> matching [BXD44_SD_sub2], 47207 regions... [12.345 seconds]
+>> matching [BXD98_SD_sub2], 47967 regions... [12.394 seconds]
+>> matching [BXD75_CTRL_sub2], 48990 regions... [13.691 seconds]
+>> matching [DBA_SD_sub2], 50026 regions... [13.169 seconds]
+>> matching [BXD84_SD_sub2], 51780 regions... [13.682 seconds]
+>> matching [BXD90_CTRL_sub2], 49790 regions... [13.697 seconds]
+>> matching [BXD71_SD_sub2], 50608 regions... [12.951 seconds]
+>> matching [BXD95_SD_sub2], 52599 regions... [13.635 seconds]
+>> matching [BXD100_CTRL_sub2], 50212 regions... [14.382 seconds]
+>> matching [48a_SD_sub2], 54420 regions... [14.370 seconds]
+>> matching [BXD61_CTRL_sub2], 47930 regions... [12.317 seconds]
+>> matching [BXD70_CTRL_sub2], 49911 regions... [12.879 seconds]
+>> matching [73b_CTRL_sub2], 50218 regions... [13.589 seconds]
+>> matching [BXD70_SD_sub2], 51092 regions... [13.241 seconds]
+>> matching [BXD95_CTRL_sub2], 49980 regions... [12.903 seconds]
+>> matching [65a_SD_sub2], 48125 regions... [12.365 seconds]
+>> matching [BXD89_SD_sub2], 51550 regions... [13.460 seconds]
+>> matching [BXD81_CTRL_sub2], 49885 regions... [12.853 seconds]
+>> matching [BXD85_CTRL_sub2], 45875 regions... [12.241 seconds]
+>> matching [BXD73_CTRL_sub2], 48870 regions... [12.742 seconds]
+>> matching [BXD64_SD_sub2], 47497 regions... [12.301 seconds]
+>> matching [BXD83_CTRL_sub2], 44375 regions... [11.461 seconds]
+>> matching [BXD66_SD_sub2], 54108 regions... [14.073 seconds]
+>> matching [BXD89_CTRL_sub2], 50085 regions... [12.889 seconds]
+>> matching [BXD49_SD_sub2], 51524 regions... [13.177 seconds]
+>> matching [BXD71_CTRL_sub2], 49564 regions... [12.668 seconds]
+>> matching [BXD79_SD_sub2], 50295 regions... [12.980 seconds]
+>> matching [BXD98_CTRL_sub2], 42847 regions... [11.176 seconds]
+>> matching [DBA_CTRL_sub2], 45861 regions... [12.173 seconds]
+>> matching [BXD61_SD_sub2], 52190 regions... [13.365 seconds]
+>> matching [BXD56_SD_sub2], 53622 regions... [13.750 seconds]
+>> matching [BXD67_CTRL_sub2], 49237 regions... [12.574 seconds]
+>> matching [BXD51_SD_sub2], 47973 regions... [12.308 seconds]
+>> matching [C57Bl6_CTRL_sub2], 45136 regions... [11.642 seconds]
+>> matching [BXD65_CTRL_sub2], 48051 regions... [12.431 seconds]
+>> matching [BXD73_SD_sub2], 48954 regions... [12.625 seconds]
+>> matching [BXD55_SD_sub2], 51523 regions... [13.281 seconds]
+>> matching [BXD43_SD_sub2], 51011 regions... [13.220 seconds]
+
+[total time: 0h 50m 44s]
+Logs saved in <logs/12-ATAC_footprints/motifs.log>

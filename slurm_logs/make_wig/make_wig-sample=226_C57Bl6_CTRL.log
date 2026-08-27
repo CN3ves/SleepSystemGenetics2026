@@ -1,0 +1,49 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-10 10:03:44
+  Workflow ID: 3e76a6b5-4c78-4e65-934b-dd8b65d5f0ea
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna063
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs make_wig:sample=226_C57Bl6_CTRL --allowed-rules make_wig --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.3cb52x20 results/3-ATAC_bam/sort/coord/226_C57Bl6_CTRL_full.co.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params software-env mtime code input --conda-frontend conda --shared-fs-usage source-cache software-deployment sources storage-local-copies input-output software-deployment-cache persistence --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpst34ocdn --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 6f1921ddeacde7cd68610aa02c93e2f3
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jul 10 10:03:44 2026]
+localrule make_wig:
+    input: results/3-ATAC_bam/sort/coord/226_C57Bl6_CTRL_full.co.bam
+    output: results/3-ATAC_bam/wigs/226_C57Bl6_CTRL.bw
+    log: logs/3-ATAC_bam/wigs_226_C57Bl6_CTRL.log
+    jobid: 0
+    benchmark: benchmarks/3-ATAC_bam/wigs_226_C57Bl6_CTRL.txt
+    reason: Forced execution
+    wildcards: sample=226_C57Bl6_CTRL
+    threads: 10
+    resources: tmpdir=/tmp/62115640, disk_mb=9147, disk=9.15 GB, disk_mib=8724, mem_mb=1000, mem=1 GB, mem_mib=954, time=00:10:00
+Shell command: 
+        module load  r-light/4.5.2
+        mkdir -p results/3-ATAC_bam/wigs
+        
+        echo "Estimating coverage for <results/3-ATAC_bam/sort/coord/226_C57Bl6_CTRL_full.co.bam>" >> logs/3-ATAC_bam/wigs_226_C57Bl6_CTRL.log
+        bamCoverage --bam results/3-ATAC_bam/sort/coord/226_C57Bl6_CTRL_full.co.bam -o results/3-ATAC_bam/wigs/226_C57Bl6_CTRL.bw --binSize 10 --normalizeUsing RPKM --effectiveGenomeSize 2652783500 --numberOfProcessors 10 --ignoreForNormalization chrX &>> logs/3-ATAC_bam/wigs_226_C57Bl6_CTRL.log
+
+        echo "Logs saved in <logs/3-ATAC_bam/wigs_226_C57Bl6_CTRL.log>" >> logs/3-ATAC_bam/wigs_226_C57Bl6_CTRL.log
+        
+[Fri Jul 10 10:08:07 2026]
+Finished jobid: 0 (Rule: make_wig)
+1 of 1 steps (100%) done
+Storing output in storage.

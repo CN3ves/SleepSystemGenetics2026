@@ -1,0 +1,52 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 12:59:41
+  Workflow ID: cf2f0e1e-3274-46e8-8cfc-2dce3c02b2ad
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna005
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs call_subsampled:group=BXD83_SD,i=1 --allowed-rules call_subsampled --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.4wxr8x18 results/4-ATAC_genotype/corrected_bams/name/021_BXD83_SD_sub1.nm.bam results/4-ATAC_genotype/corrected_bams/name/100_BXD83_SD_sub1.nm.bam results/4-ATAC_genotype/corrected_bams/name/127_BXD83_SD_sub1.nm.bam results/5-ATAC_peaks/caller/mm10-blacklist.v2.bed --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env params code input mtime --conda-frontend conda --shared-fs-usage source-cache sources software-deployment storage-local-copies input-output persistence software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp22q6gm4h --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 12:59:41 2026]
+localrule call_subsampled:
+    input: results/4-ATAC_genotype/corrected_bams/name/021_BXD83_SD_sub1.nm.bam, results/4-ATAC_genotype/corrected_bams/name/100_BXD83_SD_sub1.nm.bam, results/4-ATAC_genotype/corrected_bams/name/127_BXD83_SD_sub1.nm.bam, results/5-ATAC_peaks/caller/mm10-blacklist.v2.bed
+    output: results/5-ATAC_peaks/subset/BXD83_SD_sub1.narrowPeak.gz, results/5-ATAC_peaks/subset/logs/BXD83_SD_sub1.pval.log.gz, results/5-ATAC_peaks/subset/pileups/BXD83_SD_sub1.pileup.gz, results/5-ATAC_peaks/subset/beds/BXD83_SD_sub1.bed.gz, results/5-ATAC_peaks/subset/logs/BXD83_SD_sub1.dups.gz
+    log: logs/5-ATAC_peaks/subset_BXD83_SD_1.log
+    jobid: 0
+    benchmark: benchmarks/5-ATAC_peaks/subset_BXD83_SD_1.txt
+    reason: Forced execution
+    wildcards: group=BXD83_SD, i=1
+    resources: tmpdir=/tmp/62714651, disk_mb=8623, disk=8.62 GB, disk_mib=8224, mem_mb=40000, mem=40 GB, mem_mib=38147, time=01:45:00
+Shell command: 
+        mkdir -p results/5-ATAC_peaks/subset/pileups results/5-ATAC_peaks/subset/beds results/5-ATAC_peaks/subset/logs
+
+        echo "Calling peaks for results/4-ATAC_genotype/corrected_bams/name/021_BXD83_SD_sub1.nm.bam results/4-ATAC_genotype/corrected_bams/name/100_BXD83_SD_sub1.nm.bam results/4-ATAC_genotype/corrected_bams/name/127_BXD83_SD_sub1.nm.bam" >> logs/5-ATAC_peaks/subset_BXD83_SD_1.log
+        results/5-ATAC_peaks/caller/Genrich/Genrich -t 'results/4-ATAC_genotype/corrected_bams/name/021_BXD83_SD_sub1.nm.bam results/4-ATAC_genotype/corrected_bams/name/100_BXD83_SD_sub1.nm.bam results/4-ATAC_genotype/corrected_bams/name/127_BXD83_SD_sub1.nm.bam'  -o results/5-ATAC_peaks/subset/BXD83_SD_sub1.narrowPeak.gz -f results/5-ATAC_peaks/subset/logs/BXD83_SD_sub1.pval.log.gz -k results/5-ATAC_peaks/subset/pileups/BXD83_SD_sub1.pileup.gz -b  results/5-ATAC_peaks/subset/beds/BXD83_SD_sub1.bed.gz -m 30 -r -R results/5-ATAC_peaks/subset/logs/BXD83_SD_sub1.dups.gz -q 0.05 -y -j -e chrM -E results/5-ATAC_peaks/caller/mm10-blacklist.v2.bed -z -v &>> logs/5-ATAC_peaks/subset_BXD83_SD_1.log
+        
+        echo "Logs saved in <logs/5-ATAC_peaks/subset_BXD83_SD_1.log>" >> logs/5-ATAC_peaks/subset_BXD83_SD_1.log
+        
+Write-protecting output file results/5-ATAC_peaks/subset/BXD83_SD_sub1.narrowPeak.gz.
+Write-protecting output file results/5-ATAC_peaks/subset/logs/BXD83_SD_sub1.pval.log.gz.
+Write-protecting output file results/5-ATAC_peaks/subset/pileups/BXD83_SD_sub1.pileup.gz.
+Write-protecting output file results/5-ATAC_peaks/subset/beds/BXD83_SD_sub1.bed.gz.
+Write-protecting output file results/5-ATAC_peaks/subset/logs/BXD83_SD_sub1.dups.gz.
+[Sun Jul 26 13:12:06 2026]
+Finished jobid: 0 (Rule: call_subsampled)
+1 of 1 steps (100%) done
+Storing output in storage.

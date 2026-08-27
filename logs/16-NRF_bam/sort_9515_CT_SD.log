@@ -1,0 +1,4 @@
+Sorting sample <results/15-NRF_align/aligment/9515_CT_SD_Aligned.out.sam> by coordinate
+[bam_sort_core] merging from 0 files and 20 in-memory blocks...
+Indexing sample <results/15-NRF_align/aligment/9515_CT_SD_Aligned.out.sam> 
+Logs saved in <logs/16-NRF_bam/sort_9515_CT_SD.log>

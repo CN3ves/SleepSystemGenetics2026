@@ -1,0 +1,148 @@
+Downgrading libraries
+Collecting RGT
+  Using cached RGT-1.0.2.tar.gz (36.8 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting cython (from RGT)
+  Using cached cython-3.2.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.6 kB)
+Requirement already satisfied: numpy>=1.4.0 in /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages (from RGT) (2.5.1)
+Requirement already satisfied: scipy>=1.0.0 in /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages (from RGT) (1.18.0)
+Requirement already satisfied: pysam>=0.12.0 in /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages (from RGT) (0.24.0)
+Requirement already satisfied: pyBigWig in /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages (from RGT) (0.3.25)
+Collecting Biopython>=1.64 (from RGT)
+  Using cached biopython-1.88-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting fisher>=0.1.5 (from RGT)
+  Using cached fisher-0.2.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.0 kB)
+Collecting moods-python>=1.9.4.1 (from RGT)
+  Using cached MOODS-python-1.9.4.1.tar.gz (250 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting scikit-learn>=0.19.0 (from RGT)
+  Using cached scikit_learn-1.9.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Collecting hmmlearn==0.2.2 (from RGT)
+  Using cached hmmlearn-0.2.2.tar.gz (146 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [94 lines of output]
+      <string>:17: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+      /tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running dist_info
+      creating /tmp/pip-modern-metadata-3xzgiln4/hmmlearn.egg-info
+      writing /tmp/pip-modern-metadata-3xzgiln4/hmmlearn.egg-info/PKG-INFO
+      writing dependency_links to /tmp/pip-modern-metadata-3xzgiln4/hmmlearn.egg-info/dependency_links.txt
+      writing requirements to /tmp/pip-modern-metadata-3xzgiln4/hmmlearn.egg-info/requires.txt
+      writing top-level names to /tmp/pip-modern-metadata-3xzgiln4/hmmlearn.egg-info/top_level.txt
+      writing manifest file '/tmp/pip-modern-metadata-3xzgiln4/hmmlearn.egg-info/SOURCES.txt'
+      Traceback (most recent call last):
+        File "/users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+          ~~~~^^
+        File "/users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 175, in prepare_metadata_for_build_wheel
+          return hook(metadata_directory, config_settings)
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 380, in prepare_metadata_for_build_wheel
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())  # noqa: S102 # exec is intentional here
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 47, in <module>
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/__init__.py", line 117, in setup
+          return distutils.core.setup(**attrs)  # type: ignore[return-value]
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/core.py", line 168, in setup
+          return run_commands(dist)
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/core.py", line 184, in run_commands
+          dist.run_commands()
+          ~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/dist.py", line 1028, in run_commands
+          self.run_command(cmd)
+          ~~~~~~~~~~~~~~~~^^^^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/dist.py", line 1106, in run_command
+          super().run_command(command)
+          ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/dist.py", line 1047, in run_command
+          cmd_obj.run()
+          ~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/command/dist_info.py", line 98, in run
+          self.egg_info.run()
+          ~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/normal/lib/python3.13/site-packages/setuptools_scm/_integration/egg_info.py", line 120, in run
+          super().run()
+          ~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/command/egg_info.py", line 342, in run
+          self.find_sources()
+          ~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/normal/lib/python3.13/site-packages/setuptools_scm/_integration/egg_info.py", line 113, in find_sources
+          super().find_sources()
+          ~~~~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/command/egg_info.py", line 350, in find_sources
+          mm.run()
+          ~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/command/egg_info.py", line 572, in run
+          self.add_defaults()
+          ~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/command/egg_info.py", line 610, in add_defaults
+          sdist.add_defaults(self)
+          ~~~~~~~~~~~~~~~~~~^^^^^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/command/sdist.py", line 113, in add_defaults
+          super().add_defaults()
+          ~~~~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/command/sdist.py", line 256, in add_defaults
+          self._add_defaults_ext()
+          ~~~~~~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/command/sdist.py", line 340, in _add_defaults_ext
+          build_ext = self.get_finalized_command('build_ext')
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/cmd.py", line 319, in get_finalized_command
+          cmd_obj.ensure_finalized()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-1x6gjgzh/overlay/lib/python3.13/site-packages/setuptools/_distutils/cmd.py", line 119, in ensure_finalized
+          self.finalize_options()
+          ~~~~~~~~~~~~~~~~~~~~~^^
+        File "<string>", line 28, in finalize_options
+      ModuleNotFoundError: No module named 'numpy.distutils'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> hmmlearn
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.

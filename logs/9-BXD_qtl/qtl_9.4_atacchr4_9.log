@@ -1,0 +1,32 @@
+[1] "Running permutations on atacchr4"
+[1] "Using index 9  - seed = 17"
+[1] "900 permutations of 1500: 60 %"
+[1] "Saving results"
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] optparse_1.8.2 qtl2_0.46     
+
+loaded via a namespace (and not attached):
+ [1] fastmap_1.2.0     bit_4.6.0         cachem_1.1.0      blob_1.3.0       
+ [5] parallel_4.5.2    memoise_2.0.1     bit64_4.8.2       cli_3.6.6        
+ [9] RSQLite_3.53.3    vctrs_0.7.3       DBI_1.3.0         data.table_1.18.4
+[13] compiler_4.5.2    tools_4.5.2       Rcpp_1.1.2        otel_0.2.0       
+[17] rlang_1.3.0      

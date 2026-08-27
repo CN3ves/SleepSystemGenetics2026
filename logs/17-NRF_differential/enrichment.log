@@ -1,0 +1,5 @@
+Running GO enrichment for RNA transcripts
+Running KEGG enrichment for RNA transcripts
+Running Wikipaths enrichment for RNA transcripts
+Running Reactome enrichment for RNA transcripts
+Logs saved in <logs/17-NRF_differential/enrichment.log>

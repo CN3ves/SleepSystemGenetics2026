@@ -1,0 +1,57 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 00:33:45
+  Workflow ID: 39d3b24c-afe2-4a45-9638-6566716f34ec
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna085
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs subsample:sample=212_BXD79_CTRL --allowed-rules subsample --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.zyrmu1ym results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz results/1-ATAC_fastq/summaries/QC_plot_density.png --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code software-env params mtime input --conda-frontend conda --shared-fs-usage software-deployment software-deployment-cache input-output source-cache persistence storage-local-copies sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpjw02sbsl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 00:33:46 2026]
+localrule subsample:
+    input: results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz, results/1-ATAC_fastq/summaries/QC_plot_density.png
+    output: results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_full.fq.gz, results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub1.fq.gz, results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub2.fq.gz
+    log: logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log
+    jobid: 0
+    benchmark: benchmarks/1-ATAC_fastq/sampling_212_BXD79_CTRL.txt
+    reason: Forced execution
+    wildcards: sample=212_BXD79_CTRL
+    resources: tmpdir=/tmp/62707556, disk_mb=4961, disk=4.96 GB, disk_mib=4732, mem_mb=15000, mem=15 GB, mem_mib=14306, time=00:30:00
+Shell command: 
+        module load seqtk/1.4
+        mkdir -p results/1-ATAC_fastq/subsampling/
+
+        echo "Copy full fastq file <results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz> to results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_full.fq.gz" >> logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log
+        cp results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_full.fq.gz
+
+        echo "Subseting <results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz> to <results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub1.fq.gz" >> logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log
+        seqtk sample -s10 results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz 20000000 | gzip > results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub1.fq.gz 2>> logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log
+ 
+        echo "Subseting <results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz> to <results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub2.fq.gz" >> logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log
+        seqtk sample -s100 results/1-ATAC_fastq/QC/fastq/212_BXD79_CTRL.fq.gz 15000000 | gzip > results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub2.fq.gz 2>> logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log    
+
+        echo "Logs saved in <logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log>" >> logs/1-ATAC_fastq/sampling_212_BXD79_CTRL.log
+        
+Write-protecting output file results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_full.fq.gz.
+Write-protecting output file results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub1.fq.gz.
+Write-protecting output file results/1-ATAC_fastq/subsampling/212_BXD79_CTRL_sub2.fq.gz.
+[Sun Jul 26 00:48:05 2026]
+Finished jobid: 0 (Rule: subsample)
+1 of 1 steps (100%) done
+Storing output in storage.

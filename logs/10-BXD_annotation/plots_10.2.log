@@ -1,0 +1,234 @@
+Loading packages
+Checking arguments
+Reading inputs
+Number of contiguous regions:
+ All 193039
+DAR 24787
+QTL 22389
+QTLxSD 40425 
+[1] "Percentage of tested genome (excluding M/Y): 5.935%"
+[1] "Percentage of differentially accessible genome (excluding M/Y): 0.325%"
+[1] "Percentage of differentially more accessible genome (excluding M/Y): 0.231%"
+[1] "Percentage of differentially less accessible genome (excluding M/Y): 0.094%"
+[1] "Percentage of regions related to genotype (excluding M/Y): 0.236%"
+[1] "Percentage of regions with genotype x treatment interactions (excluding M/Y): 0.405%"
+Peaks CG content distribution:
+All 
+Min.: 0.284; 1st Qu.: 0.496; Median: 0.529; Mean: 0.525; 3rd Qu.: 0.557; Max.: 0.86 
+DAR 
+Min.: 0.283; 1st Qu.: 0.461; Median: 0.498; Mean: 0.502; 3rd Qu.: 0.536; Max.: 0.884 
+QTL 
+Min.: 0.295; 1st Qu.: 0.498; Median: 0.534; Mean: 0.54; 3rd Qu.: 0.574; Max.: 0.869 
+QTLxSD 
+Min.: 0.295; 1st Qu.: 0.502; Median: 0.539; Mean: 0.542; 3rd Qu.: 0.574; Max.: 0.861 
+null device 
+          1 
+Covplot DAR:
+chrY doesn't contain significant signal
+`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by chr, start, end, and len.
+ℹ Output is grouped by chr, start, and end.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(chr, start, end, len))` for per-operation grouping (`?dplyr::dplyr_by`) instead.
+[1] "17106" "7681"  "80"   
+null device 
+          1 
+Covplot QTL:
+`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by chr, start, end, and len.
+ℹ Output is grouped by chr, start, and end.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(chr, start, end, len))` for per-operation grouping (`?dplyr::dplyr_by`) instead.
+[1] "22399" "3128"  "80"   
+null device 
+          1 
+Covplot interactions:
+`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by chr, start, end, and len.
+ℹ Output is grouped by chr, start, and end.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(chr, start, end, len))` for per-operation grouping (`?dplyr::dplyr_by`) instead.
+[1] "40442" "3391"  "80"   
+null device 
+          1 
+Profile:
+>> Using Genome: mm10 ...
+>> Using Genome: mm10 ...
+>> preparing start_site regions by gene... 2026-08-11 11:14:41
+>> preparing tag matrix...  2026-08-11 11:14:41 
+>> preparing start_site regions by gene... 2026-08-11 11:14:51
+>> preparing tag matrix...  2026-08-11 11:14:51 
+>> preparing start_site regions by gene... 2026-08-11 11:14:56
+>> preparing tag matrix...  2026-08-11 11:14:56 
+>> preparing start_site regions by gene... 2026-08-11 11:15:01
+>> preparing tag matrix...  2026-08-11 11:15:01 
+>> preparing start_site regions by gene... 2026-08-11 11:15:07
+>> preparing tag matrix...  2026-08-11 11:15:07 
+>> preparing start_site regions by gene... 2026-08-11 11:15:13
+>> preparing tag matrix...  2026-08-11 11:15:13 
+Tag: DAR 
+Tag: QTL 
+Tag: QTLxSD 
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] optparse_1.8.2                           
+ [2] TxDb.Mmusculus.UCSC.mm10.knownGene_3.10.0
+ [3] GenomicFeatures_1.62.0                   
+ [4] AnnotationDbi_1.72.0                     
+ [5] Biobase_2.70.0                           
+ [6] BSgenome.Mmusculus.UCSC.mm10_1.4.3       
+ [7] BSgenome_1.78.0                          
+ [8] rtracklayer_1.70.1                       
+ [9] BiocIO_1.20.0                            
+[10] Biostrings_2.78.0                        
+[11] XVector_0.50.0                           
+[12] GenomicRanges_1.62.1                     
+[13] Seqinfo_1.0.0                            
+[14] IRanges_2.44.0                           
+[15] S4Vectors_0.48.1                         
+[16] BiocGenerics_0.56.0                      
+[17] generics_0.1.4                           
+[18] dplyr_1.2.1                              
+[19] ggplot2_4.0.3                            
+[20] ChIPseeker_1.46.1                        
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3                      
+  [2] jsonlite_2.0.0                          
+  [3] tidydr_0.0.6                            
+  [4] magrittr_2.0.5                          
+  [5] ggtangle_0.1.2                          
+  [6] farver_2.1.2                            
+  [7] fs_2.1.0                                
+  [8] vctrs_0.7.3                             
+  [9] memoise_2.0.1                           
+ [10] Rsamtools_2.26.0                        
+ [11] RCurl_1.98-1.19                         
+ [12] ggtree_4.0.5                            
+ [13] htmltools_0.5.9                         
+ [14] S4Arrays_1.10.1                         
+ [15] TxDb.Hsapiens.UCSC.hg19.knownGene_3.22.1
+ [16] plotrix_3.8-14                          
+ [17] curl_7.1.0                              
+ [18] SparseArray_1.10.10                     
+ [19] gridGraphics_0.5-1                      
+ [20] KernSmooth_2.23-26                      
+ [21] htmlwidgets_1.6.4                       
+ [22] plyr_1.8.9                              
+ [23] cachem_1.1.0                            
+ [24] GenomicAlignments_1.46.0                
+ [25] igraph_2.3.3                            
+ [26] lifecycle_1.0.5                         
+ [27] pkgconfig_2.0.3                         
+ [28] Matrix_1.7-4                            
+ [29] R6_2.6.1                                
+ [30] fastmap_1.2.0                           
+ [31] MatrixGenerics_1.22.0                   
+ [32] digest_0.6.39                           
+ [33] aplot_0.3.1                             
+ [34] enrichplot_1.30.5                       
+ [35] ggnewscale_0.5.2                        
+ [36] patchwork_1.3.2                         
+ [37] RSQLite_3.53.3                          
+ [38] labeling_0.4.3                          
+ [39] httr_1.4.8                              
+ [40] polyclip_1.10-7                         
+ [41] abind_1.4-8                             
+ [42] compiler_4.5.2                          
+ [43] bit64_4.8.2                             
+ [44] fontquiver_0.2.1                        
+ [45] withr_3.0.3                             
+ [46] S7_0.2.2                                
+ [47] BiocParallel_1.44.0                     
+ [48] DBI_1.3.0                               
+ [49] gplots_3.3.0                            
+ [50] ggforce_0.5.0                           
+ [51] R.utils_2.13.0                          
+ [52] MASS_7.3-65                             
+ [53] rappdirs_0.3.4                          
+ [54] DelayedArray_0.36.1                     
+ [55] rjson_0.2.23                            
+ [56] caTools_1.18.4                          
+ [57] gtools_3.9.5                            
+ [58] tools_4.5.2                             
+ [59] otel_0.2.0                              
+ [60] ape_5.8-1                               
+ [61] scatterpie_0.2.6                        
+ [62] R.oo_1.27.1                             
+ [63] glue_1.8.1                              
+ [64] restfulr_0.0.17                         
+ [65] nlme_3.1-168                            
+ [66] GOSemSim_2.36.0                         
+ [67] grid_4.5.2                              
+ [68] cluster_2.1.8.1                         
+ [69] reshape2_1.4.5                          
+ [70] fgsea_1.36.2                            
+ [71] gtable_0.3.6                            
+ [72] R.methodsS3_1.8.2                       
+ [73] tidyr_1.3.2                             
+ [74] data.table_1.18.4                       
+ [75] ggrepel_0.9.8                           
+ [76] pillar_1.11.1                           
+ [77] stringr_1.6.0                           
+ [78] yulab.utils_0.2.4                       
+ [79] splines_4.5.2                           
+ [80] tweenr_2.0.3                            
+ [81] treeio_1.34.0                           
+ [82] lattice_0.22-7                          
+ [83] bit_4.6.0                               
+ [84] tidyselect_1.2.1                        
+ [85] fontLiberation_0.1.0                    
+ [86] GO.db_3.22.0                            
+ [87] fontBitstreamVera_0.1.1                 
+ [88] SummarizedExperiment_1.40.0             
+ [89] matrixStats_1.5.0                       
+ [90] stringi_1.8.7                           
+ [91] UCSC.utils_1.6.1                        
+ [92] lazyeval_0.2.3                          
+ [93] ggfun_0.2.1                             
+ [94] yaml_2.3.12                             
+ [95] boot_1.3-32                             
+ [96] codetools_0.2-20                        
+ [97] cigarillo_1.0.0                         
+ [98] gdtools_0.5.1                           
+ [99] tibble_3.3.1                            
+[100] qvalue_2.42.0                           
+[101] ggplotify_0.1.3                         
+[102] cli_3.6.6                               
+[103] systemfonts_1.3.2                       
+[104] Rcpp_1.1.1-1.1                          
+[105] GenomeInfoDb_1.46.2                     
+[106] png_0.1-9                               
+[107] XML_3.99-0.23                           
+[108] parallel_4.5.2                          
+[109] blob_1.3.0                              
+[110] DOSE_4.4.0                              
+[111] bitops_1.1-0                            
+[112] tidytree_0.4.8                          
+[113] ggiraph_0.9.6                           
+[114] scales_1.4.0                            
+[115] purrr_1.2.2                             
+[116] crayon_1.5.3                            
+[117] rlang_1.3.0                             
+[118] cowplot_1.2.0                           
+[119] fastmatch_1.1-8                         
+[120] KEGGREST_1.50.0                         

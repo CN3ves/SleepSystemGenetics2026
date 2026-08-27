@@ -1,0 +1,1791 @@
+Loading packages
+Checking arguments
+Reading files
+trying URL 'https://www.embl.de/download/zaugg/diffTF/TFBS/TFBS_mm10_PWMScan_HOCOMOCOv10.tar.gz'
+Content type 'application/gzip' length 883836725 bytes (842.9 MB)
+==================================================
+downloaded 842.9 MB
+
+'select()' returned 1:many mapping between keys and columns
+Preparing sample data
+[1] 719324     69
+[1] 22345    81
+Initialiye GRN
+INFO [2026-08-18 12:40:27] Empty GRN object created successfully. Type the object name (e.g., GRN) to retrieve summary information about it at any time.
+INFO [2026-08-18 12:40:27]  Default output folder: /scratch/csousane/atac/results/13-ATAC_integrate/granie/
+INFO [2026-08-18 12:40:27]  Genome assembly: mm10
+INFO [2026-08-18 12:40:27] Finished successfully. Execution time: 0.1 secs
+[1] "MART CHECKPOINT"
+WARN [2026-08-18 12:40:27] addData: Found 32 duplicate rows in RNA-Seq data, consolidating them by summing them up.. 
+This warning may or may not be ignored. Carefully check its significance and whether it may affect the results.
+
+INFO [2026-08-18 12:40:42]  Normalizing data using the package DESeq2 with a standard size factor normalization.
+INFO [2026-08-18 12:40:49]  Normalizing data using the package limma with the following method: limma_quantile
+INFO [2026-08-18 12:40:50] Parsing provided metadata...
+INFO [2026-08-18 12:40:50] Subset RNA and peaks and keep only shared samples
+INFO [2026-08-18 12:40:50]  Number of samples for RNA before filtering: 80
+INFO [2026-08-18 12:40:50]  Number of samples for peaks before filtering: 68
+INFO [2026-08-18 12:40:50]  68 samples (BXD100_CTRL,BXD100_SD,BXD101_CTRL,BXD101_SD,BXD73b_CTRL,BXD73b_SD,BXD43_CTRL,BXD43_SD,BXD44_CTRL,BXD44_SD,BXD45_CTRL,BXD45_SD,BXD48_CTRL,BXD48_SD,BXD49_CTRL,BXD49_SD,BXD50_CTRL,BXD50_SD,BXD51_CTRL,BXD51_SD,BXD55_CTRL,BXD55_SD,BXD56_CTRL,BXD56_SD,BXD61_CTRL,BXD61_SD,BXD64_CTRL,BXD64_SD,BXD65_CTRL,BXD65_SD,BXD66_CTRL,BXD66_SD,BXD67_CTRL,BXD67_SD,BXD70_CTRL,BXD70_SD,BXD71_CTRL,BXD71_SD,BXD73_CTRL,BXD73_SD,BXD75_CTRL,BXD75_SD,BXD79_CTRL,BXD79_SD,BXD81_CTRL,BXD81_SD,BXD83_CTRL,BXD83_SD,BXD84_CTRL,BXD84_SD,BXD85_CTRL,BXD85_SD,BXD89_CTRL,BXD89_SD,BXD90_CTRL,BXD90_SD,BXD95_CTRL,BXD95_SD,BXD48a_CTRL,BXD48a_SD,BXD65a_CTRL,BXD65a_SD,BXD98_CTRL,BXD98_SD,C57Bl6_CTRL,C57Bl6_SD,DBA_CTRL,DBA_SD) are shared between the peaks and RNA-Seq data
+WARN [2026-08-18 12:40:50] The following samples from the RNA-Seq data will be ignored for the classification due to missing overlap with peaks data: BXD5_CTRL,BXD5_SD,BXD29_CTRL,BXD29_SD,BXD29t_CTRL,BXD29t_SD,BXD32_CTRL,BXD32_SD,BXD87_CTRL,BXD87_SD,F1_CTRL,F1_SD
+INFO [2026-08-18 12:40:50]  Number of samples for RNA after filtering: 68
+INFO [2026-08-18 12:40:50]  Number of samples for peaks data after filtering: 68
+INFO [2026-08-18 12:40:50]  Finished successfully. Execution time: 0 secs
+INFO [2026-08-18 12:40:51] Storing GRN@data$RNA$counts matrix as sparse matrix because fraction of 0s is > 0.1 (0.23)
+INFO [2026-08-18 12:40:51] Final dimensions of data:
+INFO [2026-08-18 12:40:51]  RNA  : 22313 x 80 (rows x columns)
+INFO [2026-08-18 12:40:51]  peaks: 719324 x 68 (rows x columns)
+INFO [2026-08-18 12:40:51] Generate 1 permutations of RNA-counts
+INFO [2026-08-18 12:40:51] Check for overlapping peaks...
+INFO [2026-08-18 12:40:53] Adding peak and gene annotation...
+INFO [2026-08-18 12:40:53]  Calculate statistics for each peak (mean and CV)
+INFO [2026-08-18 12:40:54]  Retrieve peak annotation using ChipSeeker. This may take a while
+>> preparing features information...		 2026-08-18 12:40:56 
+>> Using Genome: mm10 ...
+>> identifying nearest features...		 2026-08-18 12:40:57 
+>> calculating distance from peak to TSS...	 2026-08-18 12:41:02 
+>> assigning genomic annotation...		 2026-08-18 12:41:02 
+>> Using Genome: mm10 ...
+>> Using Genome: mm10 ...
+>> adding gene annotation...			 2026-08-18 12:41:14 
+>> assigning chromosome lengths			 2026-08-18 12:41:15 
+>> done...					 2026-08-18 12:41:15 
+INFO [2026-08-18 12:41:16]  Calculate statistics for each of the 22313 genes that were provided with the RNA-seq data (mean and CV)
+INFO [2026-08-18 12:41:16] Retrieving genome annotation data from AnnotationHub for mm10... This may take a while
+loading from cache
+require("ensembldb")
+INFO [2026-08-18 12:41:31] Finished successfully. Execution time: 1.1 mins
+Warning message:
+In .checkAndLogWarningsAndErrors(NULL, message, isWarning = TRUE) :
+  addData: Found 32 duplicate rows in RNA-Seq data, consolidating them by summing them up.. 
+This warning may or may not be ignored. Carefully check its significance and whether it may affect the results.
+
+INFO [2026-08-18 12:41:31] Plotting PCA and metadata correlation of normalized RNA data for all shared samples. This may take a few minutes
+INFO [2026-08-18 12:41:31] Prepare PCA. Count transformation: none
+INFO [2026-08-18 12:41:31] Plotting to file /scratch/csousane/atac/results/13-ATAC_integrate/granie/plots/PCA_sharedSamples_RNA.normalized.pdf
+WARN [2026-08-18 12:41:31] plotPCA: Removing 2026 rows (out of  in total) from count data because they have 0 variance. 
+This warning may or may not be ignored. Carefully check its significance and whether it may affect the results.
+
+INFO [2026-08-18 12:41:32]   Performing and summarizing PCs across metadata for top 500 features
+INFO [2026-08-18 12:41:35] Plotting PCA and metadata correlation of normalized peaks data for all shared samples. This may take a few minutes
+INFO [2026-08-18 12:41:35] Prepare PCA. Count transformation: none
+INFO [2026-08-18 12:41:35] Plotting to file /scratch/csousane/atac/results/13-ATAC_integrate/granie/plots/PCA_sharedSamples_peaks.normalized.pdf
+INFO [2026-08-18 12:41:54]   Performing and summarizing PCs across metadata for top 500 features
+INFO [2026-08-18 12:41:57] Finished successfully. Execution time: 26.1 secs
+Warning messages:
+1: In .checkAndLogWarningsAndErrors(NULL, message, isWarning = TRUE) :
+  plotPCA: Removing 2026 rows (out of  in total) from count data because they have 0 variance. 
+This warning may or may not be ignored. Carefully check its significance and whether it may affect the results.
+
+2: call dbDisconnect() when finished working with a connection 
+INFO [2026-08-18 12:41:57] Checking database folder for matching files: /scratch/csousane/atac/results/13-ATAC_integrate/granie/PWMScan_HOCOMOCOv10
+INFO [2026-08-18 12:41:57] Reading file /scratch/csousane/atac/results/13-ATAC_integrate/granie/PWMScan_HOCOMOCOv10/translationTable.csv
+INFO [2026-08-18 12:41:57]  Finished successfully. Execution time: 0 secs
+INFO [2026-08-18 12:41:57] Found 422 matching TFs: AHR, AIRE, ALX1, ANDR, AP2A, AP2B, AP2C, AP2D, ARI3A.D, ARI3A.S, ARI5B, ARNT, ARNT2, ATF1, ATF2, ATF3, ATOH1, BACH1, BARX2, BATF, BCL6, BHE40, BMAL1, BRAC, BRCA1, CDC5L, CDX1, CDX2, CEBPA, CEBPB, CEBPD, CEBPE, CEBPG, CEBPZ, COE1, COT1.B, COT1.S, COT2.B, COT2.S, CREB1, CREM, CRX.A, CRX.S, CTCF, CUX1, CXXC1, DBP, DDIT3, DLX2, DLX3, E2F1, E2F2, E2F3, E2F4, E2F5, E2F6, E2F7, E4F1, EGR1, EGR2, EGR3, EGR4, EHF, ELF1, ELF2, ELF3, ELF5, ELK1, ELK3, ELK4, ENOA, EPAS1, ERG, ERR1, ERR2, ERR3, ESR1, ESR2.B, ESR2.S, ETS1, ETS2, ETV4, ETV5, EVI1, EVX1, EVX2, FEV, FLI1, FOS, FOSB, FOSL1, FOSL2, FOXA1, FOXA2, FOXA3, FOXC1, FOXC2, FOXD1, FOXD3, FOXF1, FOXF2, FOXI1, FOXJ2, FOXJ3.A, FOXJ3.S, FOXM1, FOXO1, FOXO3, FOXO4, FOXP2, FOXP3, FOXQ1, FUBP1, GABP1, GABPA, GATA1, GATA2, GATA3, GATA4, GATA5, GATA6, GCM1, GCR.C, GCR.S, GFI1, GFI1B, GLI1, GLI2, GLI3, GLIS3, HAND1, HBP1, HEN1, HES1, HESX1, HEY2, HIC1, HIF1A, HINFP, HLF, HLTF, HMGA1, HMGA2, HNF1A, HNF1B, HNF4A, HNF4G, HNF6, HSF1, HSF2, HTF4, HXA1, HXA10, HXA13, HXA5, HXA7, HXA9, HXB1, HXB6, HXB7, HXB8, HXC6, HXC8, HXD10, HXD13, HXD4, HXD9, IKZF1, INSM1, IRF1, IRF2, IRF3, IRF4, IRF5, IRF7, IRF8, IRF9, ISL1, ITF2, JUN, JUNB, JUND, KAISO, KLF1, KLF15, KLF3, KLF4, KLF6, KLF8, LEF1, LHX2, LHX3, MAF, MAFA, MAFB, MAFG, MAFK.A, MAFK.S, MAX, MAZ, MBD2, MCR, MECP2, MEF2A, MEF2C, MEF2D, MEIS1, MEIS2, MITF, MLXPL, MSX2, MSX3, MTF1, MXI1, MYB, MYBB, MYC, MYCN, MYF6, MYOD1, MYOG, NANOG.A, NANOG.S, NDF1, NF2L1, NF2L2, NFAC1.A, NFAC1.S, NFAC2, NFAC3, NFAC4, NFAT5, NFE2, NFIA.C, NFIA.S, NFIL3, NFKB1, NFKB2, NFYA.D, NFYA.S, NFYB, NFYC, NKX21, NKX22, NKX25, NKX28, NKX31, NKX32, NOBOX, NR0B1, NR1D1, NR1H2, NR1H4, NR1I2.S, NR1I3.S, NR2C1, NR2C2, NR2E3, NR2F6, NR4A1, NR4A2, NR4A3, NR5A2, NR6A1, NRF1, OLIG2, ONEC2, OTX1, OTX2, OVOL1, P53, P63, P73, PAX2.D, PAX2.S, PAX5.D, PAX5.S, PAX6, PAX8, PBX1, PBX2, PBX3, PDX1, PEBB, PIT1, PITX2, PKNX1, PLAG1.D, PLAG1.S, PO2F1, PO2F2, PO3F1, PO3F2, PO4F2, PO5F1, PO6F1, PPARA.C, PPARA.S, PPARD, PPARG.A, PPARG.S, PRD14, PRDM1, PRGR.C, PRGR.S, PROP1, PRRX1, PRRX2, PTF1A, PURA, RARA.C, RARA.S, RARB, RARG.C, RARG.S, REL, RELB, REST, RFX1, RFX2, RFX3, RORA, RORG, RREB1, RUNX1, RUNX2, RUNX3, RXRA, RXRB, RXRG, SMAD1, SMAD2, SMAD3, SMAD4, SMRC1, SNAI1, SNAI2, SOX10, SOX13, SOX15, SOX17, SOX18, SOX2, SOX3, SOX4, SOX5, SOX9, SP1.A, SP1.S, SP2, SP3, SP4, SPI1, SPIB, SPZ1, SRBP1, SRBP2, SRF, SRY, STA5A, STA5B, STAT1, STAT2, STAT3, STAT4, STAT6, STF1, SUH, TAL1.A, TAL1.S, TBP, TBX2, TBX20, TBX3, TBX5, TCF7, TEAD1, TEAD3, TEAD4, TEF, TF2L1, TF65.C, TF65.S, TF7L2, TFCP2, TFDP1, TFE2.A, TFE2.S, TFE3, TFEB, TGIF1.S, THA.C, THA.S, THB.C, THB.S, TLX1.D, TLX1.S, TWST1, TYY1, UBIP1, USF1, USF2, VDR.C, VDR.S, VSX2, WT1, XBP1, YBOX1, ZBT18, ZBT7A, ZBTB6, ZEB1, ZEP1, ZEP2, ZFHX3, ZFX, ZIC1, ZIC2, ZIC3, ZN143, ZN148, ZN423
+INFO [2026-08-18 12:41:57] Use all TF from the database folder /scratch/csousane/atac/results/13-ATAC_integrate/granie/PWMScan_HOCOMOCOv10
+INFO [2026-08-18 12:41:57] Filtering the following 1 TFs as they are not present in the RNA-Seq data: BMAL1
+INFO [2026-08-18 12:41:57] Running the pipeline for 421 TF in total.
+INFO [2026-08-18 12:41:57] Finished successfully. Execution time: 0.1 secs
+INFO [2026-08-18 12:41:57] Overlap peaks and TFBS using 20 cores. This may take a while, particularly if the number of samples is large...
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF BRAC finished. Number of overlapping TFBS after filtering: 1672
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF BRCA1 finished. Number of overlapping TFBS after filtering: 4653
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF CDC5L finished. Number of overlapping TFBS after filtering: 706
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF CDX1 finished. Number of overlapping TFBS after filtering: 3675
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF CDX2 finished. Number of overlapping TFBS after filtering: 2916
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF CEBPA finished. Number of overlapping TFBS after filtering: 710
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF CEBPB finished. Number of overlapping TFBS after filtering: 856
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF CEBPD finished. Number of overlapping TFBS after filtering: 668
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF CEBPE finished. Number of overlapping TFBS after filtering: 438
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF CEBPG finished. Number of overlapping TFBS after filtering: 1212
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF CEBPZ finished. Number of overlapping TFBS after filtering: 5934
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF COE1 finished. Number of overlapping TFBS after filtering: 27959
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF COT1.B finished. Number of overlapping TFBS after filtering: 9667
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF COT1.S finished. Number of overlapping TFBS after filtering: 9634
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF COT2.B finished. Number of overlapping TFBS after filtering: 8132
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF COT2.S finished. Number of overlapping TFBS after filtering: 14012
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF CREB1 finished. Number of overlapping TFBS after filtering: 2340
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF CREM finished. Number of overlapping TFBS after filtering: 4380
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF CRX.A finished. Number of overlapping TFBS after filtering: 1299
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF CRX.S finished. Number of overlapping TFBS after filtering: 3437
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF CTCF finished. Number of overlapping TFBS after filtering: 53976
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF CUX1 finished. Number of overlapping TFBS after filtering: 1037
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF HES1 finished. Number of overlapping TFBS after filtering: 8525
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF HESX1 finished. Number of overlapping TFBS after filtering: 5485
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF HEY2 finished. Number of overlapping TFBS after filtering: 17959
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF HIC1 finished. Number of overlapping TFBS after filtering: 10674
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF HIF1A finished. Number of overlapping TFBS after filtering: 3826
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF HINFP finished. Number of overlapping TFBS after filtering: 790
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF HLF finished. Number of overlapping TFBS after filtering: 1058
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF HLTF finished. Number of overlapping TFBS after filtering: 8418
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF HMGA1 finished. Number of overlapping TFBS after filtering: 13876
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF HMGA2 finished. Number of overlapping TFBS after filtering: 270
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF HNF1A finished. Number of overlapping TFBS after filtering: 615
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF HNF1B finished. Number of overlapping TFBS after filtering: 569
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF HNF4A finished. Number of overlapping TFBS after filtering: 11840
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF HNF4G finished. Number of overlapping TFBS after filtering: 14727
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF HNF6 finished. Number of overlapping TFBS after filtering: 577
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF HSF1 finished. Number of overlapping TFBS after filtering: 7322
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF HSF2 finished. Number of overlapping TFBS after filtering: 5156
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF HTF4 finished. Number of overlapping TFBS after filtering: 24802
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF HXA1 finished. Number of overlapping TFBS after filtering: 7360
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF HXA10 finished. Number of overlapping TFBS after filtering: 729
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF HXA13 finished. Number of overlapping TFBS after filtering: 1371
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF HXA5 finished. Number of overlapping TFBS after filtering: 816
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF FOSB finished. Number of overlapping TFBS after filtering: 8374
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF FOSL1 finished. Number of overlapping TFBS after filtering: 8622
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF FOSL2 finished. Number of overlapping TFBS after filtering: 8572
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF FOXA1 finished. Number of overlapping TFBS after filtering: 3917
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF FOXA2 finished. Number of overlapping TFBS after filtering: 1770
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF FOXA3 finished. Number of overlapping TFBS after filtering: 4428
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF FOXC1 finished. Number of overlapping TFBS after filtering: 1539
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF FOXC2 finished. Number of overlapping TFBS after filtering: 2908
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF FOXD1 finished. Number of overlapping TFBS after filtering: 1615
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF FOXD3 finished. Number of overlapping TFBS after filtering: 8015
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF FOXF1 finished. Number of overlapping TFBS after filtering: 2193
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF FOXF2 finished. Number of overlapping TFBS after filtering: 1917
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF FOXI1 finished. Number of overlapping TFBS after filtering: 4660
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF FOXJ2 finished. Number of overlapping TFBS after filtering: 4856
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF FOXJ3.A finished. Number of overlapping TFBS after filtering: 5535
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF FOXJ3.S finished. Number of overlapping TFBS after filtering: 4481
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF FOXM1 finished. Number of overlapping TFBS after filtering: 4037
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF FOXO1 finished. Number of overlapping TFBS after filtering: 6514
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF FOXO3 finished. Number of overlapping TFBS after filtering: 3725
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF FOXO4 finished. Number of overlapping TFBS after filtering: 1787
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF FOXP2 finished. Number of overlapping TFBS after filtering: 2614
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF FOXP3 finished. Number of overlapping TFBS after filtering: 979
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF HXA7 finished. Number of overlapping TFBS after filtering: 643
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF HXA9 finished. Number of overlapping TFBS after filtering: 1602
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF HXB1 finished. Number of overlapping TFBS after filtering: 5893
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF HXB6 finished. Number of overlapping TFBS after filtering: 796
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF HXB7 finished. Number of overlapping TFBS after filtering: 888
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF HXB8 finished. Number of overlapping TFBS after filtering: 815
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF HXC6 finished. Number of overlapping TFBS after filtering: 1246
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF HXC8 finished. Number of overlapping TFBS after filtering: 1122
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF HXD10 finished. Number of overlapping TFBS after filtering: 1703
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF HXD13 finished. Number of overlapping TFBS after filtering: 1082
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF HXD4 finished. Number of overlapping TFBS after filtering: 1845
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF HXD9 finished. Number of overlapping TFBS after filtering: 2886
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF IKZF1 finished. Number of overlapping TFBS after filtering: 10391
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF INSM1 finished. Number of overlapping TFBS after filtering: 17568
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF IRF1 finished. Number of overlapping TFBS after filtering: 3848
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF IRF2 finished. Number of overlapping TFBS after filtering: 3786
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF IRF3 finished. Number of overlapping TFBS after filtering: 6888
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF IRF4 finished. Number of overlapping TFBS after filtering: 17920
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF IRF5 finished. Number of overlapping TFBS after filtering: 7269
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF IRF7 finished. Number of overlapping TFBS after filtering: 3579
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF IRF8 finished. Number of overlapping TFBS after filtering: 7231
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF IRF9 finished. Number of overlapping TFBS after filtering: 1670
+
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF ZN143 finished. Number of overlapping TFBS after filtering: 18779
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF ZN148 finished. Number of overlapping TFBS after filtering: 137164
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF ZN423 finished. Number of overlapping TFBS after filtering: 15232
+
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF OLIG2 finished. Number of overlapping TFBS after filtering: 36100
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF ONEC2 finished. Number of overlapping TFBS after filtering: 831
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF OTX1 finished. Number of overlapping TFBS after filtering: 3761
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF OTX2 finished. Number of overlapping TFBS after filtering: 5654
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF OVOL1 finished. Number of overlapping TFBS after filtering: 3055
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF P53 finished. Number of overlapping TFBS after filtering: 9138
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF P63 finished. Number of overlapping TFBS after filtering: 6209
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF P73 finished. Number of overlapping TFBS after filtering: 16045
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF PAX2.D finished. Number of overlapping TFBS after filtering: 1921
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF PAX2.S finished. Number of overlapping TFBS after filtering: 14426
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF PAX5.D finished. Number of overlapping TFBS after filtering: 12194
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF PAX5.S finished. Number of overlapping TFBS after filtering: 44899
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF PAX6 finished. Number of overlapping TFBS after filtering: 1373
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF PAX8 finished. Number of overlapping TFBS after filtering: 3046
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF PBX1 finished. Number of overlapping TFBS after filtering: 1076
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF PBX2 finished. Number of overlapping TFBS after filtering: 1049
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF PBX3 finished. Number of overlapping TFBS after filtering: 4939
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF PDX1 finished. Number of overlapping TFBS after filtering: 1006
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF PEBB finished. Number of overlapping TFBS after filtering: 8425
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF PIT1 finished. Number of overlapping TFBS after filtering: 1157
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF PITX2 finished. Number of overlapping TFBS after filtering: 6614
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF PKNX1 finished. Number of overlapping TFBS after filtering: 2007
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF NANOG.A finished. Number of overlapping TFBS after filtering: 2054
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF NANOG.S finished. Number of overlapping TFBS after filtering: 2810
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF NDF1 finished. Number of overlapping TFBS after filtering: 16059
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF NF2L1 finished. Number of overlapping TFBS after filtering: 18129
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF NF2L2 finished. Number of overlapping TFBS after filtering: 8783
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF NFAC1.A finished. Number of overlapping TFBS after filtering: 1668
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF NFAC1.S finished. Number of overlapping TFBS after filtering: 2095
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF NFAC2 finished. Number of overlapping TFBS after filtering: 2817
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF NFAC3 finished. Number of overlapping TFBS after filtering: 3298
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF NFAC4 finished. Number of overlapping TFBS after filtering: 1763
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF NFAT5 finished. Number of overlapping TFBS after filtering: 4934
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF NFE2 finished. Number of overlapping TFBS after filtering: 10456
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF NFIA.C finished. Number of overlapping TFBS after filtering: 14085
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF NFIA.S finished. Number of overlapping TFBS after filtering: 40021
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF NFIL3 finished. Number of overlapping TFBS after filtering: 898
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF NFKB1 finished. Number of overlapping TFBS after filtering: 10514
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF NFKB2 finished. Number of overlapping TFBS after filtering: 5265
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF NFYA.D finished. Number of overlapping TFBS after filtering: 7030
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF NFYA.S finished. Number of overlapping TFBS after filtering: 6493
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF NFYB finished. Number of overlapping TFBS after filtering: 6820
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF NFYC finished. Number of overlapping TFBS after filtering: 7336
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF NKX21 finished. Number of overlapping TFBS after filtering: 11161
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF FOXQ1 finished. Number of overlapping TFBS after filtering: 2944
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF FUBP1 finished. Number of overlapping TFBS after filtering: 3619
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF GABP1 finished. Number of overlapping TFBS after filtering: 7750
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF GABPA finished. Number of overlapping TFBS after filtering: 9714
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF GATA1 finished. Number of overlapping TFBS after filtering: 4230
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF GATA2 finished. Number of overlapping TFBS after filtering: 3859
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF GATA3 finished. Number of overlapping TFBS after filtering: 4416
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF GATA4 finished. Number of overlapping TFBS after filtering: 2413
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF GATA5 finished. Number of overlapping TFBS after filtering: 876
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF GATA6 finished. Number of overlapping TFBS after filtering: 13305
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF GCM1 finished. Number of overlapping TFBS after filtering: 4033
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF GCR.C finished. Number of overlapping TFBS after filtering: 11997
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF GCR.S finished. Number of overlapping TFBS after filtering: 47282
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF GFI1 finished. Number of overlapping TFBS after filtering: 3948
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF GFI1B finished. Number of overlapping TFBS after filtering: 5859
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF GLI1 finished. Number of overlapping TFBS after filtering: 17223
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF GLI2 finished. Number of overlapping TFBS after filtering: 14201
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF GLI3 finished. Number of overlapping TFBS after filtering: 15713
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF GLIS3 finished. Number of overlapping TFBS after filtering: 15751
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF HAND1 finished. Number of overlapping TFBS after filtering: 6944
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF HBP1 finished. Number of overlapping TFBS after filtering: 1364
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF HEN1 finished. Number of overlapping TFBS after filtering: 33896
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF NKX22 finished. Number of overlapping TFBS after filtering: 1392
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF NKX25 finished. Number of overlapping TFBS after filtering: 20596
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF NKX28 finished. Number of overlapping TFBS after filtering: 4404
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF NKX31 finished. Number of overlapping TFBS after filtering: 538
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF NKX32 finished. Number of overlapping TFBS after filtering: 4143
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF NOBOX finished. Number of overlapping TFBS after filtering: 926
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF NR0B1 finished. Number of overlapping TFBS after filtering: 21094
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF NR1D1 finished. Number of overlapping TFBS after filtering: 36362
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF NR1H2 finished. Number of overlapping TFBS after filtering: 9385
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF NR1H4 finished. Number of overlapping TFBS after filtering: 6715
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF NR1I2.S finished. Number of overlapping TFBS after filtering: 4200
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF NR1I3.S finished. Number of overlapping TFBS after filtering: 3620
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF NR2C1 finished. Number of overlapping TFBS after filtering: 12339
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF NR2C2 finished. Number of overlapping TFBS after filtering: 16809
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF NR2E3 finished. Number of overlapping TFBS after filtering: 3511
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF NR2F6 finished. Number of overlapping TFBS after filtering: 8074
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF NR4A1 finished. Number of overlapping TFBS after filtering: 6868
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF NR4A2 finished. Number of overlapping TFBS after filtering: 6100
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF NR4A3 finished. Number of overlapping TFBS after filtering: 8732
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF NR5A2 finished. Number of overlapping TFBS after filtering: 18270
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF NR6A1 finished. Number of overlapping TFBS after filtering: 9785
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF NRF1 finished. Number of overlapping TFBS after filtering: 11686
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF CXXC1 finished. Number of overlapping TFBS after filtering: 6250
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF DBP finished. Number of overlapping TFBS after filtering: 1212
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF DDIT3 finished. Number of overlapping TFBS after filtering: 2598
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF DLX2 finished. Number of overlapping TFBS after filtering: 1009
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF DLX3 finished. Number of overlapping TFBS after filtering: 821
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF E2F1 finished. Number of overlapping TFBS after filtering: 5513
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF E2F2 finished. Number of overlapping TFBS after filtering: 1421
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF E2F3 finished. Number of overlapping TFBS after filtering: 1265
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF E2F4 finished. Number of overlapping TFBS after filtering: 23445
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF E2F5 finished. Number of overlapping TFBS after filtering: 1064
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF E2F6 finished. Number of overlapping TFBS after filtering: 31143
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF E2F7 finished. Number of overlapping TFBS after filtering: 2381
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF E4F1 finished. Number of overlapping TFBS after filtering: 1317
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF EGR1 finished. Number of overlapping TFBS after filtering: 26314
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF EGR2 finished. Number of overlapping TFBS after filtering: 46746
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF EGR3 finished. Number of overlapping TFBS after filtering: 13872
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF EGR4 finished. Number of overlapping TFBS after filtering: 78512
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF EHF finished. Number of overlapping TFBS after filtering: 5009
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF ELF1 finished. Number of overlapping TFBS after filtering: 9343
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF ELF2 finished. Number of overlapping TFBS after filtering: 15954
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF ELF3 finished. Number of overlapping TFBS after filtering: 10388
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF ELF5 finished. Number of overlapping TFBS after filtering: 2006
+
+INFO [2026-08-18 12:42:01]  Calculating intersection for TF AHR finished. Number of overlapping TFBS after filtering: 1082
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF AIRE finished. Number of overlapping TFBS after filtering: 1140
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF ALX1 finished. Number of overlapping TFBS after filtering: 374
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF ANDR finished. Number of overlapping TFBS after filtering: 4919
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF AP2A finished. Number of overlapping TFBS after filtering: 42670
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF AP2B finished. Number of overlapping TFBS after filtering: 29953
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF AP2C finished. Number of overlapping TFBS after filtering: 39569
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF AP2D finished. Number of overlapping TFBS after filtering: 45807
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF ARI3A.D finished. Number of overlapping TFBS after filtering: 1787
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF ARI3A.S finished. Number of overlapping TFBS after filtering: 15907
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF ARI5B finished. Number of overlapping TFBS after filtering: 2834
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF ARNT finished. Number of overlapping TFBS after filtering: 3525
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF ARNT2 finished. Number of overlapping TFBS after filtering: 18796
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF ATF1 finished. Number of overlapping TFBS after filtering: 3615
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF ATF2 finished. Number of overlapping TFBS after filtering: 2744
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF ATF3 finished. Number of overlapping TFBS after filtering: 5168
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF ATOH1 finished. Number of overlapping TFBS after filtering: 22823
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF BACH1 finished. Number of overlapping TFBS after filtering: 6348
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF BARX2 finished. Number of overlapping TFBS after filtering: 641
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF BATF finished. Number of overlapping TFBS after filtering: 7680
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF BCL6 finished. Number of overlapping TFBS after filtering: 6613
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF BHE40 finished. Number of overlapping TFBS after filtering: 3717
+
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF PLAG1.D finished. Number of overlapping TFBS after filtering: 55208
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF PLAG1.S finished. Number of overlapping TFBS after filtering: 15366
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF PO2F1 finished. Number of overlapping TFBS after filtering: 3369
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF PO2F2 finished. Number of overlapping TFBS after filtering: 3460
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF PO3F1 finished. Number of overlapping TFBS after filtering: 1437
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF PO3F2 finished. Number of overlapping TFBS after filtering: 938
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF PO4F2 finished. Number of overlapping TFBS after filtering: 948
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF PO5F1 finished. Number of overlapping TFBS after filtering: 2105
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF PO6F1 finished. Number of overlapping TFBS after filtering: 922
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF PPARA.C finished. Number of overlapping TFBS after filtering: 16403
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF PPARA.S finished. Number of overlapping TFBS after filtering: 31615
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF PPARD finished. Number of overlapping TFBS after filtering: 12123
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF PPARG.A finished. Number of overlapping TFBS after filtering: 12239
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF PPARG.S finished. Number of overlapping TFBS after filtering: 5130
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF PRD14 finished. Number of overlapping TFBS after filtering: 4512
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF PRDM1 finished. Number of overlapping TFBS after filtering: 6823
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF PRGR.C finished. Number of overlapping TFBS after filtering: 5525
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF PRGR.S finished. Number of overlapping TFBS after filtering: 47282
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF PROP1 finished. Number of overlapping TFBS after filtering: 862
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF PRRX1 finished. Number of overlapping TFBS after filtering: 10132
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF PRRX2 finished. Number of overlapping TFBS after filtering: 7835
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF PTF1A finished. Number of overlapping TFBS after filtering: 20186
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF TCF7 finished. Number of overlapping TFBS after filtering: 4603
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF TEAD1 finished. Number of overlapping TFBS after filtering: 6484
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF TEAD3 finished. Number of overlapping TFBS after filtering: 2727
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF TEAD4 finished. Number of overlapping TFBS after filtering: 2569
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF TEF finished. Number of overlapping TFBS after filtering: 1281
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF TF2L1 finished. Number of overlapping TFBS after filtering: 10854
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF TF65.C finished. Number of overlapping TFBS after filtering: 3691
+INFO [2026-08-18 12:42:07]  Calculating intersection for TF TF65.S finished. Number of overlapping TFBS after filtering: 7432
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF TF7L2 finished. Number of overlapping TFBS after filtering: 5183
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF TFCP2 finished. Number of overlapping TFBS after filtering: 20616
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF TFDP1 finished. Number of overlapping TFBS after filtering: 2163
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF TFE2.A finished. Number of overlapping TFBS after filtering: 52083
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF TFE2.S finished. Number of overlapping TFBS after filtering: 8006
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF TFE3 finished. Number of overlapping TFBS after filtering: 6424
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF TFEB finished. Number of overlapping TFBS after filtering: 4620
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF TGIF1.S finished. Number of overlapping TFBS after filtering: 65662
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF THA.C finished. Number of overlapping TFBS after filtering: 13226
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF THA.S finished. Number of overlapping TFBS after filtering: 14389
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF THB.C finished. Number of overlapping TFBS after filtering: 15347
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF THB.S finished. Number of overlapping TFBS after filtering: 10878
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF TLX1.D finished. Number of overlapping TFBS after filtering: 7689
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF TLX1.S finished. Number of overlapping TFBS after filtering: 5207
+
+INFO [2026-08-18 12:42:02]  Calculating intersection for TF ELK1 finished. Number of overlapping TFBS after filtering: 3144
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF ELK3 finished. Number of overlapping TFBS after filtering: 12021
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF ELK4 finished. Number of overlapping TFBS after filtering: 2556
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF ENOA finished. Number of overlapping TFBS after filtering: 11112
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF EPAS1 finished. Number of overlapping TFBS after filtering: 36925
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF ERG finished. Number of overlapping TFBS after filtering: 3648
+INFO [2026-08-18 12:42:15]  Calculating intersection for TF ERR1 finished. Number of overlapping TFBS after filtering: 10058
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF ERR2 finished. Number of overlapping TFBS after filtering: 13553
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF ERR3 finished. Number of overlapping TFBS after filtering: 6056
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF ESR1 finished. Number of overlapping TFBS after filtering: 18755
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF ESR2.B finished. Number of overlapping TFBS after filtering: 12262
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF ESR2.S finished. Number of overlapping TFBS after filtering: 32928
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF ETS1 finished. Number of overlapping TFBS after filtering: 7990
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF ETS2 finished. Number of overlapping TFBS after filtering: 12108
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF ETV4 finished. Number of overlapping TFBS after filtering: 15225
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF ETV5 finished. Number of overlapping TFBS after filtering: 6455
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF EVI1 finished. Number of overlapping TFBS after filtering: 1189
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF EVX1 finished. Number of overlapping TFBS after filtering: 1119
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF EVX2 finished. Number of overlapping TFBS after filtering: 1745
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF FEV finished. Number of overlapping TFBS after filtering: 6041
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF FLI1 finished. Number of overlapping TFBS after filtering: 15528
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF FOS finished. Number of overlapping TFBS after filtering: 5336
+
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF SPIB finished. Number of overlapping TFBS after filtering: 7901
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF SPZ1 finished. Number of overlapping TFBS after filtering: 6825
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF SRBP1 finished. Number of overlapping TFBS after filtering: 16106
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF SRBP2 finished. Number of overlapping TFBS after filtering: 39891
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF SRF finished. Number of overlapping TFBS after filtering: 2073
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF SRY finished. Number of overlapping TFBS after filtering: 8094
+INFO [2026-08-18 12:42:12]  Calculating intersection for TF STA5A finished. Number of overlapping TFBS after filtering: 3245
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF STA5B finished. Number of overlapping TFBS after filtering: 4255
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF STAT1 finished. Number of overlapping TFBS after filtering: 21180
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF STAT2 finished. Number of overlapping TFBS after filtering: 6292
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF STAT3 finished. Number of overlapping TFBS after filtering: 7109
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF STAT4 finished. Number of overlapping TFBS after filtering: 6854
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF STAT6 finished. Number of overlapping TFBS after filtering: 6738
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF STF1 finished. Number of overlapping TFBS after filtering: 20701
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF SUH finished. Number of overlapping TFBS after filtering: 6000
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF TAL1.A finished. Number of overlapping TFBS after filtering: 3875
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF TAL1.S finished. Number of overlapping TFBS after filtering: 7352
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF TBP finished. Number of overlapping TFBS after filtering: 772
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF TBX2 finished. Number of overlapping TFBS after filtering: 10987
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF TBX20 finished. Number of overlapping TFBS after filtering: 17391
+INFO [2026-08-18 12:42:31]  Calculating intersection for TF TBX3 finished. Number of overlapping TFBS after filtering: 7028
+INFO [2026-08-18 12:42:32]  Calculating intersection for TF TBX5 finished. Number of overlapping TFBS after filtering: 9867
+
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF ISL1 finished. Number of overlapping TFBS after filtering: 8500
+INFO [2026-08-18 12:42:04]  Calculating intersection for TF ITF2 finished. Number of overlapping TFBS after filtering: 10537
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF JUN finished. Number of overlapping TFBS after filtering: 9218
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF JUNB finished. Number of overlapping TFBS after filtering: 8340
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF JUND finished. Number of overlapping TFBS after filtering: 7971
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF KAISO finished. Number of overlapping TFBS after filtering: 6127
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF KLF1 finished. Number of overlapping TFBS after filtering: 45176
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF KLF15 finished. Number of overlapping TFBS after filtering: 89169
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF KLF3 finished. Number of overlapping TFBS after filtering: 19299
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF KLF4 finished. Number of overlapping TFBS after filtering: 48492
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF KLF6 finished. Number of overlapping TFBS after filtering: 43483
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF KLF8 finished. Number of overlapping TFBS after filtering: 27377
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF LEF1 finished. Number of overlapping TFBS after filtering: 17411
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF LHX2 finished. Number of overlapping TFBS after filtering: 729
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF LHX3 finished. Number of overlapping TFBS after filtering: 666
+INFO [2026-08-18 12:42:31]  Calculating intersection for TF MAF finished. Number of overlapping TFBS after filtering: 6305
+INFO [2026-08-18 12:42:33]  Calculating intersection for TF MAFA finished. Number of overlapping TFBS after filtering: 20558
+INFO [2026-08-18 12:42:34]  Calculating intersection for TF MAFB finished. Number of overlapping TFBS after filtering: 12741
+INFO [2026-08-18 12:42:36]  Calculating intersection for TF MAFG finished. Number of overlapping TFBS after filtering: 21576
+INFO [2026-08-18 12:42:37]  Calculating intersection for TF MAFK.A finished. Number of overlapping TFBS after filtering: 7631
+INFO [2026-08-18 12:42:38]  Calculating intersection for TF MAFK.S finished. Number of overlapping TFBS after filtering: 7937
+INFO [2026-08-18 12:42:39]  Calculating intersection for TF MAX finished. Number of overlapping TFBS after filtering: 8416
+
+INFO [2026-08-18 12:42:17]  Calculating intersection for TF MAZ finished. Number of overlapping TFBS after filtering: 151109
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF MBD2 finished. Number of overlapping TFBS after filtering: 16287
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF MCR finished. Number of overlapping TFBS after filtering: 5437
+INFO [2026-08-18 12:42:20]  Calculating intersection for TF MECP2 finished. Number of overlapping TFBS after filtering: 21812
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF MEF2A finished. Number of overlapping TFBS after filtering: 2055
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF MEF2C finished. Number of overlapping TFBS after filtering: 1416
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF MEF2D finished. Number of overlapping TFBS after filtering: 2237
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF MEIS1 finished. Number of overlapping TFBS after filtering: 3343
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF MEIS2 finished. Number of overlapping TFBS after filtering: 6130
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF MITF finished. Number of overlapping TFBS after filtering: 4552
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF MLXPL finished. Number of overlapping TFBS after filtering: 12158
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF MSX2 finished. Number of overlapping TFBS after filtering: 7027
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF MSX3 finished. Number of overlapping TFBS after filtering: 642
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF MTF1 finished. Number of overlapping TFBS after filtering: 6267
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF MXI1 finished. Number of overlapping TFBS after filtering: 17313
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF MYB finished. Number of overlapping TFBS after filtering: 6083
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF MYBB finished. Number of overlapping TFBS after filtering: 3358
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF MYC finished. Number of overlapping TFBS after filtering: 12401
+INFO [2026-08-18 12:42:30]  Calculating intersection for TF MYCN finished. Number of overlapping TFBS after filtering: 8882
+INFO [2026-08-18 12:42:34]  Calculating intersection for TF MYF6 finished. Number of overlapping TFBS after filtering: 64614
+INFO [2026-08-18 12:42:37]  Calculating intersection for TF MYOD1 finished. Number of overlapping TFBS after filtering: 40237
+INFO [2026-08-18 12:42:39]  Calculating intersection for TF MYOG finished. Number of overlapping TFBS after filtering: 26941
+
+INFO [2026-08-18 12:42:10]  Calculating intersection for TF PURA finished. Number of overlapping TFBS after filtering: 96739
+INFO [2026-08-18 12:42:11]  Calculating intersection for TF RARA.C finished. Number of overlapping TFBS after filtering: 9888
+INFO [2026-08-18 12:42:14]  Calculating intersection for TF RARA.S finished. Number of overlapping TFBS after filtering: 37329
+INFO [2026-08-18 12:42:16]  Calculating intersection for TF RARB finished. Number of overlapping TFBS after filtering: 19449
+INFO [2026-08-18 12:42:18]  Calculating intersection for TF RARG.C finished. Number of overlapping TFBS after filtering: 15945
+INFO [2026-08-18 12:42:21]  Calculating intersection for TF RARG.S finished. Number of overlapping TFBS after filtering: 37329
+INFO [2026-08-18 12:42:22]  Calculating intersection for TF REL finished. Number of overlapping TFBS after filtering: 6856
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF RELB finished. Number of overlapping TFBS after filtering: 7728
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF REST finished. Number of overlapping TFBS after filtering: 25573
+INFO [2026-08-18 12:42:27]  Calculating intersection for TF RFX1 finished. Number of overlapping TFBS after filtering: 25692
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF RFX2 finished. Number of overlapping TFBS after filtering: 9808
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF RFX3 finished. Number of overlapping TFBS after filtering: 7590
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF RORA finished. Number of overlapping TFBS after filtering: 2634
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF RORG finished. Number of overlapping TFBS after filtering: 4362
+INFO [2026-08-18 12:42:38]  Calculating intersection for TF RREB1 finished. Number of overlapping TFBS after filtering: 62935
+INFO [2026-08-18 12:42:39]  Calculating intersection for TF RUNX1 finished. Number of overlapping TFBS after filtering: 4383
+INFO [2026-08-18 12:42:39]  Calculating intersection for TF RUNX2 finished. Number of overlapping TFBS after filtering: 6023
+INFO [2026-08-18 12:42:40]  Calculating intersection for TF RUNX3 finished. Number of overlapping TFBS after filtering: 6471
+INFO [2026-08-18 12:42:42]  Calculating intersection for TF RXRA finished. Number of overlapping TFBS after filtering: 23636
+INFO [2026-08-18 12:42:43]  Calculating intersection for TF RXRB finished. Number of overlapping TFBS after filtering: 11932
+INFO [2026-08-18 12:42:45]  Calculating intersection for TF RXRG finished. Number of overlapping TFBS after filtering: 25124
+INFO [2026-08-18 12:42:47]  Calculating intersection for TF SMAD1 finished. Number of overlapping TFBS after filtering: 30196
+
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF TWST1 finished. Number of overlapping TFBS after filtering: 34868
+INFO [2026-08-18 12:42:06]  Calculating intersection for TF TYY1 finished. Number of overlapping TFBS after filtering: 8111
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF UBIP1 finished. Number of overlapping TFBS after filtering: 180561
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF USF1 finished. Number of overlapping TFBS after filtering: 5959
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF USF2 finished. Number of overlapping TFBS after filtering: 6520
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF VDR.C finished. Number of overlapping TFBS after filtering: 6176
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF VDR.S finished. Number of overlapping TFBS after filtering: 37329
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF VSX2 finished. Number of overlapping TFBS after filtering: 725
+INFO [2026-08-18 12:42:37]  Calculating intersection for TF WT1 finished. Number of overlapping TFBS after filtering: 91616
+INFO [2026-08-18 12:42:37]  Calculating intersection for TF XBP1 finished. Number of overlapping TFBS after filtering: 1231
+INFO [2026-08-18 12:42:38]  Calculating intersection for TF YBOX1 finished. Number of overlapping TFBS after filtering: 5318
+INFO [2026-08-18 12:42:39]  Calculating intersection for TF ZBT18 finished. Number of overlapping TFBS after filtering: 11134
+INFO [2026-08-18 12:42:41]  Calculating intersection for TF ZBT7A finished. Number of overlapping TFBS after filtering: 23820
+INFO [2026-08-18 12:42:42]  Calculating intersection for TF ZBTB6 finished. Number of overlapping TFBS after filtering: 7638
+INFO [2026-08-18 12:42:46]  Calculating intersection for TF ZEB1 finished. Number of overlapping TFBS after filtering: 40151
+INFO [2026-08-18 12:42:47]  Calculating intersection for TF ZEP1 finished. Number of overlapping TFBS after filtering: 8179
+INFO [2026-08-18 12:42:48]  Calculating intersection for TF ZEP2 finished. Number of overlapping TFBS after filtering: 7175
+INFO [2026-08-18 12:42:48]  Calculating intersection for TF ZFHX3 finished. Number of overlapping TFBS after filtering: 431
+INFO [2026-08-18 12:42:53]  Calculating intersection for TF ZFX finished. Number of overlapping TFBS after filtering: 58349
+INFO [2026-08-18 12:42:55]  Calculating intersection for TF ZIC1 finished. Number of overlapping TFBS after filtering: 26432
+INFO [2026-08-18 12:42:57]  Calculating intersection for TF ZIC2 finished. Number of overlapping TFBS after filtering: 22040
+INFO [2026-08-18 12:42:59]  Calculating intersection for TF ZIC3 finished. Number of overlapping TFBS after filtering: 12380
+
+INFO [2026-08-18 12:42:03]  Calculating intersection for TF SMAD2 finished. Number of overlapping TFBS after filtering: 13973
+INFO [2026-08-18 12:42:05]  Calculating intersection for TF SMAD3 finished. Number of overlapping TFBS after filtering: 18715
+INFO [2026-08-18 12:42:08]  Calculating intersection for TF SMAD4 finished. Number of overlapping TFBS after filtering: 24839
+INFO [2026-08-18 12:42:09]  Calculating intersection for TF SMRC1 finished. Number of overlapping TFBS after filtering: 16054
+INFO [2026-08-18 12:42:13]  Calculating intersection for TF SNAI1 finished. Number of overlapping TFBS after filtering: 46680
+INFO [2026-08-18 12:42:19]  Calculating intersection for TF SNAI2 finished. Number of overlapping TFBS after filtering: 80299
+INFO [2026-08-18 12:42:23]  Calculating intersection for TF SOX10 finished. Number of overlapping TFBS after filtering: 28722
+INFO [2026-08-18 12:42:24]  Calculating intersection for TF SOX13 finished. Number of overlapping TFBS after filtering: 4382
+INFO [2026-08-18 12:42:25]  Calculating intersection for TF SOX15 finished. Number of overlapping TFBS after filtering: 14950
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF SOX17 finished. Number of overlapping TFBS after filtering: 1942
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF SOX18 finished. Number of overlapping TFBS after filtering: 2926
+INFO [2026-08-18 12:42:26]  Calculating intersection for TF SOX2 finished. Number of overlapping TFBS after filtering: 2204
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF SOX3 finished. Number of overlapping TFBS after filtering: 10707
+INFO [2026-08-18 12:42:28]  Calculating intersection for TF SOX4 finished. Number of overlapping TFBS after filtering: 6186
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF SOX5 finished. Number of overlapping TFBS after filtering: 1733
+INFO [2026-08-18 12:42:29]  Calculating intersection for TF SOX9 finished. Number of overlapping TFBS after filtering: 2369
+INFO [2026-08-18 12:42:44]  Calculating intersection for TF SP1.A finished. Number of overlapping TFBS after filtering: 163162
+INFO [2026-08-18 12:42:51]  Calculating intersection for TF SP1.S finished. Number of overlapping TFBS after filtering: 107994
+INFO [2026-08-18 12:42:55]  Calculating intersection for TF SP2 finished. Number of overlapping TFBS after filtering: 49164
+INFO [2026-08-18 12:43:12]  Calculating intersection for TF SP3 finished. Number of overlapping TFBS after filtering: 169789
+INFO [2026-08-18 12:43:25]  Calculating intersection for TF SP4 finished. Number of overlapping TFBS after filtering: 126480
+INFO [2026-08-18 12:43:26]  Calculating intersection for TF SPI1 finished. Number of overlapping TFBS after filtering: 11092
+
+INFO [2026-08-18 12:43:26]  Finished execution using 20 cores. TOTAL RUNNING TIME: 1.5 mins
+
+INFO [2026-08-18 12:43:34] Finished successfully. Execution time: 1.6 mins
+INFO [2026-08-18 12:43:34] FILTER PEAKS
+INFO [2026-08-18 12:43:34]  Number of peaks before filtering : 719324
+INFO [2026-08-18 12:43:34]   Filter peaks by CV: Min = 0
+INFO [2026-08-18 12:43:34]   Filter peaks by mean: Min = 5
+INFO [2026-08-18 12:43:34]  Number of peaks after filtering : 719014
+INFO [2026-08-18 12:43:34]  Finished successfully. Execution time: 0.1 secs
+INFO [2026-08-18 12:43:34] Filter and sort peaks by size and remain only those bigger than 20 and smaller than 10000
+INFO [2026-08-18 12:43:34] Filter and sort peaks and remain only those on the following chromosomes: chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX
+INFO [2026-08-18 12:43:34]  Number of peaks before filtering: 719324
+INFO [2026-08-18 12:43:34]  Number of peaks after filtering : 704469
+INFO [2026-08-18 12:43:34]  Finished successfully. Execution time: 0.1 secs
+INFO [2026-08-18 12:43:34] Collectively, filter 14893 out of 719324 peaks.
+INFO [2026-08-18 12:43:34] Number of remaining peaks: 704431
+INFO [2026-08-18 12:43:37] FILTER RNA-seq
+INFO [2026-08-18 12:43:37]  Number of genes before filtering : 22313
+INFO [2026-08-18 12:43:37]   Filter genes by CV: Min = 0
+INFO [2026-08-18 12:43:37]   Filter genes by mean: Min = 1
+INFO [2026-08-18 12:43:37]  Number of genes after filtering : 16876
+INFO [2026-08-18 12:43:37]  Finished successfully. Execution time: 0 secs
+INFO [2026-08-18 12:43:37]  Flagged 5437 rows due to filtering criteria
+INFO [2026-08-18 12:43:37] Finished successfully. Execution time: 3.4 secs
+INFO [2026-08-18 12:43:37] 
+real data
+
+INFO [2026-08-18 12:43:40] Calculate TF-peak links for connection type expression
+INFO [2026-08-18 12:43:40]  Correlate expression and peak counts
+INFO [2026-08-18 12:43:43]   Retain 350 unique genes from TF/gene data out of 16876 (filter 16526 non-TF genes and 0 TF genes with 0 counts throughout).
+INFO [2026-08-18 12:43:43]   Correlate TF/gene data for 350 unique Ensembl IDs (TFs) and peak counts for 704431 peaks.
+INFO [2026-08-18 12:43:43]   Note: For subsequent steps, the same gene may be associated with multiple TF, depending on the translation table.
+INFO [2026-08-18 12:44:16]   Finished successfully. Execution time: 33.6 secs
+INFO [2026-08-18 12:44:16]  Run FDR calculations for 377 TFs for which TFBS predictions and expression data for the corresponding gene are available.
+INFO [2026-08-18 12:44:16]   Skip the following 44 TF due to missing data or because they are marked as filtered: ATOH1,CDX1,CDX2,CEBPE,EVX1,EVX2,FOXA2,FOXD3,FOXI1,GATA1,GFI1,GFI1B,HAND1,HESX1,HNF4A,HNF4G,HXA10,HXA13,HXA9,HXB6,HXB7,HXB8,HXC6,HXD10,HXD13,HXD4,MLXPL,MYF6,MYOG,NKX25,NKX32,NOBOX,NR0B1,NR1I2.S,NR2E3,PDX1,PITX2,PO5F1,PRD14,PTF1A,SPZ1,SRY,TLX1.D,TLX1.S
+INFO [2026-08-18 12:44:17]   Compute FDR for each TF. This may take a while...
+INFO [2026-08-18 12:44:18] TF AHR
+INFO [2026-08-18 12:44:18] TF AIRE
+INFO [2026-08-18 12:44:18] TF ALX1
+INFO [2026-08-18 12:44:19] TF ANDR
+INFO [2026-08-18 12:44:19] TF AP2A
+INFO [2026-08-18 12:44:19] TF AP2B
+INFO [2026-08-18 12:44:20] TF AP2C
+INFO [2026-08-18 12:44:20] TF AP2D
+INFO [2026-08-18 12:44:20] TF ARI3A.D
+INFO [2026-08-18 12:44:21] TF ARI3A.S
+INFO [2026-08-18 12:44:21] TF ARI5B
+INFO [2026-08-18 12:44:21] TF ARNT
+INFO [2026-08-18 12:44:21] TF ARNT2
+INFO [2026-08-18 12:44:22] TF ATF1
+INFO [2026-08-18 12:44:22] TF ATF2
+INFO [2026-08-18 12:44:22] TF ATF3
+INFO [2026-08-18 12:44:23] TF BACH1
+INFO [2026-08-18 12:44:23] TF BARX2
+INFO [2026-08-18 12:44:23] TF BATF
+INFO [2026-08-18 12:44:23] TF BCL6
+INFO [2026-08-18 12:44:24] TF BHE40
+INFO [2026-08-18 12:44:24] TF BRAC
+INFO [2026-08-18 12:44:24] TF BRCA1
+INFO [2026-08-18 12:44:25] TF CDC5L
+INFO [2026-08-18 12:44:25] TF CEBPA
+INFO [2026-08-18 12:44:25] TF CEBPB
+INFO [2026-08-18 12:44:25] TF CEBPD
+INFO [2026-08-18 12:44:26] TF CEBPG
+INFO [2026-08-18 12:44:26] TF CEBPZ
+INFO [2026-08-18 12:44:26] TF COE1
+INFO [2026-08-18 12:44:27] TF COT1.B
+INFO [2026-08-18 12:44:27] TF COT1.S
+INFO [2026-08-18 12:44:27] TF COT2.B
+INFO [2026-08-18 12:44:27] TF COT2.S
+INFO [2026-08-18 12:44:28] TF CREB1
+INFO [2026-08-18 12:44:28] TF CREM
+INFO [2026-08-18 12:44:28] TF CRX.A
+INFO [2026-08-18 12:44:28] TF CRX.S
+INFO [2026-08-18 12:44:29] TF CTCF
+INFO [2026-08-18 12:44:29] TF CUX1
+INFO [2026-08-18 12:44:29] TF CXXC1
+INFO [2026-08-18 12:44:30] TF DBP
+INFO [2026-08-18 12:44:30] TF DDIT3
+INFO [2026-08-18 12:44:30] TF DLX2
+INFO [2026-08-18 12:44:31] TF DLX3
+INFO [2026-08-18 12:44:31] TF E2F1
+INFO [2026-08-18 12:44:31] TF E2F2
+INFO [2026-08-18 12:44:31] TF E2F3
+INFO [2026-08-18 12:44:32] TF E2F4
+INFO [2026-08-18 12:44:32] TF E2F5
+INFO [2026-08-18 12:44:32] TF E2F6
+INFO [2026-08-18 12:44:33] TF E2F7
+INFO [2026-08-18 12:44:33] TF E4F1
+INFO [2026-08-18 12:44:33] TF EGR1
+INFO [2026-08-18 12:44:34] TF EGR2
+INFO [2026-08-18 12:44:34] TF EGR3
+INFO [2026-08-18 12:44:34] TF EGR4
+INFO [2026-08-18 12:44:34] TF EHF
+INFO [2026-08-18 12:44:35] TF ELF1
+INFO [2026-08-18 12:44:35] TF ELF2
+INFO [2026-08-18 12:44:35] TF ELF3
+INFO [2026-08-18 12:44:36] TF ELF5
+INFO [2026-08-18 12:44:36] TF ELK1
+INFO [2026-08-18 12:44:36] TF ELK3
+INFO [2026-08-18 12:44:37] TF ELK4
+INFO [2026-08-18 12:44:37] TF ENOA
+INFO [2026-08-18 12:44:37] TF EPAS1
+INFO [2026-08-18 12:44:37] TF ERG
+INFO [2026-08-18 12:44:38] TF ERR1
+INFO [2026-08-18 12:44:38] TF ERR2
+INFO [2026-08-18 12:44:38] TF ERR3
+INFO [2026-08-18 12:44:39] TF ESR1
+INFO [2026-08-18 12:44:39] TF ESR2.B
+INFO [2026-08-18 12:44:39] TF ESR2.S
+INFO [2026-08-18 12:44:40] TF ETS1
+INFO [2026-08-18 12:44:40] TF ETS2
+INFO [2026-08-18 12:44:40] TF ETV4
+INFO [2026-08-18 12:44:41] TF ETV5
+INFO [2026-08-18 12:44:41] TF EVI1
+INFO [2026-08-18 12:44:41] TF FEV
+INFO [2026-08-18 12:44:41] TF FLI1
+INFO [2026-08-18 12:44:42] TF FOS
+INFO [2026-08-18 12:44:42] TF FOSB
+INFO [2026-08-18 12:44:42] TF FOSL1
+INFO [2026-08-18 12:44:43] TF FOSL2
+INFO [2026-08-18 12:44:43] TF FOXA1
+INFO [2026-08-18 12:44:43] TF FOXA3
+INFO [2026-08-18 12:44:44] TF FOXC1
+INFO [2026-08-18 12:44:44] TF FOXC2
+INFO [2026-08-18 12:44:44] TF FOXD1
+INFO [2026-08-18 12:44:44] TF FOXF1
+INFO [2026-08-18 12:44:45] TF FOXF2
+INFO [2026-08-18 12:44:45] TF FOXJ2
+INFO [2026-08-18 12:44:45] TF FOXJ3.A
+INFO [2026-08-18 12:44:46] TF FOXJ3.S
+INFO [2026-08-18 12:44:46] TF FOXM1
+INFO [2026-08-18 12:44:46] TF FOXO1
+INFO [2026-08-18 12:44:47] TF FOXO3
+INFO [2026-08-18 12:44:47] TF FOXO4
+INFO [2026-08-18 12:44:47] TF FOXP2
+INFO [2026-08-18 12:44:47] TF FOXP3
+INFO [2026-08-18 12:44:48] TF FOXQ1
+INFO [2026-08-18 12:44:48] TF FUBP1
+INFO [2026-08-18 12:44:48] TF GABP1
+INFO [2026-08-18 12:44:49] TF GABPA
+INFO [2026-08-18 12:44:49] TF GATA2
+INFO [2026-08-18 12:44:49] TF GATA3
+INFO [2026-08-18 12:44:49] TF GATA4
+INFO [2026-08-18 12:44:50] TF GATA5
+INFO [2026-08-18 12:44:50] TF GATA6
+INFO [2026-08-18 12:44:50] TF GCM1
+INFO [2026-08-18 12:44:51] TF GCR.C
+INFO [2026-08-18 12:44:51] TF GCR.S
+INFO [2026-08-18 12:44:51] TF GLI1
+INFO [2026-08-18 12:44:52] TF GLI2
+INFO [2026-08-18 12:44:52] TF GLI3
+INFO [2026-08-18 12:44:52] TF GLIS3
+INFO [2026-08-18 12:44:52] TF HBP1
+INFO [2026-08-18 12:44:53] TF HEN1
+INFO [2026-08-18 12:44:53] TF HES1
+INFO [2026-08-18 12:44:53] TF HEY2
+INFO [2026-08-18 12:44:53] TF HIC1
+INFO [2026-08-18 12:44:54] TF HIF1A
+INFO [2026-08-18 12:44:54] TF HINFP
+INFO [2026-08-18 12:44:54] TF HLF
+INFO [2026-08-18 12:44:55] TF HLTF
+INFO [2026-08-18 12:44:55] TF HMGA1
+INFO [2026-08-18 12:44:55] TF HMGA2
+INFO [2026-08-18 12:44:55] TF HNF1A
+INFO [2026-08-18 12:44:56] TF HNF1B
+INFO [2026-08-18 12:44:56] TF HNF6
+INFO [2026-08-18 12:44:56] TF HSF1
+INFO [2026-08-18 12:44:56] TF HSF2
+INFO [2026-08-18 12:44:57] TF HTF4
+INFO [2026-08-18 12:44:57] TF HXA1
+INFO [2026-08-18 12:44:57] TF HXA5
+INFO [2026-08-18 12:44:58] TF HXA7
+INFO [2026-08-18 12:44:58] TF HXB1
+INFO [2026-08-18 12:44:58] TF HXC8
+INFO [2026-08-18 12:44:59] TF HXD9
+INFO [2026-08-18 12:44:59] TF IKZF1
+INFO [2026-08-18 12:44:59] TF INSM1
+INFO [2026-08-18 12:44:59] TF IRF1
+INFO [2026-08-18 12:45:00] TF IRF2
+INFO [2026-08-18 12:45:00] TF IRF3
+INFO [2026-08-18 12:45:00] TF IRF4
+INFO [2026-08-18 12:45:01] TF IRF5
+INFO [2026-08-18 12:45:01] TF IRF7
+INFO [2026-08-18 12:45:01] TF IRF8
+INFO [2026-08-18 12:45:02] TF IRF9
+INFO [2026-08-18 12:45:02] TF ISL1
+INFO [2026-08-18 12:45:02] TF ITF2
+INFO [2026-08-18 12:45:02] TF JUN
+INFO [2026-08-18 12:45:03] TF JUNB
+INFO [2026-08-18 12:45:03] TF JUND
+INFO [2026-08-18 12:45:03] TF KAISO
+INFO [2026-08-18 12:45:04] TF KLF1
+INFO [2026-08-18 12:45:04] TF KLF15
+INFO [2026-08-18 12:45:04] TF KLF3
+INFO [2026-08-18 12:45:05] TF KLF4
+INFO [2026-08-18 12:45:05] TF KLF6
+INFO [2026-08-18 12:45:05] TF KLF8
+INFO [2026-08-18 12:45:05] TF LEF1
+INFO [2026-08-18 12:45:06] TF LHX2
+INFO [2026-08-18 12:45:06] TF LHX3
+INFO [2026-08-18 12:45:06] TF MAF
+INFO [2026-08-18 12:45:07] TF MAFA
+INFO [2026-08-18 12:45:07] TF MAFB
+INFO [2026-08-18 12:45:07] TF MAFG
+INFO [2026-08-18 12:45:08] TF MAFK.A
+INFO [2026-08-18 12:45:08] TF MAFK.S
+INFO [2026-08-18 12:45:08] TF MAX
+INFO [2026-08-18 12:45:08] TF MAZ
+INFO [2026-08-18 12:45:09] TF MBD2
+INFO [2026-08-18 12:45:09] TF MCR
+INFO [2026-08-18 12:45:09] TF MECP2
+INFO [2026-08-18 12:45:09] TF MEF2A
+INFO [2026-08-18 12:45:10] TF MEF2C
+INFO [2026-08-18 12:45:10] TF MEF2D
+INFO [2026-08-18 12:45:10] TF MEIS1
+INFO [2026-08-18 12:45:11] TF MEIS2
+INFO [2026-08-18 12:45:11] TF MITF
+INFO [2026-08-18 12:45:11] TF MSX2
+INFO [2026-08-18 12:45:11] TF MSX3
+INFO [2026-08-18 12:45:12] TF MTF1
+INFO [2026-08-18 12:45:12] TF MXI1
+INFO [2026-08-18 12:45:12] TF MYB
+INFO [2026-08-18 12:45:13] TF MYBB
+INFO [2026-08-18 12:45:13] TF MYC
+INFO [2026-08-18 12:45:14] TF MYCN
+INFO [2026-08-18 12:45:15] TF MYOD1
+INFO [2026-08-18 12:45:15] TF NANOG.A
+INFO [2026-08-18 12:45:15] TF NANOG.S
+INFO [2026-08-18 12:45:15] TF NDF1
+INFO [2026-08-18 12:45:16] TF NF2L1
+INFO [2026-08-18 12:45:16] TF NF2L2
+INFO [2026-08-18 12:45:16] TF NFAC1.A
+INFO [2026-08-18 12:45:17] TF NFAC1.S
+INFO [2026-08-18 12:45:17] TF NFAC2
+INFO [2026-08-18 12:45:18] TF NFAC3
+INFO [2026-08-18 12:45:18] TF NFAC4
+INFO [2026-08-18 12:45:18] TF NFAT5
+INFO [2026-08-18 12:45:19] TF NFE2
+INFO [2026-08-18 12:45:19] TF NFIA.C
+INFO [2026-08-18 12:45:19] TF NFIA.S
+INFO [2026-08-18 12:45:19] TF NFIL3
+INFO [2026-08-18 12:45:20] TF NFKB1
+INFO [2026-08-18 12:45:20] TF NFKB2
+INFO [2026-08-18 12:45:20] TF NFYA.D
+INFO [2026-08-18 12:45:20] TF NFYA.S
+INFO [2026-08-18 12:45:21] TF NFYB
+INFO [2026-08-18 12:45:21] TF NFYC
+INFO [2026-08-18 12:45:21] TF NKX21
+INFO [2026-08-18 12:45:22] TF NKX22
+INFO [2026-08-18 12:45:22] TF NKX28
+INFO [2026-08-18 12:45:22] TF NKX31
+INFO [2026-08-18 12:45:22] TF NR1D1
+INFO [2026-08-18 12:45:23] TF NR1H2
+INFO [2026-08-18 12:45:23] TF NR1H4
+INFO [2026-08-18 12:45:23] TF NR1I3.S
+INFO [2026-08-18 12:45:23] TF NR2C1
+INFO [2026-08-18 12:45:24] TF NR2C2
+INFO [2026-08-18 12:45:24] TF NR2F6
+INFO [2026-08-18 12:45:24] TF NR4A1
+INFO [2026-08-18 12:45:24] TF NR4A2
+INFO [2026-08-18 12:45:25] TF NR4A3
+INFO [2026-08-18 12:45:25] TF NR5A2
+INFO [2026-08-18 12:45:25] TF NR6A1
+INFO [2026-08-18 12:45:25] TF NRF1
+INFO [2026-08-18 12:45:26] TF OLIG2
+INFO [2026-08-18 12:45:26] TF ONEC2
+INFO [2026-08-18 12:45:26] TF OTX1
+INFO [2026-08-18 12:45:27] TF OTX2
+INFO [2026-08-18 12:45:27] TF OVOL1
+INFO [2026-08-18 12:45:27] TF P53
+INFO [2026-08-18 12:45:28] TF P63
+INFO [2026-08-18 12:45:28] TF P73
+INFO [2026-08-18 12:45:28] TF PAX2.D
+INFO [2026-08-18 12:45:28] TF PAX2.S
+INFO [2026-08-18 12:45:28] TF PAX5.D
+INFO [2026-08-18 12:45:29] TF PAX5.S
+INFO [2026-08-18 12:45:29] TF PAX6
+INFO [2026-08-18 12:45:29] TF PAX8
+INFO [2026-08-18 12:45:29] TF PBX1
+INFO [2026-08-18 12:45:30] TF PBX2
+INFO [2026-08-18 12:45:30] TF PBX3
+INFO [2026-08-18 12:45:30] TF PEBB
+INFO [2026-08-18 12:45:31] TF PIT1
+INFO [2026-08-18 12:45:31] TF PKNX1
+INFO [2026-08-18 12:45:31] TF PLAG1.D
+INFO [2026-08-18 12:45:32] TF PLAG1.S
+INFO [2026-08-18 12:45:32] TF PO2F1
+INFO [2026-08-18 12:45:32] TF PO2F2
+INFO [2026-08-18 12:45:32] TF PO3F1
+INFO [2026-08-18 12:45:33] TF PO3F2
+INFO [2026-08-18 12:45:33] TF PO4F2
+INFO [2026-08-18 12:45:33] TF PO6F1
+INFO [2026-08-18 12:45:33] TF PPARA.C
+INFO [2026-08-18 12:45:34] TF PPARA.S
+INFO [2026-08-18 12:45:34] TF PPARD
+INFO [2026-08-18 12:45:34] TF PPARG.A
+INFO [2026-08-18 12:45:35] TF PPARG.S
+INFO [2026-08-18 12:45:35] TF PRDM1
+INFO [2026-08-18 12:45:35] TF PRGR.C
+INFO [2026-08-18 12:45:35] TF PRGR.S
+INFO [2026-08-18 12:45:36] TF PROP1
+INFO [2026-08-18 12:45:36] TF PRRX1
+INFO [2026-08-18 12:45:36] TF PRRX2
+INFO [2026-08-18 12:45:37] TF PURA
+INFO [2026-08-18 12:45:37] TF RARA.C
+INFO [2026-08-18 12:45:37] TF RARA.S
+INFO [2026-08-18 12:45:37] TF RARB
+INFO [2026-08-18 12:45:38] TF RARG.C
+INFO [2026-08-18 12:45:38] TF RARG.S
+INFO [2026-08-18 12:45:38] TF REL
+INFO [2026-08-18 12:45:38] TF RELB
+INFO [2026-08-18 12:45:39] TF REST
+INFO [2026-08-18 12:45:39] TF RFX1
+INFO [2026-08-18 12:45:39] TF RFX2
+INFO [2026-08-18 12:45:40] TF RFX3
+INFO [2026-08-18 12:45:40] TF RORA
+INFO [2026-08-18 12:45:40] TF RORG
+INFO [2026-08-18 12:45:40] TF RREB1
+INFO [2026-08-18 12:45:41] TF RUNX1
+INFO [2026-08-18 12:45:41] TF RUNX2
+INFO [2026-08-18 12:45:41] TF RUNX3
+INFO [2026-08-18 12:45:41] TF RXRA
+INFO [2026-08-18 12:45:42] TF RXRB
+INFO [2026-08-18 12:45:42] TF RXRG
+INFO [2026-08-18 12:45:42] TF SMAD1
+INFO [2026-08-18 12:45:43] TF SMAD2
+INFO [2026-08-18 12:45:43] TF SMAD3
+INFO [2026-08-18 12:45:43] TF SMAD4
+INFO [2026-08-18 12:45:43] TF SMRC1
+INFO [2026-08-18 12:45:44] TF SNAI1
+INFO [2026-08-18 12:45:44] TF SNAI2
+INFO [2026-08-18 12:45:44] TF SOX10
+INFO [2026-08-18 12:45:44] TF SOX13
+INFO [2026-08-18 12:45:45] TF SOX15
+INFO [2026-08-18 12:45:45] TF SOX17
+INFO [2026-08-18 12:45:45] TF SOX18
+INFO [2026-08-18 12:45:46] TF SOX2
+INFO [2026-08-18 12:45:46] TF SOX3
+INFO [2026-08-18 12:45:46] TF SOX4
+INFO [2026-08-18 12:45:46] TF SOX5
+INFO [2026-08-18 12:45:47] TF SOX9
+INFO [2026-08-18 12:45:47] TF SP1.A
+INFO [2026-08-18 12:45:47] TF SP1.S
+INFO [2026-08-18 12:45:48] TF SP2
+INFO [2026-08-18 12:45:48] TF SP3
+INFO [2026-08-18 12:45:48] TF SP4
+INFO [2026-08-18 12:45:49] TF SPI1
+INFO [2026-08-18 12:45:49] TF SPIB
+INFO [2026-08-18 12:45:49] TF SRBP1
+INFO [2026-08-18 12:45:49] TF SRBP2
+INFO [2026-08-18 12:45:50] TF SRF
+INFO [2026-08-18 12:45:50] TF STA5A
+INFO [2026-08-18 12:45:50] TF STA5B
+INFO [2026-08-18 12:45:51] TF STAT1
+INFO [2026-08-18 12:45:51] TF STAT2
+INFO [2026-08-18 12:45:51] TF STAT3
+INFO [2026-08-18 12:45:51] TF STAT4
+INFO [2026-08-18 12:45:52] TF STAT6
+INFO [2026-08-18 12:45:52] TF STF1
+INFO [2026-08-18 12:45:52] TF SUH
+INFO [2026-08-18 12:45:52] TF TAL1.A
+INFO [2026-08-18 12:45:53] TF TAL1.S
+INFO [2026-08-18 12:45:53] TF TBP
+INFO [2026-08-18 12:45:53] TF TBX2
+INFO [2026-08-18 12:45:53] TF TBX20
+INFO [2026-08-18 12:45:54] TF TBX3
+INFO [2026-08-18 12:45:54] TF TBX5
+INFO [2026-08-18 12:45:54] TF TCF7
+INFO [2026-08-18 12:45:55] TF TEAD1
+INFO [2026-08-18 12:45:55] TF TEAD3
+INFO [2026-08-18 12:45:55] TF TEAD4
+INFO [2026-08-18 12:45:55] TF TEF
+INFO [2026-08-18 12:45:56] TF TF2L1
+INFO [2026-08-18 12:45:56] TF TF65.C
+INFO [2026-08-18 12:45:56] TF TF65.S
+INFO [2026-08-18 12:45:57] TF TF7L2
+INFO [2026-08-18 12:45:57] TF TFCP2
+INFO [2026-08-18 12:45:57] TF TFDP1
+INFO [2026-08-18 12:45:57] TF TFE2.A
+INFO [2026-08-18 12:45:58] TF TFE2.S
+INFO [2026-08-18 12:45:58] TF TFE3
+INFO [2026-08-18 12:45:58] TF TFEB
+INFO [2026-08-18 12:45:58] TF TGIF1.S
+INFO [2026-08-18 12:45:59] TF THA.C
+INFO [2026-08-18 12:45:59] TF THA.S
+INFO [2026-08-18 12:45:59] TF THB.C
+INFO [2026-08-18 12:45:59] TF THB.S
+INFO [2026-08-18 12:46:00] TF TWST1
+INFO [2026-08-18 12:46:00] TF TYY1
+INFO [2026-08-18 12:46:00] TF UBIP1
+INFO [2026-08-18 12:46:01] TF USF1
+INFO [2026-08-18 12:46:01] TF USF2
+INFO [2026-08-18 12:46:01] TF VDR.C
+INFO [2026-08-18 12:46:01] TF VDR.S
+INFO [2026-08-18 12:46:02] TF VSX2
+INFO [2026-08-18 12:46:02] TF WT1
+INFO [2026-08-18 12:46:02] TF XBP1
+INFO [2026-08-18 12:46:02] TF YBOX1
+INFO [2026-08-18 12:46:03] TF ZBT18
+INFO [2026-08-18 12:46:03] TF ZBT7A
+INFO [2026-08-18 12:46:03] TF ZBTB6
+INFO [2026-08-18 12:46:03] TF ZEB1
+INFO [2026-08-18 12:46:04] TF ZEP1
+INFO [2026-08-18 12:46:04] TF ZEP2
+INFO [2026-08-18 12:46:04] TF ZFHX3
+INFO [2026-08-18 12:46:04] TF ZFX
+INFO [2026-08-18 12:46:05] TF ZIC1
+INFO [2026-08-18 12:46:05] TF ZIC2
+INFO [2026-08-18 12:46:05] TF ZIC3
+INFO [2026-08-18 12:46:06] TF ZN143
+INFO [2026-08-18 12:46:06] TF ZN148
+INFO [2026-08-18 12:46:06] TF ZN423
+INFO [2026-08-18 12:46:06]   Finished successfully. Execution time: 2.4 mins
+INFO [2026-08-18 12:46:06] Finished successfully. Execution time: 2.5 mins
+INFO [2026-08-18 12:46:06] Finished. Stored 35935 connections with an FDR <= 0.3
+INFO [2026-08-18 12:46:06] 
+permuted data
+
+INFO [2026-08-18 12:46:09] Shuffling rows per column
+INFO [2026-08-18 12:46:26]  Finished successfully. Execution time: 16.7 secs
+INFO [2026-08-18 12:46:26] Calculate TF-peak links for connection type expression
+INFO [2026-08-18 12:46:26]  Correlate expression and peak counts
+INFO [2026-08-18 12:46:27]   Retain 350 unique genes from TF/gene data out of 16876 (filter 16526 non-TF genes and 0 TF genes with 0 counts throughout).
+INFO [2026-08-18 12:46:27]   Correlate TF/gene data for 350 unique Ensembl IDs (TFs) and peak counts for 704431 peaks.
+INFO [2026-08-18 12:46:27]   Note: For subsequent steps, the same gene may be associated with multiple TF, depending on the translation table.
+INFO [2026-08-18 12:47:00]   Finished successfully. Execution time: 33.1 secs
+INFO [2026-08-18 12:47:00]  Run FDR calculations for 377 TFs for which TFBS predictions and expression data for the corresponding gene are available.
+INFO [2026-08-18 12:47:00]   Skip the following 44 TF due to missing data or because they are marked as filtered: ATOH1,CDX1,CDX2,CEBPE,EVX1,EVX2,FOXA2,FOXD3,FOXI1,GATA1,GFI1,GFI1B,HAND1,HESX1,HNF4A,HNF4G,HXA10,HXA13,HXA9,HXB6,HXB7,HXB8,HXC6,HXD10,HXD13,HXD4,MLXPL,MYF6,MYOG,NKX25,NKX32,NOBOX,NR0B1,NR1I2.S,NR2E3,PDX1,PITX2,PO5F1,PRD14,PTF1A,SPZ1,SRY,TLX1.D,TLX1.S
+INFO [2026-08-18 12:47:01]   Compute FDR for each TF. This may take a while...
+INFO [2026-08-18 12:47:01] TF AHR
+INFO [2026-08-18 12:47:02] TF AIRE
+INFO [2026-08-18 12:47:02] TF ALX1
+INFO [2026-08-18 12:47:02] TF ANDR
+INFO [2026-08-18 12:47:02] TF AP2A
+INFO [2026-08-18 12:47:03] TF AP2B
+INFO [2026-08-18 12:47:03] TF AP2C
+INFO [2026-08-18 12:47:03] TF AP2D
+INFO [2026-08-18 12:47:04] TF ARI3A.D
+INFO [2026-08-18 12:47:04] TF ARI3A.S
+INFO [2026-08-18 12:47:04] TF ARI5B
+INFO [2026-08-18 12:47:04] TF ARNT
+INFO [2026-08-18 12:47:05] TF ARNT2
+INFO [2026-08-18 12:47:05] TF ATF1
+INFO [2026-08-18 12:47:05] TF ATF2
+INFO [2026-08-18 12:47:06] TF ATF3
+INFO [2026-08-18 12:47:06] TF BACH1
+INFO [2026-08-18 12:47:06] TF BARX2
+INFO [2026-08-18 12:47:06] TF BATF
+INFO [2026-08-18 12:47:07] TF BCL6
+INFO [2026-08-18 12:47:07] TF BHE40
+INFO [2026-08-18 12:47:07] TF BRAC
+INFO [2026-08-18 12:47:07] TF BRCA1
+INFO [2026-08-18 12:47:08] TF CDC5L
+INFO [2026-08-18 12:47:08] TF CEBPA
+INFO [2026-08-18 12:47:08] TF CEBPB
+INFO [2026-08-18 12:47:08] TF CEBPD
+INFO [2026-08-18 12:47:09] TF CEBPG
+INFO [2026-08-18 12:47:09] TF CEBPZ
+INFO [2026-08-18 12:47:09] TF COE1
+INFO [2026-08-18 12:47:10] TF COT1.B
+INFO [2026-08-18 12:47:10] TF COT1.S
+INFO [2026-08-18 12:47:10] TF COT2.B
+INFO [2026-08-18 12:47:10] TF COT2.S
+INFO [2026-08-18 12:47:11] TF CREB1
+INFO [2026-08-18 12:47:11] TF CREM
+INFO [2026-08-18 12:47:11] TF CRX.A
+INFO [2026-08-18 12:47:11] TF CRX.S
+INFO [2026-08-18 12:47:12] TF CTCF
+INFO [2026-08-18 12:47:12] TF CUX1
+INFO [2026-08-18 12:47:12] TF CXXC1
+INFO [2026-08-18 12:47:12] TF DBP
+INFO [2026-08-18 12:47:13] TF DDIT3
+INFO [2026-08-18 12:47:13] TF DLX2
+INFO [2026-08-18 12:47:13] TF DLX3
+INFO [2026-08-18 12:47:14] TF E2F1
+INFO [2026-08-18 12:47:14] TF E2F2
+INFO [2026-08-18 12:47:14] TF E2F3
+INFO [2026-08-18 12:47:14] TF E2F4
+INFO [2026-08-18 12:47:15] TF E2F5
+INFO [2026-08-18 12:47:15] TF E2F6
+INFO [2026-08-18 12:47:15] TF E2F7
+INFO [2026-08-18 12:47:15] TF E4F1
+INFO [2026-08-18 12:47:16] TF EGR1
+INFO [2026-08-18 12:47:16] TF EGR2
+INFO [2026-08-18 12:47:16] TF EGR3
+INFO [2026-08-18 12:47:16] TF EGR4
+INFO [2026-08-18 12:47:17] TF EHF
+INFO [2026-08-18 12:47:17] TF ELF1
+INFO [2026-08-18 12:47:17] TF ELF2
+INFO [2026-08-18 12:47:18] TF ELF3
+INFO [2026-08-18 12:47:18] TF ELF5
+INFO [2026-08-18 12:47:18] TF ELK1
+INFO [2026-08-18 12:47:18] TF ELK3
+INFO [2026-08-18 12:47:19] TF ELK4
+INFO [2026-08-18 12:47:19] TF ENOA
+INFO [2026-08-18 12:47:19] TF EPAS1
+INFO [2026-08-18 12:47:19] TF ERG
+INFO [2026-08-18 12:47:20] TF ERR1
+INFO [2026-08-18 12:47:20] TF ERR2
+INFO [2026-08-18 12:47:20] TF ERR3
+INFO [2026-08-18 12:47:21] TF ESR1
+INFO [2026-08-18 12:47:21] TF ESR2.B
+INFO [2026-08-18 12:47:21] TF ESR2.S
+INFO [2026-08-18 12:47:21] TF ETS1
+INFO [2026-08-18 12:47:22] TF ETS2
+INFO [2026-08-18 12:47:22] TF ETV4
+INFO [2026-08-18 12:47:22] TF ETV5
+INFO [2026-08-18 12:47:22] TF EVI1
+INFO [2026-08-18 12:47:23] TF FEV
+INFO [2026-08-18 12:47:23] TF FLI1
+INFO [2026-08-18 12:47:23] TF FOS
+INFO [2026-08-18 12:47:23] TF FOSB
+INFO [2026-08-18 12:47:24] TF FOSL1
+INFO [2026-08-18 12:47:24] TF FOSL2
+INFO [2026-08-18 12:47:24] TF FOXA1
+INFO [2026-08-18 12:47:25] TF FOXA3
+INFO [2026-08-18 12:47:25] TF FOXC1
+INFO [2026-08-18 12:47:25] TF FOXC2
+INFO [2026-08-18 12:47:25] TF FOXD1
+INFO [2026-08-18 12:47:26] TF FOXF1
+INFO [2026-08-18 12:47:26] TF FOXF2
+INFO [2026-08-18 12:47:26] TF FOXJ2
+INFO [2026-08-18 12:47:26] TF FOXJ3.A
+INFO [2026-08-18 12:47:27] TF FOXJ3.S
+INFO [2026-08-18 12:47:27] TF FOXM1
+INFO [2026-08-18 12:47:27] TF FOXO1
+INFO [2026-08-18 12:47:27] TF FOXO3
+INFO [2026-08-18 12:47:28] TF FOXO4
+INFO [2026-08-18 12:47:28] TF FOXP2
+INFO [2026-08-18 12:47:28] TF FOXP3
+INFO [2026-08-18 12:47:29] TF FOXQ1
+INFO [2026-08-18 12:47:29] TF FUBP1
+INFO [2026-08-18 12:47:29] TF GABP1
+INFO [2026-08-18 12:47:29] TF GABPA
+INFO [2026-08-18 12:47:30] TF GATA2
+INFO [2026-08-18 12:47:30] TF GATA3
+INFO [2026-08-18 12:47:30] TF GATA4
+INFO [2026-08-18 12:47:30] TF GATA5
+INFO [2026-08-18 12:47:31] TF GATA6
+INFO [2026-08-18 12:47:31] TF GCM1
+INFO [2026-08-18 12:47:31] TF GCR.C
+INFO [2026-08-18 12:47:32] TF GCR.S
+INFO [2026-08-18 12:47:32] TF GLI1
+INFO [2026-08-18 12:47:32] TF GLI2
+INFO [2026-08-18 12:47:32] TF GLI3
+INFO [2026-08-18 12:47:33] TF GLIS3
+INFO [2026-08-18 12:47:33] TF HBP1
+INFO [2026-08-18 12:47:33] TF HEN1
+INFO [2026-08-18 12:47:34] TF HES1
+INFO [2026-08-18 12:47:34] TF HEY2
+INFO [2026-08-18 12:47:34] TF HIC1
+INFO [2026-08-18 12:47:34] TF HIF1A
+INFO [2026-08-18 12:47:35] TF HINFP
+INFO [2026-08-18 12:47:35] TF HLF
+INFO [2026-08-18 12:47:35] TF HLTF
+INFO [2026-08-18 12:47:35] TF HMGA1
+INFO [2026-08-18 12:47:36] TF HMGA2
+INFO [2026-08-18 12:47:36] TF HNF1A
+INFO [2026-08-18 12:47:36] TF HNF1B
+INFO [2026-08-18 12:47:36] TF HNF6
+INFO [2026-08-18 12:47:37] TF HSF1
+INFO [2026-08-18 12:47:37] TF HSF2
+INFO [2026-08-18 12:47:37] TF HTF4
+INFO [2026-08-18 12:47:38] TF HXA1
+INFO [2026-08-18 12:47:38] TF HXA5
+INFO [2026-08-18 12:47:38] TF HXA7
+INFO [2026-08-18 12:47:38] TF HXB1
+INFO [2026-08-18 12:47:39] TF HXC8
+INFO [2026-08-18 12:47:39] TF HXD9
+INFO [2026-08-18 12:47:39] TF IKZF1
+INFO [2026-08-18 12:47:39] TF INSM1
+INFO [2026-08-18 12:47:40] TF IRF1
+INFO [2026-08-18 12:47:40] TF IRF2
+INFO [2026-08-18 12:47:40] TF IRF3
+INFO [2026-08-18 12:47:40] TF IRF4
+INFO [2026-08-18 12:47:41] TF IRF5
+INFO [2026-08-18 12:47:41] TF IRF7
+INFO [2026-08-18 12:47:41] TF IRF8
+INFO [2026-08-18 12:47:41] TF IRF9
+INFO [2026-08-18 12:47:42] TF ISL1
+INFO [2026-08-18 12:47:42] TF ITF2
+INFO [2026-08-18 12:47:42] TF JUN
+INFO [2026-08-18 12:47:42] TF JUNB
+INFO [2026-08-18 12:47:43] TF JUND
+INFO [2026-08-18 12:47:43] TF KAISO
+INFO [2026-08-18 12:47:43] TF KLF1
+INFO [2026-08-18 12:47:44] TF KLF15
+INFO [2026-08-18 12:47:44] TF KLF3
+INFO [2026-08-18 12:47:44] TF KLF4
+INFO [2026-08-18 12:47:44] TF KLF6
+INFO [2026-08-18 12:47:45] TF KLF8
+INFO [2026-08-18 12:47:45] TF LEF1
+INFO [2026-08-18 12:47:45] TF LHX2
+INFO [2026-08-18 12:47:46] TF LHX3
+INFO [2026-08-18 12:47:46] TF MAF
+INFO [2026-08-18 12:47:46] TF MAFA
+INFO [2026-08-18 12:47:46] TF MAFB
+INFO [2026-08-18 12:47:47] TF MAFG
+INFO [2026-08-18 12:47:47] TF MAFK.A
+INFO [2026-08-18 12:47:47] TF MAFK.S
+INFO [2026-08-18 12:47:47] TF MAX
+INFO [2026-08-18 12:47:48] TF MAZ
+INFO [2026-08-18 12:47:48] TF MBD2
+INFO [2026-08-18 12:47:48] TF MCR
+INFO [2026-08-18 12:47:49] TF MECP2
+INFO [2026-08-18 12:47:49] TF MEF2A
+INFO [2026-08-18 12:47:49] TF MEF2C
+INFO [2026-08-18 12:47:49] TF MEF2D
+INFO [2026-08-18 12:47:50] TF MEIS1
+INFO [2026-08-18 12:47:50] TF MEIS2
+INFO [2026-08-18 12:47:50] TF MITF
+INFO [2026-08-18 12:47:50] TF MSX2
+INFO [2026-08-18 12:47:51] TF MSX3
+INFO [2026-08-18 12:47:51] TF MTF1
+INFO [2026-08-18 12:47:51] TF MXI1
+INFO [2026-08-18 12:47:52] TF MYB
+INFO [2026-08-18 12:47:52] TF MYBB
+INFO [2026-08-18 12:47:52] TF MYC
+INFO [2026-08-18 12:47:52] TF MYCN
+INFO [2026-08-18 12:47:53] TF MYOD1
+INFO [2026-08-18 12:47:53] TF NANOG.A
+INFO [2026-08-18 12:47:53] TF NANOG.S
+INFO [2026-08-18 12:47:53] TF NDF1
+INFO [2026-08-18 12:47:54] TF NF2L1
+INFO [2026-08-18 12:47:54] TF NF2L2
+INFO [2026-08-18 12:47:54] TF NFAC1.A
+INFO [2026-08-18 12:47:54] TF NFAC1.S
+INFO [2026-08-18 12:47:55] TF NFAC2
+INFO [2026-08-18 12:47:55] TF NFAC3
+INFO [2026-08-18 12:47:55] TF NFAC4
+INFO [2026-08-18 12:47:56] TF NFAT5
+INFO [2026-08-18 12:47:56] TF NFE2
+INFO [2026-08-18 12:47:56] TF NFIA.C
+INFO [2026-08-18 12:47:57] TF NFIA.S
+INFO [2026-08-18 12:47:57] TF NFIL3
+INFO [2026-08-18 12:47:57] TF NFKB1
+INFO [2026-08-18 12:47:57] TF NFKB2
+INFO [2026-08-18 12:47:58] TF NFYA.D
+INFO [2026-08-18 12:47:58] TF NFYA.S
+INFO [2026-08-18 12:47:58] TF NFYB
+INFO [2026-08-18 12:47:59] TF NFYC
+INFO [2026-08-18 12:47:59] TF NKX21
+INFO [2026-08-18 12:47:59] TF NKX22
+INFO [2026-08-18 12:47:59] TF NKX28
+INFO [2026-08-18 12:48:00] TF NKX31
+INFO [2026-08-18 12:48:00] TF NR1D1
+INFO [2026-08-18 12:48:00] TF NR1H2
+INFO [2026-08-18 12:48:01] TF NR1H4
+INFO [2026-08-18 12:48:01] TF NR1I3.S
+INFO [2026-08-18 12:48:01] TF NR2C1
+INFO [2026-08-18 12:48:01] TF NR2C2
+INFO [2026-08-18 12:48:02] TF NR2F6
+INFO [2026-08-18 12:48:02] TF NR4A1
+INFO [2026-08-18 12:48:02] TF NR4A2
+INFO [2026-08-18 12:48:03] TF NR4A3
+INFO [2026-08-18 12:48:03] TF NR5A2
+INFO [2026-08-18 12:48:03] TF NR6A1
+INFO [2026-08-18 12:48:03] TF NRF1
+INFO [2026-08-18 12:48:04] TF OLIG2
+INFO [2026-08-18 12:48:04] TF ONEC2
+INFO [2026-08-18 12:48:04] TF OTX1
+INFO [2026-08-18 12:48:05] TF OTX2
+INFO [2026-08-18 12:48:05] TF OVOL1
+INFO [2026-08-18 12:48:05] TF P53
+INFO [2026-08-18 12:48:05] TF P63
+INFO [2026-08-18 12:48:06] TF P73
+INFO [2026-08-18 12:48:06] TF PAX2.D
+INFO [2026-08-18 12:48:06] TF PAX2.S
+INFO [2026-08-18 12:48:06] TF PAX5.D
+INFO [2026-08-18 12:48:07] TF PAX5.S
+INFO [2026-08-18 12:48:07] TF PAX6
+INFO [2026-08-18 12:48:07] TF PAX8
+INFO [2026-08-18 12:48:07] TF PBX1
+INFO [2026-08-18 12:48:08] TF PBX2
+INFO [2026-08-18 12:48:08] TF PBX3
+INFO [2026-08-18 12:48:08] TF PEBB
+INFO [2026-08-18 12:48:09] TF PIT1
+INFO [2026-08-18 12:48:09] TF PKNX1
+INFO [2026-08-18 12:48:09] TF PLAG1.D
+INFO [2026-08-18 12:48:09] TF PLAG1.S
+INFO [2026-08-18 12:48:10] TF PO2F1
+INFO [2026-08-18 12:48:10] TF PO2F2
+INFO [2026-08-18 12:48:10] TF PO3F1
+INFO [2026-08-18 12:48:11] TF PO3F2
+INFO [2026-08-18 12:48:11] TF PO4F2
+INFO [2026-08-18 12:48:11] TF PO6F1
+INFO [2026-08-18 12:48:11] TF PPARA.C
+INFO [2026-08-18 12:48:12] TF PPARA.S
+INFO [2026-08-18 12:48:12] TF PPARD
+INFO [2026-08-18 12:48:12] TF PPARG.A
+INFO [2026-08-18 12:48:12] TF PPARG.S
+INFO [2026-08-18 12:48:13] TF PRDM1
+INFO [2026-08-18 12:48:13] TF PRGR.C
+INFO [2026-08-18 12:48:13] TF PRGR.S
+INFO [2026-08-18 12:48:13] TF PROP1
+INFO [2026-08-18 12:48:14] TF PRRX1
+INFO [2026-08-18 12:48:14] TF PRRX2
+INFO [2026-08-18 12:48:14] TF PURA
+INFO [2026-08-18 12:48:15] TF RARA.C
+INFO [2026-08-18 12:48:15] TF RARA.S
+INFO [2026-08-18 12:48:15] TF RARB
+INFO [2026-08-18 12:48:15] TF RARG.C
+INFO [2026-08-18 12:48:16] TF RARG.S
+INFO [2026-08-18 12:48:16] TF REL
+INFO [2026-08-18 12:48:16] TF RELB
+INFO [2026-08-18 12:48:17] TF REST
+INFO [2026-08-18 12:48:17] TF RFX1
+INFO [2026-08-18 12:48:17] TF RFX2
+INFO [2026-08-18 12:48:17] TF RFX3
+INFO [2026-08-18 12:48:18] TF RORA
+INFO [2026-08-18 12:48:18] TF RORG
+INFO [2026-08-18 12:48:18] TF RREB1
+INFO [2026-08-18 12:48:18] TF RUNX1
+INFO [2026-08-18 12:48:19] TF RUNX2
+INFO [2026-08-18 12:48:19] TF RUNX3
+INFO [2026-08-18 12:48:19] TF RXRA
+INFO [2026-08-18 12:48:20] TF RXRB
+INFO [2026-08-18 12:48:20] TF RXRG
+INFO [2026-08-18 12:48:20] TF SMAD1
+INFO [2026-08-18 12:48:20] TF SMAD2
+INFO [2026-08-18 12:48:21] TF SMAD3
+INFO [2026-08-18 12:48:21] TF SMAD4
+INFO [2026-08-18 12:48:21] TF SMRC1
+INFO [2026-08-18 12:48:22] TF SNAI1
+INFO [2026-08-18 12:48:22] TF SNAI2
+INFO [2026-08-18 12:48:22] TF SOX10
+INFO [2026-08-18 12:48:23] TF SOX13
+INFO [2026-08-18 12:48:23] TF SOX15
+INFO [2026-08-18 12:48:23] TF SOX17
+INFO [2026-08-18 12:48:23] TF SOX18
+INFO [2026-08-18 12:48:24] TF SOX2
+INFO [2026-08-18 12:48:24] TF SOX3
+INFO [2026-08-18 12:48:24] TF SOX4
+INFO [2026-08-18 12:48:24] TF SOX5
+INFO [2026-08-18 12:48:25] TF SOX9
+INFO [2026-08-18 12:48:25] TF SP1.A
+INFO [2026-08-18 12:48:25] TF SP1.S
+INFO [2026-08-18 12:48:26] TF SP2
+INFO [2026-08-18 12:48:26] TF SP3
+INFO [2026-08-18 12:48:26] TF SP4
+INFO [2026-08-18 12:48:27] TF SPI1
+INFO [2026-08-18 12:48:27] TF SPIB
+INFO [2026-08-18 12:48:27] TF SRBP1
+INFO [2026-08-18 12:48:27] TF SRBP2
+INFO [2026-08-18 12:48:28] TF SRF
+INFO [2026-08-18 12:48:28] TF STA5A
+INFO [2026-08-18 12:48:28] TF STA5B
+INFO [2026-08-18 12:48:29] TF STAT1
+INFO [2026-08-18 12:48:29] TF STAT2
+INFO [2026-08-18 12:48:29] TF STAT3
+INFO [2026-08-18 12:48:29] TF STAT4
+INFO [2026-08-18 12:48:30] TF STAT6
+INFO [2026-08-18 12:48:30] TF STF1
+INFO [2026-08-18 12:48:30] TF SUH
+INFO [2026-08-18 12:48:30] TF TAL1.A
+INFO [2026-08-18 12:48:31] TF TAL1.S
+INFO [2026-08-18 12:48:31] TF TBP
+INFO [2026-08-18 12:48:31] TF TBX2
+INFO [2026-08-18 12:48:32] TF TBX20
+INFO [2026-08-18 12:48:32] TF TBX3
+INFO [2026-08-18 12:48:32] TF TBX5
+INFO [2026-08-18 12:48:32] TF TCF7
+INFO [2026-08-18 12:48:33] TF TEAD1
+INFO [2026-08-18 12:48:33] TF TEAD3
+INFO [2026-08-18 12:48:33] TF TEAD4
+INFO [2026-08-18 12:48:33] TF TEF
+INFO [2026-08-18 12:48:34] TF TF2L1
+INFO [2026-08-18 12:48:34] TF TF65.C
+INFO [2026-08-18 12:48:34] TF TF65.S
+INFO [2026-08-18 12:48:35] TF TF7L2
+INFO [2026-08-18 12:48:35] TF TFCP2
+INFO [2026-08-18 12:48:35] TF TFDP1
+INFO [2026-08-18 12:48:35] TF TFE2.A
+INFO [2026-08-18 12:48:36] TF TFE2.S
+INFO [2026-08-18 12:48:36] TF TFE3
+INFO [2026-08-18 12:48:36] TF TFEB
+INFO [2026-08-18 12:48:36] TF TGIF1.S
+INFO [2026-08-18 12:48:37] TF THA.C
+INFO [2026-08-18 12:48:37] TF THA.S
+INFO [2026-08-18 12:48:37] TF THB.C
+INFO [2026-08-18 12:48:38] TF THB.S
+INFO [2026-08-18 12:48:38] TF TWST1
+INFO [2026-08-18 12:48:38] TF TYY1
+INFO [2026-08-18 12:48:38] TF UBIP1
+INFO [2026-08-18 12:48:39] TF USF1
+INFO [2026-08-18 12:48:39] TF USF2
+INFO [2026-08-18 12:48:39] TF VDR.C
+INFO [2026-08-18 12:48:40] TF VDR.S
+INFO [2026-08-18 12:48:40] TF VSX2
+INFO [2026-08-18 12:48:40] TF WT1
+INFO [2026-08-18 12:48:41] TF XBP1
+INFO [2026-08-18 12:48:41] TF YBOX1
+INFO [2026-08-18 12:48:41] TF ZBT18
+INFO [2026-08-18 12:48:41] TF ZBT7A
+INFO [2026-08-18 12:48:42] TF ZBTB6
+INFO [2026-08-18 12:48:42] TF ZEB1
+INFO [2026-08-18 12:48:42] TF ZEP1
+INFO [2026-08-18 12:48:42] TF ZEP2
+INFO [2026-08-18 12:48:43] TF ZFHX3
+INFO [2026-08-18 12:48:43] TF ZFX
+INFO [2026-08-18 12:48:43] TF ZIC1
+INFO [2026-08-18 12:48:44] TF ZIC2
+INFO [2026-08-18 12:48:44] TF ZIC3
+INFO [2026-08-18 12:48:44] TF ZN143
+INFO [2026-08-18 12:48:44] TF ZN148
+INFO [2026-08-18 12:48:45] TF ZN423
+INFO [2026-08-18 12:48:45]   Finished successfully. Execution time: 2.3 mins
+INFO [2026-08-18 12:48:45] Finished successfully. Execution time: 2.6 mins
+INFO [2026-08-18 12:48:45] Finished. Stored 372 connections with an FDR <= 0.3
+INFO [2026-08-18 12:48:45] Finished successfully. Execution time: 5.1 mins
+Warning messages:
+1: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 2.3 GiB
+2: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 2.3 GiB
+INFO [2026-08-18 12:48:45] 
+ Plotting for real data
+INFO [2026-08-18 12:48:45] Plotting FDR summary and curves for each TF to file /scratch/csousane/atac/results/13-ATAC_integrate/granie/plots/TF_peak.fdrCurves_original.pdf
+INFO [2026-08-18 12:48:45] TF-peak link summary for real vs background links, stratified by FDR
+INFO [2026-08-18 12:48:45]  FDR = 0.001(real vs background)
+INFO [2026-08-18 12:48:45]   Links total        : 6 vs 5
+INFO [2026-08-18 12:48:45]   Distinct TFs total : 6 vs 7
+INFO [2026-08-18 12:48:45]   Links with r>=0    : 4 vs 3
+INFO [2026-08-18 12:48:45]   Distinct TFs r>=0  : 4 vs 3
+INFO [2026-08-18 12:48:45]   Links with r<0     : 2 vs 4
+INFO [2026-08-18 12:48:45]   Distinct TFs r<0   : 2 vs 4
+INFO [2026-08-18 12:48:45]  FDR = 0.01(real vs background)
+INFO [2026-08-18 12:48:45]   Links total        : 9 vs 8
+INFO [2026-08-18 12:48:45]   Distinct TFs total : 9 vs 8
+INFO [2026-08-18 12:48:45]   Links with r>=0    : 5 vs 4
+INFO [2026-08-18 12:48:45]   Distinct TFs r>=0  : 5 vs 4
+INFO [2026-08-18 12:48:45]   Links with r<0     : 4 vs 4
+INFO [2026-08-18 12:48:45]   Distinct TFs r<0   : 4 vs 4
+INFO [2026-08-18 12:48:45]  FDR = 0.05(real vs background)
+INFO [2026-08-18 12:48:45]   Links total        : 23 vs 21
+INFO [2026-08-18 12:48:45]   Distinct TFs total : 23 vs 17
+INFO [2026-08-18 12:48:45]   Links with r>=0    : 10 vs 8
+INFO [2026-08-18 12:48:45]   Distinct TFs r>=0  : 10 vs 8
+INFO [2026-08-18 12:48:45]   Links with r<0     : 13 vs 9
+INFO [2026-08-18 12:48:45]   Distinct TFs r<0   : 13 vs 9
+INFO [2026-08-18 12:48:45]  FDR = 0.1(real vs background)
+INFO [2026-08-18 12:48:45]   Links total        : 6580 vs 71
+INFO [2026-08-18 12:48:45]   Distinct TFs total : 54 vs 45
+INFO [2026-08-18 12:48:45]   Links with r>=0    : 6530 vs 21
+INFO [2026-08-18 12:48:45]   Distinct TFs r>=0  : 27 vs 19
+INFO [2026-08-18 12:48:45]   Links with r<0     : 50 vs 31
+INFO [2026-08-18 12:48:45]   Distinct TFs r<0   : 27 vs 26
+INFO [2026-08-18 12:48:45]  FDR = 0.2(real vs background)
+INFO [2026-08-18 12:48:45]   Links total        : 13294 vs 602
+INFO [2026-08-18 12:48:45]   Distinct TFs total : 110 vs 89
+INFO [2026-08-18 12:48:45]   Links with r>=0    : 12750 vs 58
+INFO [2026-08-18 12:48:45]   Distinct TFs r>=0  : 54 vs 41
+INFO [2026-08-18 12:48:45]   Links with r<0     : 544 vs 67
+INFO [2026-08-18 12:48:45]   Distinct TFs r<0   : 56 vs 48
+INFO [2026-08-18 12:48:45]  FDR = 0.3(real vs background)
+INFO [2026-08-18 12:48:45]   Links total        : 35935 vs 14047
+INFO [2026-08-18 12:48:45]   Distinct TFs total : 205 vs 175
+INFO [2026-08-18 12:48:45]   Links with r>=0    : 22054 vs 166
+INFO [2026-08-18 12:48:45]   Distinct TFs r>=0  : 110 vs 81
+INFO [2026-08-18 12:48:45]   Links with r<0     : 13881 vs 206
+INFO [2026-08-18 12:48:45]   Distinct TFs r<0   : 95 vs 94
+INFO [2026-08-18 12:48:46]  Including a total of 377 TF. Preparing plots...
+INFO [2026-08-18 12:52:19]  Finished successfully. Execution time: 3.6 mins
+INFO [2026-08-18 12:52:19] Finished successfully. Execution time: 3.6 mins
+INFO [2026-08-18 12:52:19]  Connection type expression
+
+INFO [2026-08-18 12:52:19]  real data
+
+INFO [2026-08-18 12:52:19]  Correlate expression and peak counts
+INFO [2026-08-18 12:52:20]  Retain 350 unique genes from TF/gene data out of 16876 (filter 16526 non-TF genes and 0 TF genes with 0 counts throughout).
+INFO [2026-08-18 12:52:20]  Correlate TF/gene data for 350 unique Ensembl IDs (TFs) and peak counts for 704431 peaks.
+INFO [2026-08-18 12:52:20]  Note: For subsequent steps, the same gene may be associated with multiple TF, depending on the translation table.
+INFO [2026-08-18 12:52:54]  Finished successfully. Execution time: 34.5 secs
+INFO [2026-08-18 12:52:58] Compute foreground and background as well as their median values per TF
+INFO [2026-08-18 12:53:33]  Finished successfully. Execution time: 34.5 secs
+INFO [2026-08-18 12:53:33] Calculate classification thresholds for repressors / activators
+INFO [2026-08-18 12:53:40]  Stringency 0.1: -0.0092 / 0.0078
+INFO [2026-08-18 12:53:46]  Stringency 0.05: -0.0113 / 0.0106
+INFO [2026-08-18 12:53:55]  Stringency 0.01: -0.0163 / 0.0147
+INFO [2026-08-18 12:54:00]  Stringency 0.001: -0.0203 / 0.0186
+INFO [2026-08-18 12:54:00]  Finished successfully. Execution time: 27.4 secs
+INFO [2026-08-18 12:54:00] Finalize classification
+INFO [2026-08-18 12:54:00]  Perform Wilcoxon test for each TF. This may take a few minutes.
+INFO [2026-08-18 13:03:04]   Stringency 0.1
+INFO [2026-08-18 13:03:04]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: BRAC,ELK3,FOXO1,FOXP3,GATA5,GLI3,HXA5,HXA7,HXC8,MYB,NKX22,NR1I3.S,NR4A1,ONEC2,PO6F1,RUNX2,TBX20,WT1
+INFO [2026-08-18 13:03:04]   Stringency 0.05
+INFO [2026-08-18 13:03:04]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: BRAC,FOXO1,FOXP3,GATA5,GLI3,HXA7,MYB,NR1I3.S,ONEC2,RUNX2
+INFO [2026-08-18 13:03:04]   Stringency 0.01
+INFO [2026-08-18 13:03:04]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: FOXP3,MYB
+INFO [2026-08-18 13:03:04]   Stringency 0.001
+INFO [2026-08-18 13:03:04]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: MYB
+INFO [2026-08-18 13:03:04]  Summary of classification:
+INFO [2026-08-18 13:03:04]   Column classification_q0.1_final
+INFO [2026-08-18 13:03:04]    activator: 99,    undetermined: 156,    repressor: 122,    not-expressed: 44
+INFO [2026-08-18 13:03:04]   Column classification_q0.05_final
+INFO [2026-08-18 13:03:04]    activator: 86,    undetermined: 182,    repressor: 109,    not-expressed: 44
+INFO [2026-08-18 13:03:04]   Column classification_q0.01_final
+INFO [2026-08-18 13:03:04]    activator: 70,    undetermined: 219,    repressor: 88,    not-expressed: 44
+INFO [2026-08-18 13:03:04]   Column classification_q0.001_final
+INFO [2026-08-18 13:03:04]    activator: 58,    undetermined: 253,    repressor: 66,    not-expressed: 44
+INFO [2026-08-18 13:03:04]  Finished successfully. Execution time: 9.1 mins
+INFO [2026-08-18 13:03:04] Plotting density plots with foreground and background for each TF to file results/13-ATAC_integrate/granie/plots/TF_classification_densityPlots_expression_original.pdf
+INFO [2026-08-18 13:03:34]  Finished successfully. Execution time: 30 secs
+INFO [2026-08-18 13:03:34] Plotting AR summary plot to file results/13-ATAC_integrate/granie/plots/TF_classification_stringencyThresholds_expression_original.pdf
+INFO [2026-08-18 13:03:35]  Finished successfully. Execution time: 0.1 secs
+INFO [2026-08-18 13:03:35] Plotting AR heatmap to file results/13-ATAC_integrate/granie/plots/TF_classification_summaryHeatmap_expression_original.pdf
+INFO [2026-08-18 13:03:58]  Finished successfully. Execution time: 22.4 secs
+INFO [2026-08-18 13:03:58]  permuted data
+
+INFO [2026-08-18 13:03:58]  Correlate expression and peak counts
+INFO [2026-08-18 13:03:59]  Retain 350 unique genes from TF/gene data out of 16876 (filter 16526 non-TF genes and 0 TF genes with 0 counts throughout).
+INFO [2026-08-18 13:03:59]  Correlate TF/gene data for 350 unique Ensembl IDs (TFs) and peak counts for 704431 peaks.
+INFO [2026-08-18 13:03:59]  Note: For subsequent steps, the same gene may be associated with multiple TF, depending on the translation table.
+INFO [2026-08-18 13:04:31]  Finished successfully. Execution time: 32.8 secs
+INFO [2026-08-18 13:04:34] Shuffling rows per column
+INFO [2026-08-18 13:04:51]  Finished successfully. Execution time: 16.8 secs
+INFO [2026-08-18 13:04:51] Compute foreground and background as well as their median values per TF
+INFO [2026-08-18 13:05:19]  Finished successfully. Execution time: 28.6 secs
+INFO [2026-08-18 13:05:19] Calculate classification thresholds for repressors / activators
+INFO [2026-08-18 13:05:27]  Stringency 0.1: -0.0092 / 0.0077
+INFO [2026-08-18 13:05:34]  Stringency 0.05: -0.0114 / 0.0105
+INFO [2026-08-18 13:05:40]  Stringency 0.01: -0.0176 / 0.0149
+INFO [2026-08-18 13:05:47]  Stringency 0.001: -0.0196 / 0.0177
+INFO [2026-08-18 13:05:47]  Finished successfully. Execution time: 27.2 secs
+INFO [2026-08-18 13:05:47] Finalize classification
+INFO [2026-08-18 13:05:47]  Perform Wilcoxon test for each TF. This may take a few minutes.
+INFO [2026-08-18 13:14:46]   Stringency 0.1
+INFO [2026-08-18 13:14:46]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: AP2B,AP2D,ARI3A.S,ARNT2,ATF2,CEBPB,COE1,DLX3,E2F2,E4F1,EPAS1,ETV4,FOS,FOXA3,FOXC2,FOXO1,FOXQ1,FUBP1,GLI1,GLI3,HEN1,HEY2,HIF1A,HMGA1,HSF2,HXA7,IKZF1,IRF3,IRF5,JUNB,KLF1,KLF4,LHX2,MAF,MAFA,MAZ,MEF2C,MSX2,MSX3,MXI1,MYB,NFAC1.A,NFAC1.S,NFAC2,NFE2,NFIA.C,NFIA.S,NFKB2,NFYC,NR1H2,NR1H4,NR1I3.S,NR4A2,NRF1,P73,PBX3,PO2F2,PRGR.C,RARB,RFX2,RUNX2,RXRG,SNAI1,SOX13,SOX18,SOX5,SOX9,SRBP2,TBX20,THA.C,THA.S,UBIP1,VSX2,ZBT7A,ZEB1,ZFX
+INFO [2026-08-18 13:14:46]   Stringency 0.05
+INFO [2026-08-18 13:14:46]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: ARNT2,ATF2,COE1,DLX3,E4F1,ETV4,FOXA3,FOXO1,FOXQ1,FUBP1,GLI3,HEY2,HIF1A,HMGA1,HXA7,IRF5,KLF1,KLF4,LHX2,MAFA,MSX3,MXI1,MYB,NFAC1.A,NFAC2,NFKB2,NR1H2,NR1H4,P73,PBX3,PO2F2,RFX2,RUNX2,SNAI1,SOX13,SOX18,SOX5,SOX9,SRBP2,TBX20,THA.S,ZBT7A,ZEB1
+INFO [2026-08-18 13:14:46]   Stringency 0.01
+INFO [2026-08-18 13:14:46]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: ARNT2,COE1,DLX3,HEY2,HMGA1,NR1H4,SNAI1,SOX5
+INFO [2026-08-18 13:14:46]   Stringency 0.001
+INFO [2026-08-18 13:14:46]    Change the following TFs to 'undetermined' as they were classified as activator/repressor before but the Wilcoxon test was not significant: HEY2,SNAI1
+INFO [2026-08-18 13:14:46]  Summary of classification:
+INFO [2026-08-18 13:14:46]   Column classification_q0.1_final
+INFO [2026-08-18 13:14:46]    activator: 6,    undetermined: 364,    repressor: 7,    not-expressed: 44
+INFO [2026-08-18 13:14:46]   Column classification_q0.05_final
+INFO [2026-08-18 13:14:46]    activator: 5,    undetermined: 368,    repressor: 4,    not-expressed: 44
+INFO [2026-08-18 13:14:46]   Column classification_q0.01_final
+INFO [2026-08-18 13:14:46]    activator: 2,    undetermined: 375,    repressor: 0,    not-expressed: 44
+INFO [2026-08-18 13:14:46]   Column classification_q0.001_final
+INFO [2026-08-18 13:14:46]    activator: 1,    undetermined: 376,    repressor: 0,    not-expressed: 44
+INFO [2026-08-18 13:14:46]  Finished successfully. Execution time: 9 mins
+INFO [2026-08-18 13:14:46] Plotting density plots with foreground and background for each TF to file results/13-ATAC_integrate/granie/plots/TF_classification_densityPlots_expression_background.pdf
+INFO [2026-08-18 13:15:17]  Finished successfully. Execution time: 30.7 secs
+INFO [2026-08-18 13:15:17] Plotting AR summary plot to file results/13-ATAC_integrate/granie/plots/TF_classification_stringencyThresholds_expression_background.pdf
+INFO [2026-08-18 13:15:17]  Finished successfully. Execution time: 0.1 secs
+INFO [2026-08-18 13:15:18] Shuffling rows per column
+INFO [2026-08-18 13:15:34]  Finished successfully. Execution time: 16.6 secs
+INFO [2026-08-18 13:15:34] Plotting AR heatmap to file results/13-ATAC_integrate/granie/plots/TF_classification_summaryHeatmap_expression_background.pdf
+The automatically generated colors map from the minus and plus 99^th of
+the absolute values in the matrix. There are outliers in the matrix
+whose patterns might be hidden by this color mapping. You can manually
+set the color to `col` argument.
+
+Use `suppressMessages()` to turn off this message.
+INFO [2026-08-18 13:15:59]  Finished successfully. Execution time: 24.5 secs
+INFO [2026-08-18 13:15:59] Finished successfully. Execution time: 23.7 mins
+Warning messages:
+1: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 2.3 GiB
+2: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 2.3 GiB
+3: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 2.3 GiB
+4: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 2.3 GiB
+[1] "SAVEPOINT 1"
+INFO [2026-08-18 13:15:59] 
+Preparing data
+
+INFO [2026-08-18 13:15:59] Calculate peak gene overlaps based on either a fixed neighborhood size or defined TADs...
+INFO [2026-08-18 13:15:59] Extend peaks based on user-defined extension size of 250000 up- and downstream.
+INFO [2026-08-18 13:16:01]  Finished successfully. Execution time: 2 secs
+INFO [2026-08-18 13:16:01] Source distribution of peak-gene links:
+INFO [2026-08-18 13:16:01]  neighborhood: 5720233
+INFO [2026-08-18 13:16:01] 
+Finished preparing data
+
+INFO [2026-08-18 13:16:01] 
+Calculate peak-gene correlations for real data
+
+INFO [2026-08-18 13:16:03]  Iterate through 5720233 peak-gene combinations and calculate correlations using 20 cores. This may take a few minutes.
+INFO [2026-08-18 13:20:43]  Finished execution using 20 cores. TOTAL RUNNING TIME: 4.7 mins
+
+INFO [2026-08-18 13:20:43]  Finished with calculating correlations, creating final data frame and filter NA rows due to missing RNA-seq data
+INFO [2026-08-18 13:20:51]  Finished. Final number of rows after filtering: 5137874
+INFO [2026-08-18 13:20:51]  Finished successfully. Execution time: 4.9 mins
+INFO [2026-08-18 13:20:51] 
+Calculate peak-gene correlations for permuted data
+
+INFO [2026-08-18 13:20:51]  Randomize gene-peak links by shuffling the peak IDs.
+INFO [2026-08-18 13:20:55]  Iterate through 5720233 peak-gene combinations and calculate correlations using 20 cores. This may take a few minutes.
+INFO [2026-08-18 13:26:02]  Finished execution using 20 cores. TOTAL RUNNING TIME: 5.1 mins
+
+INFO [2026-08-18 13:26:02]  Finished with calculating correlations, creating final data frame and filter NA rows due to missing RNA-seq data
+INFO [2026-08-18 13:26:14]  Finished. Final number of rows after filtering: 5144466
+INFO [2026-08-18 13:26:14]  Finished successfully. Execution time: 10.3 mins
+INFO [2026-08-18 13:26:14] Finished successfully. Execution time: 10.3 mins
+INFO [2026-08-18 13:26:14] Plotting diagnostic plots for peak-gene correlations to file(s) with basename /scratch/csousane/atac/results/13-ATAC_integrate/granie/plots/peakGene_diagnosticPlots_
+INFO [2026-08-18 13:26:25]  Gene type protein_coding+lincRNA
+INFO [2026-08-18 13:26:25]  Plotting to file /scratch/csousane/atac/results/13-ATAC_integrate/granie/plots/peakGene_diagnosticPlots_protein_coding+lincRNA.pdf
+INFO [2026-08-18 13:28:00]  Finished successfully. Execution time: 1.8 mins
+INFO [2026-08-18 13:28:00] Finished successfully. Execution time: 1.8 mins
+INFO [2026-08-18 13:28:00] Filter GRN network
+INFO [2026-08-18 13:28:00] 
+
+real data
+INFO [2026-08-18 13:28:00] Inital number of rows left before all filtering steps: 35935
+INFO [2026-08-18 13:28:00]  Filter network and retain only rows with TF-peak connections with an FDR < 0.2
+INFO [2026-08-18 13:28:00]   Number of TF-peak rows before filtering TFs: 35935
+INFO [2026-08-18 13:28:00]   Number of TF-peak rows after filtering TFs: 13294
+INFO [2026-08-18 13:28:00] 2. Filter peak-gene connections
+INFO [2026-08-18 13:28:00]  Filter genes by gene type, keep only the following gene types: protein_coding, lincRNA
+INFO [2026-08-18 13:28:00]   Number of peak-gene rows before filtering by gene type: 5137874
+INFO [2026-08-18 13:28:01]   Number of peak-gene rows after filtering by gene type: 5002888
+INFO [2026-08-18 13:28:01] 3. Merging TF-peak with peak-gene connections and filter the combined table...
+INFO [2026-08-18 13:28:01] Inital number of rows left before filtering steps: 61376
+INFO [2026-08-18 13:28:01]  Filter TF-TF self-loops
+INFO [2026-08-18 13:28:01]   Number of rows before filtering genes: 61376
+INFO [2026-08-18 13:28:01]   Number of rows after filtering genes: 59495
+INFO [2026-08-18 13:28:01]  Filter rows with missing ENSEMBL IDs
+INFO [2026-08-18 13:28:01]   Number of rows before filtering: 59495
+INFO [2026-08-18 13:28:01]   Number of rows after filtering: 59495
+INFO [2026-08-18 13:28:01]  Filter network and retain only rows with peak_gene.r in the following interval: (0 - 1]
+INFO [2026-08-18 13:28:01]   Number of rows before filtering: 59495
+INFO [2026-08-18 13:28:01]   Number of rows after filtering: 28893
+INFO [2026-08-18 13:28:01]  Calculate FDR based on remaining rows, filter network and retain only rows with peak-gene connections with an FDR < 0.2
+INFO [2026-08-18 13:28:01]   Number of rows before filtering genes (including/excluding NA): 28893/28893
+INFO [2026-08-18 13:28:01]   Number of rows after filtering genes (including/excluding NA): 10657/10657
+INFO [2026-08-18 13:28:01] Final number of rows left after all filtering steps: 10657
+INFO [2026-08-18 13:28:01] 
+
+permuted data
+INFO [2026-08-18 13:28:02] Inital number of rows left before all filtering steps: 372
+INFO [2026-08-18 13:28:02]  Filter network and retain only rows with TF-peak connections with an FDR < 0.2
+INFO [2026-08-18 13:28:02]   Number of TF-peak rows before filtering TFs: 372
+INFO [2026-08-18 13:28:02]   Number of TF-peak rows after filtering TFs: 125
+INFO [2026-08-18 13:28:02] 2. Filter peak-gene connections
+INFO [2026-08-18 13:28:02]  Filter genes by gene type, keep only the following gene types: protein_coding, lincRNA
+INFO [2026-08-18 13:28:02]   Number of peak-gene rows before filtering by gene type: 5144466
+INFO [2026-08-18 13:28:02]   Number of peak-gene rows after filtering by gene type: 5009386
+INFO [2026-08-18 13:28:02] 3. Merging TF-peak with peak-gene connections and filter the combined table...
+INFO [2026-08-18 13:28:02] Inital number of rows left before filtering steps: 944
+INFO [2026-08-18 13:28:02]  Filter TF-TF self-loops
+INFO [2026-08-18 13:28:02]   Number of rows before filtering genes: 944
+INFO [2026-08-18 13:28:02]   Number of rows after filtering genes: 938
+INFO [2026-08-18 13:28:02]  Filter rows with missing ENSEMBL IDs
+INFO [2026-08-18 13:28:02]   Number of rows before filtering: 938
+INFO [2026-08-18 13:28:02]   Number of rows after filtering: 938
+INFO [2026-08-18 13:28:02]  Filter network and retain only rows with peak_gene.r in the following interval: (0 - 1]
+INFO [2026-08-18 13:28:02]   Number of rows before filtering: 938
+INFO [2026-08-18 13:28:02]   Number of rows after filtering: 456
+INFO [2026-08-18 13:28:02]  Calculate FDR based on remaining rows, filter network and retain only rows with peak-gene connections with an FDR < 0.2
+INFO [2026-08-18 13:28:02]   Number of rows before filtering genes (including/excluding NA): 456/456
+INFO [2026-08-18 13:28:02]   Number of rows after filtering genes (including/excluding NA): 0/0
+INFO [2026-08-18 13:28:02] Final number of rows left after all filtering steps: 0
+INFO [2026-08-18 13:28:02]  Finished successfully. Execution time: 2 secs
+INFO [2026-08-18 13:28:02] Calculate correlations for TF and genes from the filtered set of connections
+INFO [2026-08-18 13:28:02]  real data
+INFO [2026-08-18 13:28:02]   Iterate through 7494 TF-gene combinations and (if possible) calculate correlations using 20 cores. This may take a few minutes.
+INFO [2026-08-18 13:28:15]  Finished execution using 20 cores. TOTAL RUNNING TIME: 13.1 secs
+
+INFO [2026-08-18 13:28:15]   Done. Construct the final table, this may result in an increased number of TF-gene pairs due to different TF names linked to the same Ensembl ID.
+INFO [2026-08-18 13:28:15]  permuted data
+INFO [2026-08-18 13:28:15]  Nothing to do, skip.
+INFO [2026-08-18 13:28:15] Finished successfully. Execution time: 13.3 secs
+[1] "SAVE NET"
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] ensembldb_2.34.0        AnnotationFilter_1.34.0 GenomicFeatures_1.62.0 
+ [4] GenomicRanges_1.62.1    Seqinfo_1.0.0           optparse_1.8.2         
+ [7] biomaRt_2.66.2          org.Mm.eg.db_3.22.0     AnnotationDbi_1.72.0   
+[10] IRanges_2.44.0          S4Vectors_0.48.1        Biobase_2.70.0         
+[13] BiocGenerics_0.56.0     generics_0.1.4          edgeR_4.8.2            
+[16] limma_3.66.0            ggrepel_0.9.8           ggplot2_4.0.3          
+[19] GRaNIE_1.14.0           readr_2.2.0            
+
+loaded via a namespace (and not attached):
+  [1] splines_4.5.2                            
+  [2] BiocIO_1.20.0                            
+  [3] bitops_1.1-0                             
+  [4] ggplotify_0.1.3                          
+  [5] filelock_1.0.3                           
+  [6] tibble_3.3.1                             
+  [7] R.oo_1.27.1                              
+  [8] polyclip_1.10-7                          
+  [9] XML_3.99-0.23                            
+ [10] lifecycle_1.0.5                          
+ [11] httr2_1.2.2                              
+ [12] doParallel_1.0.17                        
+ [13] lattice_0.22-7                           
+ [14] vroom_1.7.1                              
+ [15] MASS_7.3-65                              
+ [16] backports_1.5.1                          
+ [17] magrittr_2.0.5                           
+ [18] plotrix_3.8-14                           
+ [19] yaml_2.3.12                              
+ [20] otel_0.2.0                               
+ [21] ggtangle_0.1.2                           
+ [22] cowplot_1.2.0                            
+ [23] DBI_1.3.0                                
+ [24] RColorBrewer_1.1-3                       
+ [25] abind_1.4-8                              
+ [26] purrr_1.2.2                              
+ [27] R.utils_2.13.0                           
+ [28] RCurl_1.98-1.19                          
+ [29] yulab.utils_0.2.4                        
+ [30] tweenr_2.0.3                             
+ [31] rappdirs_0.3.4                           
+ [32] gdtools_0.5.1                            
+ [33] circlize_0.4.18                          
+ [34] enrichplot_1.30.5                        
+ [35] tidytree_0.4.8                           
+ [36] ChIPseeker_1.46.1                        
+ [37] codetools_0.2-20                         
+ [38] DelayedArray_0.36.1                      
+ [39] DOSE_4.4.0                               
+ [40] ggforce_0.5.0                            
+ [41] tidyselect_1.2.1                         
+ [42] shape_1.4.6.1                            
+ [43] futile.logger_1.4.9                      
+ [44] aplot_0.3.1                              
+ [45] UCSC.utils_1.6.1                         
+ [46] farver_2.1.2                             
+ [47] viridis_0.6.5                            
+ [48] matrixStats_1.5.0                        
+ [49] BiocFileCache_3.0.0                      
+ [50] GenomicAlignments_1.46.0                 
+ [51] jsonlite_2.0.0                           
+ [52] GetoptLong_1.1.1                         
+ [53] iterators_1.0.14                         
+ [54] systemfonts_1.3.2                        
+ [55] foreach_1.5.2                            
+ [56] tools_4.5.2                              
+ [57] ggnewscale_0.5.2                         
+ [58] progress_1.2.3                           
+ [59] treeio_1.34.0                            
+ [60] TxDb.Hsapiens.UCSC.hg19.knownGene_3.22.1 
+ [61] Rcpp_1.1.1-1.1                           
+ [62] glue_1.8.1                               
+ [63] gridExtra_2.3.1                          
+ [64] SparseArray_1.10.10                      
+ [65] DESeq2_1.50.2                            
+ [66] qvalue_2.42.0                            
+ [67] MatrixGenerics_1.22.0                    
+ [68] GenomeInfoDb_1.46.2                      
+ [69] dplyr_1.2.1                              
+ [70] withr_3.0.3                              
+ [71] BiocManager_1.30.27                      
+ [72] formatR_1.14                             
+ [73] fastmap_1.2.0                            
+ [74] boot_1.3-32                              
+ [75] caTools_1.18.4                           
+ [76] digest_0.6.39                            
+ [77] R6_2.6.1                                 
+ [78] gridGraphics_0.5-1                       
+ [79] colorspace_2.1-3                         
+ [80] GO.db_3.22.0                             
+ [81] gtools_3.9.5                             
+ [82] RSQLite_3.53.3                           
+ [83] cigarillo_1.0.0                          
+ [84] R.methodsS3_1.8.2                        
+ [85] tidyr_1.3.2                              
+ [86] fontLiberation_0.1.0                     
+ [87] data.table_1.18.4                        
+ [88] rtracklayer_1.70.1                       
+ [89] prettyunits_1.2.0                        
+ [90] httr_1.4.8                               
+ [91] htmlwidgets_1.6.4                        
+ [92] S4Arrays_1.10.1                          
+ [93] scatterpie_0.2.6                         
+ [94] pkgconfig_2.0.3                          
+ [95] gtable_0.3.6                             
+ [96] blob_1.3.0                               
+ [97] ComplexHeatmap_2.26.1                    
+ [98] S7_0.2.2                                 
+ [99] XVector_0.50.0                           
+[100] htmltools_0.5.9                          
+[101] fontBitstreamVera_0.1.1                  
+[102] fgsea_1.36.2                             
+[103] clue_0.3-68                              
+[104] ProtGenerics_1.42.0                      
+[105] scales_1.4.0                             
+[106] png_0.1-9                                
+[107] ggfun_0.2.1                              
+[108] lambda.r_1.2.4                           
+[109] tzdb_0.5.0                               
+[110] reshape2_1.4.5                           
+[111] rjson_0.2.23                             
+[112] checkmate_2.3.4                          
+[113] nlme_3.1-168                             
+[114] curl_7.1.0                               
+[115] cachem_1.1.0                             
+[116] GlobalOptions_0.1.4                      
+[117] stringr_1.6.0                            
+[118] BiocVersion_3.22.0                       
+[119] KernSmooth_2.23-26                       
+[120] parallel_4.5.2                           
+[121] restfulr_0.0.17                          
+[122] pillar_1.11.1                            
+[123] grid_4.5.2                               
+[124] vctrs_0.7.3                              
+[125] gplots_3.3.0                             
+[126] tidydr_0.0.6                             
+[127] dbplyr_2.6.0                             
+[128] cluster_2.1.8.1                          
+[129] cli_3.6.6                                
+[130] locfit_1.5-9.12                          
+[131] compiler_4.5.2                           
+[132] futile.options_1.0.1                     
+[133] Rsamtools_2.26.0                         
+[134] rlang_1.3.0                              
+[135] crayon_1.5.3                             
+[136] labeling_0.4.3                           
+[137] forcats_1.0.1                            
+[138] plyr_1.8.9                               
+[139] fs_2.1.0                                 
+[140] TxDb.Mmusculus.UCSC.mm10.knownGene_3.10.0
+[141] ggiraph_0.9.6                            
+[142] stringi_1.8.7                            
+[143] viridisLite_0.4.3                        
+[144] BiocParallel_1.44.0                      
+[145] Biostrings_2.78.0                        
+[146] lazyeval_0.2.3                           
+[147] GOSemSim_2.36.0                          
+[148] fontquiver_0.2.1                         
+[149] Matrix_1.7-4                             
+[150] hms_1.1.4                                
+[151] patchwork_1.3.2                          
+[152] bit64_4.8.2                              
+[153] KEGGREST_1.50.0                          
+[154] statmod_1.5.2                            
+[155] AnnotationHub_4.0.0                      
+[156] SummarizedExperiment_1.40.0              
+[157] igraph_2.3.3                             
+[158] memoise_2.0.1                            
+[159] ggtree_4.0.5                             
+[160] fastmatch_1.1-8                          
+[161] bit_4.6.0                                
+[162] ape_5.8-1                                

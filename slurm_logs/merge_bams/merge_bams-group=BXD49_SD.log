@@ -1,0 +1,69 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-11 19:28:22
+  Workflow ID: 8da1fd92-f56f-4b53-bb82-67e3d6c5e5fa
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna004
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs merge_bams:group=BXD49_SD --allowed-rules merge_bams --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.l4wp84pp results/3-ATAC_bam/sort/coord/039_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/080_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/117_BXD49_SD_full.co.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime software-env code input params --conda-frontend conda --shared-fs-usage sources persistence storage-local-copies software-deployment input-output source-cache software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpnpecg7iy --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 4b692a11c3ab362eb1f1b247e316ee7f
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Aug 11 19:28:22 2026]
+localrule merge_bams:
+    input: results/3-ATAC_bam/sort/coord/039_BXD49_SD_full.co.bam, results/3-ATAC_bam/sort/coord/080_BXD49_SD_full.co.bam, results/3-ATAC_bam/sort/coord/117_BXD49_SD_full.co.bam
+    output: results/12-ATAC_footprints/bams/BXD49_SD.bam
+    log: logs/12-ATAC_footprints/bams_BXD49_SD.log
+    jobid: 0
+    benchmark: benchmarks/12-ATAC_footprints/bams_BXD49_SD.txt
+    reason: Forced execution
+    wildcards: group=BXD49_SD
+    threads: 10
+    resources: tmpdir=/tmp/63435968, disk_mb=14920, disk=14.92 GB, disk_mib=14229, mem_mb=10000, mem=10 GB, mem_mib=9537, time=1:00:00
+Shell command: 
+        module load  samtools/1.21
+        mkdir -p results/12-ATAC_footprints/bams
+
+        echo "Merge bam files results/3-ATAC_bam/sort/coord/039_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/080_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/117_BXD49_SD_full.co.bam" > logs/12-ATAC_footprints/bams_BXD49_SD.log
+        samtools merge results/12-ATAC_footprints/bams/BXD49_SD.bam results/3-ATAC_bam/sort/coord/039_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/080_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/117_BXD49_SD_full.co.bam &>> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        
+        echo "Indexing file" >> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        samtools index -@ 10 results/12-ATAC_footprints/bams/BXD49_SD.bam  &>> logs/12-ATAC_footprints/bams_BXD49_SD.log
+
+        echo "Checking downsampled files" >> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        sub1=$(echo results/3-ATAC_bam/sort/coord/039_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/080_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/117_BXD49_SD_full.co.bam | sed 's/full/sub1/g' | tr ' ' '
+' | shuf --random-source=<(yes 1) -n 3 | tr '
+' ' ')
+        sub2=$(echo results/3-ATAC_bam/sort/coord/039_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/080_BXD49_SD_full.co.bam results/3-ATAC_bam/sort/coord/117_BXD49_SD_full.co.bam | sed 's/full/sub2/g' | tr ' ' '
+' | shuf --random-source=<(yes 2) -n 3 | tr '
+' ' ')
+
+        echo "Merge bam files $sub1" >> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        samtools merge results/12-ATAC_footprints/bams/BXD49_SD_sub1.bam $sub1 &>> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        samtools index -@ 10 results/12-ATAC_footprints/bams/BXD49_SD_sub1.bam &>> logs/12-ATAC_footprints/bams_BXD49_SD.log
+
+        echo "Merge bam files $sub2" >> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        samtools merge results/12-ATAC_footprints/bams/BXD49_SD_sub2.bam $sub2 &>> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        samtools index -@ 10 results/12-ATAC_footprints/bams/BXD49_SD_sub2.bam &>> logs/12-ATAC_footprints/bams_BXD49_SD.log
+
+        echo "Logs saved in <logs/12-ATAC_footprints/bams_BXD49_SD.log>" >> logs/12-ATAC_footprints/bams_BXD49_SD.log
+        
+Write-protecting output file results/12-ATAC_footprints/bams/BXD49_SD.bam.
+[Tue Aug 11 19:45:34 2026]
+Finished jobid: 0 (Rule: merge_bams)
+1 of 1 steps (100%) done
+Storing output in storage.

@@ -1,0 +1,37 @@
+Running Fastp on <rawdata/atac/fastq/177_BXD90_SD.fastq.gz>
+Detecting adapter sequence for read1...
+>I7_Nextera_Transposase_1 | >Trans2_rc | >I7_Nextera_Transposase_1 | >Trans2_rc
+CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+
+Read1 before filtering:
+total reads: 70854623
+total bases: 10699048073
+Q20 bases: 10034773554(93.7913%)
+Q30 bases: 9505986460(88.8489%)
+Q40 bases: 7881385680(73.6644%)
+
+Read1 after filtering:
+total reads: 61933907
+total bases: 5344500943
+Q20 bases: 5252434879(98.2774%)
+Q30 bases: 5078805277(95.0286%)
+Q40 bases: 4144589365(77.5487%)
+
+Filtering result:
+reads passed filter: 70687384
+reads failed due to low quality: 159617
+reads failed due to too many N: 3390
+reads failed due to too short: 4232
+reads with adapter trimmed: 55343626
+bases trimmed due to adapters: 4371668814
+
+Duplication rate (may be overestimated since this is SE data): 12.355%
+
+JSON report: results/1-ATAC_fastq/QC/json/177_BXD90_SD.json
+HTML report: results/1-ATAC_fastq/QC/html/177_BXD90_SD.html
+
+fastp -w 16 -D -i rawdata/atac/fastq/177_BXD90_SD.fastq.gz -o results/1-ATAC_fastq/QC/fastq/177_BXD90_SD.fq.gz -h results/1-ATAC_fastq/QC/html/177_BXD90_SD.html -j results/1-ATAC_fastq/QC/json/177_BXD90_SD.json 
+fastp v1.0.1, time used: 128 seconds
+Processed fastq files saved in <results/1-ATAC_fastq/QC/fastq/177_BXD90_SD.fq.gz>
+Reports saved in <results/1-ATAC_fastq/QC/html/177_BXD90_SD.html> and <results/1-ATAC_fastq/QC/json/177_BXD90_SD.json>
+Logs saved in <logs/1-ATAC_fastq/QC_177_BXD90_SD.log>

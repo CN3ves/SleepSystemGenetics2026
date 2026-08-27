@@ -1,0 +1,54 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-22 19:36:49
+  Workflow ID: f433ee48-dc00-40c7-8412-8fc880d34290
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna085
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs sort_aligment_nrf:sample=9726_FT_NSD --allowed-rules sort_aligment_nrf --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.9pq_l1nx results/15-NRF_align/aligment/9726_FT_NSD_Aligned.out.sam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime code params input --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment storage-local-copies input-output persistence software-deployment-cache source-cache sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpo3rvrc7i --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Aug 22 19:36:50 2026]
+localrule sort_aligment_nrf:
+    input: results/15-NRF_align/aligment/9726_FT_NSD_Aligned.out.sam
+    output: results/16-NRF_bam/sort/9726_FT_NSD.co.bam
+    log: logs/16-NRF_bam/sort_9726_FT_NSD.log
+    jobid: 0
+    benchmark: benchmarks/16-NRF_bam/sort_9726_FT_NSD.txt
+    reason: Forced execution
+    wildcards: sample=9726_FT_NSD
+    threads: 20
+    resources: tmpdir=/tmp/64017516, disk_mb=21341, disk=21.34 GB, disk_mib=20353, mem_mb=20000, mem=20 GB, mem_mib=19074, time=01:00:00
+Shell command: 
+        module load samtools/1.21
+
+        mkdir -p results/16-NRF_bam/sort
+
+        echo "Sorting sample <results/15-NRF_align/aligment/9726_FT_NSD_Aligned.out.sam> by coordinate" > logs/16-NRF_bam/sort_9726_FT_NSD.log
+        samtools sort -@ 20 -o results/16-NRF_bam/sort/9726_FT_NSD.co.bam results/15-NRF_align/aligment/9726_FT_NSD_Aligned.out.sam &>> logs/16-NRF_bam/sort_9726_FT_NSD.log
+        
+        echo "Indexing sample <results/15-NRF_align/aligment/9726_FT_NSD_Aligned.out.sam> " >> logs/16-NRF_bam/sort_9726_FT_NSD.log
+        samtools index -@ 20 results/16-NRF_bam/sort/9726_FT_NSD.co.bam 2>> logs/16-NRF_bam/sort_9726_FT_NSD.log
+        
+        echo "Logs saved in <logs/16-NRF_bam/sort_9726_FT_NSD.log>" >> logs/16-NRF_bam/sort_9726_FT_NSD.log
+        
+Write-protecting output file results/16-NRF_bam/sort/9726_FT_NSD.co.bam.
+[Sat Aug 22 19:37:11 2026]
+Finished jobid: 0 (Rule: sort_aligment_nrf)
+1 of 1 steps (100%) done
+Storing output in storage.

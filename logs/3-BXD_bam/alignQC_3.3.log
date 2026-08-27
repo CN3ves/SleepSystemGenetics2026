@@ -1,0 +1,87 @@
+Loading packages
+Checking arguments
+Reading inputs
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+[1] "SAMPLES with high bottleneck"
+[1] coef   sample
+<0 rows> (or 0-length row.names)
+null device 
+          1 
+null device 
+          1 
+[1] "PT score:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-15.3000  -0.1000   0.5000   0.5843   1.2000  18.5000 
+null device 
+          1 
+[1] "NFR score:"
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA's 
+-20.30000  -0.30000   0.30000   0.09247   0.80000  20.00000       226 
+Warning message:
+Removed 226 rows containing missing values or values outside the scale range (`geom_point()`). 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+Warning message:
+The following aesthetics were dropped during statistical transformation: shape.
+ℹ This can happen when ggplot fails to infer the correct grouping structure in the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical variable into a factor? 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+ [1] grid      parallel  stats4    stats     graphics  grDevices utils    
+ [8] datasets  methods   base     
+
+other attached packages:
+ [1] optparse_1.8.2        ComplexHeatmap_2.26.1 dplyr_1.2.1          
+ [4] doParallel_1.0.17     iterators_1.0.14      foreach_1.5.2        
+ [7] reshape2_1.4.5        ggplot2_4.0.3         Rsamtools_2.26.0     
+[10] Biostrings_2.78.0     XVector_0.50.0        GenomicRanges_1.62.1 
+[13] IRanges_2.44.0        S4Vectors_0.48.1      Seqinfo_1.0.0        
+[16] BiocGenerics_0.56.0   generics_0.1.4        tidyr_1.3.2          
+
+loaded via a namespace (and not attached):
+ [1] bitops_1.0-9        shape_1.4.6.1       stringi_1.8.7      
+ [4] digest_0.6.39       magrittr_2.0.5      RColorBrewer_1.1-3 
+ [7] circlize_0.4.18     plyr_1.8.9          GlobalOptions_0.1.4
+[10] purrr_1.2.2         scales_1.4.0        codetools_0.2-20   
+[13] cli_3.6.6           rlang_1.3.0         crayon_1.5.3       
+[16] withr_3.0.3         tools_4.5.2         BiocParallel_1.44.0
+[19] colorspace_2.1-3    GetoptLong_1.1.1    vctrs_0.7.3        
+[22] R6_2.6.1            png_0.1-9           matrixStats_1.5.0  
+[25] lifecycle_1.0.5     stringr_1.6.0       MASS_7.3-65        
+[28] clue_0.3-68         cluster_2.1.8.1     pkgconfig_2.0.3    
+[31] pillar_1.11.1       gtable_0.3.6        glue_1.8.1         
+[34] Rcpp_1.1.2          tibble_3.3.1        tidyselect_1.2.1   
+[37] farver_2.1.2        rjson_0.2.23        labeling_0.4.3     
+[40] compiler_4.5.2      S7_0.2.2           

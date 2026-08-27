@@ -1,0 +1,40 @@
+Aligning full sample <results/1-ATAC_fastq/subsampling/192_BXD98_CTRL_full.fq.gz> to <mm10> genome annotation
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:32:00
+61145733 reads; of these:
+  61145733 (100.00%) were unpaired; of these:
+    219120 (0.36%) aligned 0 times
+    39769688 (65.04%) aligned exactly 1 time
+    21156925 (34.60%) aligned >1 times
+99.64% overall alignment rate
+Time searching: 00:32:00
+Overall time: 00:32:00
+Aligning subsample <results/1-ATAC_fastq/subsampling/192_BXD98_CTRL_sub1.fq.gz> to <mm10> genome annotation
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:01
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:10:27
+20000000 reads; of these:
+  20000000 (100.00%) were unpaired; of these:
+    71731 (0.36%) aligned 0 times
+    13011089 (65.06%) aligned exactly 1 time
+    6917180 (34.59%) aligned >1 times
+99.64% overall alignment rate
+Time searching: 00:10:28
+Overall time: 00:10:28
+Aligning subsample <results/1-ATAC_fastq/subsampling/192_BXD98_CTRL_sub2.fq.gz> to <mm10> genome annotation
+Time loading reference: 00:00:01
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:07:52
+15000000 reads; of these:
+  15000000 (100.00%) were unpaired; of these:
+    53864 (0.36%) aligned 0 times
+    9756310 (65.04%) aligned exactly 1 time
+    5189826 (34.60%) aligned >1 times
+99.64% overall alignment rate
+Time searching: 00:07:53
+Overall time: 00:07:53
+Logs saved in <logs/2-ATAC_align/align_192_BXD98_CTRL.log>

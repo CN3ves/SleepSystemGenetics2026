@@ -1,0 +1,112 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-24 15:05:51
+  Workflow ID: ab437ce8-0037-4828-88c7-fade8c461d90
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna055
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs qualimap:sample=10205_FT_SD --allowed-rules qualimap --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.uy2vvodq results/16-NRF_bam/sort/10205_FT_SD.co.bam results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params input mtime code --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment-cache software-deployment storage-local-copies input-output sources persistence source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmps4txm4rw --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Aug 24 15:05:53 2026]
+localrule qualimap:
+    input: results/16-NRF_bam/sort/10205_FT_SD.co.bam, results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf
+    output: results/16-NRF_bam/qualimap/rnaseq_qc_10205_FT_SD.txt
+    log: logs/16-NRF_bam/qualimap_10205_FT_SD.log
+    jobid: 0
+    benchmark: benchmarks/16-NRF_bam/qualimap_10205_FT_SD.txt
+    reason: Forced execution
+    wildcards: sample=10205_FT_SD
+    threads: 10
+    resources: tmpdir=/tmp/64220874, disk_mb=6233, disk=6.23 GB, disk_mib=5945, mem_mb=20000, mem=20 GB, mem_mib=19074, time=01:00:00
+Shell command: 
+        module load qualimap/2.3
+
+        mkdir -p results/16-NRF_bam/qualimap
+
+        echo "Qualimap bamqc for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" > logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap bamqc -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gff results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD -gd MOUSE -nt 10 -os &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Qualimap rnaseq for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap rnaseq -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gtf results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD --java-mem-size=20G &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Logs saved in <logs/16-NRF_bam/qualimap_10205_FT_SD.log>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        
+RuleException:
+CalledProcessError in file "/scratch/csousane/atac/workflow/rules/16-NRF_bam.smk", line 196:
+Command 'set -euo pipefail;  
+        module load qualimap/2.3
+
+        mkdir -p results/16-NRF_bam/qualimap
+
+        echo "Qualimap bamqc for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" > logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap bamqc -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gff results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD -gd MOUSE -nt 10 -os &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Qualimap rnaseq for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap rnaseq -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gtf results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD --java-mem-size=20G &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Logs saved in <logs/16-NRF_bam/qualimap_10205_FT_SD.log>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log' returned non-zero exit status 127.
+[Mon Aug 24 15:05:54 2026]
+Error in rule qualimap:
+    message: None
+    jobid: 0
+    input: results/16-NRF_bam/sort/10205_FT_SD.co.bam, results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf
+    output: results/16-NRF_bam/qualimap/rnaseq_qc_10205_FT_SD.txt
+    log: logs/16-NRF_bam/qualimap_10205_FT_SD.log (check log file(s) for error details)
+    shell:
+        
+        module load qualimap/2.3
+
+        mkdir -p results/16-NRF_bam/qualimap
+
+        echo "Qualimap bamqc for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" > logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap bamqc -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gff results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD -gd MOUSE -nt 10 -os &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Qualimap rnaseq for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap rnaseq -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gtf results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD --java-mem-size=20G &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Logs saved in <logs/16-NRF_bam/qualimap_10205_FT_SD.log>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Mon Aug 24 15:05:54 2026]
+Error in rule qualimap:
+    message: None
+    jobid: 0
+    input: results/16-NRF_bam/sort/10205_FT_SD.co.bam, results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf
+    output: results/16-NRF_bam/qualimap/rnaseq_qc_10205_FT_SD.txt
+    log: logs/16-NRF_bam/qualimap_10205_FT_SD.log (check log file(s) for error details)
+    shell:
+        
+        module load qualimap/2.3
+
+        mkdir -p results/16-NRF_bam/qualimap
+
+        echo "Qualimap bamqc for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" > logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap bamqc -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gff results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD -gd MOUSE -nt 10 -os &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Qualimap rnaseq for <results/16-NRF_bam/sort/10205_FT_SD.co.bam>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        qualimap rnaseq -bam results/16-NRF_bam/sort/10205_FT_SD.co.bam -c -gtf results/15-NRF_align/index/gencode.vM10.primary_assembly.annotation.gtf -outdir results/16-NRF_bam/qualimap/10205_FT_SD --java-mem-size=20G &>> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+
+        echo "Logs saved in <logs/16-NRF_bam/qualimap_10205_FT_SD.log>" >> logs/16-NRF_bam/qualimap_10205_FT_SD.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

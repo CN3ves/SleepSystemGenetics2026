@@ -1,0 +1,59 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-26 02:05:16
+  Workflow ID: d5ab8442-9214-4364-b3c8-e0c79397639e
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna021
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs align_atac:sample=005_BXD55_SD --allowed-rules align_atac --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.zyrmu1ym results/1-ATAC_fastq/subsampling/005_BXD55_SD_full.fq.gz results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub1.fq.gz results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub2.fq.gz results/2-ATAC_align/index/mm10.1.bt2 --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code software-env params mtime input --conda-frontend conda --shared-fs-usage software-deployment software-deployment-cache input-output source-cache persistence storage-local-copies sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpjw02sbsl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Jul 26 02:05:16 2026]
+localrule align_atac:
+    input: results/1-ATAC_fastq/subsampling/005_BXD55_SD_full.fq.gz, results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub1.fq.gz, results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub2.fq.gz, results/2-ATAC_align/index/mm10.1.bt2
+    output: results/2-ATAC_align/aligment/005_BXD55_SD_full.sam, results/2-ATAC_align/aligment/005_BXD55_SD_sub1.sam, results/2-ATAC_align/aligment/005_BXD55_SD_sub2.sam
+    log: logs/2-ATAC_align/align_005_BXD55_SD.log
+    jobid: 0
+    benchmark: benchmarks/2-ATAC_align/align_005_BXD55_SD.txt
+    reason: Forced execution
+    wildcards: sample=005_BXD55_SD
+    threads: 20
+    resources: tmpdir=/tmp/62708054, mem_mb=5000, mem=5 GB, mem_mib=4769, disk_mb=11480, disk=11.48 GB, disk_mib=10949, time=01:30:00
+Shell command: 
+        module load bowtie2/2.5.4
+
+        mkdir -p results/2-ATAC_align/aligment
+
+        echo "Aligning full sample <results/1-ATAC_fastq/subsampling/005_BXD55_SD_full.fq.gz> to <mm10> genome annotation" >> logs/2-ATAC_align/align_005_BXD55_SD.log
+        bowtie2 --time --phred33 --local --very-sensitive-local --threads 20 --seed 87 -x results/2-ATAC_align/index/mm10 -U results/1-ATAC_fastq/subsampling/005_BXD55_SD_full.fq.gz -S results/2-ATAC_align/aligment/005_BXD55_SD_full.sam 2>> logs/2-ATAC_align/align_005_BXD55_SD.log
+
+        echo "Aligning subsample <results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub1.fq.gz> to <mm10> genome annotation" >> logs/2-ATAC_align/align_005_BXD55_SD.log
+        bowtie2 --time --phred33 --local --very-sensitive-local --threads 20 --seed 87 -x results/2-ATAC_align/index/mm10 -U results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub1.fq.gz -S results/2-ATAC_align/aligment/005_BXD55_SD_sub1.sam 2>> logs/2-ATAC_align/align_005_BXD55_SD.log
+
+        echo "Aligning subsample <results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub2.fq.gz> to <mm10> genome annotation" >> logs/2-ATAC_align/align_005_BXD55_SD.log
+        bowtie2 --time --phred33 --local --very-sensitive-local --threads 20 --seed 87 -x results/2-ATAC_align/index/mm10 -U results/1-ATAC_fastq/subsampling/005_BXD55_SD_sub2.fq.gz -S results/2-ATAC_align/aligment/005_BXD55_SD_sub2.sam 2>> logs/2-ATAC_align/align_005_BXD55_SD.log
+        
+        echo "Logs saved in <logs/2-ATAC_align/align_005_BXD55_SD.log>" >> logs/2-ATAC_align/align_005_BXD55_SD.log
+        
+Write-protecting output file results/2-ATAC_align/aligment/005_BXD55_SD_full.sam.
+Write-protecting output file results/2-ATAC_align/aligment/005_BXD55_SD_sub1.sam.
+Write-protecting output file results/2-ATAC_align/aligment/005_BXD55_SD_sub2.sam.
+[Sun Jul 26 02:39:30 2026]
+Finished jobid: 0 (Rule: align_atac)
+1 of 1 steps (100%) done
+Storing output in storage.

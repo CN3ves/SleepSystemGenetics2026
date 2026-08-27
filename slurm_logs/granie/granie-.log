@@ -1,0 +1,49 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-18 12:39:46
+  Workflow ID: 9a409a90-d211-4053-b02c-5eb92dc2a514
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna076
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs granie: --allowed-rules granie --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.kjg3yio7 results/7-ATAC_normalization/count_objects/atac_counts.RData results/7-ATAC_normalization/count_objects/rna_counts.RData results/6-ATAC_features/list/genomic_features.gtf --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code params mtime input --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage storage-local-copies sources source-cache input-output persistence software-deployment-cache software-deployment --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp1_akpb3q --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: d5cb1e3d1c89e77622e8cd992a184f43
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Aug 18 12:39:46 2026]
+localrule granie:
+    input: results/7-ATAC_normalization/count_objects/atac_counts.RData, results/7-ATAC_normalization/count_objects/rna_counts.RData, results/6-ATAC_features/list/genomic_features.gtf
+    output: results/13-ATAC_integrate/granie/graph.RData
+    log: logs/13-ATAC_integrate/granie.log
+    jobid: 0
+    benchmark: benchmarks/13-ATAC_integrate/granie.txt
+    reason: Forced execution
+    threads: 20
+    resources: tmpdir=/tmp/63710572, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=100000, mem=100 GB, mem_mib=95368, time=4:00:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/13-ATAC_integrate/granie
+
+        echo "Calculating RNA/ATAC correlations based on annotation" > logs/13-ATAC_integrate/granie.log
+        Rscript workflow/scripts/13.4-Integrate_granie.R -r results/7-ATAC_normalization/count_objects/rna_counts.RData -a results/7-ATAC_normalization/count_objects/atac_counts.RData -p results/6-ATAC_features/list/genomic_features.gtf -o results/13-ATAC_integrate/granie 2>> logs/13-ATAC_integrate/granie.log
+
+        echo "Logs saved in <logs/13-ATAC_integrate/granie.log>" >> logs/13-ATAC_integrate/granie.log
+        
+Write-protecting output file results/13-ATAC_integrate/granie/graph.RData.
+[Tue Aug 18 13:28:18 2026]
+Finished jobid: 0 (Rule: granie)
+1 of 1 steps (100%) done
+Storing output in storage.

@@ -1,0 +1,58 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-12 18:56:31
+  Workflow ID: 511ebd85-6e76-44e2-b395-3d2625e9b148
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna046
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs differential_activity:group=BXD45,sub= --allowed-rules differential_activity --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.9mcxg1fd results/12-ATAC_footprints/motifs/BXD45_CTRL_mpbs.bed results/12-ATAC_footprints/motifs/BXD45_SD_mpbs.bed results/12-ATAC_footprints/bams/BXD45_CTRL.bam results/12-ATAC_footprints/bams/BXD45_SD.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code input mtime software-env params --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage input-output software-deployment sources persistence software-deployment-cache source-cache storage-local-copies --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpebor7md_ --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: d5cb1e3d1c89e77622e8cd992a184f43
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Aug 12 18:56:31 2026]
+localrule differential_activity:
+    input: results/12-ATAC_footprints/motifs/BXD45_CTRL_mpbs.bed, results/12-ATAC_footprints/motifs/BXD45_SD_mpbs.bed, results/12-ATAC_footprints/bams/BXD45_CTRL.bam, results/12-ATAC_footprints/bams/BXD45_SD.bam
+    output: results/12-ATAC_footprints/diff/BXD45/differential_factor.txt
+    log: logs/12-ATAC_footprints/diff_BXD45.log
+    jobid: 0
+    benchmark: benchmarks/12-ATAC_footprints/diff_BXD45.txt
+    reason: Forced execution
+    wildcards: group=BXD45, sub=
+    threads: 20
+    resources: tmpdir=/tmp/63494125, disk_mb=36093, disk=36.09 GB, disk_mib=34421, mem_mb=10000, mem=10 GB, mem_mib=9537, time=1:00:00
+Shell command: 
+        mkdir -p results/12-ATAC_footprints/diff
+        
+        echo "Estimate differential activity for BXD45 " > logs/12-ATAC_footprints/diff_BXD45.log
+        cond=$(echo results/12-ATAC_footprints/motifs/BXD45_CTRL_mpbs.bed results/12-ATAC_footprints/motifs/BXD45_SD_mpbs.bed | sort | sed 's/results\/12-ATAC_footprints\/motifs\///g' | sed 's/_mpbs.bed//g' | sed 's/_sub[12]//g' | sed  's/.*_\(.*\) .*_\(.*\)/\1,\2/')
+        mpbs=$(echo results/12-ATAC_footprints/motifs/BXD45_CTRL_mpbs.bed results/12-ATAC_footprints/motifs/BXD45_SD_mpbs.bed | sort | tr ' ' ',' | sed 's/,$//g')
+        bams=$(echo results/12-ATAC_footprints/bams/BXD45_CTRL.bam results/12-ATAC_footprints/bams/BXD45_SD.bam | sort | tr ' ' ',' | sed 's/,$//g')
+
+        echo "BED files: $mpbs" >> logs/12-ATAC_footprints/diff_BXD45.log
+        echo "BAM files: $bams" >> logs/12-ATAC_footprints/diff_BXD45.log
+        echo "groups: $cond" >> logs/12-ATAC_footprints/diff_BXD45.log
+
+        rgt-hint differential --organism=mm10 --bc --nc 20 --mpbs-files=$mpbs --reads-files=$bams --conditions=$cond --output-location=results/12-ATAC_footprints/diff/BXD45 &>> logs/12-ATAC_footprints/diff_BXD45.log
+
+        echo "Logs saved in <logs/12-ATAC_footprints/diff_BXD45.log>" >> logs/12-ATAC_footprints/diff_BXD45.log
+        
+Activating conda environment: rgt_env
+Write-protecting output file results/12-ATAC_footprints/diff/BXD45/differential_factor.txt.
+[Wed Aug 12 19:05:09 2026]
+Finished jobid: 0 (Rule: differential_activity)
+1 of 1 steps (100%) done
+Storing output in storage.

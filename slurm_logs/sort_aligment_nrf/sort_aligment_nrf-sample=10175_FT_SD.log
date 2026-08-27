@@ -1,0 +1,81 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-22 19:28:26
+  Workflow ID: 38993547-d312-40d9-bf87-bec9364f0d6b
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna085
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs sort_aligment_nrf:sample=10175_FT_SD --allowed-rules sort_aligment_nrf --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.pyw2o4sy results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input mtime params code --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment-cache software-deployment persistence source-cache storage-local-copies input-output sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpt664dgg4 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Aug 22 19:28:26 2026]
+localrule sort_aligment_nrf:
+    input: results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam
+    output: results/16-NRF_bam/sort/coord/10175_FT_SD.co.bam
+    log: logs/16-NRF_bam/sort_10175_FT_SD.log
+    jobid: 0
+    benchmark: benchmarks/16-NRF_bam/sort_10175_FT_SD.txt
+    reason: Forced execution
+    wildcards: sample=10175_FT_SD
+    threads: 20
+    resources: tmpdir=/tmp/64016841, mem_mb=20000, mem=20 GB, mem_mib=19074, disk_mb=19754, disk=19.75 GB, disk_mib=18839, time=01:00:00
+Shell command: 
+        module load samtools/1.21
+
+        mkdir -p results/16-NRF_bam/sort
+
+        echo "Sorting sample <results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam> by coordinate" > logs/16-NRF_bam/sort_10175_FT_SD.log
+        samtools view -S -b results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam | samtools sort -o results/16-NRF_bam/sort/10175_FT_SD.co.bam -@ 20 &>> logs/16-NRF_bam/sort_10175_FT_SD.log
+        echo "Indexing sample <results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam> " >> logs/16-NRF_bam/sort_10175_FT_SD.log
+        sleep 60
+        samtools index -@ 20 results/16-NRF_bam/sort/10175_FT_SD.co.bam 2>> logs/16-NRF_bam/sort_10175_FT_SD.log
+        
+        echo "Logs saved in <logs/16-NRF_bam/sort_10175_FT_SD.log>" >> logs/16-NRF_bam/sort_10175_FT_SD.log
+        
+Waiting at most 5 seconds for missing files:
+results/16-NRF_bam/sort/coord/10175_FT_SD.co.bam (missing locally)
+MissingOutputException in rule sort_aligment_nrf in file "/scratch/csousane/atac/workflow/rules/16-NRF_bam.smk", line 12:
+Job 0 completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/16-NRF_bam/sort/coord/10175_FT_SD.co.bam (missing locally, parent dir contents: )
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat Aug 22 19:31:58 2026]
+Error in rule sort_aligment_nrf:
+    message: None
+    jobid: 0
+    input: results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam
+    output: results/16-NRF_bam/sort/coord/10175_FT_SD.co.bam
+    log: logs/16-NRF_bam/sort_10175_FT_SD.log (check log file(s) for error details)
+    shell:
+        
+        module load samtools/1.21
+
+        mkdir -p results/16-NRF_bam/sort
+
+        echo "Sorting sample <results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam> by coordinate" > logs/16-NRF_bam/sort_10175_FT_SD.log
+        samtools view -S -b results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam | samtools sort -o results/16-NRF_bam/sort/10175_FT_SD.co.bam -@ 20 &>> logs/16-NRF_bam/sort_10175_FT_SD.log
+        echo "Indexing sample <results/15-NRF_align/aligment/10175_FT_SD_Aligned.out.sam> " >> logs/16-NRF_bam/sort_10175_FT_SD.log
+        sleep 60
+        samtools index -@ 20 results/16-NRF_bam/sort/10175_FT_SD.co.bam 2>> logs/16-NRF_bam/sort_10175_FT_SD.log
+        
+        echo "Logs saved in <logs/16-NRF_bam/sort_10175_FT_SD.log>" >> logs/16-NRF_bam/sort_10175_FT_SD.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

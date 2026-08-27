@@ -1,0 +1,62 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-12 11:17:24
+  Workflow ID: 78b9cf76-a3b0-4e6a-8825-58be439ce128
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna042
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs scan_footprints:group=BXD71_SD --allowed-rules scan_footprints --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp._a02nv8t results/12-ATAC_footprints/bams/BXD71_SD.bam results/12-ATAC_footprints/bams/BXD71_SD_sub1.bam results/12-ATAC_footprints/bams/BXD71_SD_sub2.bam results/10-ATAC_annotation/reduced/ranges_dar.bed --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input software-env params code mtime --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment software-deployment-cache input-output storage-local-copies source-cache sources persistence --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp4uo3l1u7 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: d5cb1e3d1c89e77622e8cd992a184f43
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Aug 12 11:17:24 2026]
+localrule scan_footprints:
+    input: results/12-ATAC_footprints/bams/BXD71_SD.bam, results/12-ATAC_footprints/bams/BXD71_SD_sub1.bam, results/12-ATAC_footprints/bams/BXD71_SD_sub2.bam, results/10-ATAC_annotation/reduced/ranges_dar.bed
+    output: results/12-ATAC_footprints/footprints/BXD71_SD.bed
+    log: logs/12-ATAC_footprints/footprints_BXD71_SD.log
+    jobid: 0
+    benchmark: benchmarks/12-ATAC_footprints/footprints_BXD71_SD.txt
+    reason: Forced execution
+    wildcards: group=BXD71_SD
+    threads: 20
+    resources: tmpdir=/tmp/63439632, mem_mb=5000, mem=5 GB, mem_mib=4769, disk_mb=29702, disk=29.7 GB, disk_mib=28327, time=3:00:00
+Shell command: 
+        mkdir -p results/12-ATAC_footprints/footprints
+
+        echo "Calling footprint for results/12-ATAC_footprints/bams/BXD71_SD.bam" > logs/12-ATAC_footprints/footprints_BXD71_SD.log
+        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD71_SD results/12-ATAC_footprints/bams/BXD71_SD.bam results/10-ATAC_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD71_SD.log
+
+        echo "Make bigwigs" >> logs/12-ATAC_footprints/footprints_BXD71_SD.log
+        rgt-hint tracks --bc  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD71_SD results/12-ATAC_footprints/bams/BXD71_SD.bam results/10-ATAC_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD71_SD.log
+
+        echo "Calling footprint for results/12-ATAC_footprints/bams/BXD71_SD_sub1.bam" > logs/12-ATAC_footprints/footprints_BXD71_SD.log
+        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD71_SD_sub1 results/12-ATAC_footprints/bams/BXD71_SD_sub1.bam results/10-ATAC_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD71_SD.log
+
+        echo "Calling footprint for results/12-ATAC_footprints/bams/BXD71_SD_sub2.bam" > logs/12-ATAC_footprints/footprints_BXD71_SD.log
+        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD71_SD_sub2 results/12-ATAC_footprints/bams/BXD71_SD_sub2.bam results/10-ATAC_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD71_SD.log
+
+        deactivate
+
+        echo "Logs saved in <logs/12-ATAC_footprints/footprints_BXD71_SD.log>" >> logs/12-ATAC_footprints/footprints_BXD71_SD.log
+        
+Activating conda environment: rgt_env
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+Write-protecting output file results/12-ATAC_footprints/footprints/BXD71_SD.bed.
+[Wed Aug 12 11:32:38 2026]
+Finished jobid: 0 (Rule: scan_footprints)
+1 of 1 steps (100%) done
+Storing output in storage.

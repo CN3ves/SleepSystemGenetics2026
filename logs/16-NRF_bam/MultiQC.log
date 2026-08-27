@@ -1,0 +1,16 @@
+Running MultiQC on all logs
+
+/// MultiQC 🔍 v1.35
+
+       file_search | Search path: /scratch/csousane/atac
+          qualimap | Found 32 BamQC reports
+          qualimap | Found 32 RNASeq reports
+             htseq | Found 226 reports
+              star | Found 32 reports and 32 gene count files
+           bowtie2 | Found 226 reports
+             fastp | Found 258 reports
+     write_results | Data        : multiqc_data
+     write_results | Report      : multiqc_report.html
+           multiqc | MultiQC complete
+Moving results to <results/16-NRF_bam/MultiQC>
+Logs saved in <logs/16-NRF_bam/MultiQC.log>

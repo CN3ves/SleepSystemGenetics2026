@@ -1,0 +1,52 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-07-25 23:33:25
+  Workflow ID: 6982aec3-5424-4583-986b-81bc4bd0cb00
+  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
+  Host: dna048
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs readsQC:sample=219_DBA_SD --allowed-rules readsQC --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.vwvf0poo rawdata/atac/fastq/219_DBA_SD.fastq.gz --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input params software-env code mtime --conda-frontend conda --shared-fs-usage persistence storage-local-copies software-deployment software-deployment-cache sources input-output source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp5k_ew7tx --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: 86861b6bfa456d544911c404de6a29dd
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Jul 25 23:33:25 2026]
+localrule readsQC:
+    input: rawdata/atac/fastq/219_DBA_SD.fastq.gz
+    output: results/1-ATAC_fastq/QC/fastq/219_DBA_SD.fq.gz, results/1-ATAC_fastq/QC/html/219_DBA_SD.html, results/1-ATAC_fastq/QC/json/219_DBA_SD.json
+    log: logs/1-ATAC_fastq/QC_219_DBA_SD.log
+    jobid: 0
+    benchmark: benchmarks/1-ATAC_fastq/QC_219_DBA_SD.txt
+    reason: Forced execution
+    wildcards: sample=219_DBA_SD
+    threads: 16
+    resources: tmpdir=/tmp/62706595, mem_mb=5000, mem=5 GB, mem_mib=4769, disk_mb=7794, disk=7.79 GB, disk_mib=7433, time=00:10:00
+Shell command: 
+        module load fastp/1.0.1
+        mkdir -p results/1-ATAC_fastq/QC
+
+        echo "Running Fastp on <rawdata/atac/fastq/219_DBA_SD.fastq.gz>" > logs/1-ATAC_fastq/QC_219_DBA_SD.log
+        
+        fastp -w 16 -D -i rawdata/atac/fastq/219_DBA_SD.fastq.gz -o results/1-ATAC_fastq/QC/fastq/219_DBA_SD.fq.gz -h results/1-ATAC_fastq/QC/html/219_DBA_SD.html -j results/1-ATAC_fastq/QC/json/219_DBA_SD.json &>> logs/1-ATAC_fastq/QC_219_DBA_SD.log
+        
+        echo "Processed fastq files saved in <results/1-ATAC_fastq/QC/fastq/219_DBA_SD.fq.gz>" >> logs/1-ATAC_fastq/QC_219_DBA_SD.log
+        echo "Reports saved in <results/1-ATAC_fastq/QC/html/219_DBA_SD.html> and <results/1-ATAC_fastq/QC/json/219_DBA_SD.json>" >> logs/1-ATAC_fastq/QC_219_DBA_SD.log
+        echo "Logs saved in <logs/1-ATAC_fastq/QC_219_DBA_SD.log>" >> logs/1-ATAC_fastq/QC_219_DBA_SD.log
+        
+[Sat Jul 25 23:34:59 2026]
+Finished jobid: 0 (Rule: readsQC)
+1 of 1 steps (100%) done
+Storing output in storage.

@@ -1,0 +1,122 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-08-23 00:22:38
+  Workflow ID: 2d4b1dd8-fd9a-4ba0-9215-173511b0ffcb
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna049
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs bamQC_nrf:sample=10089_FV_NSD --allowed-rules bamQC_nrf --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.sjmrwpd_ results/16-NRF_bam/sort/10089_FV_NSD.co.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code mtime input params --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage source-cache input-output software-deployment persistence storage-local-copies sources software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpy7vf2fcz --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Aug 23 00:22:38 2026]
+localrule bamQC_nrf:
+    input: results/16-NRF_bam/sort/10089_FV_NSD.co.bam
+    output: results/16-NRF_bam/bamQC/10089_FV_NSD.RData
+    log: logs/16-NRF_bam/bamQC_10089_FV_NSD.log
+    jobid: 0
+    benchmark: benchmarks/16-NRF_bam/bamQC_10089_FV_NSD.txt
+    reason: Forced execution
+    wildcards: sample=10089_FV_NSD
+    resources: tmpdir=/tmp/64062305, disk_mb=5013, disk=5.01 GB, disk_mib=4781, mem_mb=50000, mem=50 GB, mem_mib=47684, time=02:00:00
+Shell command: 
+        module load  r-light/4.5.2
+        mkdir -p results/16-NRF_bam/bamQC
+
+        echo "Summarising QC results" >> logs/16-NRF_bam/bamQC_10089_FV_NSD.log
+        Rscript workflow/scripts/16.1-QC_align_bamQC.R -b results/16-NRF_bam/sort/10089_FV_NSD.co.bam -o results/16-NRF_bam/bamQC
+
+        echo "Logs saved in <logs/16-NRF_bam/bamQC_10089_FV_NSD.log>" >> logs/16-NRF_bam/bamQC_10089_FV_NSD.log
+        
+Loading packages
+Checking arguments
+[1] "Reading bam file"
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/16-NRF_bam/sort/10089_FV_NSD.co.bam.bai
+Write-protecting output file results/16-NRF_bam/bamQC/10089_FV_NSD.RData.
+[Sun Aug 23 00:47:38 2026]
+Finished jobid: 0 (Rule: bamQC_nrf)
+1 of 1 steps (100%) done
+Storing output in storage.
