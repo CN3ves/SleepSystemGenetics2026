@@ -1,6 +1,6 @@
-Merge bam files results/3-ATAC_bam/sort/coord/038_BXD48_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/114_BXD48_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/152_BXD48_CTRL_full.co.bam
+Merge bam files results/4-BXD_genotype/corrected_bams/coord/039_BXD48_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/114_BXD48_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/152_BXD48_CTRL_full.co.bam
 Indexing file
 Checking downsampled files
-Merge bam files results/3-ATAC_bam/sort/coord/038_BXD48_CTRL_sub1.co.bam results/3-ATAC_bam/sort/coord/114_BXD48_CTRL_sub1.co.bam results/3-ATAC_bam/sort/coord/152_BXD48_CTRL_sub1.co.bam 
-Merge bam files results/3-ATAC_bam/sort/coord/038_BXD48_CTRL_sub2.co.bam results/3-ATAC_bam/sort/coord/114_BXD48_CTRL_sub2.co.bam results/3-ATAC_bam/sort/coord/152_BXD48_CTRL_sub2.co.bam 
-Logs saved in <logs/12-ATAC_footprints/bams_BXD48_CTRL.log>
+Merge bam files results/4-BXD_genotype/corrected_bams/coord/039_BXD48_CTRL_sub1.co.bam results/4-BXD_genotype/corrected_bams/coord/114_BXD48_CTRL_sub1.co.bam results/4-BXD_genotype/corrected_bams/coord/152_BXD48_CTRL_sub1.co.bam 
+Merge bam files results/4-BXD_genotype/corrected_bams/coord/039_BXD48_CTRL_sub2.co.bam results/4-BXD_genotype/corrected_bams/coord/114_BXD48_CTRL_sub2.co.bam results/4-BXD_genotype/corrected_bams/coord/152_BXD48_CTRL_sub2.co.bam 
+Logs saved in <logs/12-BXD_footprints/bams_BXD48_CTRL.log>

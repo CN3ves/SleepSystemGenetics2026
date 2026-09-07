@@ -67,15 +67,13 @@ id <- gsub('_.*','',mapqc$sample)
 stopifnot(all(metadata$Sample[match(id, metadata$Sample)] == id))
 mapqc$group <- metadata$Treatment[match(id, metadata$Sample)]
 
-mapqc$alpha <-  0.1
 mapqc$Var1 <- as.numeric(mapqc$Var1)
 
 png(paste0(opt$outdir,"/QC_bam_mapq.png"))
-ggplot(mapqc , mapping = aes(x = Var1, y = Freq, group=sample, color=group, alpha=alpha)) +
+ggplot(mapqc , mapping = aes(x = Var1, y = Freq, group=sample, color=group)) +
   geom_line() + 
   labs(title="Aligment Quality Distribution") + xlab("Mapping quality") + ylab("Density") +
   theme_classic() + 
-  guides(alpha = "none") +
   theme( plot.title = element_text(hjust = 0.5))
 dev.off()
 
@@ -104,7 +102,6 @@ ggplot(chrs , mapping = aes(x=chr, y = rate, fill = group)) +
   geom_boxplot() + 
   labs(title="Chromosomal alignment rate") + ylab("Proportion of reads") + xlab("") +
   theme_classic() + 
-  guides(alpha = "none") +
   theme( plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=1))
 dev.off()
 
@@ -116,7 +113,6 @@ ggplot(mito , mapping = aes(x=sample, y = rate, fill=group)) +
   geom_boxplot() + geom_point() + 
   labs(title="Chromosomal alignment rate") + ylab("Proportion of reads") + xlab("") +
   theme_classic() + 
-  guides(alpha = "none") +
   theme( plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=1))
 dev.off()
 
@@ -141,7 +137,6 @@ ggplot(bneck , mapping = aes(y = coef, group=group, color=group)) +
   labs(title="Aligment Bottleneck Distribution") + ylab("Density") +
   theme_classic() + 
   theme(axis.title.x=element_blank(),axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
-  guides(alpha = "none") +
   geom_hline(yintercept=0.8) + geom_hline(yintercept=0.9) +  geom_hline(yintercept=0.5) + 
   theme( plot.title = element_text(hjust = 0.5))
 dev.off()
@@ -159,15 +154,14 @@ comp <- as.data.frame(do.call(rbind, comp))
 id <- gsub('_.*','',comp$sample)
 stopifnot(all(metadata$Sample[match(id, metadata$Sample)] == id)) 
 comp$group <- metadata$Treatment[match(id, metadata$Sample)]
-comp$alpha <-  0.1
 
 png(paste0(opt$outdir,"/QC_bam_libcomplexity.png"))
-ggplot(comp , mapping = aes(x = reads, y = values, group=sample, color=group, alpha = alpha)) +
+ggplot(comp , mapping = aes(x = reads, y = values, group=sample, color=group)) +
   geom_point(shape = 1, size=2) + 
   geom_line() + 
   labs(title="Estimation of ATAC-seq\nlibrary complexity") + xlab(expression(Putative ~ sequenced ~ 
        fragments ~ x ~ 10^6)) + ylab(expression(Distinct ~  fragments ~ x ~ 10^6)) +
-  theme_classic() + scale_alpha_continuous(guide ='none') + 
+  theme_classic() + 
   theme( plot.title = element_text(hjust = 0.5)) 
 dev.off()
 
@@ -181,13 +175,12 @@ rsize <- as.data.frame(do.call(rbind, rsize))
 id <- gsub('_.*','',rsize$sample)
 stopifnot(all(metadata$Sample[match(id, metadata$Sample)] == id)) 
 rsize$group <- metadata$Treatment[match(id, metadata$Sample)]
-rsize$alpha <-  0.1
 
 png(paste0(opt$outdir,"/QC_bam_fragsize.png"))
-ggplot(rsize, aes(x=x, y=y, group=sample, color=group, alpha=alpha)) + 
+ggplot(rsize, aes(x=x, y=y, group=sample, color=group)) + 
   geom_line() + 
   labs(title="Read sizes") + xlab("Read length (bp)") + ylab(expression(Normalized ~ read ~ density ~ x ~ 10^-3)) +
-  theme_classic() +  theme( plot.title = element_text(hjust = 0.5)) +scale_alpha_continuous(guide ='none') 
+  theme_classic() +  theme( plot.title = element_text(hjust = 0.5)) 
 dev.off()
 
 # PT Scores
@@ -201,9 +194,6 @@ id <- gsub('_.*','',pt$sample)
 stopifnot(all(metadata$Sample[match(id, metadata$Sample)] == id))
 pt$group <- metadata$Treatment[match(id, metadata$Sample)]
 
-pt$alpha <-  0.1
-pt$alpha[grepl("chrM", pt$chr)] <-  0.5
-
 pt$shape <- sapply(pt$chr, function(x) if(x=="chrM") "Mitocondrial" else "Nuclear")
 pt$log <- round(pt$log,1) 
 pt$PT <- round(pt$PT,1) 
@@ -213,11 +203,11 @@ print("PT score:")
 print(summary(pt$PT))
 
 png(paste0(opt$outdir,"/QC_bam_pt.png"))
-ggplot(points, mapping = aes(x = log, y = PT,  color=group, alpha=alpha, shape = shape)) +
+ggplot(points, mapping = aes(x = log, y = PT,  color=group, shape = shape)) +
   geom_point(size=1) +  facet_wrap(~group, ncol= 1) + 
   labs(title="PT score") + xlab("log2 mean coverage") + ylab("Promoter vs Transcript")  +
   geom_hline(yintercept=0) + 
-  theme_classic() + scale_alpha_continuous(guide ='none') +
+  theme_classic() + 
   scale_shape_manual(name = "DNA", values = c(4, 1)) +
   theme( plot.title = element_text(hjust = 0.5))
 dev.off()
@@ -233,8 +223,6 @@ id <- gsub('_.*','',nfr$sample)
 stopifnot(all(metadata$Sample[match(id, metadata$Sample)] == id)) 
 nfr$group <- metadata$Treatment[match(id, metadata$Sample)]
 
-nfr$alpha <-  0.1
-nfr$alpha[grepl("chrM", nfr$chr)] <-  0.5
 
 nfr$shape <- sapply(nfr$chr, function(x) if(x=="chrM") "Mitocondrial" else "Nuclear")
 nfr$log <- round(nfr$log,1) 
@@ -245,11 +233,11 @@ print("NFR score:")
 print(summary(nfr$NFR))
 
 png(paste0(opt$outdir,"/QC_bam_nfr.png"))
-ggplot(points, mapping = aes(x = log, y = NFR,  color=group, alpha=alpha, shape = shape)) +
+ggplot(points, mapping = aes(x = log, y = NFR,  color=group, shape = shape)) +
   geom_point(size=1) +  facet_wrap(~group, ncol= 1) + 
   labs(title="NFRscore for 200bp flanking TSSs") + xlab("log2 mean coverage") + ylab("Nucleosome Free Regions score") +
   geom_hline(yintercept=0) + 
-  theme_classic() + scale_alpha_continuous(guide ='none') +
+  theme_classic() + 
   scale_shape_manual(name = "DNA", values = c(4, 1)) +
   theme( plot.title = element_text(hjust = 0.5))
 dev.off()
@@ -281,7 +269,7 @@ ggplot(plot, mapping = aes(x = perc, y = val, group=sample, color=group)) +
   facet_wrap(~group, ncol= 1) + 
   labs(title="Coverage around TSS") + xlab("Distance to TSS") + ylab("Aggregate TSS score") +
   geom_hline(yintercept=0) + 
-  theme_classic() + scale_alpha_continuous(guide ='none') +
+  theme_classic() +
   scale_shape_manual(name = "DNA", values = c(4, 1)) +
   theme( plot.title = element_text(hjust = 0.5))
 dev.off()
@@ -394,8 +382,14 @@ for (sample in names(qcs)) {
   res[[sample]] <- as.data.frame(qcs[[sample]][['QC']][8:10])
   res[[sample]]$sample <- sample
   res[[sample]]$TSSscore <- qcs[[sample]][['TSSE']]$TSSEscore
+  
 }
 res <- do.call(rbind,res)
+
+chrs <- chrs %>% select(-group) %>% pivot_wider( names_from=chr, values_from=rate)
+names(chrs)[-1] <- paste0('Align_rate_',names(chrs)[-1])
+
+res <- merge(res,chrs)
 
 write.csv(res, paste0(opt$outdir,"/QCbam_align.csv"))
 

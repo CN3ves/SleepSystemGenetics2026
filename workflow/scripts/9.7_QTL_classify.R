@@ -65,7 +65,7 @@ output <- foreach(i = 1:nrow(test), .packages = c("qtl2")) %dopar% {
     chr <- gsub('_.*','',region)
     model <- grep(paste0(chr,'_'), models, value = TRUE)
   } else {
-    model <- grep('rna_', models, value = TRUE)
+    model <- grep(paste0(exp,'_'), models, value = TRUE)
   }
 
   geno_info <- readRDS(model)[['qtl_data']]

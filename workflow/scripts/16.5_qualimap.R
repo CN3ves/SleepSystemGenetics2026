@@ -1,4 +1,4 @@
-# Script designed to filter counts from ATAC count files
+# Script designed to run QC for RNA-seq
 
 # Redirect all R logs to Snakemake log
 log <- file('logs/16-NRF_bam/qualimap_16.5.log', open = "wt")

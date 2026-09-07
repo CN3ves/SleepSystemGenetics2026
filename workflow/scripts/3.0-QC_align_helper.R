@@ -11,7 +11,7 @@ alignQC <- function(logs) {
                       "Reads" = gsub("(\\d*).*", "\\1", log[grep('reads',log[,1]),1]),
                       "Unpaired" = trimws(gsub(".*\\((.*)).*", "\\1", log[grep('unpaired',log[,1]),1])),
                       "Unaligned" = trimws(gsub(".*\\((.*)).*", "\\1", log[grep('0 times',log[,1]),1])),
-                      "Aligned 1x" = trimws(gsub(".*\\((.*)).*", "\\1", log[grep('1 times',log[,1]),1])),
+                      "Aligned 1x" = trimws(gsub(".*\\((.*)).*", "\\1", log[grep('exactly 1',log[,1]),1])),
                       "Multialigned" = trimws(gsub(".*\\((.*)).*", "\\1", log[grep('>1 times',log[,1]),1])),
                       "Alignment rate" = gsub("%.*", "%", log[grep('overall',log[,1]),1]),
                       stringsAsFactors = FALSE)

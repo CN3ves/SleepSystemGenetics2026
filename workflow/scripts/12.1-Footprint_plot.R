@@ -139,6 +139,16 @@ if(opt$test=="") { # no need to repeat for subsampled data
   df_plot <- subset(df, Num > 100)
   df_plot$Num <- NULL
 
+
+  # Save for QTL analyses
+  counts <- list("counts" = df[,-1], 
+               "sample" = data.frame("Treatment" = gsub(".*_","",colnames(df)[-1]), 
+                                      "Strain" = gsub("_.*","",colnames(df)[-1]),
+                                      "group" = colnames(df)[-1]))
+  rownames(counts$sample) <- counts$sample$group
+  saveRDS(counts, paste0(opt$outdir,"/footprints_counts_disp.RData"))
+
+
   df_plot_scale <-t(apply(df_plot, 1, scale))
   colnames(df_plot_scale) <- colnames(df_plot)
   rownames(df_plot_scale) <- rownames(df_plot)

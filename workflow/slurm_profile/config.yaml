@@ -10,6 +10,6 @@ cluster-generic-submit-cmd:
     --export=ALL
     --chdir=$PWD
     --account=pfranken_bxd_atac
-jobs: 226
+jobs: 15
 cluster-generic-cancel-cmd: scancel
 printshellcmds: True

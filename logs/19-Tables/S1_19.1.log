@@ -1,0 +1,102 @@
+Loading packages
+Checking arguments
+Load sequencing QC tab
+Load alignmnet QC tab
+Load peak calling QC tab
+Load peak calling number
+Load features tab
+>> preparing features information...		 2026-09-01 06:53:26 PM 
+>> Using Genome: mm10 ...
+>> identifying nearest features...		 2026-09-01 06:53:27 PM 
+>> calculating distance from peak to TSS...	 2026-09-01 06:53:30 PM 
+>> assigning genomic annotation...		 2026-09-01 06:53:30 PM 
+>> Using Genome: mm10 ...
+>> Using Genome: mm10 ...
+>> adding gene annotation...			 2026-09-01 06:53:47 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2026-09-01 06:53:47 PM 
+>> done...					 2026-09-01 06:53:47 PM 
+Split regions
+>> preparing features information...		 2026-09-01 06:53:57 PM 
+>> Using Genome: mm10 ...
+>> identifying nearest features...		 2026-09-01 06:53:57 PM 
+>> calculating distance from peak to TSS...	 2026-09-01 06:54:05 PM 
+>> assigning genomic annotation...		 2026-09-01 06:54:05 PM 
+>> Using Genome: mm10 ...
+>> Using Genome: mm10 ...
+>> adding gene annotation...			 2026-09-01 06:54:13 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2026-09-01 06:54:14 PM 
+>> done...					 2026-09-01 06:54:14 PM 
+Warning message:
+In valid.GenomicRanges.seqinfo(x, suggest.trim = TRUE) :
+  GRanges object contains 1 out-of-bound range located on sequence
+  chr4_JH584295_random. Note that ranges located on a sequence whose length is
+  unknown (NA) or on a circular sequence are not considered out-of-bound (use
+  seqlengths() and isCircular() to get the lengths and circularity flags of the
+  underlying sequences). You can use trim() to trim these ranges. See
+  ?`trim,GenomicRanges-method` for more information.
+Annotating...
+Compute cCRE for regions
+[[1]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[2]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[3]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[4]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[5]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[6]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[7]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[8]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[9]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[10]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[11]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[12]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[13]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[14]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[15]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[16]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[17]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[18]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[19]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+[[20]]
+[1] "/scratch/csousane/atac/Rlibs" "/opt/R-4.5.2/lib/R/library"  
+
+
+Execution halted

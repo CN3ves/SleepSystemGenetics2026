@@ -165,6 +165,26 @@ get_regions <- function(exp, genes= NULL) {
                       "feature" = genes[!genes %in% regions$feature])
     regions <- rbind(regions, add_mat)
 
+  } else if(grepl("footprints", exp)) {
+    genes <- gsub('\\(.*','',genes)
+    genes <- gsub('.*\\.','',genes)
+    genes <- gsub('.*:','',genes)
+    
+    gene.coords <- genes(TxDb.Mmusculus.UCSC.mm10.knownGene,single.strand.genes.only=FALSE)
+    gene.coords <- as.data.frame(gene.coords)
+    
+    symb <- as.data.frame(org.Mm.egGENENAME[mappedkeys(org.Mm.egGENENAME)])
+    symb$SYMBOL <- select(org.Mm.eg.db, keys = symb$gene_id, columns="SYMBOL", keytype="ENTREZID")$SYMBOL
+    
+    gene.coords <- merge(gene.coords, symb, all.x=TRUE, by.x="group_name", by.y="gene_id")
+    gene.coords <- gene.coords[match(tolower(genes), tolower(gene.coords$SYMBOL) ),]
+    print(paste("Proportion of genes matched:", mean(!is.na(gene.coords[,1]))))
+    
+    regions <- data.frame("description"= gene.coords$gene_name, 
+                          "chr"= gene.coords$seqnames,
+                          "start"= gene.coords$start,
+                          "end"= gene.coords$end)
+
   }
 
   return(regions)

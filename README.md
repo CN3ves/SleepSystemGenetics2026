@@ -320,6 +320,7 @@ foreach | 1.5.2
 doParallel | 1.0.17 
 doSNOW | 1.0.20 
 rtracklayer | 1.70.1 
+colorspace | 2.1-3
 csaw | 1.44.0 
 tidyverse | 2.0.0 
 GenomicRanges | 1.62.1 
@@ -349,6 +350,7 @@ rjson | 0.2.23
 EDASeq | 2.44.0 
 ATACseqQC | 1.34.0 
 Rsamtools | 2.26.0 
+openxlsx | 4.2.8.1
 preseqR | 4.0.0 
 GenomicAlignments | 1.46.0 
 tidyr | 1.3.2 
@@ -356,5 +358,21 @@ reshape2 | 1.4.5
 XML | 3.99-0.24 
 Rsubread | 2.24.0 
 pheatmap | 1.0.13 
+qgraph | 2.3.3
+igraph | 2.3.3
 qtl2 | 0.46 
+svglite | 2.2.2
 </details>
+
+```
+x <- read.csv('results/12-BXD_footprints/plots/footprint_analysis.csv')
+x <-unique(unlist(strsplit(x[x$padj<0.05,1],':')))
+x <-  gsub('.*\\.','',gsub('\\(.*','',x))
+cat(paste(sort(unique(toupper(x))), collapse='\n'))
+```
+https://maayanlab.cloud/kea3/
+
+place in results/12-BXD_footprints/KEA/Integrated scaled rank.tsv
+place in results/12-BXD_footprints/KEA/Mean rank.tsv
+
+some rules gather results from other rules so they might need to be run sequentially. the pipeline was testes runnign one rule at a time, not the entire workflow

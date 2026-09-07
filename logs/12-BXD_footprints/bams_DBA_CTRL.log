@@ -1,6 +1,6 @@
-Merge bam files results/3-ATAC_bam/sort/coord/036_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/072_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/111_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/112_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/182_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/202_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/218_DBA_CTRL_full.co.bam results/3-ATAC_bam/sort/coord/228_DBA_CTRL_full.co.bam
+Merge bam files results/4-BXD_genotype/corrected_bams/coord/036_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/072_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/111_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/112_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/182_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/202_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/218_DBA_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/228_DBA_CTRL_full.co.bam
 Indexing file
 Checking downsampled files
-Merge bam files results/3-ATAC_bam/sort/coord/228_DBA_CTRL_sub1.co.bam results/3-ATAC_bam/sort/coord/036_DBA_CTRL_sub1.co.bam results/3-ATAC_bam/sort/coord/202_DBA_CTRL_sub1.co.bam 
-Merge bam files results/3-ATAC_bam/sort/coord/202_DBA_CTRL_sub2.co.bam results/3-ATAC_bam/sort/coord/228_DBA_CTRL_sub2.co.bam results/3-ATAC_bam/sort/coord/036_DBA_CTRL_sub2.co.bam 
-Logs saved in <logs/12-ATAC_footprints/bams_DBA_CTRL.log>
+Merge bam files results/4-BXD_genotype/corrected_bams/coord/228_DBA_CTRL_sub1.co.bam results/4-BXD_genotype/corrected_bams/coord/036_DBA_CTRL_sub1.co.bam results/4-BXD_genotype/corrected_bams/coord/202_DBA_CTRL_sub1.co.bam 
+Merge bam files results/4-BXD_genotype/corrected_bams/coord/202_DBA_CTRL_sub2.co.bam results/4-BXD_genotype/corrected_bams/coord/228_DBA_CTRL_sub2.co.bam results/4-BXD_genotype/corrected_bams/coord/036_DBA_CTRL_sub2.co.bam 
+Logs saved in <logs/12-BXD_footprints/bams_DBA_CTRL.log>

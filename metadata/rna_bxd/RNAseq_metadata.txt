@@ -1,0 +1,173 @@
+Sample_geo_accession	Sample Title	condition	genotype	tissue
+GSM3151467	05nsd_Cortex_Control	Control	BXD/TyJ 05	Cortex
+GSM3151468	05sd_Cortex_SleepDeprived	Sleep Deprived	BXD/TyJ 05	Cortex
+GSM3151469	100nsd_Cortex_Control	Control	BXD/RwwJ 100	Cortex
+GSM3151470	100sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 100	Cortex
+GSM3151471	101nsd_Cortex_Control	Control	BXD/RwwJ 101	Cortex
+GSM3151472	101sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 101	Cortex
+GSM3151473	103nsd_Cortex_Control	Control	BXD/RwwJ 73b (103)	Cortex
+GSM3151474	103sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 73b (103)	Cortex
+GSM3151475	29nsd_Cortex_Control	Control	BXD/TyJ 29	Cortex
+GSM3151476	29sd_Cortex_SleepDeprived	Sleep Deprived	BXD/TyJ 29	Cortex
+GSM3151477	29tnsd_Cortex_Control	Control	BXD/TyJ 29t	Cortex
+GSM3151478	29tsd_Cortex_SleepDeprived	Sleep Deprived	BXD/TyJ 29t	Cortex
+GSM3151479	32nsd_Cortex_Control	Control	BXD/TyJ 32	Cortex
+GSM3151480	32sd_Cortex_SleepDeprived	Sleep Deprived	BXD/TyJ 32	Cortex
+GSM3151481	43nsd_Cortex_Control	Control	BXD/RwwJ 43	Cortex
+GSM3151482	43sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 43	Cortex
+GSM3151483	44nsd_Cortex_Control	Control	BXD/RwwJ 44	Cortex
+GSM3151484	44sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 44	Cortex
+GSM3151485	45nsd_Cortex_Control	Control	BXD/RwwJ 45	Cortex
+GSM3151486	45sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 45	Cortex
+GSM3151487	48nsd_Cortex_Control	Control	BXD/RwwJ 48	Cortex
+GSM3151488	48sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 48	Cortex
+GSM3151489	49nsd_Cortex_Control	Control	BXD/RwwJ 49	Cortex
+GSM3151490	49sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 49	Cortex
+GSM3151491	50nsd_Cortex_Control	Control	BXD/RwwJ 50	Cortex
+GSM3151492	50sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 50	Cortex
+GSM3151493	51nsd_Cortex_Control	Control	BXD/RwwJ 51	Cortex
+GSM3151494	51sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 51	Cortex
+GSM3151495	55nsd_Cortex_Control	Control	BXD/RwwJ 55	Cortex
+GSM3151496	55sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 55	Cortex
+GSM3151497	56nsd_Cortex_Control	Control	BXD/RwwJ 56	Cortex
+GSM3151498	56sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 56	Cortex
+GSM3151499	61nsd_Cortex_Control	Control	BXD/RwwJ 61	Cortex
+GSM3151500	61sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 61	Cortex
+GSM3151501	64nsd_Cortex_Control	Control	BXD/RwwJ 64	Cortex
+GSM3151502	64sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 64	Cortex
+GSM3151503	65nsd_Cortex_Control	Control	BXD/RwwJ 65	Cortex
+GSM3151504	65sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 65	Cortex
+GSM3151505	66nsd_Cortex_Control	Control	BXD/RwwJ 66	Cortex
+GSM3151506	66sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 66	Cortex
+GSM3151507	67nsd_Cortex_Control	Control	BXD/RwwJ 67	Cortex
+GSM3151508	67sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 67	Cortex
+GSM3151509	70nsd_Cortex_Control	Control	BXD/RwwJ 70	Cortex
+GSM3151510	70sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 70	Cortex
+GSM3151511	71nsd_Cortex_Control	Control	BXD/RwwJ 71	Cortex
+GSM3151512	71sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 71	Cortex
+GSM3151513	73nsd_Cortex_Control	Control	BXD/RwwJ 73	Cortex
+GSM3151514	73sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 73	Cortex
+GSM3151515	75nsd_Cortex_Control	Control	BXD/RwwJ 75	Cortex
+GSM3151516	75sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 75	Cortex
+GSM3151517	79nsd_Cortex_Control	Control	BXD/RwwJ 79	Cortex
+GSM3151518	79sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 79	Cortex
+GSM3151519	81nsd_Cortex_Control	Control	BXD/RwwJ 81	Cortex
+GSM3151520	81sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 81	Cortex
+GSM3151521	83nsd_Cortex_Control	Control	BXD/RwwJ 83	Cortex
+GSM3151522	83sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 83	Cortex
+GSM3151523	84nsd_Cortex_Control	Control	BXD/RwwJ 84	Cortex
+GSM3151524	84sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 84	Cortex
+GSM3151525	85nsd_Cortex_Control	Control	BXD/RwwJ 85	Cortex
+GSM3151526	85sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 85	Cortex
+GSM3151527	87nsd_Cortex_Control	Control	BXD/RwwJ 87	Cortex
+GSM3151528	87sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 87	Cortex
+GSM3151529	89nsd_Cortex_Control	Control	BXD/RwwJ 89	Cortex
+GSM3151530	89sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 89	Cortex
+GSM3151531	90nsd_Cortex_Control	Control	BXD/RwwJ 90	Cortex
+GSM3151532	90sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 90	Cortex
+GSM3151533	95nsd_Cortex_Control	Control	BXD/RwwJ 95	Cortex
+GSM3151534	95sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 95	Cortex
+GSM3151535	96nsd_Cortex_Control	Control	BXD/RwwJ 48a (96)	Cortex
+GSM3151536	96sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 48a (96)	Cortex
+GSM3151537	97nsd_Cortex_Control	Control	BXD/RwwJ 65a (97)	Cortex
+GSM3151538	97sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 65a (97)	Cortex
+GSM3151539	98nsd_Cortex_Control	Control	BXD/RwwJ 98	Cortex
+GSM3151540	98sd_Cortex_SleepDeprived	Sleep Deprived	BXD/RwwJ 98	Cortex
+GSM3151541	B61nsd_Cortex_Control	Control	C57BL/6J	Cortex
+GSM3151542	B61sd_Cortex_SleepDeprived	Sleep Deprived	C57BL/6J	Cortex
+GSM3151543	B62nsd_Cortex_Control	Control	C57BL/6J	Cortex
+GSM3151544	B62sd_Cortex_SleepDeprived	Sleep Deprived	C57BL/6J	Cortex
+GSM3151545	BDnsd_Cortex_Control	Control	C57/BL/J x DBA/2J F1	Cortex
+GSM3151546	BDsd_Cortex_SleepDeprived	Sleep Deprived	C57/BL/J x DBA/2J F1	Cortex
+GSM3151547	DB1nsd_Cortex_Control	Control	DBA/2J	Cortex
+GSM3151548	DB1sd_Cortex_SleepDeprived	Sleep Deprived	DBA/2J	Cortex
+GSM3151549	DB2nsd_Cortex_Control	Control	DBA/2J	Cortex
+GSM3151550	DB2sd_Cortex_SleepDeprived	Sleep Deprived	DBA/2J	Cortex
+GSM3151551	DBnsd_Cortex_Control	Control	DBA/2J x C57/BL/J F1	Cortex
+GSM3151552	DBsd_Cortex_SleepDeprived	Sleep Deprived	DBA/2J x C57/BL/J F1	Cortex
+GSM3151553	L05nsd_Liver_Control	Control	BXD/TyJ 05	Liver
+GSM3151554	L05sd_Liver_SleepDeprived	Sleep Deprived	BXD/TyJ 05	Liver
+GSM3151555	L100nsd_Liver_Control	Control	BXD/RwwJ 100	Liver
+GSM3151556	L100sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 100	Liver
+GSM3151557	L101nsd_Liver_Control	Control	BXD/RwwJ 101	Liver
+GSM3151558	L101sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 101	Liver
+GSM3151559	L103nsd_Liver_Control	Control	BXD/RwwJ 73b (103)	Liver
+GSM3151560	L103sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 73b (103)	Liver
+GSM3151561	L29nsd_Liver_Control	Control	BXD/TyJ 29	Liver
+GSM3151562	L29sd_Liver_SleepDeprived	Sleep Deprived	BXD/TyJ 29	Liver
+GSM3151563	L29tnsd_Liver_Control	Control	BXD/TyJ 29t	Liver
+GSM3151564	L29tsd_Liver_SleepDeprived	Sleep Deprived	BXD/TyJ 29t	Liver
+GSM3151565	L32nsd_Liver_Control	Control	BXD/TyJ 32	Liver
+GSM3151566	L32sd_Liver_SleepDeprived	Sleep Deprived	BXD/TyJ 32	Liver
+GSM3151567	L43nsd_Liver_Control	Control	BXD/RwwJ 43	Liver
+GSM3151568	L43sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 43	Liver
+GSM3151569	L44nsd_Liver_Control	Control	BXD/RwwJ 44	Liver
+GSM3151570	L44sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 44	Liver
+GSM3151571	L45nsd_Liver_Control	Control	BXD/RwwJ 45	Liver
+GSM3151572	L45sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 45	Liver
+GSM3151573	L48nsd_Liver_Control	Control	BXD/RwwJ 48	Liver
+GSM3151574	L48sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 48	Liver
+GSM3151575	L49nsd_Liver_Control	Control	BXD/RwwJ 49	Liver
+GSM3151576	L49sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 49	Liver
+GSM3151577	L50nsd_Liver_Control	Control	BXD/RwwJ 50	Liver
+GSM3151578	L50sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 50	Liver
+GSM3151579	L51nsd_Liver_Control	Control	BXD/RwwJ 51	Liver
+GSM3151580	L51sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 51	Liver
+GSM3151581	L55nsd_Liver_Control	Control	BXD/RwwJ 55	Liver
+GSM3151582	L55sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 55	Liver
+GSM3151583	L56nsd_Liver_Control	Control	BXD/RwwJ 56	Liver
+GSM3151584	L56sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 56	Liver
+GSM3151585	L61nsd_Liver_Control	Control	BXD/RwwJ 61	Liver
+GSM3151586	L61sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 61	Liver
+GSM3151587	L64nsd_Liver_Control	Control	BXD/RwwJ 64	Liver
+GSM3151588	L64sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 64	Liver
+GSM3151589	L65nsd_Liver_Control	Control	BXD/RwwJ 65	Liver
+GSM3151590	L65sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 65	Liver
+GSM3151591	L66nsd_Liver_Control	Control	BXD/RwwJ 66	Liver
+GSM3151592	L66sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 66	Liver
+GSM3151593	L67nsd_Liver_Control	Control	BXD/RwwJ 67	Liver
+GSM3151594	L67sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 67	Liver
+GSM3151595	L70nsd_Liver_Control	Control	BXD/RwwJ 70	Liver
+GSM3151596	L70sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 70	Liver
+GSM3151597	L71nsd_Liver_Control	Control	BXD/RwwJ 71	Liver
+GSM3151598	L71sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 71	Liver
+GSM3151599	L73nsd_Liver_Control	Control	BXD/RwwJ 73	Liver
+GSM3151600	L73sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 73	Liver
+GSM3151601	L75nsd_Liver_Control	Control	BXD/RwwJ 75	Liver
+GSM3151602	L75sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 75	Liver
+GSM3151603	L79nsd_Liver_Control	Control	BXD/RwwJ 79	Liver
+GSM3151604	L79sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 79	Liver
+GSM3151605	L81nsd_Liver_Control	Control	BXD/RwwJ 81	Liver
+GSM3151606	L81sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 81	Liver
+GSM3151607	L83nsd_Liver_Control	Control	BXD/RwwJ 83	Liver
+GSM3151608	L83sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 83	Liver
+GSM3151609	L84nsd_Liver_Control	Control	BXD/RwwJ 84	Liver
+GSM3151610	L84sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 84	Liver
+GSM3151611	L85nsd_Liver_Control	Control	BXD/RwwJ 85	Liver
+GSM3151612	L85sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 85	Liver
+GSM3151613	L87nsd_Liver_Control	Control	BXD/RwwJ 87	Liver
+GSM3151614	L87sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 87	Liver
+GSM3151615	L89nsd_Liver_Control	Control	BXD/RwwJ 89	Liver
+GSM3151616	L89sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 89	Liver
+GSM3151617	L90nsd_Liver_Control	Control	BXD/RwwJ 90	Liver
+GSM3151618	L90sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 90	Liver
+GSM3151619	L95nsd_Liver_Control	Control	BXD/RwwJ 95	Liver
+GSM3151620	L95sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 95	Liver
+GSM3151621	L96nsd_Liver_Control	Control	BXD/RwwJ 48a (96)	Liver
+GSM3151622	L96sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 48a (96)	Liver
+GSM3151623	L97nsd_Liver_Control	Control	BXD/RwwJ 65a (97)	Liver
+GSM3151624	L97sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 65a (97)	Liver
+GSM3151625	L98nsd_Liver_Control	Control	BXD/RwwJ 98	Liver
+GSM3151626	L98sd_Liver_SleepDeprived	Sleep Deprived	BXD/RwwJ 98	Liver
+GSM3151627	LB61nsd_Liver_Control	Control	C57BL/6J	Liver
+GSM3151628	LB61sd_Liver_SleepDeprived	Sleep Deprived	C57BL/6J	Liver
+GSM3151629	LB62nsd_Liver_Control	Control	C57BL/6J	Liver
+GSM3151630	LB62sd_Liver_SleepDeprived	Sleep Deprived	C57BL/6J	Liver
+GSM3151631	LBDnsd_Liver_Control	Control	C57/BL/J x DBA/2J F1	Liver
+GSM3151632	LBDsd_Liver_SleepDeprived	Sleep Deprived	C57/BL/J x DBA/2J F1	Liver
+GSM3151633	LDB1nsd_Liver_Control	Control	DBA/2J	Liver
+GSM3151634	LDB1sd_Liver_SleepDeprived	Sleep Deprived	DBA/2J	Liver
+GSM3151635	LDB2nsd_Liver_Control	Control	DBA/2J	Liver
+GSM3151636	LDB2sd_Liver_SleepDeprived	Sleep Deprived	DBA/2J	Liver
+GSM3151637	LDBnsd_Liver_Control	Control	DBA/2J x C57/BL/J F1	Liver
+GSM3151638	LDBsd_Liver_SleepDeprived	Sleep Deprived	DBA/2J x C57/BL/J F1	Liver

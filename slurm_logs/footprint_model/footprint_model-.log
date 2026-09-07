@@ -1,0 +1,64 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-09-03 14:28:15
+  Workflow ID: b274af46-ab18-46a8-b1f8-9fc5f4a709c3
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna030
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs footprint_model: --allowed-rules footprint_model --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.odi2pcmi results/12-BXD_footprints/plots/agreggated_diff.svg results/12-BXD_footprints/plots/agreggated_diff_sub1.svg results/12-BXD_footprints/plots/agreggated_diff_sub2.svg --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code params input mtime --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage sources source-cache storage-local-copies persistence software-deployment input-output software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpyolx1pd0 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep  3 14:28:15 2026]
+localrule footprint_model:
+    input: results/12-BXD_footprints/plots/agreggated_diff.svg, results/12-BXD_footprints/plots/agreggated_diff_sub1.svg, results/12-BXD_footprints/plots/agreggated_diff_sub2.svg
+    output: results/12-BXD_footprints/model/footprints_QTL_model.RData, results/12-BXD_footprints/model/footprintsFC_QTL_model.RData
+    log: logs/12-BXD_footprints/model.log
+    jobid: 0
+    benchmark: benchmarks/12-BXD_footprints/model.txt
+    reason: Forced execution
+    threads: 40
+    resources: tmpdir=/tmp/64541674, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=20000, mem=20 GB, mem_mib=19074, time=02:00:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p results/12-BXD_footprints/model
+
+        echo "Prepare <results/12-BXD_footprints/plots/footprints_counts_disp.RData> for QTL analysis" > logs/12-BXD_footprints/model.log
+        Rscript workflow/scripts/9.2_QTL_prepare.R -c 'results/12-BXD_footprints/plots/footprints_counts_disp.RData' -d results/9-BXD_qtl/info -o results/12-BXD_footprints/model 2>> logs/12-BXD_footprints/model.log
+        cp results/9-BXD_qtl/info/*map* results/12-BXD_footprints/model
+
+        echo "Running model on footprints.json" >> logs/12-BXD_footprints/model.log
+        Rscript workflow/scripts/9.3_QTL_run.R -j results/12-BXD_footprints/model/footprints.json -o results/12-BXD_footprints/model 2>> logs/12-BXD_footprints/model.log
+        echo "Running model on footprintsFC.json" >> logs/12-BXD_footprints/model.log
+        Rscript workflow/scripts/9.3_QTL_run.R -j results/12-BXD_footprints/model/footprintsFC.json -o results/12-BXD_footprints/model 2>> logs/12-BXD_footprints/model.log
+
+        echo "Logs saved in <logs/12-BXD_footprints/model.log>" >> logs/12-BXD_footprints/model.log
+        
+Loading packages
+Checking arguments
+Loading packages
+Checking arguments
+Reading inputs
+Loading packages
+Checking arguments
+Reading inputs
+Write-protecting output file results/12-BXD_footprints/model/footprints_QTL_model.RData.
+Write-protecting output file results/12-BXD_footprints/model/footprintsFC_QTL_model.RData.
+[Thu Sep  3 14:29:22 2026]
+Finished jobid: 0 (Rule: footprint_model)
+1 of 1 steps (100%) done
+Storing output in storage.

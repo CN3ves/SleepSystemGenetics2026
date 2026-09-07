@@ -7,7 +7,7 @@ prepare_data: Prepares all required files for QTL analysis
 qtl_model: Run QTL analysis
 qtl_perms: Runs permitation analyses
 qtl_peaks: Calls significant LOD peaks
-qtl_aggregate: Merges the results split due to numebr of permutations into a individual tables
+qtl_aggregate: Merges the results split due to numeber of permutations into a individual tables
 qtl_ttest: Rund post-hoc tests to identify baseline and SD variant-dependent response 
 '''
 

@@ -1,20 +1,20 @@
 
 SNAKEMAKE
 =========
-  Date: 2026-08-12 18:43:54
-  Workflow ID: 32f3d344-78f4-48e2-9317-25cc43eaa17f
-  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
-  Host: dna045
+  Date: 2026-08-30 12:04:25
+  Workflow ID: 29ca9ed5-2a39-4217-89e2-4daf29edcdac
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna030
   User: csousane
   Snakemake version: 9.23.1
   Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
-  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs differential_activity:group=BXD73,sub= --allowed-rules differential_activity --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.9mcxg1fd results/12-ATAC_footprints/motifs/BXD73_CTRL_mpbs.bed results/12-ATAC_footprints/motifs/BXD73_SD_mpbs.bed results/12-ATAC_footprints/bams/BXD73_CTRL.bam results/12-ATAC_footprints/bams/BXD73_SD.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code input mtime software-env params --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage input-output software-deployment sources persistence software-deployment-cache source-cache storage-local-copies --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpebor7md_ --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs differential_activity:group=BXD73,sub= --allowed-rules differential_activity --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.3x0sevks results/12-BXD_footprints/motifs/BXD73_CTRL_mpbs.bed results/12-BXD_footprints/motifs/BXD73_SD_mpbs.bed results/12-BXD_footprints/bams/BXD73_CTRL.bam results/12-BXD_footprints/bams/BXD73_SD.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code params mtime input --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage storage-local-copies software-deployment-cache persistence source-cache input-output software-deployment sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp6jle_vmq --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
   Snakefile: /scratch/csousane/atac/workflow/Snakefile
   Base directory: /scratch/csousane/atac/workflow
   Run directory: /scratch/csousane/atac
   Working directory: /scratch/csousane/atac
   Config file(s): ['workflow/config/config.yaml']
-  Config MD5: d5cb1e3d1c89e77622e8cd992a184f43
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
 
 Building DAG of jobs...
 Using shell: /usr/bin/bash
@@ -23,36 +23,36 @@ Rules claiming more threads will be scaled down.
 Select jobs to execute...
 Execute 1 jobs...
 
-[Wed Aug 12 18:43:54 2026]
+[Sun Aug 30 12:04:25 2026]
 localrule differential_activity:
-    input: results/12-ATAC_footprints/motifs/BXD73_CTRL_mpbs.bed, results/12-ATAC_footprints/motifs/BXD73_SD_mpbs.bed, results/12-ATAC_footprints/bams/BXD73_CTRL.bam, results/12-ATAC_footprints/bams/BXD73_SD.bam
-    output: results/12-ATAC_footprints/diff/BXD73/differential_factor.txt
-    log: logs/12-ATAC_footprints/diff_BXD73.log
+    input: results/12-BXD_footprints/motifs/BXD73_CTRL_mpbs.bed, results/12-BXD_footprints/motifs/BXD73_SD_mpbs.bed, results/12-BXD_footprints/bams/BXD73_CTRL.bam, results/12-BXD_footprints/bams/BXD73_SD.bam
+    output: results/12-BXD_footprints/diff/BXD73/differential_statistics.txt
+    log: logs/12-BXD_footprints/diff_BXD73.log
     jobid: 0
-    benchmark: benchmarks/12-ATAC_footprints/diff_BXD73.txt
+    benchmark: benchmarks/12-BXD_footprints/diff_BXD73.txt
     reason: Forced execution
     wildcards: group=BXD73, sub=
     threads: 20
-    resources: tmpdir=/tmp/63494086, disk_mb=30473, disk=30.47 GB, disk_mib=29062, mem_mb=10000, mem=10 GB, mem_mib=9537, time=1:00:00
+    resources: tmpdir=/tmp/64409879, disk_mb=30473, disk=30.47 GB, disk_mib=29062, mem_mb=15000, mem=15 GB, mem_mib=14306, time=0:25:00
 Shell command: 
-        mkdir -p results/12-ATAC_footprints/diff
+        mkdir -p results/12-BXD_footprints/diff
         
-        echo "Estimate differential activity for BXD73 " > logs/12-ATAC_footprints/diff_BXD73.log
-        cond=$(echo results/12-ATAC_footprints/motifs/BXD73_CTRL_mpbs.bed results/12-ATAC_footprints/motifs/BXD73_SD_mpbs.bed | sort | sed 's/results\/12-ATAC_footprints\/motifs\///g' | sed 's/_mpbs.bed//g' | sed 's/_sub[12]//g' | sed  's/.*_\(.*\) .*_\(.*\)/\1,\2/')
-        mpbs=$(echo results/12-ATAC_footprints/motifs/BXD73_CTRL_mpbs.bed results/12-ATAC_footprints/motifs/BXD73_SD_mpbs.bed | sort | tr ' ' ',' | sed 's/,$//g')
-        bams=$(echo results/12-ATAC_footprints/bams/BXD73_CTRL.bam results/12-ATAC_footprints/bams/BXD73_SD.bam | sort | tr ' ' ',' | sed 's/,$//g')
+        echo "Estimate differential activity for BXD73 " > logs/12-BXD_footprints/diff_BXD73.log
+        cond=$(echo results/12-BXD_footprints/motifs/BXD73_CTRL_mpbs.bed results/12-BXD_footprints/motifs/BXD73_SD_mpbs.bed | sort | sed 's/results\/12-BXD_footprints\/motifs\///g' | sed 's/_mpbs.bed//g' | sed 's/_sub[12]//g' | sed  's/.*_\(.*\) .*_\(.*\)/\1,\2/')
+        mpbs=$(echo results/12-BXD_footprints/motifs/BXD73_CTRL_mpbs.bed results/12-BXD_footprints/motifs/BXD73_SD_mpbs.bed | sort | tr ' ' ',' | sed 's/,$//g')
+        bams=$(echo results/12-BXD_footprints/bams/BXD73_CTRL.bam results/12-BXD_footprints/bams/BXD73_SD.bam | sort | tr ' ' ',' | sed 's/,$//g')
 
-        echo "BED files: $mpbs" >> logs/12-ATAC_footprints/diff_BXD73.log
-        echo "BAM files: $bams" >> logs/12-ATAC_footprints/diff_BXD73.log
-        echo "groups: $cond" >> logs/12-ATAC_footprints/diff_BXD73.log
+        echo "BED files: $mpbs" >> logs/12-BXD_footprints/diff_BXD73.log
+        echo "BAM files: $bams" >> logs/12-BXD_footprints/diff_BXD73.log
+        echo "groups: $cond" >> logs/12-BXD_footprints/diff_BXD73.log
 
-        rgt-hint differential --organism=mm10 --bc --nc 20 --mpbs-files=$mpbs --reads-files=$bams --conditions=$cond --output-location=results/12-ATAC_footprints/diff/BXD73 &>> logs/12-ATAC_footprints/diff_BXD73.log
+        rgt-hint differential --organism=mm10 --bc --nc 20 --mpbs-files=$mpbs --reads-files=$bams --conditions=$cond --output-location=results/12-BXD_footprints/diff/BXD73 &>> logs/12-BXD_footprints/diff_BXD73.log
 
-        echo "Logs saved in <logs/12-ATAC_footprints/diff_BXD73.log>" >> logs/12-ATAC_footprints/diff_BXD73.log
+        echo "Logs saved in <logs/12-BXD_footprints/diff_BXD73.log>" >> logs/12-BXD_footprints/diff_BXD73.log
         
 Activating conda environment: rgt_env
-Write-protecting output file results/12-ATAC_footprints/diff/BXD73/differential_factor.txt.
-[Wed Aug 12 18:51:23 2026]
+Write-protecting output file results/12-BXD_footprints/diff/BXD73/differential_statistics.txt.
+[Sun Aug 30 12:11:52 2026]
 Finished jobid: 0 (Rule: differential_activity)
 1 of 1 steps (100%) done
 Storing output in storage.

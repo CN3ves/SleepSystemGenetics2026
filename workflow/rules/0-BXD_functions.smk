@@ -179,9 +179,13 @@ def get_bams(wildcards):
     '''
     This function merges all replicate bam files into a single sample
     '''
-    samples = [sample for sample in config['atac_samples'] if wildcards.group in sample]
+    corrected_samples = [sample.replace('tmp','039') for sample in
+        [sample.replace('039','038') for sample in
+        [sample.replace('038','tmp') for sample in config['atac_samples']]
+        ]]
+    samples = [sample for sample in corrected_samples if wildcards.group in sample]
     
-    return [f'results/3-BXD_bam/sort/coord/{sample}_full.co.bam'
+    return [f'results/4-BXD_genotype/corrected_bams/coord/{sample}_full.co.bam'
             for sample in samples] 
 
 # Input function used in rule scan_motifs

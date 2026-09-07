@@ -5,15 +5,15 @@ Reading inputs
 [1] "64/68"
 [1] "GROUPS with >200M total reads"
       Category         x
-65 C57Bl6_CTRL 389061400
-67    DBA_CTRL 373510955
+65 C57Bl6_CTRL 389061401
+67    DBA_CTRL 373510954
 68      DBA_SD 359837930
 66   C57Bl6_SD 344163961
 [1] "GROUPS with the lowest total reads"
       Category         x
-35  BXD66_CTRL 126015125
+35  BXD66_CTRL 126015124
 18    BXD48_SD 121211128
-49  BXD81_CTRL 121058302
+49  BXD81_CTRL 121058301
 9  BXD101_CTRL 119716378
 53  BXD84_CTRL 118745533
 28    BXD56_SD 100400696
@@ -31,10 +31,12 @@ Matrix products: default
 BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 
 locale:
- [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
- [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
- [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: Etc/UTC
 tzcode source: system (glibc)

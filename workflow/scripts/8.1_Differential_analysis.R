@@ -47,7 +47,7 @@ if(!is.null(opt$frip)) { # test the impact of low FRIP samples
   frips <- read.csv(opt$frip, row.names=1)
   frips <-frips[grep('full', names(frips))]
   rm <- gsub('_full','',gsub('^X','',names(frips)[frips <= 0.2]))
-  print(paste("Excluced sample", colnames(counts)[colnames(counts) %in% rm], "due to low FRiP score"))
+  print(paste("Excluded sample", colnames(counts)[colnames(counts) %in% rm], "due to low FRiP score"))
   counts <- counts[,!colnames(counts) %in% rm]
 }
 

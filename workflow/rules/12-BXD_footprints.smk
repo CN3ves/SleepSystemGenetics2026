@@ -7,9 +7,11 @@ scan_motifs: Scan footprints for binding motifs
 differential_activity: Differential footprint analyses for each line (HINT-ATAC produces p-values)
 differential_heatmap: Simultaneous differential footprint analyses for all lines (HINT-ATAC normalizes equaly)
 footprint_plots: Plot the results from the differential analyses
-
+footprint_model: Run QTL model on footprints
+footprint_perms: Runs permitation analyses
+footprint_qtl: Run all QTL analyses for footprints
 '''
-localrules: scan_motifs, differential_heatmap, footprint_plots
+localrules: scan_motifs, differential_heatmap, footprint_plots, footprint_qtl
 
 rule merge_bams:
     '''
@@ -187,7 +189,7 @@ rule differential_activity:
 rule differential_heatmap:
     '''
     Same as differential_activity, but considering all samples together.
-    Note: [total time: 80h 17m 10s]
+    Note: [total time: 85h 30m 26s]
     '''
     input:
         beds = ancient(all_bed),
@@ -235,7 +237,7 @@ rule footprint_plots:
         diffs=diffprints,
         heatmap=ancient(rules.differential_heatmap.output.diff)
     output:
-        stats=protected('results/12-BXD_footprints/plots/agreggated_diff{sub, (_sub1|_sub2)*}.svg'),
+        plot=protected('results/12-BXD_footprints/plots/agreggated_diff{sub, (_sub1|_sub2)*}.svg'),
     log:
         'logs/12-BXD_footprints/plots{sub, (_sub1|_sub2)*}.log'
     benchmark:
@@ -253,6 +255,130 @@ rule footprint_plots:
 
         echo "Ploting results for footprint analyses on <{wildcards.sub}>" > {log}
         Rscript workflow/scripts/12.1-Footprint_plot.R -f '{input.diffs}' -a {input.heatmap} -t '{wildcards.sub}' -o {params.dir} 2>> {log}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule footprint_model:
+    '''
+    QTL for footprints
+    '''
+    input:
+        check=ancient(lambda wildcards: [f'results/12-BXD_footprints/plots/agreggated_diff{sub}.svg'for sub in ['','_sub1','_sub2']]),   
+    output:
+        qtl=protected('results/12-BXD_footprints/model/footprints_QTL_model.RData'),
+        int=protected('results/12-BXD_footprints/model/footprintsFC_QTL_model.RData'),
+    log:
+        'logs/12-BXD_footprints/model.log'
+    benchmark:
+        'benchmarks/12-BXD_footprints/model.txt'
+    resources:
+        mem_mb = 20000,
+        time = '02:00:00'
+    threads: 40
+    params:
+        dir='results/12-BXD_footprints/model',
+        source=rules.get_info.params.dir,
+        counts='results/12-BXD_footprints/plots/footprints_counts_disp.RData'
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}
+
+        echo "Prepare <{params.counts}> for QTL analysis" > {log}
+        Rscript workflow/scripts/9.2_QTL_prepare.R -c '{params.counts}' -d {params.source} -o {params.dir} 2>> {log}
+        cp {params.source}/*map* {params.dir}
+
+        echo "Running model on footprints.json" >> {log}
+        Rscript workflow/scripts/9.3_QTL_run.R -j {params.dir}/footprints.json -o {params.dir} 2>> {log}
+        echo "Running model on footprintsFC.json" >> {log}
+        Rscript workflow/scripts/9.3_QTL_run.R -j {params.dir}/footprintsFC.json -o {params.dir} 2>> {log}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule footprint_perms:
+    '''
+    Permutation for footprints
+    '''
+    input:
+        qtl=ancient(rules.footprint_model.output.qtl),
+        int=ancient(rules.footprint_model.output.int),
+    output:
+        qtl=protected('results/12-BXD_footprints/perms/footprints_QTL_perm{i}.RData'),
+        inf=protected('results/12-BXD_footprints/perms/footprintsFC_QTL_perm{i}.RData'),
+    log:
+        'logs/12-BXD_footprints/QTL_footprints_perm_{i}.log'
+    benchmark:
+        'benchmarks/12-BXD_footprints/QTL_footprints_perm_{i}.txt'
+    resources:
+        mem_mb = 100000,
+        time = '4:00:00'
+    threads: 10
+    params:
+        dir='results/12-BXD_footprints/perms',
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}
+
+        echo "QTL permutations number {wildcards.i}" > {log}
+        echo "<{input.qtl}>" >> {log}
+        Rscript workflow/scripts/9.4_QTL_perms.R -q {input.qtl} -i {wildcards.i} -o {params.dir} 2>> {log}
+
+        echo "<{input.int}>" >> {log}
+        Rscript workflow/scripts/9.4_QTL_perms.R -q {input.int} -i {wildcards.i} -o {params.dir} 2>> {log}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule footprint_qtl:
+    '''
+    Permutation for footprints
+    '''
+    input:
+        qtl=ancient(rules.footprint_model.output.qtl),
+        int=ancient(rules.footprint_model.output.int),
+        perms_qtl=ancient(lambda wildcards: [f"results/12-BXD_footprints/perms/footprints_QTL_perm{i}.RData" for i in range(1, int(config['qtl_permutation_split'])+1)]),
+        perms_int=ancient(lambda wildcards: [f"results/12-BXD_footprints/perms/footprintsFC_QTL_perm{i}.RData" for i in range(1, int(config['qtl_permutation_split'])+1)]),
+    output:
+        qtls=protected('results/9-BXD_qtl/ttest/qtl_ttests_footprints.csv'),
+    log:
+        'logs/12-BXD_footprints/qtl.log'
+    benchmark:
+        'benchmarks/12-BXD_footprints/qtl.txt'
+    resources:
+        mem_mb = 200000,
+        time = '3:00:00'
+    threads: 10
+    params:
+        dir='results/12-BXD_footprints/qtl',
+        model=rules.footprint_model.params.dir,
+        tab=rules.qtl_aggregate.params.dir,
+        inv=rules.qtl_ttest.params.dir
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}
+
+        echo "Searching significant QTL peaks for <{input.qtl}>" > {log}
+        echo "Permutation files <{input.perms_qtl}>" >> {log}
+        Rscript workflow/scripts/9.5_QTL_sig.R -m {input.qtl} -p '{input.perms_qtl}' -o {params.dir} 2>> {log}
+
+        echo "Searching significant QTL peaks for <{input.int}>" >> {log}
+        echo "Permutation file <{input.perms_int}>" >> {log}
+        Rscript workflow/scripts/9.5_QTL_sig.R -m {input.int} -p '{input.perms_int}' -o {params.dir} 2>> {log}
+
+        echo "Aggregating QTL results into a single table" >> {log}
+        Rscript workflow/scripts/12.2_QTL_aggregate.R -t '{params.dir}/footprints_QTL_sigs.csv {params.dir}/footprintsFC_QTL_sigs.csv' -o {params.dir} 2>> {log}
+
+        echo "Classifying interaction QTL results from <{input.int}>" >> {log}
+        Rscript workflow/scripts/9.7_QTL_classify.R -q {params.model} -t results/12-BXD_footprints/qtl/QTL_table_filter_footprintsFC.csv -o {params.dir} 2>> {log}
+
+        echo "Adding QTL information to <{params.tab}>" >> {log}
+        cp {params.dir}/QTL_table* {params.tab}/
+        echo "Adding interaction information to <{params.inv}>" >> {log}
+        cp {params.dir}/qtl_ttest* {params.inv}/
 
         echo "Logs saved in <{log}>" >> {log}
         '''

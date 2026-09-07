@@ -28,7 +28,8 @@ include: 'rules/17-NRF_differential.smk'
 
 include: 'rules/18-Check.smk'
 
-
+include: 'rules/19-Tables.smk'
+include: 'rules/20-Figures.smk'
 
 # Defines agregation/output parameters for peak calling. 
 corrected_samples = [sample.replace('tmp','039') for sample in
@@ -39,15 +40,21 @@ sample_groups = list(set(['_'.join(sample.split('_')[1:]) for sample in correcte
 lines = list(set([line.split('_')[0] for line in sample_groups]))
 
 # Master rule used to launch workflow
-rule results:
+rule manuscript:
     '''
     Rule to automatically generate required outputs.
     On our server snakemake could hang for some jobs, so the outputs were generated step by step for convinience.
     '''
     input:
-        expand('results/18-Checkpoint/{exp}.check', exp = ['bxd', 'nrf']),
+        expand('manuscript/figures/Fig{fig}.svg',  fig = ['S1a']),
 
+        #expand('results/18-Checkpoint/{exp}.check', exp =  ['bxd','nrf']),
+        # Run above first. 
+        # Table S5 requires manually downloading KEA3 results which depend on the footprint analyses.
+        #expand('manuscript/tables/TableS{tab}.xlsx', 
+        #    tab = ['7-GRN', '8-RNAQC_summary', '9-Differential_Expression']),
 
-         
-
-       
+        #expand('manuscript/figures/Fig{fig}.svg', 
+        #    fig = ['1a', 'S1a', '2a', 'S2','3a','S3a'])
+        
+      

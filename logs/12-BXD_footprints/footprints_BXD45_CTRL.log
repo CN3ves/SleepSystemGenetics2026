@@ -1,4 +1,23 @@
-Calling footprint for results/12-ATAC_footprints/bams/BXD45_CTRL_sub2.bam
+Calling footprint for results/12-BXD_footprints/bams/BXD45_CTRL.bam
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL.bam.bai
 
-[total time: 0h 3m 14s]
-Logs saved in <logs/12-ATAC_footprints/footprints_BXD45_CTRL.log>
+[total time: 0h 5m 32s]
+Make bigwigs
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL.bam.bai
+
+[total time: 0h 0m 44s]
+Calling footprint for results/12-BXD_footprints/bams/BXD45_CTRL_sub1.bam
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL_sub1.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL_sub1.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL_sub1.bam.bai
+
+[total time: 0h 4m 18s]
+Calling footprint for results/12-BXD_footprints/bams/BXD45_CTRL_sub2.bam
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL_sub2.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL_sub2.bam.bai
+[W::hts_idx_load3] The index file is older than the data file: results/12-BXD_footprints/bams/BXD45_CTRL_sub2.bam.bai
+
+[total time: 0h 2m 31s]
+Logs saved in <logs/12-BXD_footprints/footprints_BXD45_CTRL.log>

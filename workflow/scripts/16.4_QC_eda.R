@@ -1,4 +1,4 @@
-# Script designed to filter counts from ATAC count files
+# Script designed to filter counts from RNA count files
 
 # Redirect all R logs to Snakemake log
 log <- file('logs/16-NRF_bam/eda_16.4.log', open = "wt")
@@ -84,7 +84,7 @@ rownames(counts) <- counts$ID
 counts <- counts[,-1]
 
 cat("Read-level EDA\n")
-#Numbers of unaligned and aligned reads(((((((())))))))
+#Numbers of unaligned and aligned reads
 cols <- as.factor(meta$Group)
 names(cols) <- cols
 levels(cols) <- rainbow(length(cols))

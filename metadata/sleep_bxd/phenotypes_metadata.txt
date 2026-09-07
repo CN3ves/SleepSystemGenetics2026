@@ -1,0 +1,389 @@
+filename.variablename	condition 	variable type	subtype 
+BXDw24bsl.out.h1	bsl	state	distribution
+BXDw24bsl.out.h2	bsl	state	distribution
+BXDw24bsl.out.h3	bsl	state	distribution
+BXDw24bsl.out.h4	bsl	state	distribution
+BXDw24bsl.out.h5	bsl	state	distribution
+BXDw24bsl.out.h6	bsl	state	distribution
+BXDw24bsl.out.h7	bsl	state	distribution
+BXDw24bsl.out.h8	bsl	state	distribution
+BXDw24bsl.out.h9	bsl	state	distribution
+BXDw24bsl.out.h10	bsl	state	distribution
+BXDw24bsl.out.h11	bsl	state	distribution
+BXDw24bsl.out.h12	bsl	state	distribution
+BXDw24bsl.out.h13	bsl	state	distribution
+BXDw24bsl.out.h14	bsl	state	distribution
+BXDw24bsl.out.h15	bsl	state	distribution
+BXDw24bsl.out.h16	bsl	state	distribution
+BXDn24bsl.out.h1	bsl	state	distribution
+BXDn24bsl.out.h2	bsl	state	distribution
+BXDn24bsl.out.h3	bsl	state	distribution
+BXDn24bsl.out.h4	bsl	state	distribution
+BXDn24bsl.out.h5	bsl	state	distribution
+BXDn24bsl.out.h6	bsl	state	distribution
+BXDn24bsl.out.h7	bsl	state	distribution
+BXDn24bsl.out.h8	bsl	state	distribution
+BXDn24bsl.out.h9	bsl	state	distribution
+BXDn24bsl.out.h10	bsl	state	distribution
+BXDn24bsl.out.h11	bsl	state	distribution
+BXDn24bsl.out.h12	bsl	state	distribution
+BXDn24bsl.out.h13	bsl	state	distribution
+BXDn24bsl.out.h14	bsl	state	distribution
+BXDn24bsl.out.h15	bsl	state	distribution
+BXDn24bsl.out.h16	bsl	state	distribution
+BXDr24bsl.out.h1	bsl	state	distribution
+BXDr24bsl.out.h2	bsl	state	distribution
+BXDr24bsl.out.h3	bsl	state	distribution
+BXDr24bsl.out.h4	bsl	state	distribution
+BXDr24bsl.out.h5	bsl	state	distribution
+BXDr24bsl.out.h6	bsl	state	distribution
+BXDr24bsl.out.h7	bsl	state	distribution
+BXDr24bsl.out.h8	bsl	state	distribution
+BXDr24bsl.out.h9	bsl	state	distribution
+BXDr24bsl.out.h10	bsl	state	distribution
+BXDr24bsl.out.h11	bsl	state	distribution
+BXDr24bsl.out.h12	bsl	state	distribution
+BXDr24bsl.out.h13	bsl	state	distribution
+BXDr24bsl.out.h14	bsl	state	distribution
+BXDr24bsl.out.h15	bsl	state	distribution
+BXDr24bsl.out.h16	bsl	state	distribution
+BXDdel20m.out.ref	bsl	EEG	power
+BXDdel20m.out.del	rec	EEG	power
+BXDdel20m.out.so	rec	state	distribution
+BXDvs1224bsl.wD.L	bsl	state	distribution
+BXDvs1224bsl.nL.D	bsl	state	distribution
+BXDvs1224bsl.rL.D	bsl	state	distribution
+BXDvs1224bsl.w24	bsl	state	amount
+BXDvs1224bsl.n24	bsl	state	amount
+BXDvs1224bsl.r24	bsl	state	amount
+BXDvs1224bsl.w12L	bsl	state	amount
+BXDvs1224bsl.n12L	bsl	state	amount
+BXDvs1224bsl.r12L	bsl	state	amount
+BXDvs1224bsl.w12D	bsl	state	amount
+BXDvs1224bsl.n12D	bsl	state	amount
+BXDvs1224bsl.r12D	bsl	state	amount
+actwak1224bsl.out.act24	bsl	activity	amount
+actwak1224bsl.out.relact24	bsl	activity	amount
+actwak1224bsl.out.act12L	bsl	activity	amount
+actwak1224bsl.out.relact12L	bsl	activity	amount
+actwak1224bsl.out.act12D	bsl	activity	amount
+actwak1224bsl.out.relact12D	bsl	activity	amount
+BXDvsREC.out.w2	rec	state	amount
+BXDvsREC.out.w3	rec	state	amount
+BXDvsREC.out.w4	rec	state	amount
+BXDvsREC.out.w5	rec	state	amount
+BXDvsREC.out.w3.4	rec	state	amount
+BXDvsREC.out.w2.3.4	rec	state	amount
+BXDvsREC.out.w2.3.4.5	rec	state	amount
+BXDvsREC.out.n2	rec	state	amount
+BXDvsREC.out.n3	rec	state	amount
+BXDvsREC.out.n4	rec	state	amount
+BXDvsREC.out.n5	rec	state	amount
+BXDvsREC.out.n3.4	rec	state	amount
+BXDvsREC.out.n2.3.4	rec	state	amount
+BXDvsREC.out.n2.3.4.5	rec	state	amount
+BXDvsREC.out.r2	rec	state	amount
+BXDvsREC.out.r3	rec	state	amount
+BXDvsREC.out.r4	rec	state	amount
+BXDvsREC.out.r5	rec	state	amount
+BXDvsREC.out.r3.4	rec	state	amount
+BXDvsREC.out.r2.3.4	rec	state	amount
+BXDvsREC.out.r2.3.4.5	rec	state	amount
+BXDvsREC.out.w1	SD	state	amount
+BXDvsREC.out.n1	SD	state	amount
+BXDvsREC.out.r1	SD	state	amount
+BXDvsRECdif.out.w2d	rec vs bsl	state	amount
+BXDvsRECdif.out.w3d	rec vs bsl	state	amount
+BXDvsRECdif.out.w4d	rec vs bsl	state	amount
+BXDvsRECdif.out.w5d	rec vs bsl	state	amount
+BXDvsRECdif.out.w3.4d	rec vs bsl	state	amount
+BXDvsRECdif.out.w2.3.4d	rec vs bsl	state	amount
+BXDvsRECdif.out.w2.3.4.5d	rec vs bsl	state	amount
+BXDvsRECdif.out.n2d	rec vs bsl	state	amount
+BXDvsRECdif.out.n3d	rec vs bsl	state	amount
+BXDvsRECdif.out.n4d	rec vs bsl	state	amount
+BXDvsRECdif.out.n5d	rec vs bsl	state	amount
+BXDvsRECdif.out.n3.4d	rec vs bsl	state	amount
+BXDvsRECdif.out.n2.3.4d	rec vs bsl	state	amount
+BXDvsRECdif.out.n2.3.4.5d	rec vs bsl	state	amount
+BXDvsRECdif.out.r2d	rec vs bsl	state	amount
+BXDvsRECdif.out.r3d	rec vs bsl	state	amount
+BXDvsRECdif.out.r4d	rec vs bsl	state	amount
+BXDvsRECdif.out.r5d	rec vs bsl	state	amount
+BXDvsRECdif.out.r3.4d	rec vs bsl	state	amount
+BXDvsRECdif.out.r2.3.4d	rec vs bsl	state	amount
+BXDvsRECdif.out.r2.3.4.5d	rec vs bsl	state	amount
+BXDvsRECgain.out.n6hloss	rec vs bsl	state	amount
+BXDvsRECgain.out.n24hgain	rec vs bsl	state	amount
+BXDvsRECgain.out.nG.L	rec vs bsl	state	amount
+BXDvsRECgain.out.nG.L.1	rec vs bsl	state	amount
+BXDvsRECgain.out.r6hloss	rec vs bsl	state	amount
+BXDvsRECgain.out.r24hgain	rec vs bsl	state	amount
+BXDvsRECgain.out.rG.L	rec vs bsl	state	amount
+BXDvsRECgain.out.rG.L.1	rec vs bsl	state	amount
+LDDLactwbsl.out.wakL1	bsl	state	distribution
+LDDLactwbsl.out.wakL2	bsl	state	distribution
+LDDLactwbsl.out.wakD1	bsl	state	distribution
+LDDLactwbsl.out.wakD2	bsl	state	distribution
+LDDLactwbsl.out.wakLD	bsl	state	distribution
+LDDLactwbsl.out.wakDL	bsl	state	distribution
+LDDLactwbsl.out.actL1	bsl	activity	distribution
+LDDLactwbsl.out.actL2	bsl	activity	distribution
+LDDLactwbsl.out.actD1	bsl	activity	distribution
+LDDLactwbsl.out.actD2	bsl	activity	distribution
+LDDLactwbsl.out.actLD	bsl	activity	distribution
+LDDLactwbsl.out.actDL	bsl	activity	distribution
+BXDsleepepisodesSD.out.num_sleep	SD	state	architecture
+BXDsleepepisodesSD.out.dur_sleep	SD	state	architecture
+BXDseizures.out.num_seizur	bsl	EEG	paroxismal
+BXDseizures.out.dur_seizur	bsl	EEG	paroxismal
+BXDspindles.out.num_Wspin	bsl	EEG	paroxismal
+BXDspindles.out.dur_Wspin	bsl	EEG	paroxismal
+BXDspindles.out.num_Nspin	bsl	EEG	paroxismal
+BXDspindles.out.dur_Nspin	bsl	EEG	paroxismal
+BXDspindles.out.num_Rspin	bsl	EEG	paroxismal
+BXDspindles.out.dur_Rspin	bsl	EEG	paroxismal
+BXD_NR-ratio.out.ratLb	bsl	state	amount
+BXD_NR-ratio.out.ratDb	bsl	state	amount
+BXD_NR-ratio.out.rat24b	bsl	state	amount
+BXD_NR-ratio.out.ratLr	rec	state	amount
+BXD_NR-ratio.out.ratDr	rec	state	amount
+BXD_NR-ratio.out.rat18r	rec	state	amount
+BXD_NR-ratio.out.ratLbr	rec vs bsl	state	amount
+BXD_NR-ratio.out.ratDbr	rec vs bsl	state	amount
+BXD_NR-ratio.out.rat24br	rec vs bsl	state	amount
+BXD_TDWh.out.TDW_Lbh	bsl	state	amount
+BXD_TDWh.out.TDW_Lb.	bsl	state	amount
+BXD_TDWh.out.TDW_Dbh	bsl	state	amount
+BXD_TDWh.out.TDW_Db.	bsl	state	amount
+BXD_TDWh.out.TDW_SDh	SD	state	amount
+BXD_TDWh.out.TDW_SD.	SD	state	amount
+BXD_TDWh.out.TDW_Lrh	rec	state	amount
+BXD_TDWh.out.TDW_Lr.	rec	state	amount
+BXD_TDWh.out.TDW_Drh	rec	state	amount
+BXD_TDWh.out.TDW_Dr.	rec	state	amount
+BXD_TDWh.out.TDW_Drb.	rec vs bsl	state	amount
+BXD_PS_tpf.out.TPF_Lb	bsl	EEG	frequency
+BXD_PS_tpf.out.TPF_Lr1	rec	EEG	frequency
+BXD_PS_tpf.out.TPF_Lr2	rec	EEG	frequency
+BXD_PS_tpf.out.TPF_L1d	rec vs bsl	EEG	frequency
+BXD_PS_tpf.out.TPF_L2d	rec vs bsl	EEG	frequency
+BXD_TDW_tpf.out.TPF_Db	bsl	EEG	frequency
+BXD_TDW_tpf.out.TPF_Dr1	rec	EEG	frequency
+BXD_TDW_tpf.out.TPF_Dr2	rec	EEG	frequency
+BXD_TDW_tpf.out.TPF_r1d	rec vs bsl	EEG	frequency
+BXD_TDW_tpf.out.TPF_r2d	rec vs bsl	EEG	frequency
+BXD_TDW_tpf.out.TPF_SD	SD	EEG	frequency
+BXD_POG.out.Min_Ph_w	bsl	state	distribution
+BXD_POG.out.Max_Ph_w	bsl	state	distribution
+BXD_POG.out.Max_Amp_w	bsl	state	distribution
+BXD_POG.out.Min_Ph_n	bsl	state	distribution
+BXD_POG.out.Max_Ph_n	bsl	state	distribution
+BXD_POG.out.Max_Amp_n	bsl	state	distribution
+BXD_POG.out.Min_Ph_r	bsl	state	distribution
+BXD_POG.out.Max_Ph_r	bsl	state	distribution
+BXD_POG.out.Max_Amp_r	bsl	state	distribution
+BXD_INOUT.out.w_w	bsl	state	architecture
+BXD_INOUT.out.w_n	bsl	state	architecture
+BXD_INOUT.out.w_r	bsl	state	architecture
+BXD_INOUT.out.n_w	bsl	state	architecture
+BXD_INOUT.out.n_n	bsl	state	architecture
+BXD_INOUT.out.n_r	bsl	state	architecture
+BXD_INOUT.out.r_w	bsl	state	architecture
+BXD_INOUT.out.r_n	bsl	state	architecture
+BXD_INOUT.out.r_r	bsl	state	architecture
+BXD_num_ep_bsl.out.w	bsl	state	architecture
+BXD_num_ep_bsl.out.w.h	bsl	state	architecture
+BXD_num_ep_bsl.out.w_dur	bsl	state	architecture
+BXD_num_ep_bsl.out.n	bsl	state	architecture
+BXD_num_ep_bsl.out.n.h	bsl	state	architecture
+BXD_num_ep_bsl.out.n_dur	bsl	state	architecture
+BXD_num_ep_bsl.out.r	bsl	state	architecture
+BXD_num_ep_bsl.out.r.h	bsl	state	architecture
+BXD_num_ep_bsl.out.r_dur	bsl	state	architecture
+BXD_nBA.out.nBA	bsl	state	architecture
+BXD_nBA.out.nBS	bsl	state	architecture
+BXD_nBA.out.nLS	bsl	state	architecture
+BXD_nBAbslrec.out.nBArec	rec	state	architecture
+BXD_nBAbslrec.out.nBSrec	rec	state	architecture
+BXD_nBAbslrec.out.nBAbsl	bsl	state	architecture
+BXD_nBAbslrec.out.nBAref	bsl	state	architecture
+BXD_nBAbslrec.out.nBAbd	bsl	state	architecture
+BXD_nBAbslrec.out.nBSbsl	bsl	state	architecture
+BXD_nBAbslrec.out.nBSref	bsl	state	architecture
+BXD_nBAbslrec.out.nBSbd	bsl	state	architecture
+BXD_nBAbslrec.out.nBArd	rec vs bsl	state	architecture
+BXD_nBAbslrec.out.nBSrd	rec vs bsl	state	architecture
+BXDactrec.out.actR1D	rec	activity	amount
+BXDactrec.out.actR1Dr	rec	activity	amount
+BXDactrec.out.actR2L	rec	activity	amount
+BXDactrec.out.actR2Lr	rec	activity	amount
+BXDactrec.out.actR2D	rec	activity	amount
+BXDactrec.out.actR2Dr	rec	activity	amount
+BXDactrec.out.actR1D.b	rec vs bsl	activity	amount
+BXDactrec.out.actR1Dr.b	rec vs bsl	activity	amount
+BXDactrec.out.actR2L.b	rec vs bsl	activity	amount
+BXDactrec.out.actR2Lr.b	rec vs bsl	activity	amount
+BXDactrec.out.actR2D.b	rec vs bsl	activity	amount
+BXDactrec.out.actR2Dr.b	rec vs bsl	activity	amount
+BXD_longW.out.longW.	bsl	state	architecture
+BXD_longW.out.longW	bsl	state	architecture
+BXD_EEGref.out.refall	bsl	EEG	power
+BXD_EEGref.out.refw	bsl	EEG	power
+BXD_EEGref.out.refn	bsl	EEG	power
+BXD_EEGref.out.refr	bsl	EEG	power
+BXD_EEGref.out.n.w	bsl	EEG	power
+BXD_EEGref.out.r.w	bsl	EEG	power
+BXD_EEGref.out.n.r	bsl	EEG	power
+BXD_TPF.P.out.powTHE	bsl	EEG	power
+BXD_TPF.P.out.powDIP	bsl	EEG	power
+BXD_TPF.P.out.relTHEDIP	bsl	EEG	power
+BXD_TPF.P.out.powFD_ps	bsl	EEG	power
+BXD_TPF.P.out.relFD_ps	bsl	EEG	power
+BXD_TPF.P.out.relTP_FD	bsl	EEG	power
+BXD_TPF.P.out.powFD_sws	bsl	EEG	power
+BXD_TPF.P.out.freqTHE	bsl	EEG	frequency
+BXD_TPF.P.out.freqDIP	bsl	EEG	frequency
+BXD_TPF.P.out.present1	bsl	EEG	frequency
+BXD_TPF.P.out.freqFD_ps	bsl	EEG	frequency
+BXD_TPF.P.out.present2	bsl	EEG	frequency
+BXD_TPF.P.out.freqFD_sws	bsl	EEG	frequency
+BXD_NREMS_EEG_bands.out.delta	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.delta.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.del_slow.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.del_fast.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.fast.slow	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.theta	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.theta.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.sigma	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.sigma.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.beta	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.beta.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.gamma1	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.gamma1.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.gamma2	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.gamma2.	bsl	EEG	power
+BXD_NREMS_EEG_bands.out.del50.Hz	bsl	EEG	frequency
+BXD_Wak_EEG_bands.out.delta	bsl	EEG	power
+BXD_Wak_EEG_bands.out.delta.	bsl	EEG	power
+BXD_Wak_EEG_bands.out.theta	bsl	EEG	power
+BXD_Wak_EEG_bands.out.theta.	bsl	EEG	power
+BXD_Wak_EEG_bands.out.sigma	bsl	EEG	power
+BXD_Wak_EEG_bands.out.sigma.	bsl	EEG	power
+BXD_Wak_EEG_bands.out.beta	bsl	EEG	power
+BXD_Wak_EEG_bands.out.beta.	bsl	EEG	power
+BXD_Wak_EEG_bands.out.gamma1	bsl	EEG	power
+BXD_Wak_EEG_bands.out.gamma1.	bsl	EEG	power
+BXD_Wak_EEG_bands.out.gamma2	bsl	EEG	power
+BXD_Wak_EEG_bands.out.gamma2.	bsl	EEG	power
+BXD_REM_EEG_bands.out.delta	bsl	EEG	power
+BXD_REM_EEG_bands.out.delta.	bsl	EEG	power
+BXD_REM_EEG_bands.out.theta	bsl	EEG	power
+BXD_REM_EEG_bands.out.theta.	bsl	EEG	power
+BXD_REM_EEG_bands.out.sigma	bsl	EEG	power
+BXD_REM_EEG_bands.out.sigma.	bsl	EEG	power
+BXD_REM_EEG_bands.out.beta	bsl	EEG	power
+BXD_REM_EEG_bands.out.beta.	bsl	EEG	power
+BXD_REM_EEG_bands.out.gamma1	bsl	EEG	power
+BXD_REM_EEG_bands.out.gamma1.	bsl	EEG	power
+BXD_REM_EEG_bands.out.gamma2	bsl	EEG	power
+BXD_REM_EEG_bands.out.gamma2.	bsl	EEG	power
+BXD_WNR_spec_bands.out.delW	bsl	EEG	power
+BXD_WNR_spec_bands.out.theW	bsl	EEG	power
+BXD_WNR_spec_bands.out.sigW	bsl	EEG	power
+BXD_WNR_spec_bands.out.betW	bsl	EEG	power
+BXD_WNR_spec_bands.out.gam1W	bsl	EEG	power
+BXD_WNR_spec_bands.out.gam2W	bsl	EEG	power
+BXD_WNR_spec_bands.out.delN	bsl	EEG	power
+BXD_WNR_spec_bands.out.theN	bsl	EEG	power
+BXD_WNR_spec_bands.out.sigN	bsl	EEG	power
+BXD_WNR_spec_bands.out.betN	bsl	EEG	power
+BXD_WNR_spec_bands.out.gam1N	bsl	EEG	power
+BXD_WNR_spec_bands.out.gam2N	bsl	EEG	power
+BXD_WNR_spec_bands.out.delR	bsl	EEG	power
+BXD_WNR_spec_bands.out.theR	bsl	EEG	power
+BXD_WNR_spec_bands.out.sigR	bsl	EEG	power
+BXD_WNR_spec_bands.out.betR	bsl	EEG	power
+BXD_WNR_spec_bands.out.gam1R	bsl	EEG	power
+BXD_WNR_spec_bands.out.gam2R	bsl	EEG	power
+BXD_NREMSspecSD.out.del_b	bsl	EEG	power
+BXD_NREMSspecSD.out.del1_b	bsl	EEG	power
+BXD_NREMSspecSD.out.del2_b	bsl	EEG	power
+BXD_NREMSspecSD.out.the_b	bsl	EEG	power
+BXD_NREMSspecSD.out.sig_b	bsl	EEG	power
+BXD_NREMSspecSD.out.bet_b	bsl	EEG	power
+BXD_NREMSspecSD.out.gam1_b	bsl	EEG	power
+BXD_NREMSspecSD.out.gam2_b	bsl	EEG	power
+BXD_NREMSspecSD.out.del_r	rec	EEG	power
+BXD_NREMSspecSD.out.del1_r	rec	EEG	power
+BXD_NREMSspecSD.out.del2_r	rec	EEG	power
+BXD_NREMSspecSD.out.the_r	rec	EEG	power
+BXD_NREMSspecSD.out.sig_r	rec	EEG	power
+BXD_NREMSspecSD.out.bet_r	rec	EEG	power
+BXD_NREMSspecSD.out.gam1_r	rec	EEG	power
+BXD_NREMSspecSD.out.gam2_r	rec	EEG	power
+BXD_NREMSspecSD.out.del_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.del1_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.del2_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.the_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.sig_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.bet_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.gam1_rat	rec vs bsl	EEG	power
+BXD_NREMSspecSD.out.gam2_rat	rec vs bsl	EEG	power
+BXDdeldyn2.out.del_1bsl	bsl	EEG	power
+BXDdeldyn2.out.del_13bsl	bsl	EEG	power
+BXDdeldyn2.out.del13v12b	bsl	EEG	power
+BXDdeldyn2.out.del13vs18b	bsl	EEG	power
+BXDdeldyn2.out.del_1rec	rec	EEG	power
+BXD_NRsigma1.out.maxS	bsl	EEG	power
+BXD_NRsigma1.out.srf	bsl	EEG	power
+BXD_NRsigma1.out.maxTr	bsl	EEG	power
+BXD_NRsigma1.out.p1r	bsl	EEG	power
+BXD_NRsigma1.out.p2r	bsl	EEG	power
+BXD_NRsigma1.out.dif	bsl	EEG	power
+BXD_NRsigma1.out.rem0	bsl	EEG	power
+BXDspindles.out.Nspin	bsl	state	amount
+BXDvsREC2hN.out.n4d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n5d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n6d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n7d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n8d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n9d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n10d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n11d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n12d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n13d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n14d	rec vs bsl	state	amount
+BXDvsREC2hN.out.n15d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w4d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w5d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w6d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w7d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w8d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w9d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w10d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w11d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w12d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w13d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w14d	rec vs bsl	state	amount
+BXDvsREC2hW.out.w15d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r4d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r5d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r6d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r7d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r8d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r9d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r10d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r11d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r12d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r13d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r14d	rec vs bsl	state	amount
+BXDvsREC2hR.out.r15d	rec vs bsl	state	amount
+BXDvsREC3hN.out.n3d	rec vs bsl	state	amount
+BXDvsREC3hN.out.n4d	rec vs bsl	state	amount	
+BXDvsREC3hN.out.n5d	rec vs bsl	state	amount	
+BXDvsREC3hN.out.n6d	rec vs bsl	state	amount	
+BXDvsREC3hN.out.n7d	rec vs bsl	state	amount
+BXDvsREC3hN.out.n8d	rec vs bsl	state	amount
+BXDvsREC3hN.out.n9d	rec vs bsl	state	amount
+BXDvsREC3hN.out.n10d	rec vs bsl	state	amount

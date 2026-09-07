@@ -1,20 +1,20 @@
 
 SNAKEMAKE
 =========
-  Date: 2026-08-22 00:33:40
-  Workflow ID: 83535f1a-d6d2-4adc-8826-37cbbeb08af9
+  Date: 2026-08-30 12:13:25
+  Workflow ID: e82ab608-857e-4143-be03-7faf233f474c
   Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
-  Host: dna029
+  Host: dna039
   User: csousane
   Snakemake version: 9.23.1
   Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
-  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs differential_activity:group=BXD85,sub=_sub1 --allowed-rules differential_activity --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.f5leml67 results/12-ATAC_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed results/12-ATAC_footprints/motifs/BXD85_SD_sub1_mpbs.bed results/12-ATAC_footprints/bams/BXD85_CTRL_sub1.bam results/12-ATAC_footprints/bams/BXD85_SD_sub1.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input mtime code params --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment-cache source-cache storage-local-copies software-deployment persistence sources input-output --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpo66_rofl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs differential_activity:group=BXD85,sub=_sub1 --allowed-rules differential_activity --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.3x0sevks results/12-BXD_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed results/12-BXD_footprints/motifs/BXD85_SD_sub1_mpbs.bed results/12-BXD_footprints/bams/BXD85_CTRL_sub1.bam results/12-BXD_footprints/bams/BXD85_SD_sub1.bam --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code params mtime input --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage storage-local-copies software-deployment-cache persistence source-cache input-output software-deployment sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp6jle_vmq --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
   Snakefile: /scratch/csousane/atac/workflow/Snakefile
   Base directory: /scratch/csousane/atac/workflow
   Run directory: /scratch/csousane/atac
   Working directory: /scratch/csousane/atac
   Config file(s): ['workflow/config/config.yaml']
-  Config MD5: e331b71dca27571e853b97081085344d
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
 
 Building DAG of jobs...
 Using shell: /usr/bin/bash
@@ -23,36 +23,36 @@ Rules claiming more threads will be scaled down.
 Select jobs to execute...
 Execute 1 jobs...
 
-[Sat Aug 22 00:33:40 2026]
+[Sun Aug 30 12:13:25 2026]
 localrule differential_activity:
-    input: results/12-ATAC_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed, results/12-ATAC_footprints/motifs/BXD85_SD_sub1_mpbs.bed, results/12-ATAC_footprints/bams/BXD85_CTRL_sub1.bam, results/12-ATAC_footprints/bams/BXD85_SD_sub1.bam
-    output: results/12-ATAC_footprints/diff/BXD85_sub1/differential_factor.txt
-    log: logs/12-ATAC_footprints/diff_BXD85_sub1.log
+    input: results/12-BXD_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed, results/12-BXD_footprints/motifs/BXD85_SD_sub1_mpbs.bed, results/12-BXD_footprints/bams/BXD85_CTRL_sub1.bam, results/12-BXD_footprints/bams/BXD85_SD_sub1.bam
+    output: results/12-BXD_footprints/diff/BXD85_sub1/differential_statistics.txt
+    log: logs/12-BXD_footprints/diff_BXD85_sub1.log
     jobid: 0
-    benchmark: benchmarks/12-ATAC_footprints/diff_BXD85_sub1.txt
+    benchmark: benchmarks/12-BXD_footprints/diff_BXD85_sub1.txt
     reason: Forced execution
     wildcards: group=BXD85, sub=_sub1
     threads: 20
-    resources: tmpdir=/tmp/63958461, mem_mb=15000, mem=15 GB, mem_mib=14306, disk_mb=14502, disk=14.5 GB, disk_mib=13831, time=0:25:00
+    resources: tmpdir=/tmp/64409912, mem_mb=15000, mem=15 GB, mem_mib=14306, disk_mb=14502, disk=14.5 GB, disk_mib=13831, time=0:25:00
 Shell command: 
-        mkdir -p results/12-ATAC_footprints/diff
+        mkdir -p results/12-BXD_footprints/diff
         
-        echo "Estimate differential activity for BXD85 _sub1" > logs/12-ATAC_footprints/diff_BXD85_sub1.log
-        cond=$(echo results/12-ATAC_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed results/12-ATAC_footprints/motifs/BXD85_SD_sub1_mpbs.bed | sort | sed 's/results\/12-ATAC_footprints\/motifs\///g' | sed 's/_mpbs.bed//g' | sed 's/_sub[12]//g' | sed  's/.*_\(.*\) .*_\(.*\)/\1,\2/')
-        mpbs=$(echo results/12-ATAC_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed results/12-ATAC_footprints/motifs/BXD85_SD_sub1_mpbs.bed | sort | tr ' ' ',' | sed 's/,$//g')
-        bams=$(echo results/12-ATAC_footprints/bams/BXD85_CTRL_sub1.bam results/12-ATAC_footprints/bams/BXD85_SD_sub1.bam | sort | tr ' ' ',' | sed 's/,$//g')
+        echo "Estimate differential activity for BXD85 _sub1" > logs/12-BXD_footprints/diff_BXD85_sub1.log
+        cond=$(echo results/12-BXD_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed results/12-BXD_footprints/motifs/BXD85_SD_sub1_mpbs.bed | sort | sed 's/results\/12-BXD_footprints\/motifs\///g' | sed 's/_mpbs.bed//g' | sed 's/_sub[12]//g' | sed  's/.*_\(.*\) .*_\(.*\)/\1,\2/')
+        mpbs=$(echo results/12-BXD_footprints/motifs/BXD85_CTRL_sub1_mpbs.bed results/12-BXD_footprints/motifs/BXD85_SD_sub1_mpbs.bed | sort | tr ' ' ',' | sed 's/,$//g')
+        bams=$(echo results/12-BXD_footprints/bams/BXD85_CTRL_sub1.bam results/12-BXD_footprints/bams/BXD85_SD_sub1.bam | sort | tr ' ' ',' | sed 's/,$//g')
 
-        echo "BED files: $mpbs" >> logs/12-ATAC_footprints/diff_BXD85_sub1.log
-        echo "BAM files: $bams" >> logs/12-ATAC_footprints/diff_BXD85_sub1.log
-        echo "groups: $cond" >> logs/12-ATAC_footprints/diff_BXD85_sub1.log
+        echo "BED files: $mpbs" >> logs/12-BXD_footprints/diff_BXD85_sub1.log
+        echo "BAM files: $bams" >> logs/12-BXD_footprints/diff_BXD85_sub1.log
+        echo "groups: $cond" >> logs/12-BXD_footprints/diff_BXD85_sub1.log
 
-        rgt-hint differential --organism=mm10 --bc --nc 20 --mpbs-files=$mpbs --reads-files=$bams --conditions=$cond --output-location=results/12-ATAC_footprints/diff/BXD85_sub1 &>> logs/12-ATAC_footprints/diff_BXD85_sub1.log
+        rgt-hint differential --organism=mm10 --bc --nc 20 --mpbs-files=$mpbs --reads-files=$bams --conditions=$cond --output-location=results/12-BXD_footprints/diff/BXD85_sub1 &>> logs/12-BXD_footprints/diff_BXD85_sub1.log
 
-        echo "Logs saved in <logs/12-ATAC_footprints/diff_BXD85_sub1.log>" >> logs/12-ATAC_footprints/diff_BXD85_sub1.log
+        echo "Logs saved in <logs/12-BXD_footprints/diff_BXD85_sub1.log>" >> logs/12-BXD_footprints/diff_BXD85_sub1.log
         
 Activating conda environment: rgt_env
-Write-protecting output file results/12-ATAC_footprints/diff/BXD85_sub1/differential_factor.txt.
-[Sat Aug 22 00:39:55 2026]
+Write-protecting output file results/12-BXD_footprints/diff/BXD85_sub1/differential_statistics.txt.
+[Sun Aug 30 12:19:39 2026]
 Finished jobid: 0 (Rule: differential_activity)
 1 of 1 steps (100%) done
 Storing output in storage.

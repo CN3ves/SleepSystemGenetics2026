@@ -1,0 +1,39 @@
+Reading  results/12-BXD_footprints/model/footprints_QTL_model.RData 
+[1] "Running permutations on footprints"
+[1] "Using index 10  - seed = 20"
+[1] "1000 permutations of 1500: 66.67 %"
+[1] "Run first half of features: 1 - 373 out of 746"
+[1] "Run second half of features: 373 - 746 out of 746"
+[1] "Merge both halves: 100 permutations of 746 features"
+[1] "Saving results"
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] optparse_1.8.2 qtl2_0.46     
+
+loaded via a namespace (and not attached):
+ [1] fastmap_1.2.0       bit_4.6.0           cachem_1.1.0       
+ [4] blob_1.3.0          parallel_4.5.2      memoise_2.0.1      
+ [7] bit64_4.8.4         cli_3.6.6           RSQLite_3.53.3     
+[10] vctrs_0.7.3         DBI_1.3.0           data.table_1.18.6.1
+[13] compiler_4.5.2      tools_4.5.2         Rcpp_1.1.2         
+[16] otel_0.2.0          rlang_1.3.0        

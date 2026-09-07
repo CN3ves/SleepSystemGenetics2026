@@ -47,10 +47,11 @@ rule correlation_qtl:
     Calculate Pearson correlation betweeen chromatin accessibility and transcriptssharing interaction QTL peaks 
     '''
     input:
-        rna=ancient(lambda wildcards: f"{rules.differential_analysis.params.dir}/rna_counts_disp.RData"),
+        rna=ancient("results/8-BXD_differential/DA/rna_counts_disp.RData"),
         rna_qtl=ancient('results/9-BXD_qtl/ttest/qtl_ttests_rna.csv'),
-        atac=ancient(lambda wildcards: f"{rules.differential_analysis.params.dir}/atac_counts_disp.RData"),
+        atac=ancient("results/8-BXD_differential/DA/atac_counts_disp.RData"),
         atac_qtl=ancient('results/9-BXD_qtl/ttest/qtl_ttests_atac.csv'),
+        footprint_qtl=ancient(rules.footprint_qtl.output.qtls),
         regions=rules.make_features.output.gtf
     output:
         cors=protected("results/13-BXD_integrate/qtl/gene_region_cors_qtl.csv")
@@ -80,7 +81,7 @@ rule correlation_plots:
     Plot overlaps for ATAC and RNA-seq QTL and differential results.
     '''
     input:
-        rna_diff=ancient(lambda wildcards: f"{rules.differential_analysis.params.dir}/rna_peaks_treament.csv"),
+        rna_diff=ancient("results/8-BXD_differential/DA/rna_peaks_treament.csv"),
         rna_qtl=ancient(rules.qtl_aggregate.output.rna),
         rnaFC_qtl=ancient(rules.qtl_aggregate.output.rnaFC),
         atac_annot=ancient('results/10-BXD_annotation/encode/cCRE_annotated.RData'),
@@ -112,7 +113,6 @@ rule correlation_plots:
         echo "Logs saved in <{log}>" >> {log}
         '''
  
-
 rule granie:
     '''
     GRaNIE: Gene Regulatory Network Inference including Enhancers

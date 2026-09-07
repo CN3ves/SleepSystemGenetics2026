@@ -1,6 +1,6 @@
 Estimate differential activity for BXD81 _sub2
-BED files: results/12-ATAC_footprints/motifs/BXD81_CTRL_sub2_mpbs.bed,results/12-ATAC_footprints/motifs/BXD81_SD_sub2_mpbs.bed
-BAM files: results/12-ATAC_footprints/bams/BXD81_CTRL_sub2.bam,results/12-ATAC_footprints/bams/BXD81_SD_sub2.bam
+BED files: results/12-BXD_footprints/motifs/BXD81_CTRL_sub2_mpbs.bed,results/12-BXD_footprints/motifs/BXD81_SD_sub2_mpbs.bed
+BAM files: results/12-BXD_footprints/bams/BXD81_CTRL_sub2.bam,results/12-BXD_footprints/bams/BXD81_SD_sub2.bam
 groups: CTRL,SD
  48 cpus are detected and 20 of them will be used...
 
@@ -15,5 +15,5 @@ signal generation is done!
 generating line plot for each motif...
 
 
-[total time: 0h 7m 6s]
-Logs saved in <logs/12-ATAC_footprints/diff_BXD81_sub2.log>
+[total time: 0h 5m 52s]
+Logs saved in <logs/12-BXD_footprints/diff_BXD81_sub2.log>

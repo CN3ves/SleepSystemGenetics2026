@@ -52,7 +52,7 @@ counts <- readRDS(opt$counts)
 
 # Make phenotype
 metadata <- counts$sample
-if(exp=='sleep') {
+if(exp %in% c('sleep','footprints')) {
   counts <- counts$counts
 } else {
   counts <- log(cpm(counts))
@@ -62,6 +62,9 @@ colnames(counts) <- metadata[colnames(counts),"group"]
 colnames(counts) <- gsub("BXD0*","BXD", colnames(counts)) # match strain names
 colnames(counts) <-  gsub("B6([1-2])", "C57\\1", colnames(counts))
 colnames(counts) <-  gsub("DB([1-2])", "DBA\\1", colnames(counts))
+colnames(counts) <-  gsub("^48a", "BXD48a", colnames(counts))
+colnames(counts) <-  gsub("^65a", "BXD65a", colnames(counts))
+colnames(counts) <-  gsub("^73b", "BXD73b", colnames(counts))
 colnames(counts) <-  gsub("BXD96", "BXD48a", colnames(counts))
 colnames(counts) <-  gsub("BXD97", "BXD65a", colnames(counts))
 colnames(counts) <-  gsub("BXD103", "BXD73b", colnames(counts))

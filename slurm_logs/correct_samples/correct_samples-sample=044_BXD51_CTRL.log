@@ -1,20 +1,20 @@
 
 SNAKEMAKE
 =========
-  Date: 2026-07-26 12:40:33
-  Workflow ID: c13d00fa-4ebf-463d-8e9c-c40f4deeffca
-  Platform: Linux-5.14.0-427.37.1.el9_4.x86_64-x86_64-with-glibc2.34
-  Host: dna002
+  Date: 2026-08-30 00:18:25
+  Workflow ID: b3bfb4fd-80fd-4ea5-b1a6-d1828752444a
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna067
   User: csousane
   Snakemake version: 9.23.1
   Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
-  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs correct_samples:sample=044_BXD51_CTRL --allowed-rules correct_samples --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.4wxr8x18 results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam results/4-ATAC_genotype/check/metadata_corrected.csv results/3-ATAC_bam/alignQC/QCbam_align.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env params code input mtime --conda-frontend conda --shared-fs-usage source-cache sources software-deployment storage-local-copies input-output persistence software-deployment-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp22q6gm4h --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs correct_samples:sample=044_BXD51_CTRL --allowed-rules correct_samples --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.cc5xshdr results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam results/4-BXD_genotype/check/metadata_corrected.csv results/3-BXD_bam/alignQC/QCbam_align.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code mtime params input --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment input-output sources software-deployment-cache source-cache persistence storage-local-copies --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpvjy4stbj --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
   Snakefile: /scratch/csousane/atac/workflow/Snakefile
   Base directory: /scratch/csousane/atac/workflow
   Run directory: /scratch/csousane/atac
   Working directory: /scratch/csousane/atac
   Config file(s): ['workflow/config/config.yaml']
-  Config MD5: 86861b6bfa456d544911c404de6a29dd
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
 
 Building DAG of jobs...
 Using shell: /usr/bin/bash
@@ -23,57 +23,57 @@ Rules claiming more threads will be scaled down.
 Select jobs to execute...
 Execute 1 jobs...
 
-[Sun Jul 26 12:40:35 2026]
+[Sun Aug 30 00:18:25 2026]
 localrule correct_samples:
-    input: results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam, results/4-ATAC_genotype/check/metadata_corrected.csv, results/3-ATAC_bam/alignQC/QCbam_align.csv
-    output: results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam, results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam, results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam, results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam, results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam, results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam
-    log: logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
+    input: results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam, results/4-BXD_genotype/check/metadata_corrected.csv, results/3-BXD_bam/alignQC/QCbam_align.csv
+    output: results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam, results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam, results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam, results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam, results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam, results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam
+    log: logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
     jobid: 0
-    benchmark: benchmarks/4-ATAC_genotype/correct_044_BXD51_CTRL.txt
+    benchmark: benchmarks/4-BXD_genotype/correct_044_BXD51_CTRL.txt
     reason: Forced execution
     wildcards: sample=044_BXD51_CTRL
-    resources: tmpdir=/tmp/62713805, disk_mb=3459, disk=3.46 GB, disk_mib=3299, mem_mb=5000, mem=5 GB, mem_mib=4769, time=00:30:00
+    resources: tmpdir=/tmp/64404808, mem_mb=5000, mem=5 GB, mem_mib=4769, disk_mb=3459, disk=3.46 GB, disk_mib=3299, time=00:30:00
 Shell command: 
-        mkdir -p results/4-ATAC_genotype/corrected_bams/coord results/4-ATAC_genotype/corrected_bams/name
+        mkdir -p results/4-BXD_genotype/corrected_bams/coord results/4-BXD_genotype/corrected_bams/name
 
-        echo "Copying <results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam> files from <results/3-ATAC_bam/sort> to <results/4-ATAC_genotype/corrected_bams> " > logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        echo "cp results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam
+        echo "Copying <results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam> files from <results/3-BXD_bam/sort> to <results/4-BXD_genotype/corrected_bams> " > logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        echo "cp results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam
 
-        echo "cp results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam.bai" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam.bai results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam.bai
+        echo "cp results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam.bai results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam.bai" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam.bai results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam.bai
 
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g') results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g') results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g') results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g') results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam
         
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g').bai results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam.bai" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g').bai results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam.bai
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g').bai results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam.bai" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g').bai results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam.bai
 
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g') results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g') results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g') results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g') results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam
         
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g').bai results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam.bai" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g').bai results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam.bai
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g').bai results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam.bai" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g').bai results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam.bai
         
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/coord/name/g') results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/coord/name/g' | sed 's/\.co\./\.nm\./g') results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/coord/name/g') results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/coord/name/g' | sed 's/\.co\./\.nm\./g') results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam
         
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g' | sed 's/coord/name/g') results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g' | sed 's/coord/name/g'| sed 's/\.co\./\.nm\./g') results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g' | sed 's/coord/name/g') results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub1/g' | sed 's/coord/name/g'| sed 's/\.co\./\.nm\./g') results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam
         
-        echo "cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g'| sed 's/coord/name/g') results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
-        cp $(echo results/3-ATAC_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g'| sed 's/coord/name/g'| sed 's/\.co\./\.nm\./g') results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam
+        echo "cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g'| sed 's/coord/name/g') results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
+        cp $(echo results/3-BXD_bam/sort/coord/044_BXD51_CTRL_full.co.bam | sed 's/full/sub2/g'| sed 's/coord/name/g'| sed 's/\.co\./\.nm\./g') results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam
 
-        echo "Logs saved in <logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log>" >> logs/4-ATAC_genotype/correct_044_BXD51_CTRL.log
+        echo "Logs saved in <logs/4-BXD_genotype/correct_044_BXD51_CTRL.log>" >> logs/4-BXD_genotype/correct_044_BXD51_CTRL.log
     
         
-Write-protecting output file results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam.
-Write-protecting output file results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam.
-Write-protecting output file results/4-ATAC_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam.
-Write-protecting output file results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam.
-Write-protecting output file results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam.
-Write-protecting output file results/4-ATAC_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam.
-[Sun Jul 26 12:48:14 2026]
+Write-protecting output file results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_full.co.bam.
+Write-protecting output file results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub1.co.bam.
+Write-protecting output file results/4-BXD_genotype/corrected_bams/coord/044_BXD51_CTRL_sub2.co.bam.
+Write-protecting output file results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_full.nm.bam.
+Write-protecting output file results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub1.nm.bam.
+Write-protecting output file results/4-BXD_genotype/corrected_bams/name/044_BXD51_CTRL_sub2.nm.bam.
+[Sun Aug 30 00:19:01 2026]
 Finished jobid: 0 (Rule: correct_samples)
 1 of 1 steps (100%) done
 Storing output in storage.

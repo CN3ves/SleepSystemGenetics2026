@@ -21,8 +21,7 @@ rule BXD_checkpoint:
         check_cors=ancient('results/13-BXD_integrate/plots/cors_int.png'),
         check_grn=ancient('results/13-BXD_integrate/granie/graph.RData'),
         check_diff=ancient(lambda wildcards: [f"results/8-BXD_differential/plots/{exp}_coeff_heatFC.png" for exp in ['rna','atac']]),
-        check_enrich=ancient(lambda wildcards: [f'results/11-BXD_enrichment/{exp}/QTLxSD_ORA_GO_genes_all_enrichment.csv' for exp in ['rna','atac']]),
-        check_footprints=ancient(lambda wildcards: [f'results/12-BXD_footprints/plots/agreggated_diff{sub}.svg' for sub in ['','_sub1','_sub2']])
+        check_enrich=ancient(lambda wildcards: [f'results/11-BXD_enrichment/{exp}/QTLxSD_ORA_GO_genes_all_enrichment.csv' for exp in ['rna','atac']])
     output:
         check=protected('results/18-Checkpoint/bxd.check'),
     log:

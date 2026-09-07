@@ -77,10 +77,10 @@ rule readsQC_summary:
         mkdir -p {params.dir}
 
         echo "Summarising QC results" >> {log}
-        Rscript workflow/scripts/2.1-QC_reads_table.R -m {params.metadata} -d {params.source}/json/ -o {params.dir}
+        Rscript workflow/scripts/1.1-QC_reads_table.R -m {params.metadata} -d {params.source}/json/ -o {params.dir}
 
         echo "Plotting QC summaries" >> {log}
-        Rscript workflow/scripts/2.2-QC_reads_plots.R -m {params.metadata} -f {params.dir}/QC_fastq.csv -o {params.dir}
+        Rscript workflow/scripts/1.2-QC_reads_plots.R -m {params.metadata} -f {params.dir}/QC_fastq.csv -o {params.dir}
 
         echo "Logs saved in <{log}>" >> {log}
         '''

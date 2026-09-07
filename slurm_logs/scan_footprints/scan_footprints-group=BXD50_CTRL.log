@@ -1,20 +1,20 @@
 
 SNAKEMAKE
 =========
-  Date: 2026-08-22 00:21:56
-  Workflow ID: 5b26b331-eba4-4cf3-a0f6-e7dcfe0d8ab6
+  Date: 2026-08-30 10:16:20
+  Workflow ID: ffdc3810-450c-45ee-beae-bb018a3020f7
   Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
-  Host: dna065
+  Host: dna003
   User: csousane
   Snakemake version: 9.23.1
   Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
-  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs scan_footprints:group=BXD50_CTRL --allowed-rules scan_footprints --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.f5leml67 results/12-ATAC_footprints/bams/BXD50_CTRL.bam results/12-ATAC_footprints/bams/BXD50_CTRL_sub1.bam results/12-ATAC_footprints/bams/BXD50_CTRL_sub2.bam results/10-BXD_annotation/reduced/ranges_dar.bed --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input mtime code params --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage software-deployment-cache source-cache storage-local-copies software-deployment persistence sources input-output --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpo66_rofl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs scan_footprints:group=BXD50_CTRL --allowed-rules scan_footprints --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.n5slkhi4 results/12-BXD_footprints/bams/BXD50_CTRL.bam results/12-BXD_footprints/bams/BXD50_CTRL_sub1.bam results/12-BXD_footprints/bams/BXD50_CTRL_sub2.bam results/10-BXD_annotation/reduced/ranges_dar.bed --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input params mtime code --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage input-output sources software-deployment-cache software-deployment storage-local-copies persistence source-cache --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpf5_bni19 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
   Snakefile: /scratch/csousane/atac/workflow/Snakefile
   Base directory: /scratch/csousane/atac/workflow
   Run directory: /scratch/csousane/atac
   Working directory: /scratch/csousane/atac
   Config file(s): ['workflow/config/config.yaml']
-  Config MD5: d5cb1e3d1c89e77622e8cd992a184f43
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
 
 Building DAG of jobs...
 Using shell: /usr/bin/bash
@@ -23,39 +23,39 @@ Rules claiming more threads will be scaled down.
 Select jobs to execute...
 Execute 1 jobs...
 
-[Sat Aug 22 00:21:56 2026]
+[Sun Aug 30 10:16:21 2026]
 localrule scan_footprints:
-    input: results/12-ATAC_footprints/bams/BXD50_CTRL.bam, results/12-ATAC_footprints/bams/BXD50_CTRL_sub1.bam, results/12-ATAC_footprints/bams/BXD50_CTRL_sub2.bam, results/10-BXD_annotation/reduced/ranges_dar.bed
-    output: results/12-ATAC_footprints/footprints/BXD50_CTRL.bed, results/12-ATAC_footprints/footprints/BXD50_CTRL_sub1.bed, results/12-ATAC_footprints/footprints/BXD50_CTRL_sub2.bed
-    log: logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
+    input: results/12-BXD_footprints/bams/BXD50_CTRL.bam, results/12-BXD_footprints/bams/BXD50_CTRL_sub1.bam, results/12-BXD_footprints/bams/BXD50_CTRL_sub2.bam, results/10-BXD_annotation/reduced/ranges_dar.bed
+    output: results/12-BXD_footprints/footprints/BXD50_CTRL.bed, results/12-BXD_footprints/footprints/BXD50_CTRL_sub1.bed, results/12-BXD_footprints/footprints/BXD50_CTRL_sub2.bed
+    log: logs/12-BXD_footprints/footprints_BXD50_CTRL.log
     jobid: 0
-    benchmark: benchmarks/12-ATAC_footprints/footprints_BXD50_CTRL.txt
+    benchmark: benchmarks/12-BXD_footprints/footprints_BXD50_CTRL.txt
     reason: Forced execution
     wildcards: group=BXD50_CTRL
     threads: 20
-    resources: tmpdir=/tmp/63958450, mem_mb=1000, mem=1 GB, mem_mib=954, disk_mb=26773, disk=26.77 GB, disk_mib=25533, time=0:40:00
+    resources: tmpdir=/tmp/64409286, disk_mb=26773, disk=26.77 GB, disk_mib=25533, mem_mb=1000, mem=1 GB, mem_mib=954, time=0:40:00
 Shell command: 
-        mkdir -p results/12-ATAC_footprints/footprints
+        mkdir -p results/12-BXD_footprints/footprints
 
-        echo "Calling footprint for results/12-ATAC_footprints/bams/BXD50_CTRL.bam" > logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
-        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD50_CTRL results/12-ATAC_footprints/bams/BXD50_CTRL.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
+        echo "Calling footprint for results/12-BXD_footprints/bams/BXD50_CTRL.bam" > logs/12-BXD_footprints/footprints_BXD50_CTRL.log
+        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-BXD_footprints/footprints --output-prefix=BXD50_CTRL results/12-BXD_footprints/bams/BXD50_CTRL.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
 
-        echo "Make bigwigs" >> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
-        rgt-hint tracks --bc  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD50_CTRL results/12-ATAC_footprints/bams/BXD50_CTRL.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
+        echo "Make bigwigs" >> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
+        rgt-hint tracks --bc  --organism=mm10 --output-location=results/12-BXD_footprints/footprints --output-prefix=BXD50_CTRL results/12-BXD_footprints/bams/BXD50_CTRL.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
 
-        echo "Calling footprint for results/12-ATAC_footprints/bams/BXD50_CTRL_sub1.bam" >> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
-        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD50_CTRL_sub1 results/12-ATAC_footprints/bams/BXD50_CTRL_sub1.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
+        echo "Calling footprint for results/12-BXD_footprints/bams/BXD50_CTRL_sub1.bam" >> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
+        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-BXD_footprints/footprints --output-prefix=BXD50_CTRL_sub1 results/12-BXD_footprints/bams/BXD50_CTRL_sub1.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
 
-        echo "Calling footprint for results/12-ATAC_footprints/bams/BXD50_CTRL_sub2.bam" >> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
-        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-ATAC_footprints/footprints --output-prefix=BXD50_CTRL_sub2 results/12-ATAC_footprints/bams/BXD50_CTRL_sub2.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
+        echo "Calling footprint for results/12-BXD_footprints/bams/BXD50_CTRL_sub2.bam" >> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
+        rgt-hint footprinting --atac-seq  --organism=mm10 --output-location=results/12-BXD_footprints/footprints --output-prefix=BXD50_CTRL_sub2 results/12-BXD_footprints/bams/BXD50_CTRL_sub2.bam results/10-BXD_annotation/reduced/ranges_dar.bed &>> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
 
-        echo "Logs saved in <logs/12-ATAC_footprints/footprints_BXD50_CTRL.log>" >> logs/12-ATAC_footprints/footprints_BXD50_CTRL.log
+        echo "Logs saved in <logs/12-BXD_footprints/footprints_BXD50_CTRL.log>" >> logs/12-BXD_footprints/footprints_BXD50_CTRL.log
         
 Activating conda environment: rgt_env
-Write-protecting output file results/12-ATAC_footprints/footprints/BXD50_CTRL.bed.
-Write-protecting output file results/12-ATAC_footprints/footprints/BXD50_CTRL_sub1.bed.
-Write-protecting output file results/12-ATAC_footprints/footprints/BXD50_CTRL_sub2.bed.
-[Sat Aug 22 00:33:57 2026]
+Write-protecting output file results/12-BXD_footprints/footprints/BXD50_CTRL.bed.
+Write-protecting output file results/12-BXD_footprints/footprints/BXD50_CTRL_sub1.bed.
+Write-protecting output file results/12-BXD_footprints/footprints/BXD50_CTRL_sub2.bed.
+[Sun Aug 30 10:30:05 2026]
 Finished jobid: 0 (Rule: scan_footprints)
 1 of 1 steps (100%) done
 Storing output in storage.
