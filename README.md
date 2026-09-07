@@ -1,6 +1,9 @@
 # SleepSystemGenetics2026
 Workflow for the manuscript
 
+
+![Workflow](workflow/rulegraph.png)
+
 Required packages:
 
 ```
