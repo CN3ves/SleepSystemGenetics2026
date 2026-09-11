@@ -3,8 +3,8 @@ Checking arguments
 Load Table S2
 Determining gene groups
 [1] "IEG in plasticity"
- [1] "Arc"    "Homer1" "Rheb"   "Npas4"  "Ptgs2"  "Fos"    "Rcan1"  "Egr2"  
- [9] "Nr4a1"  "Nr4a3"  "Dusp1"  "Per1"  
+ [1] "Arc"    "Homer1" "Rheb"   "Npas4"  "Ptgs2"  "Fos"    "Rcan1"  "Nptx2" 
+ [9] "Dusp1"  "Per1"  
 Set plot parameters
 Save plot
 null device 

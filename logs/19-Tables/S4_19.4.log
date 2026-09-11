@@ -2,17 +2,17 @@ Loading packages
 Checking arguments
 Load footprint analyses
 Annotate footprints
->> preparing features information...		 2026-09-04 09:07:12 PM 
+>> preparing features information...		 2026-09-11 08:47:41 AM 
 >> Using Genome: mm10 ...
->> identifying nearest features...		 2026-09-04 09:07:12 PM 
->> calculating distance from peak to TSS...	 2026-09-04 09:15:19 PM 
->> assigning genomic annotation...		 2026-09-04 09:15:19 PM 
+>> identifying nearest features...		 2026-09-11 08:47:42 AM 
+>> calculating distance from peak to TSS...	 2026-09-11 08:56:02 AM 
+>> assigning genomic annotation...		 2026-09-11 08:56:02 AM 
 >> Using Genome: mm10 ...
 >> Using Genome: mm10 ...
->> adding gene annotation...			 2026-09-04 09:18:26 PM 
+>> adding gene annotation...			 2026-09-11 08:59:15 AM 
 'select()' returned 1:many mapping between keys and columns
->> assigning chromosome lengths			 2026-09-04 09:19:15 PM 
->> done...					 2026-09-04 09:19:15 PM 
+>> assigning chromosome lengths			 2026-09-11 09:00:06 AM 
+>> done...					 2026-09-11 09:00:06 AM 
 Filter table
 Load footprint meta-analisys
 Save table

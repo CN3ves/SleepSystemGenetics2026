@@ -73,7 +73,6 @@ cat("Filter overlapping terms\n")
 all <- atac
 all@result <- all@result[all@result$ID %in% rna@result$ID,]
 
-
 termsim <- pairwise_termsim(all)
 p <- enrichplot::emapplot(termsim, showCategory =  200) + theme(text = element_text(size = 8))
 
@@ -82,5 +81,7 @@ cat("Save plot\n")
 svg(paste0(opt$outdir,"/Fig1c.svg"),height=14,width=14)
 print(p)
 dev.off()
+
+write.csv(termsim@termsim, paste0(opt$outdir, "/data/1c.csv"))
 
 sessionInfo()

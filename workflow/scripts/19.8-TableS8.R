@@ -52,28 +52,25 @@ wb <- createWorkbook()
 cat("Loading metadata\n")
 metadata <- read.csv(opt$meta)
 names(metadata)[1] <- "Sample"
-rownames(metadata) <- metadata$Sample
+rownames(metadata) <- metadata$SampleName
 
 cat("Load sequencing QC tab\n")
-pre_align <- list.files(opt$pre, pattern="csv", full.name= TRUE)
-pre_align <- read.csv(pre_align)
+pre_align <- read.csv(opt$pre_align)
 names(pre_align)[1:2] <- c("Metric", "Summary")
 
-group_name <- metadata[names(pre_align)[-1:-2],c("Sample", "Group")]
+group_name <- metadata[gsub('^X','',names(pre_align)[-1:-2]),c("Sample", "Group")]
 group_name <- apply(group_name, 1, paste, collapse=" (")
 names(pre_align)[-1:-2] <- paste0(group_name,")")
-
 
 addWorksheet(wb, "Sequencing_QC")
 writeData(wb, "Sequencing_QC", pre_align, rowNames=FALSE)
 
 cat("Load alignmnet QC tab\n")
-post_align <- list.files(opt$post, pattern="csv", full.name= TRUE)
-post_align <- read.csv(post_align)
+post_align <- read.csv(opt$post_align)
 post_align <- t(post_align)
 post_align <- cbind(rownames(post_align),post_align)
 post_align <- as.data.frame(post_align)
-names(post_align) <-post_align[2,]
+names(post_align) <- post_align[2,]
 names(post_align)[1:2] <- c("Metric", "Summary")
 post_align <- post_align[-1:-2,]
 
@@ -85,6 +82,7 @@ addWorksheet(wb, "Alignment_QC")
 writeData(wb, "Alignment_QC", post_align, rowNames=FALSE)
 
 # Save the workbook
+cat("Save table\n")
 saveWorkbook(wb, paste0(opt$outdir,"/TableS8-RNAQC_summary.xlsx"), overwrite = TRUE)
 
 sessionInfo()

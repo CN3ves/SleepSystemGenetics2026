@@ -78,8 +78,8 @@ p <- Heatmap(as.matrix(df[,colnames(df) %in% kinases]),
              col = c("white","blue"),
              heatmap_legend_param = list(at=0:1, labels = c("Not target", "Known target"),color_bar = "discrete"),
              name = "Target",
-             row_names_gp = gpar(fontsize = 8,col=col),
-             column_names_gp = gpar(fontsize = 6),
+             row_names_gp = gpar(fontsize = 10,col=col),
+             column_names_gp = gpar(fontsize = 10),
              column_title = "Kinases",
              row_title = "Significant TFs",
              column_title_side = "bottom"#, column_labels = gsub("\\*","",colnames(df[,grep("\\*",colnames(df))]))
@@ -89,5 +89,7 @@ cat("Save plot\n")
 svg(paste0(opt$outdir,"/Fig2c.svg"), width=15, height=10)
 print(p)
 dev.off()
+
+write.csv(as.matrix(df[,colnames(df) %in% kinases]), paste0(opt$outdir, "/data/2c.csv"))
 
 sessionInfo()

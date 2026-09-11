@@ -24,6 +24,7 @@ rule tableS1:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S1" > {log}
@@ -61,6 +62,7 @@ rule tableS2:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S2" > {log}
@@ -95,6 +97,7 @@ rule tableS3:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S3" > {log}
@@ -125,6 +128,7 @@ rule tableS4:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S4" > {log}
@@ -157,6 +161,7 @@ rule tableS5:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S5" > {log}
@@ -187,6 +192,7 @@ rule tableS6:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S6" > {log}
@@ -206,6 +212,8 @@ rule tableS7:
     '''
     input:
         S2=ancient(rules.tableS2.output.table),
+        S4=ancient(rules.tableS4.output.table),
+        S5=ancient(rules.tableS5.output.table),
         S6=ancient(rules.tableS6.output.table)
     output:
         table=protected('manuscript/tables/TableS7-GRN.xlsx'),
@@ -221,6 +229,7 @@ rule tableS7:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S7" > {log}
@@ -230,7 +239,9 @@ rule tableS7:
             -c results/8-BXD_differential/DA/rna_counts_disp.RData \
             -d results/12-BXD_footprints/motifs/ \
             -e {input.S2} \
-            -f {input.S6} \
+            -f {input.S4} \
+            -g {input.S5} \
+            -i {input.S6} \
             -o {params.dir}
 
         echo "Logs saved in <{log}>" >> {log}
@@ -256,6 +267,7 @@ rule tableS8:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S8" > {log}
@@ -288,6 +300,7 @@ rule tableS9:
         dir='manuscript/tables'
     shell:
         '''
+        module load r-light/4.5.2
         mkdir -p {params.dir}/data
 
         echo "Make Table S9" > {log}

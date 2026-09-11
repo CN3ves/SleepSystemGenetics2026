@@ -140,11 +140,11 @@ process_QTL <- function(file, data, invertions, ATACdiff=NA) {
   }
 
   if(!all(is.na(ATACdiff))) {
-    n <- c("regionID", "region",  "Annotation", "cCRE", "gene", "lod", "chr", "pos", "ci_lo", "ci_hi", "bp","bp_lo", "bp_hi", "BSL_trend", "SD_trend", grep('BB|DD',names(QTL), value= TRUE), "snp", "snps")
+    n <- c("regionID", "region",  "Annotation", "cCRE", "gene", "test", "lod", "chr", "pos", "ci_lo", "ci_hi", "bp","bp_lo", "bp_hi", "BSL_trend", "SD_trend", grep('BB|DD',names(QTL), value= TRUE), "snp", "snps")
     if(!grepl('FC', file)) n <- n[!n %in% c("BSL_trend", "SD_trend")]
     QTL <- QTL[,n]
   } else {
-    n <- c("Gene", "lod", "chr", "pos", "ci_lo", "ci_hi", "bp","bp_lo", "bp_hi", "BSL_trend", "SD_trend", grep('BB|DD',names(QTL), value= TRUE), "snp", "snps")
+    n <- c("Gene", "test", "lod", "chr", "pos", "ci_lo", "ci_hi", "bp","bp_lo", "bp_hi", "BSL_trend", "SD_trend", grep('BB|DD',names(QTL), value= TRUE), "snp", "snps")
     if(!grepl('FC', file)) n <- n[!n %in% c("BSL_trend", "SD_trend")]
     QTL <- QTL[,n]
   }

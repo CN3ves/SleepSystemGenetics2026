@@ -1,0 +1,11 @@
+Loading packages
+Checking arguments
+Load Table S6
+Load Table S2
+Select examples
+Load genomic information
+Warning message:
+In recode_geno(sheet, genotypes) : 3746 genotypes treated as missing: "H"
+Warning message:
+In recode_geno(sheet, genotypes) : 3816 genotypes treated as missing: "H"
+Load QTL information for ATAC

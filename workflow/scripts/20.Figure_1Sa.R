@@ -22,9 +22,7 @@ option_list = list(
               help="Called variants", metavar="character"),
   make_option(c("-b", "--map"), type="character", default=NULL, 
               help="BXD genetic map directory", metavar="character"),
-  make_option(c("-c", "--genos"), type="character", default=NULL, 
-              help="BXD reference genotypes", metavar="character"),
-  make_option(c("-d", "--meta"), type="character", default=NULL, 
+  make_option(c("-c", "--meta"), type="character", default=NULL, 
               help="ATAC-seq metadata", metavar="character"),
   make_option(c("-o", "--outdir"), type="character", default=NULL, 
               help="Output directory", metavar="character")
@@ -41,13 +39,9 @@ if (is.null(opt$map)){
   print_help(opt_parser)
   stop("BXD genetic map directory (-b) is missing", call.=FALSE)
 }
-if (is.null(opt$genos)){
-  print_help(opt_parser)
-  stop("BXD reference genotypes (-c) is missing", call.=FALSE)
-}
 if (is.null(opt$meta)){
   print_help(opt_parser)
-  stop("ATAC-seq metadata (-d) is missing", call.=FALSE)
+  stop("ATAC-seq metadata (-c) is missing", call.=FALSE)
 }
 if (is.null(opt$outdir)){
   print_help(opt_parser)
@@ -56,7 +50,7 @@ if (is.null(opt$outdir)){
 
 cat("Load Genotyping data\n")
 # Read inputs
-bxd <- readRDS(opt$genos)
+bxd <- readRDS(paste0(opt$map,"/genotypes.Rdata"))
 geno_files <- list.files(opt$dir, pattern="csv", full.names=T)
 metadata <- read.csv(opt$meta, row.names=1)
 metadata$Sample <- sprintf("%03d",metadata$Sample)
@@ -175,10 +169,12 @@ Heatmap(as.matrix(M), border_gp = gpar(col = "black", lty = 1),
         column_title = "BXD Genotyping",
         heatmap_legend_param = list(title = "% SNPs matching reference"),
         cluster_rows = FALSE, cluster_columns = FALSE,
-        column_names_gp = grid::gpar(fontsize = 8),
-        row_names_gp = grid::gpar(fontsize = 8),
+        column_names_gp = grid::gpar(fontsize = 12),
+        row_names_gp = grid::gpar(fontsize = 12),
         row_labels = sapply(rownames(M), function(r) ifelse(r %in% named_rows, r,"")),
         col = col_fun(seq(0,1,0.5)))
 dev.off()
+
+write.csv(as.matrix(M), paste0(opt$outdir, "/data/S1a.csv"))
 
 sessionInfo()

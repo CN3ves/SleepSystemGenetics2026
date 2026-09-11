@@ -379,3 +379,6 @@ place in results/12-BXD_footprints/KEA/Integrated scaled rank.tsv
 place in results/12-BXD_footprints/KEA/Mean rank.tsv
 
 some rules gather results from other rules so they might need to be run sequentially. the pipeline was testes runnign one rule at a time, not the entire workflow
+
+
+[interactive network](https://cn3ves.github.io/SleepSystemGenetics2026/)

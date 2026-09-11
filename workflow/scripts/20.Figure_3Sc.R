@@ -55,7 +55,7 @@ points <- as.numeric(gsub("CTRL", 19,  gsub("SD", 17, counts$sample$Treatment)))
 cat("Save plot\n")
 svg(paste0(opt$outdir,"/FigS3c.svg"))
 
-mds <-plotMDS(counts, col =  colors[strains], pch = points, top=100, gene.selection="common", main=paste("RNA MDS (PCA) using top 100 variable features"))
+mds <-plotMDS(counts, col =  colors[strains], pch = points, top=100, gene.selection="common", main=paste("RNA PCA using top 100 variable features"))
 legend("topleft", legend=c("DBA", "C57Bl6"), pch=19, col=c(dba,c57), ncol=1)
 legend("bottomleft", legend=c("SD","CTRL"), pch=c(17,19), col="black", ncol=1)
 
@@ -65,31 +65,11 @@ text(labs$x, labs$y, labs$label, cex=1, pos=4, col=labs$col)
 
 dev.off()
 
+tab <- mds$eigen.vectors[,1:2]
+rownames(tab) <- strains
+colnames(tab) <- paste0("PC",1:ncol(tab))
+tab$color <- colors[strains]
+
+write.csv(tab, paste0(opt$outdir, "/data/S3c.csv"))
+
 sessionInfo()
-
-#DEG PCA  
-# library("openxlsx")
-# counts <- readRDS('results/7-BXD_normalization/EDA/rna_filtered_normalised_counts.RData')
-# diff <-read.xlsx('manuscript/tables/TableS2-Differential_Correlation.xlsx','Differential_Expression')
-# sigs <- diff[diff$RNA_FDR < 0.05,'Gene_ID']
-
-# strains <- as.factor(counts$sample$Strain)
-# colors <- rainbow(length(levels(strains)))
-# names(colors) <- levels(strains)
-# colors["DBA"]<- dba
-# colors["C57Bl6"]<- c57
-
-# points <- as.numeric(gsub("CTRL", 19,  gsub("SD", 17, counts$sample$Treatment)))
-
-# cat("Save plot\n")
-# svglite("manuscript/figures/FigS3RNA.svg")
-
-# mds <-plotMDS(counts[sigs,], col = colors[strains], pch = points, top=100, gene.selection="common", main=paste("ATAC MDS (PCA) using top 100 variable features"))
-# legend("topleft", legend=c("DBA", "C57Bl6"), pch=19, col=c(dba,c57), ncol=1)
-# legend("bottomleft", legend=c("SD","CTRL"), pch=c(17,19), col="black", ncol=1)
-
-# labs <- data.frame(x=mds$x,y=mds$y,label=strains, col=colors[strains],treatment=points) %>% filter(treatment == 19)  %>% group_by(label,col) %>% summarize(x=mean(x),y=mean(y))
-
-# text(labs$x, labs$y, labs$label, cex=1, pos=4, col=labs$col)
-
-# dev.off()

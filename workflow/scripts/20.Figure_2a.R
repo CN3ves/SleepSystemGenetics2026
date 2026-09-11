@@ -48,6 +48,13 @@ cat("Load footprints\n")
 meta <- read.csv(opt$footprints)
 df <- read.delim(opt$heatmap)
 
+meta$Sig <- "Not sig."
+meta$Sig[meta$padj < 0.05] <- "Sig."
+meta$Sig[meta$Sig == "Sig." &  meta$n >= 30] <- "Sig. 30+ lines"
+meta$Sig[meta$n == max(meta$n)] <- "Sig. all lines"
+cols <- c("Not sig." = "black", "Sig." = "black", "Sig. 30+ lines" = "darkblue","Sig. all lines" = "purple")
+meta$cols <- cols[meta$Sig]
+
 samples <- unique(gsub("Protection_Score_","",names(df)[grep("Protection_Score_",names(df))]))
 
 for(s in samples) {
@@ -69,14 +76,16 @@ rowlabels <- rownames(df_plot_scale)
 
 sigs <-  meta[meta$padj < 0.05,'X']
 idx <- unique(c(
-  unlist(sapply(sigs, function(x) grep(paste0('^',x,'$'), rowlabels))),
+  unlist(sapply(sigs, function(x) which(rowlabels %in% x))),
   seq(1,length(rowlabels),5)))
 
+cols <- meta$col[match(rowlabels, meta$X)]
 rowlabels <- gsub("MA[0-9]*\\.[0-9]\\.","",rowlabels)
 rowlabels[-idx] <- "" 
 
 ra = rowAnnotation(
-  labels = anno_text(rowlabels, which = "row", just="left", gp = gpar(fontsize = 5, col=ifelse(rowlabels %in% sigs, "purple", "black"))),
+  labels = anno_text(rowlabels, which = "row", just="left", 
+    gp = gpar(fontsize = 5, col=cols)),
   show_legend = FALSE
  )
 
@@ -84,24 +93,23 @@ p <- Heatmap(as.matrix(df_plot_scale),
              name = "TF", 
              col = rev(brewer.pal(n = 11, name = "RdBu")),
              left_annotation = ra,
-             
              cluster_rows = TRUE,  show_row_names = FALSE,
              show_row_dend = TRUE, row_dend_side = "right", 
-             row_names_gp = gpar(fontsize = 4),
+             row_names_gp = gpar(fontsize = 10),
              row_split=8, #row_title = NULL, 
              row_gap = unit(2, "mm"),
-             column_names_gp = gpar(fontsize = 8, col=ifelse(grepl("_SD", colnames(df_plot_scale)), "purple","darkgreen")),
+             column_names_gp = gpar(fontsize = 10, 
+              col=ifelse(grepl("_SD", colnames(df_plot_scale)), "purple","darkgreen")),
              show_column_dend = TRUE,
-             column_split=8, #column_title = NULL, 
-             column_gap = unit(2, "mm"),
-             
-             #clustering_method_rows = "ward.D2",
+             column_split=8, 
+             column_gap = unit(2, "mm")
              )
-
 
 cat("Save plot\n")
 svg(paste0(opt$outdir,"/Fig2a.svg"),height=10, width=10)
 print(p)
 dev.off()
+
+write.csv(as.matrix(df_plot_scale), paste0(opt$outdir, "/data/2a.csv"))
 
 sessionInfo()

@@ -41,18 +41,18 @@ meta_footprints <- read.csv(opt$footprints)
 
 # Make aggregate plot
 df <- meta_footprints[order(meta_footprints$mean_activity),]
-df$tf <- rownames(df)
+names(df)[1] <- 'tf'
 df$Sig <- "Not sig."
 df$Sig[df$padj < 0.05] <- "Sig."
-df$Sig[df$Sig == "Sig." &  df$tf %in% names(which(tf_sig >= 30))] <- "Sig. 30+ lines"
-df$Sig[df$tf %in% names(which(tf_sig == n))] <- "Sig. all lines"
-cols <- c("Not sig." = "grey", "Sig." = "darkred", "Sig. 30+ lines" = "darkgreen","Sig. all lines" = "limegreen")
+df$Sig[df$Sig == "Sig." &  df$n >= 30] <- "Sig. 30+ lines"
+df$Sig[df$n == max(df$n)] <- "Sig. all lines"
+cols <- c("Not sig." = "grey", "Sig." = "darkred", "Sig. 30+ lines" = "darkblue","Sig. all lines" = "purple")
 
 df$labs <- toupper(df$tf)
 df$labs[df$Sig == "Not sig."] <- ""
-df[names(which(tf_sig[rownames(df)] < 5)),"labs"] <- ""
+df[df$n < 5,"labs"] <- ""
 df$labs <- gsub("MA[0-9]*\\.[0-9]\\.", "", df$labs)
-df$labs[df$labs != ""] <- paste0(df$labs[df$labs != ""], " (", tf_sig[df$tf[df$labs != ""]],")")
+df$labs[df$labs != ""] <- paste0(df$labs[df$labs != ""], " (", df$n[df$labs != ""],")")
 df$labs[grep("NA",df$labs)] <- "" 
 
 df$tf <- factor(df$tf, levels=sample(df$tf))
@@ -64,8 +64,9 @@ g <- ggplot(df, aes(x=tf,y=mean_activity, fill=Sig, col = Sig, label = labs)) +
   scale_color_manual(values = cols) + 
   scale_fill_manual(values = cols) + 
   theme_classic() + 
-  theme(axis.text.x=element_blank(), axis.ticks.x=element_blank(), axis.title=element_text(size=14,face="bold")) +
-  geom_text_repel(size=3,show.legend = FALSE,max.overlaps=20) +
+  theme(axis.text.x=element_blank(), axis.ticks.x=element_blank(), 
+    axis.title=element_text(size=14,face="bold")) +
+  geom_text_repel(size=5,show.legend = FALSE,max.overlaps=20) +
   ylab("Mean activity score\nCTRL <-> SD") + xlab("") + 
   ylim(c(-y_lims,y_lims)) + 
   geom_hline(yintercept=0, color = "black", linewidth=0.5) 
@@ -74,5 +75,7 @@ cat("Save plot\n")
 svg(paste0(opt$outdir,"/Fig2b.svg"), width=14, height=7)
 print(g)
 dev.off()
+
+write.csv(df, paste0(opt$outdir, "/data/2b.csv"))
 
 sessionInfo()

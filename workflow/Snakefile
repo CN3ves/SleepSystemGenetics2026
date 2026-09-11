@@ -46,15 +46,11 @@ rule manuscript:
     On our server snakemake could hang for some jobs, so the outputs were generated step by step for convinience.
     '''
     input:
-        expand('manuscript/figures/Fig{fig}.svg',  fig = ['S1a']),
-
-        #expand('results/18-Checkpoint/{exp}.check', exp =  ['bxd','nrf']),
+        expand('results/18-Checkpoint/{exp}.check', exp =  ['bxd','nrf']),
         # Run above first. 
         # Table S5 requires manually downloading KEA3 results which depend on the footprint analyses.
-        #expand('manuscript/tables/TableS{tab}.xlsx', 
-        #    tab = ['7-GRN', '8-RNAQC_summary', '9-Differential_Expression']),
+        expand('manuscript/tables/TableS{tab}.xlsx', tab = ['7-GRN', '8-RNAQC_summary', '9-Differential_Expression']),
 
-        #expand('manuscript/figures/Fig{fig}.svg', 
-        #    fig = ['1a', 'S1a', '2a', 'S2','3a','S3a'])
+        expand('manuscript/figures/data/{fig}.csv', fig = ['1a', 'S1a','2a','S2','3a', 'S3a', 'S4a']),
         
       

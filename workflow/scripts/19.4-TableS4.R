@@ -103,7 +103,6 @@ names(meta)[1] <- 'Motif'
 addWorksheet(wb, "Meta-analysis")
 writeData(wb, "Meta-analysis", meta, rowNames=FALSE)
 
-
 cat("Save table\n")
 saveWorkbook(wb, paste0(opt$outdir,"/TableS4-Footprints.xlsx"), overwrite = TRUE)
    

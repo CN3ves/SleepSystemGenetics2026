@@ -2,24 +2,26 @@ Loading packages
 Checking arguments
 Load Genome
 Annotation to TSS
->> preparing features information...		 2026-09-05 01:32:13 AM 
+>> preparing features information...		 2026-09-08 10:01:09 PM 
 >> Using Genome: mm10 ...
->> identifying nearest features...		 2026-09-05 01:32:14 AM 
->> calculating distance from peak to TSS...	 2026-09-05 01:32:49 AM 
->> assigning genomic annotation...		 2026-09-05 01:32:49 AM 
+>> identifying nearest features...		 2026-09-08 10:01:09 PM 
+>> calculating distance from peak to TSS...	 2026-09-08 10:01:46 PM 
+>> assigning genomic annotation...		 2026-09-08 10:01:46 PM 
 >> Using Genome: mm10 ...
 >> Using Genome: mm10 ...
->> adding gene annotation...			 2026-09-05 01:33:21 AM 
+>> adding gene annotation...			 2026-09-08 10:02:18 PM 
 Loading required package: org.Mm.eg.db
 
 'select()' returned 1:many mapping between keys and columns
->> assigning chromosome lengths			 2026-09-05 01:33:24 AM 
->> done...					 2026-09-05 01:33:24 AM 
+>> assigning chromosome lengths			 2026-09-08 10:02:21 PM 
+>> done...					 2026-09-08 10:02:21 PM 
 [1] "Percentage annotated: 100 %"
+null device 
+          1 
 Annotation to ENCODE cCRE
 [1] "Percentage annotated: 5.32 %"
-X11cairo 
-       2 
+null device 
+          1 
 R version 4.5.2 (2025-10-31)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.5 LTS

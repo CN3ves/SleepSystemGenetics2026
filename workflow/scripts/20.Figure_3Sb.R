@@ -55,7 +55,7 @@ points <- as.numeric(gsub("CTRL", 19,  gsub("SD", 17, counts$sample$Treatment)))
 cat("Save plot\n")
 svg(paste0(opt$outdir,"/FigS3b.svg"))
 
-mds <- plotMDS(counts, col = colors[strains], pch = points, top= round(nrow(counts)*0.05), gene.selection="common", main=paste0("ATAC MDS (PCA) using top 5% (", round(nrow(counts)*0.05) ,") variable features"))
+mds <- plotMDS(counts, col = colors[strains], pch = points, top= round(nrow(counts)*0.05), gene.selection="common", main=paste0("ATAC PCA using top 5% (", round(nrow(counts)*0.05) ,") variable features"))
 legend("topleft", legend=c("DBA", "C57Bl6"), pch=19, col=c(dba,c57), ncol=1)
 legend("bottomleft", legend=c("SD","CTRL"), pch=c(17,19), col="black", ncol=1)
 
@@ -64,5 +64,12 @@ labs <- data.frame(x=mds$x,y=mds$y,label=strains, col=colors[strains],treatment=
 text(labs$x, labs$y, labs$label, cex=1, pos=4, col=labs$col)
 
 dev.off()
+
+tab <- mds$eigen.vectors[,1:2]
+rownames(tab) <- strains
+colnames(tab) <- paste0("PC",1:ncol(tab))
+tab$color <- colors[strains]
+
+write.csv(tab, paste0(opt$outdir, "/data/S3b.csv"))
 
 sessionInfo()

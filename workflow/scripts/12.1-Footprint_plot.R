@@ -88,6 +88,8 @@ for (tf in unique(footprints$Motif)) {
 
 meta_footprints <- as.data.frame(do.call(rbind, fisher_res))
 meta_footprints$padj <- p.adjust(meta_footprints$meta_pval, method ="BH")
+meta_footprints$n <- tf_sig[rownames(meta_footprints)]
+meta_footprints$n[is.na(meta_footprints$n)] <- 0
 
 write.csv(meta_footprints, paste0(opt$outdir,"/footprint_analysis", opt$test,".csv"))
 

@@ -104,4 +104,6 @@ svg(paste0(opt$outdir,"/Fig1a.svg"),width=20, height=20)
 print(g)
 dev.off()
 
+write.csv(tab, paste0(opt$outdir, "/data/1a.csv"))
+
 sessionInfo()

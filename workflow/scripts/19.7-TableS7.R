@@ -37,7 +37,7 @@ option_list = list(
               help="Table S4", metavar="character"),
   make_option(c("-g", "--S5"), type="character", default=NULL, 
               help="Table S5", metavar="character"),
-  make_option(c("-e", "--S6"), type="character", default=NULL, 
+  make_option(c("-i", "--S6"), type="character", default=NULL, 
               help="Table S6", metavar="character"),
   make_option(c("-o", "--outdir"), type="character", default=NULL, 
               help="Output directory", metavar="character")
@@ -533,7 +533,8 @@ writeData(wb, "Final SD-Net edges", unique(net$edges) , rowNames=FALSE)
 addWorksheet(wb, "Final SD-Net nodes")
 writeData(wb, "Final SD-Net nodes", unique(net$vertices) , rowNames=FALSE)
 
-saveWorkbook(wb, paste0(opt$outdir,"/TableS7-GRN.xlsx", overwrite = TRUE))
+cat("Save table\n")
+saveWorkbook(wb, paste0(opt$outdir,"/TableS7-GRN.xlsx"), overwrite = TRUE)
    
 saveRDS(network, paste0(opt$outdir,"/data/SleepNet_simple.RDS"))
 

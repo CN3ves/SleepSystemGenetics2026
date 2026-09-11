@@ -1,7 +1,7 @@
-# Script to produce figure S2a
+# Script to produce figure S2
 
 # Redirect all R logs to Snakemake log
-log <- file('logs/20-Figures/figure2Sa.log', open = "wt")
+log <- file('logs/20-Figures/figure2S.log', open = "wt")
 sink(log, type = "output")
 sink(log, type = "message")
 
@@ -87,7 +87,7 @@ cors$Pearson_correlation_all <- as.numeric(cors$Pearson_correlation_all)
 
 cat("Get examples\n")
 #genes <- c("Nrf1","Sgsm1", "Fxyd3","Nav1", "Ncald", "Homer1",'Rbfox3','Tshz1','Dcaf7','Klf4','Ano2','Rasl11b','Cadm1')
-genes <- c("Hps1", "Hjurp", "Dynlt1c","Nrf1","Sgsm1", "Ncald")
+genes <- c("Hps1", "Nrf1","Tshz1", "Ncald", 'Nav1','Sgsm1')
 
 all(genes %in% rna$Gene_ID[rna$RNA_FDR < 0.05])
 
@@ -119,12 +119,12 @@ df$strain <- gsub("_.*","", df$sample)
 df$ATAC <- as.numeric(df$ATAC )
 df$RNA <- as.numeric(df$RNA )
 
-df$label <- factor(df$label, level=c("chr6:30028521-30028771 -> Nrf1", 
-                                     "chr5:113288807-113289057 -> Sgsm1",
-                                     "chr19:42788355-42788605 -> Hps1",
-                                     "chr17:6605446-6605696 -> Dynlt1c", 
-                                     "chr1:88275856-88276106 -> Hjurp",
-                                     "chr15:37607642-37607892 -> Ncald" ))
+df$label <- factor(df$label, level=c("chr1:135623342-135623558 -> Nav1",
+                                     "chr19:42788388-42788638 -> Hps1", 
+                                     "chr6:30028536-30028786 -> Nrf1",
+                                     "chr5:113297968-113298218 -> Sgsm1", 
+                                     "chr18:83895324-83895574 -> Tshz1",
+                                     "chr15:37607642-37607892 -> Ncald"))
 
 g <- ggplot(df, aes(x=ATAC,y=RNA, shape=treatment, col = treatment)) +
   geom_point(size=2) +
@@ -140,5 +140,7 @@ cat("Save plot\n")
 svg(paste0(opt$outdir,"/FigS2.svg"), width=17, height= 10)
 print(g)
 dev.off()
+
+write.csv(df, paste0(opt$outdir, "/data/S2.csv"))
 
 sessionInfo()
