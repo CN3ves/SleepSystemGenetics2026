@@ -1,7 +1,8 @@
 '''
 This Snakefile contains rules to produce the figures for the manuscript
 '''
-localrules: Figure1, FigureS1, Figure2, FigureS2, Figure3, FigureS3, FigureS4
+localrules: Figure1, FigureS1, Figure2, FigureS2, Figure3, FigureS3, FigureS4, FigureS5, Figure6, FigureS8, Figure8
+
 
 rule Figure1:
     '''
@@ -83,13 +84,13 @@ rule FigureS1:
         Rscript workflow/scripts/20.Figure_1Sb.R  -a {input.S2} -o {params.dir}
 
         echo "Make Figure S1c" >> {log}
-        Rscript workflow/scripts/20.Figure_1Sc.R  -a {input.S2} -o {params.dir}
+        Rscript workflow/scripts/20.Figure_1Sc.R  -a {input.S1} -o {params.dir}
     
         echo "Make Figure S1d" >> {log}
-        Rscript workflow/scripts/20.Figure_1Sd.R  -a {input.S2} -b {input.S3} -o {params.dir}
+        Rscript workflow/scripts/20.Figure_1Sd.R  -a {input.S2} -o {params.dir}
 
         echo "Make Figure S1e" >> {log}
-        Rscript workflow/scripts/20.Figure_1Se.R -a {input.S1} -o {params.dir}
+        Rscript workflow/scripts/20.Figure_1Se.R -a {input.S2} -b {input.S3} -o {params.dir}
 
         echo "Logs saved in <{log}>" >> {log}
         '''
@@ -282,6 +283,234 @@ rule FigureS4:
 
         echo "Make Figure S4b" >> {log}
         Rscript workflow/scripts/20.Figure_4Sb.R -a {params.qtls}/data/ -b {params.counts}/atac_counts_disp.RData -c {params.counts}/rna_counts_disp.RData  -d {input.S6} -o {params.dir}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule FigureS5:
+    '''
+    Figure S5
+    '''
+    input:
+        sleepnet=ancient(rules.tableS7.output.sleepnet),
+        fullnet=ancient(rules.tableS7.output.fullnet),
+    output:
+        figS5=protected('manuscript/figures/data/S5.csv'),
+    log:
+        'logs/20-Figures/FS5.log'
+    benchmark:
+        'benchmarks/20-Figures/FS5.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make Figures S5" > {log}
+        Rscript workflow/scripts/20.Figure_5Sa.R -a {input.sleepnet} -b {input.fullnet} -o {params.dir}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule Figure4:
+    '''
+    Figure 4
+    '''
+    input:
+        sleepnet=ancient(rules.tableS7.output.sleepnet),
+        sgnet=ancient(rules.tableS7.output.fullnet),
+        grnet=ancient(rules.tableS7.output.fullnet),
+        f=ancient(rules.FigureS5.output.figS5)
+    output:
+        fig4a=protected('manuscript/figures/data/4a.csv'),
+        fig4b=protected('manuscript/figures/data/4b.csv'),
+        fig4c=protected('manuscript/figures/data/4c.csv'),
+    log:
+        'logs/20-Figures/F4.log'
+    benchmark:
+        'benchmarks/20-Figures/F4.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make Figures 4a" > {log}
+        Rscript workflow/scripts/20.Figure_4a.R -a {input.sgnet} - -o {params.dir}
+
+        echo "Make Figures 4b" > {log}
+        Rscript workflow/scripts/20.Figure_4b.R -a {input.grnet} - -o {params.dir}
+
+        echo "Make Figures 4c" > {log}
+        Rscript workflow/scripts/20.Figure_4c.R -a {input.sleepnet} - -o {params.dir}
+
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule Figure6:
+    '''
+    Figure 6
+    '''
+    input:
+        S9=ancient(rules.tableS9.output.table),
+    output:
+        fig6a=protected('manuscript/figures/data/6a.csv'),
+        fig6b=protected('manuscript/figures/data/6b.csv'),
+    log:
+        'logs/20-Figures/F6.log'
+    benchmark:
+        'benchmarks/20-Figures/F6.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make Figures 6a" > {log}
+        Rscript workflow/scripts/20.Figure_6a.R -a {input.S9} - -o {params.dir}
+
+        echo "Make Figures 6b" > {log}
+        Rscript workflow/scripts/20.Figure_6b.R -a {input.S9} - -o {params.dir}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule FigureS8:
+    '''
+    Figure S8
+    '''
+    input:
+        S6=ancient(rules.tableS6.output.table),
+        f=ancient(rules.Figure6.output.fig6a)
+    output:
+        figS8a=protected('manuscript/figures/data/S8a.csv'),
+        figS8b=protected('manuscript/figures/data/S8b.csv')
+    log:
+        'logs/20-Figures/FS8.log'
+    benchmark:
+        'benchmarks/20-Figures/FS8.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+        counts='results/16-NRF_bam/EDA/'
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make Figure S8a" > {log}
+        Rscript workflow/scripts/20.Figure_8Sa.R -a {params.counts}/EDA_normalised.RData -o {params.dir}
+
+        echo "Make Figure S8b" >> {log}
+        Rscript workflow/scripts/20.Figure_8Sb.R -a {input.S9} -o {params.dir}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule Figure8:
+    '''
+    Figure S8
+    '''
+    input:
+        sleepnet=ancient(rules.tableS7.output.sleepnet),
+        S2=ancient(rules.tableS2.output.table),
+        S9=ancient(rules.tableS9.output.table)
+    output:
+        fig8a=protected('manuscript/figures/data/8a.csv'),
+        fig8b=protected('manuscript/figures/data/8b.csv'),
+        fig8c=protected('manuscript/figures/data/8c.csv')
+    log:
+        'logs/20-Figures/F8.log'
+    benchmark:
+        'benchmarks/20-Figures/F8.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+        counts='results/7-BXD_normalization/EDA',
+        sleep='rawdata/sleep_bxd',
+        footprints='results/12-BXD_footprints/heatmap'
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make Figure S8a" > {log}
+        Rscript workflow/scripts/20.Figure_8a.R -a {params.sleepnet} -b {input.S9} -o {params.dir}
+
+        echo "Make Figure S8b" >> {log}
+        Rscript workflow/scripts/20.Figure_8b.R   \
+            -a {input.sleepnet}
+            -b {params.counts}/atac_counts_disp.RData \
+            -c {params.counts}/rna_counts_disp.RData \
+            -d {params.footprints}/differential_statistics.txt \
+            -e {params.sleep}/phenotypes.txt \
+            -f {input.S2} \
+            -g {input.S9} \
+            -o {params.dir}
+
+        echo "Make Figure S8c" >> {log}
+        Rscript workflow/scripts/20.Figure_8c.R   \
+            -a {input.sleepnet}
+            -b {params.counts}/atac_counts_disp.RData \
+            -c {params.counts}/rna_counts_disp.RData \
+            -d {params.footprints}/differential_statistics.txt \
+            -e {params.sleep}/phenotypes.txt \
+            -f {input.S2} \
+            -g {input.S9} \
+            -o {params.dir}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+
+rule Figure_interactive:
+    '''
+    Figure 4
+    '''
+    input:
+        sleepnet=ancient(rules.tableS7.output.sleepnet),
+        f=ancient(rules.Figure4.output.fig4)
+    output:
+        int=protected('manuscript/figures/data/index.html'),
+    log:
+        'logs/20-Figures/F4.log'
+    benchmark:
+        'benchmarks/20-Figures/F4.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make interactive network" > {log}
+        Rscript workflow/scripts/20.Figure_interactive.R -a {input.sgnet} - -o {params.dir}
 
         echo "Logs saved in <{log}>" >> {log}
         '''

@@ -217,6 +217,10 @@ rule tableS7:
         S6=ancient(rules.tableS6.output.table)
     output:
         table=protected('manuscript/tables/TableS7-GRN.xlsx'),
+        sleepnet=protected('manuscript/tables/data/SleepNet.RDS'),
+        fullnet=protected('manuscript/tables/data/fullnet.RData'),
+        grnet=protected('manuscript/tables/data/grnet.RData'),
+        sgnet=protected('manuscript/tables/data/sgnet.RData'),
     log:
         'logs/19-Tables/S7.log'
     benchmark:
@@ -286,6 +290,7 @@ rule tableS9:
     '''
     input:
         check_point=ancient(rules.NRF_checkpoint.output.check),
+        QC=ancient(rules.tableS8.output.table)
     output:
         table=protected('manuscript/tables/TableS9-Differential_Expression.xlsx'),
     log:

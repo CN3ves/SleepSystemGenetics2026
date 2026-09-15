@@ -138,7 +138,7 @@ p <- p + guides(color=guide_legend(title="SD vs CTRL"), fill=guide_legend(title=
 p <- p  + geom_hline(yintercept=0, linetype="dashed", color = "grey")
 
 cat("Save plot\n")
-svg(paste0(opt$outdir,"/FigS3c.svg"),width=16,height=7)
+svg(paste0(opt$outdir,"/FigS4a.svg"),width=16,height=7)
 print(p)
 dev.off()
 

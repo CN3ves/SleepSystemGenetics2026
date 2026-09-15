@@ -12,6 +12,7 @@ suppressMessages({
   library("igraph")
   library("qgraph")
   library("colorspace")
+  library("RColorBrewer")
   library("optparse")
 })
 
@@ -19,8 +20,10 @@ cat("Checking arguments\n")
 options(bitmapType='cairo')
 
 option_list = list(
-  make_option(c("-a", "--S6"), type="character", default=NULL, 
-              help="Table S6", metavar="character"),
+  make_option(c("-a", "--net"), type="character", default=NULL, 
+              help="SD network", metavar="character"),
+  make_option(c("-b", "--full"), type="character", default=NULL, 
+              help="Full SD network", metavar="character"),
   make_option(c("-o", "--outdir"), type="character", default=NULL, 
               help="Output directory", metavar="character")
 ); 
@@ -28,28 +31,38 @@ option_list = list(
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
-if (is.null(opt$S6)){
+if (is.null(opt$net)){
   print_help(opt_parser)
-  stop("Table S6 (-a) is missing", call.=FALSE)
+  stop("SD network (-a) is missing", call.=FALSE)
 }
 if (is.null(opt$outdir)){
   print_help(opt_parser)
   stop("Output directory (-o) is missing", call.=FALSE)
 }
 
-cat("Load table S6\n")
-network <- readRDS("paper/GRANIE/SleepNet.RDS")
+cat("Load SD network\n")
+network <- readRDS(opt$net)
+full <- readRDS(opt$full)
 
-colors <- readRDS("graph_cols.RDS")
+
+colors <- list(
+  edge = data.frame(legend=unique(E(full)$type), 
+    color= rev(brewer.pal(n = length(unique(E(full)$type))+1, name = "Set3")[-2])),# bad yellow
+  node = data.frame(legend=unique(V(full)$carac), 
+    color= rev(brewer.pal(n = length(unique(V(full)$carac)), name = "Dark2")))
+  )
+
 v_cols <- colors[['node']]
-e_cols <- colors[['edge']]
+e_cols <- colors[['edge']] 
+
+saveRDS(colors, paste0(opt$outdir,"/graph_cols.RDS"))
 
 net_params <- function(nw, e_cols,v_cols) {
   V(nw)$size <- 1
-  V(nw)$color <-  sapply(V(nw)$carac, function(x) v_cols$color[v_cols == x])
+  V(nw)$color <-  unlist(lapply(V(nw)$carac, function(x) v_cols$color[v_cols$legend == x]))
   
   E(nw)$width <- 0.5
-  E(nw)$color <- sapply(E(nw)$type, function(x) e_cols$color[e_cols == x])
+  E(nw)$color <- unlist(lapply(E(nw)$type, function(x) e_cols$color[e_cols$legend == x]))
   
   V(nw)$shape <- "circle"
   V(nw)$shape[V(nw)$carac == 'Region'] <- "square"
@@ -64,7 +77,7 @@ net_params <- function(nw, e_cols,v_cols) {
   return(nw)
 }
 
-network <- net_params(network, e_cols,v_cols)
+full <- net_params(full, e_cols,v_cols)
   
 #subset component
 components <- components(network)
@@ -73,7 +86,7 @@ vert_ids <- V(network)[components$membership == biggest_cluster_id]
 subnet <- induced_subgraph(network, vert_ids)
 
 edges <- as_data_frame(subnet, what = "edges")
-sub_nodes <- seeds <- c("Nrf1","Hes1")
+sub_nodes <- seeds <- "Nrf1"
 d <- 5
 for (i in 1:d) {
   sub_edges <- edges[edges$from %in% sub_nodes | edges$to %in% sub_nodes,]
@@ -86,38 +99,26 @@ for (i in 1:d) {
     n <- V(network)$name[!V(network)$carac %in% c('Chromatin')]
     extra_edges <- rbind(edges[edges$from %in% motifs & edges$to %in% n,],
                      edges[edges$to %in% motifs & edges$from %in% n,])
+
+    extra_nodes <- c(extra_edges$from, extra_edges$to)
+    extra_nodes <- extra_nodes[!extra_nodes %in% sub_nodes]
+
+    extra_edges <- rbind(edges[edges$from %in% extra_nodes & edges$to %in% n,],
+                     edges[edges$to %in% extra_nodes & edges$from %in% n,])
     sub_nodes <- unique(c(sub_nodes,extra_edges$from, extra_edges$to))
   }
   
-  print(table(V(network)$carac[V(network)$name %in% sub_nodes]))
 }
 
-subnet <- induced_subgraph(network,  V(network)[V(network)$name %in% sub_nodes]) 
+net <- induced_subgraph(full,  V(full)[V(full)$name %in% sub_nodes]) 
 
-subnet <- delete_vertices(subnet,V(subnet)[names(which(degree(subnet)==1))[names(which(degree(subnet)==1)) %in% V(subnet)$name[V(subnet)$carac == 'Chromatin']]])
+edges <- as_data_frame(net, what = "edges")
 
-edges <- as_data_frame(subnet, what = "edges")
+unique(V(network)$carac)[!unique(V(network)$carac) %in% V(net)$carac]
 
-#subset regions not leading to transcripts
-tfs <- V(subnet)$name[V(subnet)$carac == 'TF']
-tfs <- (edges$from %in%  tfs | edges$to %in% tfs) & edges$type == "regulatory"
-tfs <- c(edges[tfs,"to"], edges[tfs,"from"])
-tfs <- tfs[tfs %in% V(subnet)$name[V(subnet)$carac == 'Region']]
+unique(E(network)$type)[!unique(E(network)$type) %in% E(net)$type]
 
-rna <- V(subnet)$name[V(subnet)$carac == 'Transcript']
-rna <- (edges$from %in%  rna | edges$to %in% rna)
-rna <- c(edges[rna,"to"], edges[rna,"from"])
-rna <- rna[rna %in% V(subnet)$name[V(subnet)$carac == 'Region']]
-
-idx <- sample( tfs[!tfs %in% rna],round(sum(!tfs %in% rna)*0.90))
-
-subnet <- delete_vertices(subnet,V(subnet)[idx])
-
-unique(V(network)$carac)[!unique(V(network)$carac) %in% V(subnet)$carac]
-
-unique(E(network)$type)[!unique(E(network)$type) %in% E(subnet)$type]
-
-layout <- qgraph.layout.fruchtermanreingold(as_edgelist(subnet, names = FALSE), vcount = vcount(subnet))
+layout <- qgraph.layout.fruchtermanreingold(as_edgelist(net, names = FALSE), vcount = vcount(net))
 
 plot_graph <- function(net, old_edges, new_edges, e_cols,v_cols, file, seeds=NULL) {
   
@@ -139,40 +140,35 @@ plot_graph <- function(net, old_edges, new_edges, e_cols,v_cols, file, seeds=NUL
 
 # A) QTL x FC edges
 cat("Plot figure S5a\n")
-old_edges <- c("QTLxFC"); new_edges <- c("QTL")
-plot_graph(subnet, old_edges, new_edges, e_cols,v_cols,file="S5a", seeds) 
-
-cat("Plot figure S5b\n")
-old_edges <- c("QTL"); new_edges <- c("QTLxFC")
-plot_graph(subnet, old_edges, new_edges,e_cols, v_cols, file="S5b", seeds) 
+old_edges <- c(""); new_edges <- c("QTLxSD","QTL")
+plot_graph(net, old_edges, new_edges, e_cols,v_cols,file="S5a", seeds) 
 
 # B) + Cor edges
-cat("Plot figure S5c\n")
+cat("Plot figure S5b\n")
 old_edges <- c(old_edges,new_edges); new_edges <- c("-Cor","+Cor")
-plot_graph(subnet, old_edges, new_edges, e_cols, v_cols, file="S5c", seeds) 
+plot_graph(net, old_edges, new_edges, e_cols, v_cols, file="S5b", seeds) 
 
 # C) + GRN edges
-cat("Plot figure S5d\n")
+cat("Plot figure S5c\n")
 old_edges <- c(old_edges,new_edges); new_edges <- c("regulatory")
-plot_graph(subnet, old_edges, new_edges, e_cols, v_cols, file="S5d", seeds) 
+plot_graph(net, old_edges, new_edges, e_cols, v_cols, file="S5c", seeds) 
 
-# D) + kinase edges
-cat("Plot figure S5e\n")
-old_edges <- c(old_edges,new_edges); new_edges <- c("Kinase")
-plot_graph(subnet, old_edges, new_edges, e_cols, v_cols,file="S5e", seeds) 
-
-# E) + footprint edges
-cat("Plot figure S5f\n")
+# D) + footprint edges
+cat("Plot figure S5d\n")
 old_edges <- c(old_edges,new_edges); new_edges <- c("Footprint")
-plot_graph(subnet, old_edges, new_edges, e_cols, v_cols, file="S5f", seeds) 
+plot_graph(net, old_edges, new_edges, e_cols, v_cols,file="S5d", seeds) 
+
+# E) + alls edges
+cat("Plot figure S5e\n")
+old_edges <- c(old_edges,new_edges); new_edges <- c( "Overlap", "Translation", "Phosphorylation")
+plot_graph(net, old_edges, new_edges, e_cols, v_cols, file="S5e", seeds) 
 
 # F) network
-cat("Plot figure S5g\n")
+cat("Plot figure S5f\n")
+subnet <- induced_subgraph(full,  V(full)[V(full)$name %in% sub_nodes]) 
 old_edges <- c(old_edges,new_edges); new_edges <-""
-plot_graph(subnet, old_edges, new_edges, e_cols,v_cols, file="S5g", seeds) 
+plot_graph(subnet, old_edges, new_edges, e_cols,v_cols, file="S5f", seeds) 
 
-cat("Save plot\n")
-
-write.csv(tm, paste0(opt$outdir, "/data/S4a.csv"))
+write.csv(as_data_frame(subnet, what = "edges"), paste0(opt$outdir, "/data/S5.csv"))
 
 sessionInfo()

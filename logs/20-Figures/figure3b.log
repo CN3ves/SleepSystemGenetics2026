@@ -9,3 +9,37 @@ In recode_geno(sheet, genotypes) : 3746 genotypes treated as missing: "H"
 Warning message:
 In recode_geno(sheet, genotypes) : 3816 genotypes treated as missing: "H"
 Load QTL information for ATAC
+Load QTL information for ATAC
+Load QTL information for ATAC
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] optparse_1.8.2   openxlsx_4.2.8.1 qtl2_0.46       
+
+loaded via a namespace (and not attached):
+ [1] fastmap_1.2.0       bit_4.6.0           cachem_1.1.0       
+ [4] blob_1.3.0          parallel_4.5.2      memoise_2.0.1      
+ [7] bit64_4.8.4         cli_3.6.6           zip_3.0.2          
+[10] RSQLite_3.53.3      vctrs_0.7.3         DBI_1.3.0          
+[13] data.table_1.18.6.1 compiler_4.5.2      tools_4.5.2        
+[16] Rcpp_1.1.2          otel_0.2.0          jsonlite_2.0.0     
+[19] rlang_1.3.0         stringi_1.8.9      

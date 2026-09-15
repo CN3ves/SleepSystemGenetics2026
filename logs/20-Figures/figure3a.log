@@ -2,17 +2,17 @@ Loading packages
 Checking arguments
 Load Table S6
 TSS annotation
->> preparing features information...		 2026-09-11 09:41:40 AM 
+>> preparing features information...		 2026-09-11 05:36:27 PM 
 >> Using Genome: mm10 ...
->> identifying nearest features...		 2026-09-11 09:41:40 AM 
->> calculating distance from peak to TSS...	 2026-09-11 09:41:41 AM 
->> assigning genomic annotation...		 2026-09-11 09:41:41 AM 
+>> identifying nearest features...		 2026-09-11 05:36:28 PM 
+>> calculating distance from peak to TSS...	 2026-09-11 05:36:29 PM 
+>> assigning genomic annotation...		 2026-09-11 05:36:29 PM 
 >> Using Genome: mm10 ...
 >> Using Genome: mm10 ...
->> adding gene annotation...			 2026-09-11 09:41:57 AM 
+>> adding gene annotation...			 2026-09-11 05:37:00 PM 
 'select()' returned 1:many mapping between keys and columns
->> assigning chromosome lengths			 2026-09-11 09:41:57 AM 
->> done...					 2026-09-11 09:41:57 AM 
+>> assigning chromosome lengths			 2026-09-11 05:37:00 PM 
+>> done...					 2026-09-11 05:37:00 PM 
 Save plot 1
 null device 
           1 

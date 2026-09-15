@@ -37,7 +37,7 @@ if (is.null(opt$S2)){
 }
 if (is.null(opt$S3)){
   print_help(opt_parser)
-  stop("Table S3 (-a) is missing", call.=FALSE)
+  stop("Table S3 (-b) is missing", call.=FALSE)
 }
 if (is.null(opt$outdir)){
   print_help(opt_parser)
@@ -67,7 +67,7 @@ correlations <- correlations %>% select(RNA,ATAC,Nearest.Gene,Pearson_correlatio
   summarize(RNA=unique(RNA), ATAC= log2(mean(2^ATAC)), cor=max(abs(as.numeric(Pearson_correlation_all))))
 
 cat("Determining gene groups\n")
-ov <- read.xlsx(opt$S3, "Overlap")
+ov <- read.xlsx(opt$S3, , sheet="Overlap")
 plasticity <- c(grep('ynap',ov$Description),
                 grep('memo',ov$Description),
                 grep('hor',ov$Description),

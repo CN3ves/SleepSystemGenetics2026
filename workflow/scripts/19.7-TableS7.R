@@ -87,6 +87,7 @@ gr_net <- readRDS(opt$granie)
 ATACdiff <- read.xlsx(opt$S2, "Differential_Accessibility")
 RNAdiff <- read.xlsx(opt$S2, "Differential_Expression")
 footprints <-  read.xlsx(opt$S4, "Footprints")
+TF_meta <-  read.xlsx(opt$S4, "Meta-analysis")
 kea_list <- list(read.xlsx(opt$S5, "Mean_rank"),
   read.xlsx(opt$S5, "Integrated_scaled_rank"))
 
@@ -397,20 +398,51 @@ network <- delete_vertices(fullnet, grep("FitNormal",V(fullnet)$name, value=TRUE
 nodes <- as_data_frame(network,"vertices")
 
 cat("Filter transcripts affected by SD\n") 
+cat(" - Network size:",length(network),"\n") 
 rna <- RNAdiff[RNAdiff$RNA_FDR < 0.05,"Gene_ID"]
 keep <- nodes$name[nodes$carac == 'Transcript'] %in% rna
 
+cat("Removed", sum(!keep),"transcripts\n") 
 network <- delete_vertices(network,nodes$name[nodes$carac == 'Transcript'][!keep])
 
 cat("Filter regions affected by SD\n") 
+cat(" - Network size:",length(network),"\n") 
 atac <- GRanges(ATACdiff[ATACdiff$ATAC_FDR < 0.05,])
 regions <- GRanges(nodes$name[nodes$carac == 'Chromatin'])
 ov <- findOverlaps(regions,atac)
 keep <- nodes$name[nodes$carac == 'Chromatin'] %in% paste(regions[queryHits(ov)])
 
+cat("Removed", sum(!keep),"regions\n") 
 network <- delete_vertices(network,nodes$name[nodes$carac == 'Chromatin'][!keep])
 
+cat("Filter TFs by SD\n") 
+cat(" - Network size:",length(network),"\n")  
+TF_meta <- TF_meta[TF_meta$padj<0.05,1]
+sig_tf <- unique(unlist(strsplit(TF_meta,':')))
+TF_meta <-  gsub('.*\\.','',gsub('\\(.*','',TF_meta))
+sig_tf <-  gsub('.*\\.','',gsub('\\(.*','',sig_tf))
+keep <- toupper(nodes$name[nodes$carac == 'TF']) %in% c(toupper(sig_tf), toupper(TF_meta))
+
+cat("Removed", sum(!keep),"TFs\n") 
+network <- delete_vertices(network,nodes$name[nodes$carac == 'TF'][!keep])
+
+cat("Remove motifs with no TF\n") 
+cat(" - Network size:",length(network),"\n")
+nodes <- as_data_frame(network,"vertices")
+edges <- as_data_frame(network, "edges")
+
+motifs <- nodes$name[nodes$carac == 'Motif']
+tfs <- nodes$name[nodes$carac == 'TF']
+
+m <- edges$to[edges$to %in% motifs & edges$from %in% tfs]
+m <- c(m,edges$from[edges$from %in% motifs & edges$to %in% tfs])
+keep <- motifs %in% m
+
+cat("Removed", sum(!keep),"motifs\n") 
+network <- delete_vertices(network,motifs[!keep])
+
 cat("Filter regions not connected to SNPs or transcripts\n") 
+cat(" - Network size:",length(network),"\n")
 nodes <- as_data_frame(network,"vertices")
 edges <- as_data_frame(network, "edges")
 
@@ -420,12 +452,13 @@ loci <- nodes$name[nodes$carac == 'Loci']
 
 r <- edges$to[edges$to %in% regions & edges$from %in% c(genes, loci)]
 r <- c(r,edges$from[edges$from %in% regions & edges$to %in% c(genes, loci)])
-
 keep <- regions %in% r
 
+cat("Removed", sum(!keep),"regions\n") 
 network <- delete_vertices(network,regions[!keep])
 
 cat("Filter motifs with no regions\n") 
+cat(" - Network size:",length(network),"\n")
 nodes <- as_data_frame(network,"vertices")
 edges <- as_data_frame(network, "edges")
 
@@ -434,72 +467,113 @@ motifs <- nodes$name[nodes$carac == 'Motif']
 
 m <- edges$to[edges$to %in% motifs & edges$from %in% regions]
 m <- c(m,edges$from[edges$from %in% motifs & edges$to %in% regions])
-
 keep <- motifs %in% m
 
+cat("Removed", sum(!keep),"motifs\n") 
 network <- delete_vertices(network,motifs[!keep])
 
-cat("Filter footprints with no regulation\n") 
+cat("Filter footprints with no GRN regulation\n") 
+cat(" - Network size:",length(network),"\n")
 nodes <- as_data_frame(network,"vertices")
 edges <- as_data_frame(network, "edges")
 
 motifs <- nodes$name[nodes$carac == 'Motif']
 
+rm_motif <- c()
+rm_edges <- list()
 for (m in motifs) {
   n <- names(neighbors(network, m))
   tf <- n[n %in% nodes$name[nodes$carac == 'TF']]
+  regions <- n[n %in% nodes$name[nodes$carac == 'Chromatin']]
 
   r <- edges$to[edges$to %in% n & edges$from %in% tf]
   r <- c(r,edges$from[edges$from %in% n & edges$to %in% tf])
 
-  if (length(r) == 0)  network <- delete_vertices(network,m)
+  if (length(r) == 0) {
+    rm_motif <- c(rm_motif,m)
+  } else {
+    rm <- regions[!regions %in% r]
+    if(length(rm) > 0) {
+      for (r in rm) {
+       rm_edges <- c(rm_edges, list(
+        c(which(edges$to == m & edges$from == r),
+          which(edges$to == r & edges$from == m))))   
+      }
+    }
+  }
 }
+cat("Removed", length(unlist(rm_edges)),"edges\n") 
+network <- delete_edges(network,E(network)[unlist(rm_edges)])
 
+cat("Removed", length(rm_motif),"motifs\n") 
+network <- delete_vertices(network, rm_motif)
+
+
+nodes <- as_data_frame(network,"vertices")
+edges <- as_data_frame(network, "edges")
 tfs <- nodes$name[nodes$carac == 'TF']
 rm_edges <- list()
 for (t in tfs) {
   n <- names(neighbors(network, t))
   
-  motif <- n[n %in% nodes$name[nodes$carac == 'Motif']]
-
-  if(length(motif) > 0) {
-    r <- n[n %in% nodes$name[nodes$carac == 'Chromatin']]
-    if(length(r) > 0) {
-      for (m in motif) {
-        f <- names(neighbors(network, m))
-        rm <- r[r %in% f]
-
-        for (e in rm) {
-          rm_edges <- c(rm_edges, list(
-            c(which(edges$to == t & edges$from == e),
-              which(edges$to == e & edges$from == t))))         
-        }
-      }
-    }
-  } else if(length(motif) == 0) { #try remove all tf-chr
-    r <- n[n %in% nodes$name[nodes$carac == 'Chromatin']]
-    for (e in r) {
-      rm_edges <- c(rm_edges, list(
-        c(which(edges$to == t & edges$from == e),
-         which(edges$to == e & edges$from == t))))    
-    }
+  r <- n[n %in% nodes$name[nodes$carac == 'Chromatin']]
+  for (e in r) {
+    rm_edges <- c(rm_edges, list(
+      c(which(edges$to == t & edges$from == e),
+        which(edges$to == e & edges$from == t))))    
   }
 }
 
+cat("Removed", length(unlist(rm_edges)),"edges\n") 
 network <- delete_edges(network,E(network)[unlist(rm_edges)])
 
-cat("Filter unconnected nodes\n") 
+cat("Remove TFs with no motif \n")
+cat(" - Network size:",length(network),"\n")
 nodes <- as_data_frame(network,"vertices")
 edges <- as_data_frame(network, "edges")
+
+motifs <- nodes$name[nodes$carac == 'Motif']
+tfs <- nodes$name[nodes$carac == 'TF']
+
+t <- edges$to[edges$to %in% tfs & edges$from %in% motifs]
+t <- c(t,edges$from[edges$from %in% tfs & edges$to %in% motifs])
+keep <- tfs %in% t
+
+cat("Removed", sum(!keep),"Tfs\n") 
+network <- delete_vertices(network,tfs[!keep])
+
+cat("Remove kinases with no TF \n")
+cat(" - Network size:",length(network),"\n")
+nodes <- as_data_frame(network,"vertices")
+edges <- as_data_frame(network, "edges")
+
+kinases <- nodes$name[nodes$carac == 'Kinase']
+tfs <- nodes$name[nodes$carac == 'TF']
+
+k <- edges$to[edges$to %in% kinases & edges$from %in% tfs]
+k <- c(k,edges$from[edges$from %in% kinases & edges$to %in% tfs])
+keep <- kinases %in% k
+
+cat("Removed", sum(!keep),"kinases\n") 
+network <- delete_vertices(network,kinases[!keep])
+cat("Network size",length(network),"\n") 
+
+cat("Filter unconnected nodes\n") 
+cat(" - Network size:",length(network),"\n")
+nodes <- as_data_frame(network,"vertices")
 # prune network progressively edge chromatin and motifs
+d <- names(which(degree(network)==1))
 for(o in c('Chromatin', 'Motif')){ 
-  d <- names(which(degree(network)==1))
   rm <- d[d %in% nodes$name[nodes$carac %in% o]]
+  cat("Removed", length(rm),o,"\n") 
   network <- delete_vertices(network, rm)
+  cat(" - Network size:",length(network),"\n")
 }
 
+cat("Removed", sum(degree(network)==0),"nodes\n") 
 network <- delete_vertices(network, names(which(degree(network)==0)))
 
+cat("Final Network size:",length(network),"\n")
 saveRDS(network, paste0(opt$outdir,"/data/SleepNet.RDS"))
 
 cat("Rename edges\n") 

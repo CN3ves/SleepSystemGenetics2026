@@ -49,7 +49,8 @@ for (sheet in c("SD effect CT", "SD effect FV","SD effect FT")) {
   mat <- stats[[i]]$table
   mat$ENSEMBLE <- rownames(mat)
   mat <- mat[,c("ENSEMBLE", "SYMBOL", "NAME", "logFC", "logCPM", "F", "PValue", "FDR")]
-  
+  names(mat) <- gsub("ENSEMBLE","ENSEMBL",names(mat))
+
   sheet <- gsub("FT","ciKO",gsub("FV","Tamoxifen Control",gsub("CT","Genotype Control",sheet)))
   sheet <- gsub("SD effect ","SD effect -",sheet)
   addWorksheet(wb, sheet)
@@ -62,6 +63,7 @@ for (sheet in c("baselineCT", "baselineFV", "SDFT", "SDCT", "SDFV" )) {
   mat <- stats[[sheet]]$table
   mat$ENSEMBLE <- rownames(mat)
   mat <- mat[,c("ENSEMBLE", "SYMBOL", "NAME", "logFC", "logCPM", "F", "PValue", "FDR")]
+  names(mat) <- gsub("ENSEMBLE","ENSEMBL",names(mat))
 
   if(sheet == "baselineCT") sheet <- "-Baseline- FT vs CT"
   if(sheet == "baselineFV") sheet <- "-Baseline- FT vs FV"
