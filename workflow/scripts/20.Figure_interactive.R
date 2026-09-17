@@ -1,7 +1,7 @@
-# Script to produce figure 4c
+# Script to produce figure 4interactive
 
 # Redirect all R logs to Snakemake log
-log <- file('logs/20-Figures/figure4c.log', open = "wt")
+log <- file('logs/20-Figures/figure4int.log', open = "wt")
 sink(log, type = "output")
 sink(log, type = "message")
 
@@ -46,9 +46,8 @@ colors <- readRDS(paste0(opt$outdir,"/graph_cols.RDS"))
 v_cols <- colors[['node']]
 e_cols <- colors[['edge']] 
 
-
 net_params <- function(nw, e_cols,v_cols) {
-  V(nw)$size <- 1
+  V(nw)$size <- 5
   V(nw)$color <-  unlist(lapply(V(nw)$carac, function(x) v_cols$color[v_cols$legend == x]))
   
   E(nw)$width <- 1
@@ -82,37 +81,57 @@ biggest_cluster_id <- which.max(components$csize)
 vert_ids <- V(network)[components$membership == biggest_cluster_id]
 subnet <- induced_subgraph(network, vert_ids)
 
-layout <- qgraph.layout.fruchtermanreingold(as_edgelist(subnet, names = FALSE), vcount = vcount(subnet))
 
-
-
-
-links <- as_data_frame(plot_net, what = "edges")
-links$value <- 2
-links$title <- links$type 
-
-nodes <- as_data_frame(plot_net, what = "vertices")
+nodes <- as_data_frame(subnet, what = "vertices")
 nodes$id <- nodes$title <- nodes$name 
-nodes$label <- substr(nodes$label,1,6)
+nodes$label <- substr(nodes$name,1,6)
 
 ln <- unique(nodes[,c('carac','shape','color')])
 names(ln)[1] <- 'label'
 
+links <- as_data_frame(subnet, what = "edges")
+links$value <- 2
+links$title <- links$type 
+
 le <- unique(links[,c('title','color')])
 names(le)[1] <- 'label'
 
-data <- toVisNetworkData(igraph_network)
-visNetwork(nodes = data$nodes, edges = data$edges, height = "500px")
+layout <- qgraph.layout.fruchtermanreingold(as_edgelist(subnet, names = FALSE), vcount = vcount(subnet))
+nodes$x <- layout[, 1] * 1  # Scale up for visNetwork
+nodes$y <- layout[, 2] * 1
+names(nodes)[2] <- "type"
 
-fig <- visNetwork(nodes, links, width="100%", height="800px", background="#eeefff",
-           main="SD-Net", submain="the most beautiful of all networks") %>% 
-  visOptions(selectedBy = "carac", 
-             highlightNearest = list(enabled=TRUE, hover=TRUE, degree=1),
-             nodesIdSelection = TRUE) %>%
-  visLegend(useGroups = F, addNodes = ln,  addEdges = le)  %>% 
-  visInteraction(navigationButtons = TRUE)
+fig <- visNetwork(
+  nodes = nodes,
+  edges = links,
+  width = "100%",
+  height = "800px",
+  main = "Genetic and regulatory network of the response to sleep deprivation in cortex",
+  submain = "Hover to highlight closest connections; Select nodes in dropdown menu by writing name; Zoom in/out using mouse scroll"
+) %>%
+  visNodes(size = 10) %>%
+  visOptions(
+    selectedBy = "type",
+    highlightNearest = list(
+      enabled = TRUE,
+      hover = TRUE,
+      degree = 1
+    ),
+    nodesIdSelection = list(
+      enabled = TRUE,
+      main = "Select Node",
+      style = "width: 200px; height: 30px;"
+    )
+  ) %>%
+  visLegend(
+    useGroups = FALSE,
+    addNodes = ln,
+    addEdges = le
+  ) %>%
+  visInteraction(navigationButtons = TRUE, keyboard = TRUE,) %>%
+  visPhysics(enabled = FALSE)
 
-saveWidget(fig, file = "myplot.html")
+saveWidget(fig, file = paste0(opt$outdir,"/data/index.html"))
 
 sessionInfo()
 

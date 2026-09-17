@@ -63,7 +63,7 @@ ct_int <- ct_int[ct_int$PValue < 0.01,]
 fv_int <- read.xlsx(opt$S9, sheet="-Interaction- SD x Tamoxifen")
 fv_int <- fv_int[fv_int$PValue < 0.01,]
 
-int <- fv_int$SYMBOL[fv_int$ENSEMBLE %in% ct_int$ENSEMBLE]
+int <- fv_int$SYMBOL[fv_int$ENSEMBL %in% ct_int$ENSEMBL]
 int <- int[!is.na(int)]
 
 ct_bsl <- read.xlsx(opt$S9, sheet="-Baseline- ciKO vs Genotype")
@@ -71,7 +71,7 @@ ct_bsl <- ct_bsl[ct_bsl$FDR < 0.05,]
 fv_bsl <- read.xlsx(opt$S9, sheet="-Baseline- ciKO vs Tamoxifen")
 fv_bsl <- fv_bsl[fv_bsl$FDR < 0.05,]
 
-bsl <- fv_bsl$SYMBOL[fv_bsl$ENSEMBLE %in% ct_bsl$ENSEMBLE]
+bsl <- fv_bsl$SYMBOL[fv_bsl$ENSEMBL %in% ct_bsl$ENSEMBL]
 bsl <- bsl[!is.na(bsl)]
 
 int <- int[int %in% nodes$name]

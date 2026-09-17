@@ -1,0 +1,44 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-09-17 00:41:14
+  Workflow ID: 0e62515a-0627-4eb6-931e-fb1cd60dabeb
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna072
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs Figure_interactive: --allowed-rules Figure_interactive --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.ky3zvn39 manuscript/tables/data/SleepNet.RDS manuscript/figures/data/4a.csv --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input code params mtime --deployment-method conda --conda-frontend conda --conda-base-path /dcsrsoft/spack/20260114/spack/opt/spack/linux-zen2/miniforge3-25.3.0-3-brbhokeedsspozyjhxn7lnqlcf6wgtkz --shared-fs-usage source-cache software-deployment-cache software-deployment storage-local-copies persistence input-output sources --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp8sdatgdy --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 17 00:41:15 2026]
+localrule Figure_interactive:
+    input: manuscript/tables/data/SleepNet.RDS, manuscript/figures/data/4a.csv
+    output: manuscript/figures/data/index.html
+    log: logs/20-Figures/F4int.log
+    jobid: 0
+    benchmark: benchmarks/20-Figures/F4int.txt
+    reason: Forced execution
+    resources: tmpdir=/tmp/65082815, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, time=0:10:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p manuscript/figures/data
+
+        echo "Make interactive network" > logs/20-Figures/F4int.log
+        Rscript workflow/scripts/20.Figure_interactive.R -a manuscript/tables/data/SleepNet.RDS -o manuscript/figures
+
+        echo "Logs saved in <logs/20-Figures/F4int.log>" >> logs/20-Figures/F4int.log
+        
+slurmstepd: error: *** JOB 65082815 ON dna072 CANCELLED AT 2026-09-17T00:51:27 DUE TO TIME LIMIT ***

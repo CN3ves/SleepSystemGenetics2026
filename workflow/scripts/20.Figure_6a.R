@@ -52,11 +52,11 @@ deg$sig <- "No change"
 deg$sig[deg$FDR < 0.05 & deg$logFC > 0] <- "Up"
 deg$sig[deg$FDR < 0.05 & deg$logFC < 0] <- "Down"
 
-shared <- ct[ct$FDR <0.05,"ENSEMBLE"] %in% fv[fv$FDR <0.05,"ENSEMBLE"]
-shared <- ct[ct$FDR <0.05,"ENSEMBLE"][shared]
+shared <- ct[ct$FDR <0.05,"ENSEMBL"] %in% fv[fv$FDR <0.05,"ENSEMBL"]
+shared <- ct[ct$FDR <0.05,"ENSEMBL"][shared]
 
 deg$label <- deg$SYMBOL
-deg$SYMBOL[!deg$ENSEMBLE %in% shared] <- ""
+deg$SYMBOL[!deg$ENSEMBL %in% shared] <- ""
 
 lim <-  round(max(abs(deg$logFC)),1)
 

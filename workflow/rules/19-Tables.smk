@@ -1,7 +1,7 @@
 '''
 This Snakefile contains rules to produce the tables for the manuscript
 '''
-localrules: tableS1, tableS2, tableS3, tableS4, tableS5, tableS6, tableS7, tableS8, tableS9
+localrules: tableS1, tableS2, tableS3, tableS5, tableS6, tableS7, tableS8, tableS9
 
 rule tableS1:
     '''
@@ -121,8 +121,8 @@ rule tableS4:
     benchmark:
         'benchmarks/19-Tables/S4.txt'
     resources:
-        mem_mb = 1000,
-        time = '0:10:00'
+        mem_mb = 75000,
+        time = '0:30:00'
     threads: 1
     params:
         dir='manuscript/tables'

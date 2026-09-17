@@ -57,11 +57,11 @@ colors <- c("CT_NSD"="grey", "FT_NSD"="red", "FV_NSD"="green", "CT_SD"="darkgrey
 pchs <-  c("CT_NSD"= 16, "FT_NSD"=16, "FV_NSD"=16, "CT_SD"=23, "FT_SD"=23, "FV_SD"=23)
   
 svg(paste0(opt$outdir,"/FigS8a.svg"),width=10,height=10)
-plotMDS(logcpm, col = colors[pData(counts)$Group], pch = pchs[pData(counts)$Group],main=paste0("MDS (PCA) using all (", nrow(counts),") features"),top=nrow(logcpm), gene.selection="common", dim.plot = c(1,2))
+plotMDS(logcpm, col = colors[pData(counts)$Group], pch = pchs[pData(counts)$Group],main=paste0("PCA using all (", nrow(logcpm),") features"),top=nrow(logcpm), gene.selection="common", dim.plot = c(1,2))
 
 legend("top", legend=names(colors), col=colors, pch=pchs, ncol=3)
 dev.off()
 
-write.csv(deg, paste0(opt$outdir, "/data/S8a.csv"))
+write.csv(logcpm, paste0(opt$outdir, "/data/S8a.csv"))
 
 sessionInfo()

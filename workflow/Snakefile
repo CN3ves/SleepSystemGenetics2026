@@ -49,6 +49,7 @@ rule manuscript:
         expand('results/18-Checkpoint/{exp}.check', exp =  ['bxd','nrf']),
         # Run above first. 
         # Table S5 requires manually downloading KEA3 results which depend on the footprint analyses.
-        expand('manuscript/figures/data/{fig}.csv', fig = ['1a', 'S1a','2a','S2','3a', 'S3a', 'S4a','S5','4a','6a','S8a', '8a']),
+        expand('manuscript/figures/data/{fig}.csv', fig = ['1a', 'S1a','2a','S2','3a', 'S3a', 'S4a','S5','4a','6a','S8a', '8a', 'S11']),
+        'manuscript/figures/data/index.html'
         
       

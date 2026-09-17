@@ -1,7 +1,7 @@
-# Script to produce figure S8a
+# Script to produce figure S8b
 
 # Redirect all R logs to Snakemake log
-log <- file('logs/20-Figures/figure8Sa.log', open = "wt")
+log <- file('logs/20-Figures/figure8Sb.log', open = "wt")
 sink(log, type = "output")
 sink(log, type = "message")
 
@@ -9,8 +9,8 @@ cat("Loading packages\n")
 .libPaths('Rlibs')
 
 suppressMessages({
-  library("VennDiagram")
-  library("RColorBrewer")
+  library("edgeR")
+  library("EDASeq")
   library("openxlsx")
   library("optparse")
 })
@@ -19,7 +19,9 @@ cat("Checking arguments\n")
 options(bitmapType='cairo')
 
 option_list = list(
-  make_option(c("-a", "--S9"), type="character", default=NULL, 
+  make_option(c("-a", "--counts"), type="character", default=NULL, 
+              help="Nrf1 counts", metavar="character"),
+  make_option(c("-b", "--S9"), type="character", default=NULL, 
               help="Table S9", metavar="character"),
   make_option(c("-o", "--outdir"), type="character", default=NULL, 
               help="Output directory", metavar="character")
@@ -28,52 +30,56 @@ option_list = list(
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
+if (is.null(opt$counts)){
+  print_help(opt_parser)
+  stop("Nrf1 counts (-a) is missing", call.=FALSE)
+}
 if (is.null(opt$S9)){
   print_help(opt_parser)
-  stop("Table S9 (-a) is missing", call.=FALSE)
+  stop("Table S9 (-b) is missing", call.=FALSE)
 }
 if (is.null(opt$outdir)){
   print_help(opt_parser)
   stop("Output directory (-o) is missing", call.=FALSE)
 }
 
-cat("Load Table S9 \n")
+cat("Load normalized counts\n")
+
+counts <-  readRDS(opt$counts)
+
+pData(counts)$NRF <- ifelse(gsub("_.*", "", pData(counts)$Group) == "FT", "negative", "positive")
+pData(counts)$NRF <- as.factor(pData(counts)$NRF)
+pData(counts)$NRF <- relevel(pData(counts)$NRF, ref="positive")
+pData(counts)$Treatment <- as.factor(pData(counts)$Treatment)
+pData(counts)$Treatment <- relevel(pData(counts)$Treatment, ref="Vehicle")
+
+y <- DGEList(counts=counts(counts), group=pData(counts)$Group)
+y$offset <- -offst(counts)
+keep <- filterByExpr(y)
+y <- y[keep,,keep.lib.sizes=FALSE]
+
+logcpm <- cpm(y, log=TRUE)
+
 ct <- read.xlsx(opt$S9, sheet="SD effect -Genotype Control")
 fv <- read.xlsx(opt$S9, sheet="SD effect -Tamoxifen Control")
 ft <- read.xlsx(opt$S9, sheet="SD effect -ciKO")
 
-stats <- list("Tamoxifen control"=ct, "Genotype control"=fv, "Nrf1 cKO"=ft)
-sets <- lapply(stats, function(x) x$ENSEMBL[x$FDR < 0.05])
+ct <- ct[ct$FDR < 0.05,'ENSEMBL']
+fv <- fv[fv$FDR < 0.05,'ENSEMBL']
+ft <- ft[ft$FDR < 0.05,'ENSEMBL']
 
-venn.diagram(
-  x = sets,
-  category.names = names(sets),
-  filename = paste0(opt$outdir,"/FigS8b.svg"),
-  output=TRUE,
-  disable.logging = TRUE,
-  # Output features
-  imagetype="svg" ,
-  height = 7, 
-  width = 7, 
-  resolution = 300,
-  compression = "lzw",
-  # Circles
-  lwd = 2,
-  lty = 'blank',
-  fill = brewer.pal(3, "Pastel2"),
-  # Numbers
-  cex = .9,
-  fontface = "italic",
-  fontfamily = "sans",
-  # Set names
-  cat.cex = 2,
-  cat.col = brewer.pal(3, "Pastel2"),
-  cat.fontface = "bold",
-  cat.default.pos = "outer",
-  cat.fontfamily = "sans"
-)
-df <- t(as.data.frame(lapply(sets, function(set) paste(set, collapse = ','))))
-rownames(df) <- names(sets)
-write.csv(df, paste0(opt$outdir, "/data/S8b.csv"))
+nrf <- ft[!(ft %in% fv | ft %in% ct)]
+
+logcpm <- logcpm[nrf,]
+colors <- c("CT_NSD"="grey", "FT_NSD"="red", "FV_NSD"="green", "CT_SD"="darkgrey", "FT_SD"="darkred", "FV_SD"="darkgreen")
+pchs <-  c("CT_NSD"= 16, "FT_NSD"=16, "FV_NSD"=16, "CT_SD"=23, "FT_SD"=23, "FV_SD"=23)
+  
+svg(paste0(opt$outdir,"/FigS8b.svg"),width=10,height=10)
+plotMDS(logcpm, col = colors[pData(counts)$Group], pch = pchs[pData(counts)$Group],main=paste0("PCA using all (", nrow(logcpm),") features"),top=nrow(logcpm), gene.selection="common", dim.plot = c(1,2))
+
+legend("top", legend=names(colors), col=colors, pch=pchs, ncol=3)
+dev.off()
+
+write.csv(logcpm, paste0(opt$outdir, "/data/S8b.csv"))
 
 sessionInfo()

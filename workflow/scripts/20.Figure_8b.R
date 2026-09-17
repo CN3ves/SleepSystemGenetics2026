@@ -158,7 +158,7 @@ ct_int <- ct_int[ct_int$PValue < 0.01,]
 fv_int <- read.xlsx(opt$S9, sheet="-Interaction- SD x Tamoxifen")
 fv_int <- fv_int[fv_int$PValue < 0.01,]
 
-int <- fv_int$SYMBOL[fv_int$ENSEMBLE %in% ct_int$ENSEMBLE]
+int <- fv_int$SYMBOL[fv_int$ENSEMBL %in% ct_int$ENSEMBL]
 int <- int[!is.na(int)]
 
 ct_bsl <- read.xlsx(opt$S9, sheet="-Baseline- ciKO vs Genotype")
@@ -166,7 +166,7 @@ ct_bsl <- ct_bsl[ct_bsl$FDR < 0.05,]
 fv_bsl <- read.xlsx(opt$S9, sheet="-Baseline- ciKO vs Tamoxifen")
 fv_bsl <- fv_bsl[fv_bsl$FDR < 0.05,]
 
-bsl <- fv_bsl$SYMBOL[fv_bsl$ENSEMBLE %in% ct_bsl$ENSEMBLE]
+bsl <- fv_bsl$SYMBOL[fv_bsl$ENSEMBL %in% ct_bsl$ENSEMBL]
 bsl <- bsl[!is.na(bsl)]
 
 int <- int[int %in% nodes$name]
@@ -208,6 +208,7 @@ paths <-  paths[sapply(paths,length) <5]
 
 sub_nodes <- seeds <- unique(unlist(paths))
 edges <- as_edgelist(network)
+sub_nodes <- c(sub_nodes ,'Nrf1')
 for (i in 1:3) {
   sub_nodes <- sub_nodes[!sub_nodes %in% V(network)$name[V(network)$carac =="Motif"]]
   sub_edges <- edges[edges[,1] %in% sub_nodes | edges[,2] %in% sub_nodes,]
@@ -242,7 +243,7 @@ rna_fc <- mean_fcs(readRDS(opt$rna))
 samples <- colnames(sleep)[colnames(sleep) %in% colnames(atac_fc)]
 samples <- samples[samples %in% colnames(rna_fc)]
 
-sleep <- as.data.frame(sleep[phenos[phenos %in% V(subnet)$name],samples,drop=FALSE])
+sleep <- as.data.frame(sleep[keep_phenos[keep_phenos %in% V(subnet)$name],samples,drop=FALSE])
 rna_fc <- as.data.frame(rna_fc[rownames(rna_fc) %in% V(subnet)$name,samples])
 
 ov <- findOverlaps(GRanges(ATACdiff),GRanges(V(subnet)$name[V(subnet)$carac == 'Chromatin']))

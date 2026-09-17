@@ -1,0 +1,67 @@
+Loading packages
+Checking arguments
+Load Sleep Network 
+Load statistics 
+Load DARs 
+Load footprint meta-analysis 
+Load phenotypes 
+Prepare Sleep Network 
+Calculate FC responses 
+null device 
+          1 
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] optparse_1.8.2       igraph_2.3.3         qgraph_1.10.1       
+ [4] openxlsx_4.2.8.1     colorspace_2.1-3     lubridate_1.9.5     
+ [7] forcats_1.0.1        stringr_1.6.0        dplyr_1.2.1         
+[10] purrr_1.2.2          readr_2.2.0          tidyr_1.3.2         
+[13] tibble_3.3.1         ggplot2_4.0.3        tidyverse_2.0.0     
+[16] RColorBrewer_1.1-3   GenomicRanges_1.62.1 Seqinfo_1.0.0       
+[19] IRanges_2.44.0       S4Vectors_0.48.1     BiocGenerics_0.56.0 
+[22] generics_0.1.4       edgeR_4.8.2          limma_3.66.0        
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.2.1    psych_2.6.5         farver_2.1.2       
+ [4] S7_0.2.2            fastmap_1.2.0       digest_0.6.39      
+ [7] rpart_4.1.24        timechange_0.4.0    lifecycle_1.0.5    
+[10] cluster_2.1.8.1     statmod_1.5.2       magrittr_2.0.5     
+[13] compiler_4.5.2      rlang_1.3.0         Hmisc_5.2-6        
+[16] tools_4.5.2         data.table_1.18.6.1 knitr_1.51         
+[19] htmlwidgets_1.6.4   mnormt_2.1.2        plyr_1.8.9         
+[22] abind_1.4-8         withr_3.0.3         foreign_0.8-90     
+[25] nnet_7.3-20         grid_4.5.2          lavaan_0.7-2       
+[28] scales_1.4.0        gtools_3.9.5        cli_3.6.6          
+[31] rmarkdown_2.31      otel_0.2.0          rstudioapi_0.18.0  
+[34] reshape2_1.4.5      tzdb_0.5.0          pbapply_1.7-5      
+[37] parallel_4.5.2      base64enc_0.1-6     vctrs_0.7.3        
+[40] Matrix_1.7-4        hms_1.1.4           glasso_1.11        
+[43] Formula_1.2-6       htmlTable_2.5.0     jpeg_0.1-11        
+[46] locfit_1.5-9.12     glue_1.8.1          stringi_1.8.9      
+[49] gtable_0.3.6        quadprog_1.5-8      pillar_1.11.1      
+[52] htmltools_0.5.9     R6_2.6.1            evaluate_1.0.5     
+[55] pbivnorm_0.6.0      lattice_0.22-7      png_0.1-9          
+[58] backports_1.5.1     corpcor_1.6.10      Rcpp_1.1.2         
+[61] zip_3.0.2           fdrtool_1.2.18      gridExtra_2.3.1    
+[64] nlme_3.1-168        checkmate_2.3.4     xfun_0.58          
+[67] pkgconfig_2.0.3    
