@@ -2,12 +2,12 @@
 This repository contains supplementary material for the  manuscript ["Systems genetics implicate key mitochondrial gene Nrf1 in the build-up of sleep pressure in mice"](https://www.researchsquare.com/article/rs-9589050/v1),
 *Nature Communications* (under review):  
 
-* Snakemake workflow for the computational analyses (workflow/), including: 
-  * All logs and benchmarks produced while testing of the workflow (workflow/logs/)  
+* Snakemake workflow for the computational analyses (*workflow/*), including: 
+  * All logs and benchmarks produced while testing of the workflow (*workflow/logs/*)  
   * ⚠️ Slurm specific configuration files (please update if using a different Workload Manager software)
   * Visual representations of the workflow (DAG, Filegraph, and rulegraph)
-  * ⚠️ Scripts used for the sleep analyses were run outside of the may workflow (sleep_script/)
-*  Additional metadata required for the pipeline (metadata/)  
+  * ⚠️ Scripts used for the sleep analyses were run outside of the may workflow (*sleep_scripts/*)
+*  Additional metadata required for the pipeline (*metadata/*)  
   * Sequencing raw data available on GEO repository [GSE303676](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303676).
   * Sleep EEG/EMG and scoring results are available on Figshare
 * An interactive version of the filtered [SD-Net](https://cn3ves.github.io/SleepSystemGenetics2026/)
@@ -75,7 +75,7 @@ snakemake --profile workflow/slurm_profile --use-conda --rerun-triggers code,inp
 ```
 ⚠️ **Note that** the command --rerun-triggers is used here to prevent *software-env* changes from triggering re-runs.
 For some reason, I had some trouble with the remote server resulting in a Python version crash for the HINT-ATAC.
-If this happens to you, delete the rgt_env/ conda environment and re-install to override the Python version used.
+If this happens to you, delete the *rgt_env/* conda environment and re-install to override the Python version used.
 ```
 rm -r libs/python-3.11.7-hab00c5b_1_cpython* rgt_env/
 ```
@@ -94,9 +94,9 @@ This workflow fails the following best practices:
 
 ⚠️ **Note that** the full workflow cannot run in one go, since the KEA results need to be downloaded in-between steps.
 I tested the workflow by running one rule at a time, which also ensures any important unlisted file is produced before trying the next rules.
-Please modify the rule manuscript in workflow/Snakefile as required.
+Please modify the rule manuscript in *workflow/Snakefile* as required.
 
-For the KEA analysis use the followin script in R to easily obtain all significant TFs:
+For the KEA analysis use the following script in R to easily obtain all significant TFs:
  
 ```
 # Read Footprint results table
