@@ -13,7 +13,7 @@ This repository contains supplementary material for the  manuscript ["Systems ge
 * An interactive version of the filtered [SD-Net](https://cn3ves.github.io/SleepSystemGenetics2026/)
 
 ## Workflow
-An annotated summary of the analitical work flow is shown below:
+An annotated summary of the analytical work flow is shown below:
 ![Workflow](workflow/rulegraph.svg)
 
 ### Set up
@@ -73,14 +73,14 @@ To run the workflow, clone this repository and, in the command line (bash) chang
 ```
 snakemake --profile workflow/slurm_profile --use-conda --rerun-triggers code,input,mtime,params
 ```
-⚠️ Note that the command --rerun-triggers is used here to prevent *software-env* changes from triggering re-runs.
+⚠️ **Note that** the command --rerun-triggers is used here to prevent *software-env* changes from triggering re-runs.
 For some reason, I had some trouble with the remote server resulting in a Python version crash for the HINT-ATAC.
 If this happens to you, delete the rgt_env/ conda environment and re-install to override the Python version used.
 ```
 rm -r libs/python-3.11.7-hab00c5b_1_cpython* rgt_env/
 ```
 
-I usually checked the full workflow before running it with the commands:
+I often checked the full workflow before running it with the commands:
 ```
 snakemake -c 1 --dag  | dot -Tpng > workflow/dag.png
 snakemake -c 1 --rulegraph  | dot -Tpng > workflow/rulegraph.png
@@ -92,7 +92,7 @@ This workflow fails the following best practices:
   * Param [dir/genrich/index/inv/model] is a prefix of input or output file but hardcoded
   * Specify a conda environment or container for each rule.:
 
-⚠️ Note that the full workflow cannot run in one go, since the KEA results need to be downloaded in-between steps.
+⚠️ **Note that** the full workflow cannot run in one go, since the KEA results need to be downloaded in-between steps.
 I tested the workflow by running one rule at a time, which also ensures any important unlisted file is produced before trying the next rules.
 Please modify the rule manuscript in workflow/Snakefile as required.
 
@@ -110,7 +110,7 @@ cat(paste(sort(unique(toupper(TFs))), collapse='\n'))
 ```
 Copy and paste this list into the [KEA3](https://maayanlab.cloud/kea3/) website and download the files: 
   * results/12-BXD_footprints/KEA/Integrated scaled rank.tsv 
-  *results/12-BXD_footprints/KEA/Mean rank.tsv
+  * results/12-BXD_footprints/KEA/Mean rank.tsv
 
 
 ### Versions used
