@@ -8,14 +8,14 @@ These Directory files also contain individual sleep onset after sleep deprivatio
 the EEG reference used to normalize the EEG spectra to reduce variabilty in the inter-individual differences in EEG amplitude; in microVolt square).
 
 So called *.smo files are binary files with following structure (a 'Record' in Pascal) for each 4 sec epoch in the 4-day experiment (86400 epochs total per smo file):
-'''
+```
  epoch = RECORD
             state          : char;
             bin            : array[0..400] of single;
             EEGv,EMGv,temp : single;
           END;
-'''
-'''
+```
+```
 'state' can have the following values:
 	'w','n','r' for EEG artefact-free waking, NREM sleep, and REM sleep, respectively.
 	'1','2','3' for waking, NREM sleep, and REM sleep with EEG artefacts, respectively.
@@ -23,4 +23,4 @@ So called *.smo files are binary files with following structure (a 'Record' in P
 	'9'         for Theta-Dominated Wakefulness (TDW).
 'bin' the full spectal power densities at 0.25Hz resolution from 0-100Hz, i.e., 401 values, in volt-square per 0.25Hz 
 'EEGv','EMGv','temp' for the EEG variance, EMG variance, and cortical temperature(set to 0.0 if not recorded).
-'''
+```
