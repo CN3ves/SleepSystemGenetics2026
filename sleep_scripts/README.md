@@ -2,7 +2,7 @@ Main programs to extract sleep-wake/EEG phenotypes from *.smo files.
 
 Files with the names of the mice, the group they belong to, and the number of mice per group are listed in 'Nrf1 directory.txt' and 'Drp1 Directory.txt' and read by the programs.
 
-'FT' are the floxed/tamoxifen-injected mice (icKO), 'FV' the floxed/vehicle-injected mice (Tamoxifen controls), and 'CT' mice control/tamoxifen-injected mice (Genotype controls)
+'FT' are the floxed/tamoxifen-injected mice (icKO), 'FV' the floxed/vehicle-injected mice (Genotype controls), and 'CT' mice control/tamoxifen-injected mice (Tamoxifen controls)
 
 These Directory files also contain individual sleep onset after sleep deprivation (in 4s epochs afer light onset of day 3 with end of sleep deprivation = 5400) and 
 the EEG reference used to normalize the EEG spectra to reduce variabilty in the inter-individual differences in EEG amplitude; in microVolt square).
