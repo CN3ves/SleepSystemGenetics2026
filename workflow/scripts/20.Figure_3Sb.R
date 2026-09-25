@@ -67,7 +67,7 @@ dev.off()
 
 tab <- mds$eigen.vectors[,1:2]
 rownames(tab) <- strains
-colnames(tab) <- paste0("PC",1:ncol(tab))
+tab <- as.data.frame(tab)
 tab$color <- colors[strains]
 
 write.csv(tab, paste0(opt$outdir, "/data/S3b.csv"))

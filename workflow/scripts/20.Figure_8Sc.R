@@ -72,8 +72,13 @@ venn.diagram(
   cat.default.pos = "outer",
   cat.fontfamily = "sans"
 )
-df <- t(as.data.frame(lapply(sets, function(set) paste(set, collapse = ','))))
-rownames(df) <- names(sets)
+n <- max(sapply(sets, length))
+df <- data.frame(c(sets[[1]],rep('',n-length(sets[[1]]))),
+    c(sets[[2]],rep('',n-length(sets[[2]]))),
+    c(sets[[3]],rep('',n-length(sets[[3]]))))
+
+names(df) <- names(sets)
+
 write.csv(df, paste0(opt$outdir, "/data/S8c.csv"))
 
 sessionInfo()

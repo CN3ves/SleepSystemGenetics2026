@@ -165,7 +165,7 @@ plot_graph(net, old_edges, new_edges, e_cols, v_cols, file="S5e", seeds)
 
 # F) network
 cat("Plot figure S5f\n")
-subnet <- induced_subgraph(full,  V(full)[V(full)$name %in% sub_nodes]) 
+subnet <- delete_edges(net,  E(net)[!attr(E(net),'vnames') %in% attr(E(network),'vnames')]) 
 old_edges <- c(old_edges,new_edges); new_edges <-""
 plot_graph(subnet, old_edges, new_edges, e_cols,v_cols, file="S5f", seeds) 
 

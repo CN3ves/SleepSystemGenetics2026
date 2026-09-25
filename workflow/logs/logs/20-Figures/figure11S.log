@@ -9,8 +9,8 @@ null device
           1 
 Warning message:
 `as_data_frame()` was deprecated in tibble 2.0.0.
-ℹ Please use `as_tibble()` (with slightly different semantics) to convert to a tibble, or `as.data.frame()` to
-  convert to a data frame. 
+ℹ Please use `as_tibble()` (with slightly different semantics) to convert to a
+  tibble, or `as.data.frame()` to convert to a data frame. 
 R version 4.5.2 (2025-10-31)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.5 LTS

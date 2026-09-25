@@ -1,0 +1,97 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-09-17 18:17:31
+  Workflow ID: d228a57d-f4b7-4e5d-bd34-3dcfa6cb72fc
+  Platform: Linux-5.14.0-570.132.1.el9_6.x86_64-x86_64-with-glibc2.34
+  Host: dna072
+  User: csousane
+  Snakemake version: 9.23.1
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /users/csousane/.conda/envs/snakemake/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scratch/csousane/atac/workflow/Snakefile --target-jobs FigureS9: --allowed-rules FigureS9 --cores all --attempt 1 --force-use-threads --wait-for-files /scratch/csousane/atac/.snakemake/tmp.sa07r579 manuscript/tables/TableS9-Differential_Expression.xlsx --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime code params input --conda-frontend conda --shared-fs-usage storage-local-copies input-output software-deployment-cache source-cache persistence sources software-deployment --printshellcmds --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /users/csousane/.conda/envs/snakemake/bin --runtime-source-cache-path /users/csousane/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmp4qyu20wk --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scratch/csousane/atac/workflow/Snakefile
+  Base directory: /scratch/csousane/atac/workflow
+  Run directory: /scratch/csousane/atac
+  Working directory: /scratch/csousane/atac
+  Config file(s): ['workflow/config/config.yaml']
+  Config MD5: cfa99051c1831e5275fb5cf857d9871c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 17 18:17:32 2026]
+localrule FigureS9:
+    input: manuscript/tables/TableS9-Differential_Expression.xlsx
+    output: manuscript/figures/data/S9.csv
+    log: logs/20-Figures/FS9.log
+    jobid: 0
+    benchmark: benchmarks/20-Figures/FS9.txt
+    reason: Forced execution
+    resources: tmpdir=/tmp/65090706, mem_mb=1000, mem=1 GB, mem_mib=954, disk_mb=1000, disk=1 GB, disk_mib=954, time=0:10:00
+Shell command: 
+        module load r-light/4.5.2
+        mkdir -p manuscript/figures/data
+
+        echo "Make Figure S9" > logs/20-Figures/FS9.log
+        Rscript workflow/scripts/20.Figure_9S.R -a results/16-NRF_bam/EDA//EDA_normalised.RData -o manuscript/figures
+
+        echo "Logs saved in <logs/20-Figures/FS9.log>" >> logs/20-Figures/FS9.log
+        
+/usr/bin/bash: line 6: 2097107 Killed                  Rscript workflow/scripts/20.Figure_9S.R -a results/16-NRF_bam/EDA//EDA_normalised.RData -o manuscript/figures
+RuleException:
+CalledProcessError in file "/scratch/csousane/atac/workflow/rules/20-Figures.smk", line 513:
+Command 'set -euo pipefail;  
+        module load r-light/4.5.2
+        mkdir -p manuscript/figures/data
+
+        echo "Make Figure S9" > logs/20-Figures/FS9.log
+        Rscript workflow/scripts/20.Figure_9S.R -a results/16-NRF_bam/EDA//EDA_normalised.RData -o manuscript/figures
+
+        echo "Logs saved in <logs/20-Figures/FS9.log>" >> logs/20-Figures/FS9.log' returned non-zero exit status 137.
+[Thu Sep 17 18:17:45 2026]
+Error in rule FigureS9:
+    message: None
+    jobid: 0
+    input: manuscript/tables/TableS9-Differential_Expression.xlsx
+    output: manuscript/figures/data/S9.csv
+    log: logs/20-Figures/FS9.log (check log file(s) for error details)
+    shell:
+        
+        module load r-light/4.5.2
+        mkdir -p manuscript/figures/data
+
+        echo "Make Figure S9" > logs/20-Figures/FS9.log
+        Rscript workflow/scripts/20.Figure_9S.R -a results/16-NRF_bam/EDA//EDA_normalised.RData -o manuscript/figures
+
+        echo "Logs saved in <logs/20-Figures/FS9.log>" >> logs/20-Figures/FS9.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu Sep 17 18:17:45 2026]
+Error in rule FigureS9:
+    message: None
+    jobid: 0
+    input: manuscript/tables/TableS9-Differential_Expression.xlsx
+    output: manuscript/figures/data/S9.csv
+    log: logs/20-Figures/FS9.log (check log file(s) for error details)
+    shell:
+        
+        module load r-light/4.5.2
+        mkdir -p manuscript/figures/data
+
+        echo "Make Figure S9" > logs/20-Figures/FS9.log
+        Rscript workflow/scripts/20.Figure_9S.R -a results/16-NRF_bam/EDA//EDA_normalised.RData -o manuscript/figures
+
+        echo "Logs saved in <logs/20-Figures/FS9.log>" >> logs/20-Figures/FS9.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.
+slurmstepd: error: Detected 1 oom_kill event in StepId=65090706.batch. Some of the step tasks have been OOM Killed.

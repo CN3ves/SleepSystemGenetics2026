@@ -72,7 +72,7 @@ for (sheet in c("baselineCT", "baselineFV", "SDFT", "SDCT", "SDFV" )) {
   if(sheet == "SDFV") sheet <- "-Interaction- SD x FV"
   
   print(sheet)
-  sheet <- gsub("FT","ciKO",gsub("FV","Tamoxifen",gsub("CT","Genotype",sheet)))
+  sheet <- gsub("FT","ciKO",gsub("FV","Genotype",gsub("CT","Tamoxifen",sheet)))
   addWorksheet(wb, sheet)
   writeData(wb, sheet, mat, rowNames=FALSE)
     

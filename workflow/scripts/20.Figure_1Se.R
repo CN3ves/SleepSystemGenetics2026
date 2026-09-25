@@ -78,8 +78,6 @@ IEG <- unique(c("Atf3", "Bhlhe40", "Ccl2", "Ccn1", "Ccn2", "Ccnl1", "Cebpd", "Cs
 
 print("IEG in plasticity")
 print(plasticity[plasticity %in% IEG])
-#[1] "Arc"    "Homer1" "Rheb"   "Cebpb"  "Fos"    "Npas4"  "Ptgs2"  "Rcan1" 
-#[9] "Egr2"   "Nr4a1"  "Nr4a3" 
 
 ov <- unique(unlist(sapply(ov$Genes,strsplit, ', ')))
 

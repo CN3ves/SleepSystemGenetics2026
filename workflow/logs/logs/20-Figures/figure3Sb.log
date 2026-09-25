@@ -6,11 +6,10 @@ Save plot
 ℹ Summaries were computed grouped by label and col.
 ℹ Output is grouped by label.
 ℹ Use `summarise(.groups = "drop_last")` to silence this message.
-ℹ Use `summarise(.by = c(label, col))` for per-operation grouping (`?dplyr::dplyr_by`) instead.
+ℹ Use `summarise(.by = c(label, col))` for per-operation grouping (`?dplyr::dplyr_by`)
+  instead.
 null device 
           1 
-Warning message:
-In tab$color <- colors[strains] : Coercing LHS to a list
 R version 4.5.2 (2025-10-31)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 22.04.5 LTS

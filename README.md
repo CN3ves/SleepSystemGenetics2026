@@ -1,13 +1,28 @@
 # SleepSystemGenetics2026
-Workflow for the manuscript
+This repository contains supplementary material for the  manuscript ["Systems genetics implicate key mitochondrial gene Nrf1 in the build-up of sleep pressure in mice"](https://www.researchsquare.com/article/rs-9589050/v1),
+*Nature Communications* (under review):  
 
+* Snakemake workflow for the computational analyses (workflow/), including: 
+  * All logs and benchmarks produced while testing of the workflow (workflow/logs/)  
+  * ⚠️ Slurm specific configuration files (please update if using a different Workload Manager software)
+  * Visual representations of the workflow (DAG, Filegraph, and rulegraph)
+  * ⚠️ Scripts used for the sleep analyses were run outside of the may workflow (sleep_script/)
+*  Additional metadata required for the pipeline (metadata/)  
+  * Sequencing raw data available on GEO repository [GSE303676](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303676).
+  * Sleep EEG/EMG and scoring results are available on Figshare
+* An interactive version of the filtered [SD-Net](https://cn3ves.github.io/SleepSystemGenetics2026/)
 
-![Workflow](workflow/rulegraph.png)
+## Workflow
+An annotated summary of the analitical work flow is shown below:
+![Workflow](workflow/rulegraph.svg)
 
-Required packages:
+### Set up
 
+The workflow requires Conda [miniforge](https://conda-forge.org/miniforge/) and [R](https://rstudio-education.github.io/hopr/starting.html)
+
+Once all software is installed, run the code below on your commandline (bash) to set-up the conda environment
 ```
-module load miniforge3/25.3.0-3
+module load miniforge3/25.3.0-3 # Requirement depends on system package management
 conda activate snakemake
 conda install python=3.13
 conda install -c conda-forge -c bioconda deeptools
@@ -15,9 +30,10 @@ conda create -c conda-forge -c bioconda -c nodefaults -n snakemake snakemake
 conda install bioconda::snakemake-executor-plugin-cluster-generic
 conda list
 ```
-```
-required_packages <- c("BiocManager", "annotatr", "ATACseqQC", "biomaRt", "BSgenome.Mmusculus.UCSC.mm10", "ChIPseeker", "circlize", "clusterProfiler", "ComplexHeatmap", "csaw", "dendsort", "doParallel", "doSNOW", "dplyr", "EDASeq", "edgeR", "enrichplot", "foreach", "GenomicAlignments", "GenomicRanges", "ggplot2", "ggrepel", "GRaNIE", "limma", "optparse", "org.Mm.eg.db", "pheatmap", "preseqR", "qtl2", "RColorBrewer", "ReactomePA", "readr", "reshape2", "rjson", "Rsamtools", "Rsubread", "rtracklayer", "tidyr", "tidyverse", "TxDb.Mmusculus.UCSC.mm10.knownGene", "VennDiagram", "XML")
 
+Inside R, run the code below to automatically install all missing R packages required 
+```
+required_packages <- c("annotatr","ATACseqQC", "biomaRt","BSgenome.Mmusculus.UCSC.mm10","ChIPseeker","circlize","clusterProfiler","colorspace","ComplexHeatmap","csaw","dendsort","doParallel","doSNOW","dplyr","EDASeq","edgeR","enrichplot","foreach","GenomicAlignments","GenomicRanges","ggplot2","ggpubr","ggrepel","GRaNIE","htmlwidgets","igraph","limma", "openxlsx", "optparse","org.Mm.eg.db", "pheatmap", "preseqR","qgraph", "qtl","RColorBrewer","ReactomePA","readr","reshape2","rjson", "Rsamtools", "Rsubread", "rtracklayer", "tidyr","tidyverse","TxDb.Mmusculus.UCSC.mm10.knownGene","VennDiagram","visNetwork","XML")
 installed.packages <- installed.packages()[,"Package"]
 
 for (package in required_packages) {
@@ -32,20 +48,9 @@ for (package in required_packages) {
 }
 ```
 
-Check DAG
-```
-snakemake -c 1 --dag  | dot -Tpng > workflow/dag.png; snakemake -c 1 --rulegraph  | dot -Tpng > workflow/rulegraph.png; snakemake -c 1 --filegraph  | dot -Tpng > workflow/filegraph.png; snakemake -c 1 -n; snakemake -n --debug-dag > snakemake_trace.txt 2>&1; snakemake --lint 2> lint; cat lint | grep 'Lints' | wc -l; cat lint | grep '*' | sort -u; rm lint
-```
-
-Run pipeline
-```
-snakemake --profile workflow/slurm_profile --use-conda --rerun-triggers code,input,mtime,params
-```
+Finally, you will need a downgraded version of Python to run HINT-ATAC. Set up a specific environment by running on the command line (bash): 
 
 ```
-echo "Installing Hmm-based IdeNtification of Transcription factor footprints" > {log}
-
-#Need to downgrade everything
 conda create -p ./rgt_env -c bioconda -c conda-forge python=3.11.7 # not enough space allocated
 conda activate ./rgt_env
 
@@ -57,23 +62,61 @@ pip install scipy==1.12.0
 cd ~/rgtdata
 python setupGenomicData.py --mm10
 
+rgt-hint  --version
+#HINT - Regulatory Analysis Toolbox (RGT) - v1.0.2
+
 conda deactivate 
 ```
-```
-rgt-hint  --version
-HINT - Regulatory Analysis Toolbox (RGT) - v1.0.2
-```
+### Run workflow
+To run the workflow, clone this repository and, in the command line (bash) change work working directory to it. Then run:
 
-On remote servers, you might need to reinstall from time to time if you see a python version clash. run before
+```
+snakemake --profile workflow/slurm_profile --use-conda --rerun-triggers code,input,mtime,params
+```
+⚠️ Note that the command --rerun-triggers is used here to prevent *software-env* changes from triggering re-runs.
+For some reason, I had some trouble with the remote server resulting in a Python version crash for the HINT-ATAC.
+If this happens to you, delete the rgt_env/ conda environment and re-install to override the Python version used.
 ```
 rm -r libs/python-3.11.7-hab00c5b_1_cpython* rgt_env/
 ```
-If this happen, --rerun-triggers software-env will trigger a new analyses, hence why we used --rerun-triggers code,input,mtime,params (though ancient is used on inputs so it should render mtime useless)
+
+I usually checked the full workflow before running it with the commands:
+```
+snakemake -c 1 --dag  | dot -Tpng > workflow/dag.png
+snakemake -c 1 --rulegraph  | dot -Tpng > workflow/rulegraph.png
+snakemake -c 1 --filegraph  | dot -Tpng > workflow/filegraph.png; snakemake -c 1 -n
+snakemake -n --debug-dag > snakemake_trace.txt 2>&1; snakemake --lint 2> lint; cat lint | grep 'Lints' | wc -l; cat lint | grep '*' | sort -u; rm lint
+```
+This command produces the visual representations for the workflow and evaluates it with [--lint](https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html) to evaluate the code.
+This workflow fails the following best practices:  
+  * Param [dir/genrich/index/inv/model] is a prefix of input or output file but hardcoded
+  * Specify a conda environment or container for each rule.:
+
+⚠️ Note that the full workflow cannot run in one go, since the KEA results need to be downloaded in-between steps.
+I tested the workflow by running one rule at a time, which also ensures any important unlisted file is produced before trying the next rules.
+Please modify the rule manuscript in workflow/Snakefile as required.
+
+For the KEA analysis use the followin script in R to easily obtain all significant TFs:
+ 
+```
+# Read Footprint results table
+TFs <- read.csv('results/12-BXD_footprints/plots/footprint_analysis.csv')
+# Get significant TFs and brak heterodimers into single proteins
+TFs <-unique(unlist(strsplit(TFs[TFs$padj<0.05,1],':')))
+# Simplify the names to get the gene SYMBOL
+TFs <-  gsub('.*\\.','',gsub('\\(.*','',TFs))
+# Get unique TF SYMBOLs
+cat(paste(sort(unique(toupper(TFs))), collapse='\n'))
+```
+Copy and paste this list into the [KEA3](https://maayanlab.cloud/kea3/) website and download the files: 
+  * results/12-BXD_footprints/KEA/Integrated scaled rank.tsv 
+  *results/12-BXD_footprints/KEA/Mean rank.tsv
 
 
+### Versions used
 <details>
   
-  <summary>packages in environment at /users/USER/.conda/envs/snakemake:</summary>
+  <summary>Packages in environment at /users/USER/.conda/envs/snakemake:</summary>
   
 Name | Version |  Build | Channel
 |---|---|---|---|
@@ -319,66 +362,52 @@ zstd | 1.5.7 | hb78ec9c_6 | conda-forge
 
 Package | Version
 |---|---|
-foreach | 1.5.2 
-doParallel | 1.0.17 
-doSNOW | 1.0.20 
-rtracklayer | 1.70.1 
+annotatr | 1.36.0
+ATACseqQC | 1.34.0
+biomaRt | 2.66.2
+BSgenome.Mmusculus.UCSC.mm10 | 1.4.3
+ChIPseeker | 1.46.1
+circlize | 0.4.18
+clusterProfiler | 4.18.4
 colorspace | 2.1-3
-csaw | 1.44.0 
-tidyverse | 2.0.0 
-GenomicRanges | 1.62.1 
-optparse | 1.8.2 
-ChIPseeker | 1.46.1 
-ggplot2 | 4.0.3 
-dplyr | 1.2.1 
-BSgenome.Mmusculus.UCSC.mm10 | 1.4.3 
-TxDb.Mmusculus.UCSC.mm10.knownGene | 3.10.0 
-ggrepel | 0.9.8 
-annotatr | 1.36.0 
-ComplexHeatmap | 2.26.1 
-circlize | 0.4.18 
-org.Mm.eg.db | 3.22.0 
-clusterProfiler | 4.18.4 
-enrichplot | 1.30.5 
-ReactomePA | 1.54.0 
-RColorBrewer | 1.1-3 
-dendsort | 0.3.4 
-edgeR | 4.8.2 
-VennDiagram | 1.8.2 
-readr | 2.2.0 
-GRaNIE | 1.14.0 
-limma | 3.66.0 
-biomaRt | 2.66.2 
-rjson | 0.2.23 
-EDASeq | 2.44.0 
-ATACseqQC | 1.34.0 
-Rsamtools | 2.26.0 
-openxlsx | 4.2.8.1
-preseqR | 4.0.0 
-GenomicAlignments | 1.46.0 
-tidyr | 1.3.2 
-reshape2 | 1.4.5 
-XML | 3.99-0.24 
-Rsubread | 2.24.0 
-pheatmap | 1.0.13 
-qgraph | 2.3.3
+ComplexHeatmap | 2.26.1
+csaw | 1.44.0
+dendsort | 0.3.4
+doParallel | 1.0.17
+doSNOW | 1.0.20
+dplyr | 1.2.1
+EDASeq | 2.44.0
+edgeR | 4.8.2
+enrichplot | 1.30.5
+foreach | 1.5.2
+GenomicAlignments |1.46.0
+GenomicRanges | 1.62.1
+ggplot2 | 4.0.3
+ggpubr | 1.0.0
+ggrepel | 0.9.8
+GRaNIE | 1.14.0
+htmlwidgets | 1.6.4
 igraph | 2.3.3
-qtl2 | 0.46 
-svglite | 2.2.2
+limma | 3.66.0
+openxlsx | 4.2.8.1
+optparse | 1.8.2
+org.Mm.eg.db | 3.22.0
+pheatmap | 1.0.13
+preseqR | 4.0.0
+qgraph | 1.10.1
+qtl2 | 0.46
+RColorBrewer | 1.1-3
+ReactomePA | 1.54.0
+readr | 2.2.0
+reshape2 | 1.4.5
+rjson | 0.2.23
+Rsamtools | 2.26.0
+Rsubread | 2.24.0
+rtracklayer | 1.70.1
+tidyr | 1.3.2
+tidyverse | 2.0.0
+TxDb.Mmusculus.UCSC.mm10.knownGene | 3.10.0
+VennDiagram | 1.8.2
+visNetwork | 2.1.4
+XML | 3.99-0.24
 </details>
-
-```
-x <- read.csv('results/12-BXD_footprints/plots/footprint_analysis.csv')
-x <-unique(unlist(strsplit(x[x$padj<0.05,1],':')))
-x <-  gsub('.*\\.','',gsub('\\(.*','',x))
-cat(paste(sort(unique(toupper(x))), collapse='\n'))
-```
-https://maayanlab.cloud/kea3/
-
-place in results/12-BXD_footprints/KEA/Integrated scaled rank.tsv
-place in results/12-BXD_footprints/KEA/Mean rank.tsv
-
-some rules gather results from other rules so they might need to be run sequentially. the pipeline was testes runnign one rule at a time, not the entire workflow
-
-
-[interactive network](https://cn3ves.github.io/SleepSystemGenetics2026/)

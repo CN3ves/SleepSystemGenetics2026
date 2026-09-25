@@ -1,7 +1,7 @@
 '''
 This Snakefile contains rules to produce the figures for the manuscript
 '''
-localrules: Figure1, FigureS1, Figure2, FigureS2, FigureS3, FigureS4, FigureS5, Figure6, FigureS8, Figure8, FigureS11, Figure_interactive
+localrules: Figure1, FigureS1, Figure2, FigureS2, FigureS3, FigureS4, FigureS5, Figure6, FigureS8, Figure8, FigureS9, FigureS11, Figure_interactive
 
 
 rule Figure1:
@@ -486,6 +486,36 @@ rule Figure8:
             -f {input.S2} \
             -g {input.S9} \
             -o {params.dir}
+
+        echo "Logs saved in <{log}>" >> {log}
+        '''
+
+rule FigureS9:
+    '''
+    Figure S9
+    '''
+    input:
+        S9=ancient(rules.tableS9.output.table)
+    output:
+        figS9=protected('manuscript/figures/data/S9.csv')
+    log:
+        'logs/20-Figures/FS9.log'
+    benchmark:
+        'benchmarks/20-Figures/FS9.txt'
+    resources:
+        mem_mb = 1000,
+        time = '0:10:00'
+    threads: 1
+    params:
+        dir='manuscript/figures',
+        counts='results/16-NRF_bam/EDA/'
+    shell:
+        '''
+        module load r-light/4.5.2
+        mkdir -p {params.dir}/data
+
+        echo "Make Figure S9" > {log}
+        Rscript workflow/scripts/20.Figure_9S.R -a {params.counts}/EDA_normalised.RData -o {params.dir}
 
         echo "Logs saved in <{log}>" >> {log}
         '''

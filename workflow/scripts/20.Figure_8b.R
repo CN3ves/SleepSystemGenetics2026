@@ -307,6 +307,6 @@ legend("topright", legend=c(paste0("ρ ⊂ ",names(cols)),"No cor"), bty = "n", 
 
 dev.off()
 
-write.csv(as_data_frame(subnet, what = "edges"), paste0(opt$outdir, "/data/8a.csv"))
+write.csv(as_data_frame(subnet, what = "edges"), paste0(opt$outdir, "/data/8b.csv"))
 
 sessionInfo()
