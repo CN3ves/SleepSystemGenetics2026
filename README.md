@@ -68,7 +68,7 @@ rgt-hint  --version
 conda deactivate 
 ```
 ### Run workflow
-To run the workflow, clone this repository and, in the command line (bash) change work working directory to it. Then run:
+To run the workflow, [clone this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and, in the command line (bash) change work working directory to it. Then run:
 
 ```
 snakemake --profile workflow/slurm_profile --use-conda --rerun-triggers code,input,mtime,params
