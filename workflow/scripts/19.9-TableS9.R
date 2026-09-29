@@ -51,7 +51,7 @@ for (sheet in c("SD effect CT", "SD effect FV","SD effect FT")) {
   mat <- mat[,c("ENSEMBLE", "SYMBOL", "NAME", "logFC", "logCPM", "F", "PValue", "FDR")]
   names(mat) <- gsub("ENSEMBLE","ENSEMBL",names(mat))
 
-  sheet <- gsub("FT","ciKO",gsub("FV","Tamoxifen Control",gsub("CT","Genotype Control",sheet)))
+  sheet <- gsub("FT","ciKO",gsub("FV","Genotype Control",gsub("CT","Tamoxifen Control",sheet)))
   sheet <- gsub("SD effect ","SD effect -",sheet)
   addWorksheet(wb, sheet)
   writeData(wb, sheet, mat, rowNames=FALSE)
