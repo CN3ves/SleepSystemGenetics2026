@@ -31,7 +31,8 @@ conda install bioconda::snakemake-executor-plugin-cluster-generic
 conda list
 ```
 
-Inside R, run the code below to automatically install all missing R packages required 
+Inside R, run the code below to automatically install all missing R packages required.
+Please note that [preSeqR](https://cran.r-project.org/src/contrib/Archive/preseqR/) was removed from the CRAN repository and you might need to install it from the archives.
 ```
 required_packages <- c("annotatr","ATACseqQC", "biomaRt","BSgenome.Mmusculus.UCSC.mm10","ChIPseeker","circlize","clusterProfiler","colorspace","ComplexHeatmap","csaw","dendsort","doParallel","doSNOW","dplyr","EDASeq","edgeR","enrichplot","foreach","GenomicAlignments","GenomicRanges","ggplot2","ggpubr","ggrepel","GRaNIE","htmlwidgets","igraph","limma", "openxlsx", "optparse","org.Mm.eg.db", "pheatmap", "preseqR","qgraph", "qtl","RColorBrewer","ReactomePA","readr","reshape2","rjson", "Rsamtools", "Rsubread", "rtracklayer", "tidyr","tidyverse","TxDb.Mmusculus.UCSC.mm10.knownGene","VennDiagram","visNetwork","XML")
 installed.packages <- installed.packages()[,"Package"]
